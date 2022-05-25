@@ -2,7 +2,7 @@ import "./scss/main.scss";
 
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn } from "react-scroll-motion";
 
-import Header from "./components/header/Header";
+// import Header from "./components/header/Header";
 import Navbar from "./components/Navbar";
 
 function App() {
