@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -18,13 +19,13 @@ const Navbar = () => {
         </div>
         <nav className="nav">
           <li>
-            <a href="/">Work</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="/">About</a>
+            <a href="/work">Work</a>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </nav>
       </div>
