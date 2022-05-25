@@ -1,12 +1,59 @@
-.nav-links {
-    li {
-        list-style-type: none;
-        
+.navbar {
+  font-size: 1.8rem;
+  height: 156px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-weight: 700;
+    font-size: 3.6rem;
+    @media (max-width: $layout-breakpoint-medium) {
+      font-size: 3.2rem;
     }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    margin-inline: 20px;
 
     a {
-        font-size: 3em;
-        text-decoration: none;
-        color: inherit;
+      position: relative;
+      text-decoration: none;
+      color: $black;
+      white-space: nowrap;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+
+      &::before {
+        margin-bottom: -4px;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $black;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
     }
+  }
 }

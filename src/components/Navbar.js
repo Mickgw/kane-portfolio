@@ -12,24 +12,21 @@ const Navbar = () => {
       }}
       className="navbar"
     >
-      <div className="logo">
-        <h1>Logo</h1>
-      </div>
-      <div className="navigation">
-        <ul className="nav-links">
+      <div className="navbar-inner">
+        <div className="logo">
+          <h1>Your logo</h1>
+        </div>
+        <nav className="nav">
           <li>
-              <a href="/">Home</a>
+            <a href="/">Work</a>
           </li>
           <li>
-              <a href="/">Work</a>
+            <a href="/">About</a>
           </li>
           <li>
-              <a href="/">About</a>
+            <a href="/">Contact</a>
           </li>
-          <li>
-              <a href="/">Contact</a>
-          </li>
-        </ul>
+        </nav>
       </div>
     </motion.div>
   );
