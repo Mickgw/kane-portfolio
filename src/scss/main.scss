@@ -6,8 +6,14 @@
 //Components
 @import "components/navbar";
 @import "components/header";
+@import "components/loader";
+@import "components/about";
 
 body {
-    margin-inline: 12vw;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
+.App {
+  padding-inline: 12vw;
+}
