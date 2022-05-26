@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 export const Loader = ({ setLoading, text }) => {
-  const loaderTimer = 1000; //2700 mili seconds
+  const loaderTimer = 1400; //2700 mili seconds
 
   const loader_animation = {
     hidden: {
@@ -15,7 +15,7 @@ export const Loader = ({ setLoading, text }) => {
       transition: {
         ease: [0.2, 0.3, 0.3, 1],
         // ease: "easeIn",
-        duration: 0.6,
+        duration: loaderTimer / 1000 / 2,
       },
     },
 
@@ -24,7 +24,7 @@ export const Loader = ({ setLoading, text }) => {
 
       transition: {
         ease: [0.2, 0.3, 0.3, 1],
-        duration: 0.6,
+        duration: loaderTimer / 1000 / 2,
       },
     },
   };

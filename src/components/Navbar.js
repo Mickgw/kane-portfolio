@@ -1,37 +1,38 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <AnimatePresence initial={false}>
-      <motion.div
-        initial={{ opacity: 0, y: -180 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          ease: "easeInOut",
-          duration: 1,
-          delay: 0.6,
-        }}
-        className="navbar"
-      >
-        <div className="navbar-inner">
-          <div className="logo">
-            <h1>Your logo</h1>
-          </div>
-          <nav className="nav">
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/work">Work</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </nav>
+    <motion.div
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.6,
+      }}
+      className="navbar"
+    >
+      <div className="navbar-inner">
+        <div className="logo">
+          <h1>Your logo</h1>
         </div>
-      </motion.div>
-    </AnimatePresence>
+        <nav className="nav">
+          <li>
+            <NavLink to="/about">About</NavLink>
+            {/* <a href="/about">About</a> */}
+          </li>
+          <li>
+            <NavLink to="/work">Work</NavLink>
+            {/* <a href="/work">Work</a> */}
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+            {/* <a href="/contact">Contact</a> */}
+          </li>
+        </nav>
+      </div>
+    </motion.div>
   );
 };
 
