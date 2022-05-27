@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { gsap, Power3, Power1 } from "gsap";
-import { motion } from "framer-motion";
 
 function Transition() {
   const loader_whole = useRef(null);
