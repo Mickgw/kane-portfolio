@@ -1,9 +1,16 @@
-import React from 'react'
+import PageLoader from "../components/loader/PageLoader";
+import gsap from "gsap";
 
 const Work = () => {
-  return (
-    <div>This is the Work page</div>
-  )
-}
+  const page_loader = gsap.timeline();
 
-export default Work
+  return (
+    <>
+      <PageLoader timeline={page_loader} />
+
+      <div>This is the Work page</div>
+    </>
+  );
+};
+
+export default Work;

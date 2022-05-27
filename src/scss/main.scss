@@ -6,9 +6,9 @@
 //Components
 @import "components/navbar";
 @import "components/header";
-@import "components/loader";
 @import "components/about";
-@import "components/transition";
+@import "components/main-loader";
+@import "components/page-loader";
 
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */
@@ -16,5 +16,5 @@ body {
 }
 
 .App {
-  padding-inline: 12vw;
+  margin-inline: 12vw;
 }
