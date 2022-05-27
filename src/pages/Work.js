@@ -8,7 +8,7 @@ const Work = () => {
     <>
       <PageLoader timeline={page_loader} />
 
-      <div>This is the Work page</div>
+      <div>This is the work page</div>
     </>
   );
 };

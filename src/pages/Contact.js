@@ -8,7 +8,7 @@ const Contact = () => {
     <>
       <PageLoader timeline={page_loader} />
 
-      <div>This is the Work page</div>
+      <div>This is the contact page</div>
     </>
   );
 };
