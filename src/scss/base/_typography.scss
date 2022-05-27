@@ -9,3 +9,7 @@ html {
       sans-serif;
   }
 }
+
+h2 {
+  font-size : clamp(2rem, 10vw, 5rem);
+}

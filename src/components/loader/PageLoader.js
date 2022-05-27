@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { gsap, Power4, Power1 } from "gsap";
+import { gsap, Power3, Power1 } from "gsap";
 import { motion } from "framer-motion";
 
 function Transition() {
@@ -21,7 +21,7 @@ function Transition() {
         {
           y: 0,
           duration: background_animation_duration,
-          ease: Power4.easeInOut,
+          ease: Power3.easeInOut,
         }
       )
       .fromTo(
@@ -29,7 +29,7 @@ function Transition() {
         { opacity: 0, y: 25 },
         { opacity: 1, y: 0, delay: minus_delay, ease: Power1.easeInOut }
       )
-      .to("#text", { opacity: 0, y: -25, ease: Power1.easeInOut })
+      .to("#text", { opacity: 0, delay: 0.3, y: -25, ease: Power1.easeInOut })
       .fromTo(
         loader_whole.current,
         { y: 0 },
@@ -37,7 +37,7 @@ function Transition() {
           y: "-100vh",
           delay: minus_delay,
           duration: background_animation_duration,
-          ease: Power4.easeInOut,
+          ease: Power3.easeInOut,
         }
       );
   });
