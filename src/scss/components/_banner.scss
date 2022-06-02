@@ -4,7 +4,7 @@
   height: 100vh;
 
   .row {
-    margin-block: 10vh;
+    padding-block: 10vh;
     position: relative;
     padding-inline: 100px;
     display: flex;
@@ -60,6 +60,12 @@
   text-transform: uppercase;
   position: absolute;
   bottom: 48px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+  letter-spacing: 3px;
+  }
 }
 
 .main-text {

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -16,21 +16,12 @@ const Navbar = () => {
     >
       <div className="navbar-inner">
         <div className="logo">
-          <h1>Your logo</h1>
+          <Link to="/"><h1>kane</h1></Link>
         </div>
         <nav className="nav">
-          <li>
-            <NavLink to="/about">Portfolio</NavLink>
-            {/* <a href="/about">About</a> */}
-          </li>
-          <li>
-            <NavLink to="/work">About</NavLink>
-            {/* <a href="/work">Work</a> */}
-          </li>
-          <li>
-            <NavLink to="/contact">Video</NavLink>
-            {/* <a href="/contact">Contact</a> */}
-          </li>
+          <NavLink to="/about">Portfolio</NavLink>
+          <NavLink to="/work">About</NavLink>
+          <NavLink to="/contact">Video</NavLink>
         </nav>
       </div>
     </motion.div>
