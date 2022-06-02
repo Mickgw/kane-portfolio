@@ -2,9 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { gsap, Power3, Power1 } from "gsap";
 
 function Transition() {
-  const loader_whole = useRef(null);
-  const loader_text = useRef(null);
-
   //Animation vars
   const background_animation_duration = 0.6;
   const minus_delay = -0.3; //Being used to make animation flow into each other
@@ -58,7 +55,6 @@ function Transition() {
           </h2>
         </div>
       </div>
-      <div id="loader_secondary_bg" className="pageloader_secondary_bg"></div>
     </>
   );
 }

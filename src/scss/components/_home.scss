@@ -1,0 +1,28 @@
+$image-width: 50%;
+
+.grid {
+  margin-block: 15em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.right-side {
+  .img-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      background: #fff;
+      top: 0;
+      right: 0;
+    }
+    img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

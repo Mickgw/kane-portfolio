@@ -6,9 +6,11 @@
 //Components
 @import "components/navbar";
 @import "components/header";
+@import "components/home";
 @import "components/about";
 @import "components/main-loader";
 @import "components/page-loader";
+@import "components/banner";
 
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */

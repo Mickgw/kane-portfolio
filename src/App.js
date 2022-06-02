@@ -9,6 +9,7 @@ import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 
 function App2() {
+
   return (
     <div className="App">
       <Router>
@@ -17,12 +18,13 @@ function App2() {
         </header>
 
         <main>
-          <Routes>
+          <Routes onChange={console.log("link has changed")}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+
         </main>
       </Router>
     </div>

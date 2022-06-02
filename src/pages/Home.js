@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
+import { gsap, Power2 } from "gsap";
+
+import Banner from "../components/Banner";
 
 const Home = () => {
-  return (
-    <div>HOME PAGE</div>
-  )
-}
+  let container = useRef(null);
+  let tl = new gsap.timeline();
 
-export default Home
+  useEffect(() => {
+    tl.to(container, 0, { css: { visibility: "visible" } });
+    tl.from("#id", 1.4, {
+      scale: 1.6,
+      ease: Power2.easeInOut,
+      delay: -1.4,
+    });
+  });
+
+  return (
+    <>
+      <Banner />
+    </>
+  );
+};
+
+export default Home;

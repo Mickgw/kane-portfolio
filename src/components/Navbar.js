@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   return (
     <motion.div
@@ -19,15 +20,15 @@ const Navbar = () => {
         </div>
         <nav className="nav">
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">Portfolio</NavLink>
             {/* <a href="/about">About</a> */}
           </li>
           <li>
-            <NavLink to="/work">Work</NavLink>
+            <NavLink to="/work">About</NavLink>
             {/* <a href="/work">Work</a> */}
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact">Video</NavLink>
             {/* <a href="/contact">Contact</a> */}
           </li>
         </nav>
