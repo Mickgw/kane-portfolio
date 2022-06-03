@@ -1,9 +1,12 @@
-//Banner
+$letter-spacing-banner-text: 42px;
+
 .banner {
+  // visibility: hidden;
   background-color: $white;
   height: 100vh;
 
   .row {
+    overflow: hidden;
     padding-block: 10vh;
     position: relative;
     padding-inline: 100px;
@@ -62,13 +65,10 @@
   bottom: 48px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-
-  &:hover {
-    letter-spacing: 3px;
-  }
 }
 
 .main-text {
+  overflow: hidden;
   font-size: 8rem;
   text-transform: uppercase;
   letter-spacing: 42px;
@@ -103,3 +103,4 @@
     right: -112px;
   }
 }
+

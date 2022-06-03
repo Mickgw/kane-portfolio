@@ -2,46 +2,64 @@ import Image1 from "../assets/images/image-1-banner.jpeg";
 import Image2 from "../assets/images/image-2-banner.jpeg";
 import Image3 from "../assets/images/image-3-banner.jpeg";
 
-import React, { useRef, useEffect } from "react";
-import { gsap, Power2 } from "gsap";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 
 const Banner2 = () => {
+  const middleImageDuration = 2;
+
+  gsap
+  .timeline()
+  .to("#banner", {css: {visibility: 'visible'}})
+
   useEffect(() => {
     gsap
       .timeline()
-      .fromTo("#reveal-image", {
-        x: "-100vw",
-      }, {x: 0, duration: 2, ease: Power2.easeIn});
-    // .fromTo(
-    //   "#imnage-container",
-    //   { y: "100" },
-    //   {
-    //     y: 0,
-    //     skewY: 0,
-    //     duration: 1,
-    //     ease: Power2.easeInOut,
-    //   }
-    // )
-    // .fromTo(
-    //   "#reveal-image",
-    //   { y: 25 },
-    //   {
-    //     y: 0,
-    //     delay: -1,
-    //     ease: Power2.easeInOut,
-    //   }
-    // );
+      .fromTo(
+        "#reveal-middle-image",
+        { scale: 0, opacity: 0 },
+        { duration: middleImageDuration, opacity: 1, scale: 1 }
+      );
   });
 
+  useEffect(() => {
+    gsap
+      .timeline()
+      .fromTo(
+        "#reveal-image-left",
+        {
+          y: -100,
+          opacity: 0,
+        },
+        { delay: 1, y: 0, opacity: 1, duration: 1 }
+      )
+      .fromTo(
+        "#reveal-image-right",
+        {
+          y: 100,
+          opacity: 0,
+        },
+        { y: 0, opacity: 1, delay: -0.5, duration: 1 }
+      )
+      .fromTo(
+        "#reveal-banner-text",
+        { opacity: 0 },
+        { duration: 3, opacity: 1 }
+      )
+  });
+
+
   return (
-    <div className="banner">
+    <div id="banner" className="banner">
       <div className="container">
         <div className="row">
-          <div className="main-text">kane jansen</div>
+          <div id="reveal-banner-text" className="main-text">
+            kane jansen
+          </div>
           <div className="section left">
             <div className="inner-section">
               <img
-                id="reveal-image"
+                id="reveal-image-left"
                 className="side-image left"
                 src={Image1}
                 alt="left"
@@ -49,21 +67,31 @@ const Banner2 = () => {
             </div>
             <div className="inner-section" />
           </div>
-          <div className="section middle">
-            <img className="main-image" src={Image2} alt="middle" />
+          <div id="middle-image-container" className="section middle">
+            <img
+              id="reveal-middle-image"
+              className="main-image"
+              src={Image2}
+              alt="middle"
+            />
           </div>
           <div className="section right">
             <div className="inner-section" />
             <div className="inner-section">
-              <img className="side-image right" src={Image3} alt="right" />
+              <img
+                id="reveal-image-right"
+                className="side-image right"
+                src={Image3}
+                alt="right"
+              />
             </div>
           </div>
         </div>
-        <div className="scroll">
+        <div id="scrolldown-text" className="scroll">
           <span>Scroll down</span>
         </div>
       </div>
-      <div className="fixed-misc">
+      <div id="misc" className="fixed-misc">
         Arnhem, The Netherlands - 51°58'48"N, 5°54'40"E
       </div>
     </div>
