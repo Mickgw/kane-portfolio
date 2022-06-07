@@ -10,7 +10,8 @@ const Banner2 = () => {
   const ImageDuration = 1;
 
   useEffect(() => {
-      timeline
+      gsap
+      .timeline()
       .fromTo(
         "#reveal-image-left",
         {
@@ -62,7 +63,6 @@ const Banner2 = () => {
               id="reveal-middle-image"
               className="main-image"
               src={Image2}
-              alt="middle"
             />
           </div>
           <div className="section right">
