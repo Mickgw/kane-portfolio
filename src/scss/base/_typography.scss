@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
+$text-color: rgb(175, 175, 175);
+
 html {
   font-size: 62.5%;
   line-height: 1.25;
@@ -12,4 +14,8 @@ html {
 
 h2 {
   font-size : clamp(2rem, 10vw, 5rem);
+}
+
+.bolded {
+  font-weight: 700;
 }

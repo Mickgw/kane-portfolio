@@ -6,21 +6,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 
 const Banner2 = () => {
-  const middleImageDuration = 2;
-
-  gsap
-  .timeline()
-  .to("#banner", {css: {visibility: 'visible'}})
-
-  useEffect(() => {
-    gsap
-      .timeline()
-      .fromTo(
-        "#reveal-middle-image",
-        { scale: 0, opacity: 0 },
-        { duration: middleImageDuration, opacity: 1, scale: 1 }
-      );
-  });
+  const ImageDuration = 1;
 
   useEffect(() => {
     gsap
@@ -28,10 +14,10 @@ const Banner2 = () => {
       .fromTo(
         "#reveal-image-left",
         {
-          y: -100,
+          y: 100,
           opacity: 0,
         },
-        { delay: 1, y: 0, opacity: 1, duration: 1 }
+        { delay: 1, y: 0, opacity: 1, duration: ImageDuration }
       )
       .fromTo(
         "#reveal-image-right",
@@ -39,15 +25,19 @@ const Banner2 = () => {
           y: 100,
           opacity: 0,
         },
-        { y: 0, opacity: 1, delay: -0.5, duration: 1 }
+        { y: 0, opacity: 1, delay: -0.5, duration: ImageDuration }
+      )
+      .fromTo(
+        "#reveal-middle-image",
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, delay: -0.5, duration: ImageDuration }
       )
       .fromTo(
         "#reveal-banner-text",
         { opacity: 0 },
         { duration: 3, opacity: 1 }
-      )
+      );
   });
-
 
   return (
     <div id="banner" className="banner">

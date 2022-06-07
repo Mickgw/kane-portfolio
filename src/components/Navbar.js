@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { NavLink, Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,18 +9,24 @@ const Navbar = () => {
       transition={{
         ease: "easeInOut",
         duration: 1,
-        delay: 0.6,
+        delay: 3,
       }}
       className="navbar"
     >
       <div className="navbar-inner">
         <div className="logo">
-          <Link to="/"><h1>kane</h1></Link>
+          <h1>kane</h1>
         </div>
         <nav className="nav">
-          <NavLink to="/about">Portfolio</NavLink>
-          <NavLink to="/work">About</NavLink>
-          <NavLink to="/contact">Video</NavLink>
+          <span className="navlink">
+            <NavLink to="/about">Portfolio</NavLink>
+          </span>
+          <span className="navlink">
+            <NavLink to="/work">About</NavLink>
+          </span>
+          <span className="navlink">
+            <NavLink to="/contact">Video</NavLink>
+          </span>
         </nav>
       </div>
     </motion.div>

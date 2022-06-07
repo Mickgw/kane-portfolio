@@ -11,12 +11,18 @@
 @import "components/main-loader";
 @import "components/page-loader";
 @import "components/banner";
+@import "components/homeAbout";
 
 body {
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
 }
 
 .App {
-  margin-inline: 12vw;
+  margin-inline: 15vw;
 }

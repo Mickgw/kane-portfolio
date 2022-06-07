@@ -1,7 +1,6 @@
 $letter-spacing-banner-text: 42px;
 
 .banner {
-  // visibility: hidden;
   background-color: $white;
   height: 100vh;
 
@@ -89,7 +88,7 @@ $letter-spacing-banner-text: 42px;
 }
 
 .fixed-misc {
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: -100px;
   transform: rotate(90deg);

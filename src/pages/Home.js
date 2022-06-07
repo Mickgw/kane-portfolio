@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap, Power2 } from "gsap";
 
 import Banner from "../components/Banner";
+import HomeAbout from "../components/about/HomeAbout";
 
 const Home = () => {
   let container = useRef(null);
@@ -19,6 +20,7 @@ const Home = () => {
   return (
     <>
       <Banner />
+      <HomeAbout />
     </>
   );
 };
