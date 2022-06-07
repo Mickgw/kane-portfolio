@@ -11,9 +11,11 @@
 @import "components/main-loader";
 @import "components/page-loader";
 @import "components/banner";
-@import "components/homeAbout";
+@import "components/home-about";
+@import "components/photo-albums";
 
 body {
+  overflow-x: hidden;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 

@@ -3,6 +3,7 @@ import { gsap, Power2 } from "gsap";
 
 import Banner from "../components/Banner";
 import HomeAbout from "../components/about/HomeAbout";
+import PhotoAlbums from "../components/albums/PhotoAlbums";
 
 const Home = () => {
   let container = useRef(null);
@@ -21,6 +22,7 @@ const Home = () => {
     <>
       <Banner />
       <HomeAbout />
+      <PhotoAlbums />
     </>
   );
 };

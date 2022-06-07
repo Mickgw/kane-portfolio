@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { gsap, Power2, scrollTrigger } from "gsap";
+import { gsap, Power4, Power3, scrollTrigger } from "gsap";
 
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
@@ -9,20 +9,26 @@ import Arrow from "../../assets/images/arrow-down-svgrepo-com.svg";
 const HomeAbout = () => {
   useEffect(() => {
     var timeline = gsap.timeline();
-    const ImageDuration = 1;
 
-    timeline.fromTo(
-      "#image-container",
-      { y: "100vh" },
-      { y: 0, ease: Power2.inOut, duration: ImageDuration }
-    );
-    timeline.fromTo(
-      "#portrait",
-      {
-        scale: 1.4,
-      },
-      { scale: 1, delay: -ImageDuration, duration: ImageDuration * 2 }
-    );
+    const ImageDuration = 1.5;
+
+    timeline
+      .fromTo(
+        "#image-container",
+        { x: "100vw", skewY: 15 },
+        { x: 0, skewY: 0, ease: Power4.inOut, duration: ImageDuration }
+      )
+      .fromTo(
+        "#portrait",
+        {
+          scale: 1.2,
+        },
+        { scale: 1, delay: -ImageDuration, duration: ImageDuration * 2 }
+      );
+
+    timeline
+      .from("#header-content-line", { y: 100, duration: 1, delay: -1 })
+
   });
 
   return (
@@ -33,17 +39,17 @@ const HomeAbout = () => {
             <div className="home-about-content-inner">
               <h1>
                 <div className="home-about-content-line">
-                  <div className="home-about-content-line-inner">
+                  <div id="header-content-line" className="home-about-content-line-inner">
                     I am currently a <span class="bolded">student</span>
                   </div>
                 </div>
                 <div className="home-about-content-line">
-                  <div className="home-about-content-line-inner">
+                  <div id="header-content-line" className="home-about-content-line-inner">
                     at <span class="bolded">Rijn Ijssel Arnhem</span> studying
                   </div>
                 </div>
                 <div className="home-about-content-line">
-                  <div className="home-about-content-line-inner">
+                  <div id="header-content-line" className="home-about-content-line-inner">
                     <span class="bolded">Visual and Sound design</span>
                   </div>
                 </div>
