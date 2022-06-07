@@ -6,11 +6,11 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 
 const Banner2 = () => {
+  var timeline = gsap.timeline();
   const ImageDuration = 1;
 
   useEffect(() => {
-    gsap
-      .timeline()
+      timeline
       .fromTo(
         "#reveal-image-left",
         {
