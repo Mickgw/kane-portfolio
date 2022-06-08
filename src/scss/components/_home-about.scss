@@ -27,7 +27,22 @@
               height: 60px;
               overflow: hidden;
             }
+            padding-left: -50px;
+            border-left: 5px solid $forest-green;
+
+            &:before {
+              position: absolute;
+              content: "";
+              width: 56px;
+              height: 1px;
+              background: #dfdfdf;
+              top: 50%;
+              left: -68px;
+            }
           }
+
+
+          
 
           p {
             margin-block: 2em;

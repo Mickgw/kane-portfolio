@@ -2,20 +2,6 @@ $year-date-color: rgba(255, 255, 255, 0.6);
 $card-spacing: 3em;
 $card-content-padding: 1em;
 
-.divider-text {
-    color: grey;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    letter-spacing: 3px;
-}
-
-.divider {
-    border: none !important;
-    height: 1px;
-    background-color: $divider-color;
-    margin-block: 1.3em;
-}
-
 .photo-albums {
     padding-block: 5em;
     .container {

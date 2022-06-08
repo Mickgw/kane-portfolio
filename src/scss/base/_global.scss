@@ -3,3 +3,17 @@
 body {
   background: $background;
 }
+
+.divider-text {
+  color: grey;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.divider {
+  border: none !important;
+  height: 1px;
+  background-color: $divider-color;
+  margin-block: 1.3em;
+}

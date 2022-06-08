@@ -41,7 +41,7 @@ const Banner2 = () => {
         { opacity: 0 },
         { duration: 3, opacity: 1 }
       )
-      // .fromTo("#scrolldown-text", { y: 0, opacity: 0}, {y: 200, opacity: 1, duration: 1});
+      .fromTo("#scrolldown-text", { y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1});
   });
 
 

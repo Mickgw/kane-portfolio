@@ -50,7 +50,7 @@ const HomeAbout = () => {
                 </div>
                 <div className="home-about-content-line">
                   <div id="header-content-line" className="home-about-content-line-inner">
-                    <span class="bolded">visual and sound design</span>
+                    <span class="bolded">audio visual specialist</span>
                   </div>
                 </div>
               </h1>

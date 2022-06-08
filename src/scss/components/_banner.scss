@@ -64,7 +64,7 @@ $letter-spacing-banner-text: 42px;
   position: absolute;
   bottom: 48px;
   transition: 0.5s ease-in-out;
-  // animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
 }
 
 @keyframes bounce {
@@ -109,7 +109,7 @@ $letter-spacing-banner-text: 42px;
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 1.5px;
-  color: rgb(145, 145, 145);
+  color: rgb(190, 190, 190);
   z-index: 8;
   @media (max-width: 1440px) {
     right: -112px;

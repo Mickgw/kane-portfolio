@@ -6,25 +6,36 @@
             padding-block: 5em;
             height: 30vh;
             width: 100%;
-            display: flex;
+            display: grid;
             grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 100px;
 
             .section {
                 width: 100%;
 
                 &.email {
+                    .email-header-one {
+                        padding-top: 1em;
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+
+                    .contact-paragraph {
+                        color: grey;
+                        padding-block: 2em;
+                        font-size: 1.4rem;
+                    }
                     a {
                         text-decoration: none;
+                        font-weight: 700;
 
                         color: $black;
                         font-family: 700;
-                        font-size: 6rem;
+                        font-size: 2.3rem;
                     }
-
                 }
 
                 &.socials {
-
                 }
             }
         }
