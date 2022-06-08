@@ -4,6 +4,7 @@ import Image3 from "../assets/images/image-3-banner.jpeg";
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { useForceUpdate } from "framer-motion";
 
 const Banner2 = () => {
   var timeline = gsap.timeline();
@@ -12,6 +13,8 @@ const Banner2 = () => {
   useEffect(() => {
       gsap
       .timeline()
+      .to("#banner", { autoAlpha: 1, duration: 0 }) //Prevents white flash
+
       .fromTo(
         "#reveal-image-left",
         {
@@ -37,8 +40,10 @@ const Banner2 = () => {
         "#reveal-banner-text",
         { opacity: 0 },
         { duration: 3, opacity: 1 }
-      );
+      )
+      // .fromTo("#scrolldown-text", { y: 0, opacity: 0}, {y: 200, opacity: 1, duration: 1});
   });
+
 
   return (
     <div id="banner" className="banner">

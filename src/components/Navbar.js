@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <div className="navbar-inner">
         <div className="logo">
-          <h1>kane</h1>
+          <Link to="/"><h1>kane</h1></Link>
         </div>
         <nav className="nav">
           <span className="navlink">

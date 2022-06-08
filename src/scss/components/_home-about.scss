@@ -1,17 +1,23 @@
 .home-about {
-  margin-block: 30vh;
+  margin-block: 20vh;
   height: 100vh;
   .container {
+    margin: 0 auto;
+
     .home-about-inner {
       display: flex;
       grid-template-columns: repeat(1, 1fr);
       height: 100vh;
+
       .home-about-content {
         width: 100%;
+        margin: 0 auto;
+
         .home-about-content-inner {
-        padding-top: 20em;
+          padding-top: 25em;
           width: 90%;
           color: #323232;
+
           h1 {
             font-weight: 500;
             font-size: 3.8rem;
@@ -22,6 +28,7 @@
               overflow: hidden;
             }
           }
+
           p {
             margin-block: 2em;
             font-size: 1.43rem;
@@ -29,12 +36,15 @@
             font-weight: 300;
             padding-right: 48px;
           }
+
           .btn-row {
             position: relative;
             display: flex;
+
             a {
               text-decoration: none;
             }
+
             &:before {
               position: absolute;
               content: "";
@@ -44,6 +54,7 @@
               top: 50%;
               left: -68px;
             }
+
             button {
               font-family: "Poppins";
               text-decoration: none;
@@ -64,13 +75,14 @@
                 color: $black-text-hover;
 
                 .arrow-icon {
-                    background-color: $black;
+                  background-color: $black-text-hover;
                 }
               }
 
               &:focus {
                 outline: none;
               }
+
               .arrow-icon {
                 position: absolute;
                 display: flex;
@@ -86,11 +98,11 @@
                 transition: 0.3s ease-in-out;
 
                 img {
-                    width: 60%;
+                  width: 60%;
                 }
 
                 &:hover {
-                  background-color: $black;
+                  background-color: $black-text-hover;
                 }
               }
             }
@@ -113,12 +125,14 @@
           .home-about-image {
             position: absolute;
             overflow: hidden;
+
             &.right {
               top: 0;
               right: 0px;
               width: 48%;
               height: 70%;
             }
+
             &.left {
               bottom: 8em;
 
@@ -126,7 +140,9 @@
               width: 48%;
               height: 70%;
             }
+
             img {
+              padding-block: 50px;
               position: absolute;
               top: 0;
               left: 0;

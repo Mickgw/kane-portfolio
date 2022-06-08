@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { gsap, Power4, Power3, scrollTrigger } from "gsap";
+import { gsap, Power4 } from "gsap";
 
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
@@ -21,9 +21,9 @@ const HomeAbout = () => {
       .fromTo(
         "#portrait",
         {
-          scale: 1.2,
+          scale: 1.3,
         },
-        { scale: 1, delay: -ImageDuration, duration: ImageDuration * 2 }
+        { scale: 1, delay: -ImageDuration, duration: ImageDuration * 1.5 }
       );
 
     timeline
@@ -50,7 +50,7 @@ const HomeAbout = () => {
                 </div>
                 <div className="home-about-content-line">
                   <div id="header-content-line" className="home-about-content-line-inner">
-                    <span class="bolded">Visual and Sound design</span>
+                    <span class="bolded">visual and sound design</span>
                   </div>
                 </div>
               </h1>

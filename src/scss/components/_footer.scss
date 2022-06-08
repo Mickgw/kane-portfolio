@@ -1,0 +1,62 @@
+.footer {
+    bottom: 0;
+
+    .container {
+        .email-and-socials {
+            padding-block: 5em;
+            height: 30vh;
+            width: 100%;
+            display: flex;
+            grid-template-rows: repeat(2, 1fr);
+
+            .section {
+                width: 100%;
+
+                &.email {
+                    a {
+                        text-decoration: none;
+
+                        color: $black;
+                        font-family: 700;
+                        font-size: 6rem;
+                    }
+
+                }
+
+                &.socials {
+
+                }
+            }
+        }
+        .bottom-footer-row {
+            padding-block: 5em;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: grey;
+
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+
+            .copyright {
+            }
+
+            .local-time {
+            }
+
+            .made-by {
+                a {
+                    text-decoration: none;
+                    color: grey;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
