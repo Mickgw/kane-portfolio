@@ -4,10 +4,9 @@ import Image3 from "../assets/images/image-3-banner.jpeg";
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import { useForceUpdate } from "framer-motion";
 
 const Banner2 = () => {
-  var timeline = gsap.timeline();
+  // var timeline = gsap.timeline();
   const ImageDuration = 1;
 
   useEffect(() => {
@@ -68,6 +67,7 @@ const Banner2 = () => {
               id="reveal-middle-image"
               className="main-image"
               src={Image2}
+              alt="middle"
             />
           </div>
           <div className="section right">
