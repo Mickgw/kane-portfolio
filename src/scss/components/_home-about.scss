@@ -19,6 +19,7 @@
           color: #323232;
 
           h1 {
+            position: relative;
             font-weight: 500;
             font-size: 3.8rem;
             margin-bottom: 24px;
@@ -27,17 +28,14 @@
               height: 60px;
               overflow: hidden;
             }
-            padding-left: -50px;
-            border-left: 5px solid $forest-green;
 
             &:before {
               position: absolute;
               content: "";
-              width: 56px;
-              height: 1px;
-              background: #dfdfdf;
-              top: 50%;
-              left: -68px;
+              width: 5px;
+              height: 90%;
+              background: grey;
+              left: -40px;
             }
           }
 

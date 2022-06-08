@@ -2,21 +2,19 @@
     bottom: 0;
 
     .container {
-        .email-and-socials {
-            padding-block: 5em;
+        .top-footer-row {
+            padding-block: 20em;
             height: 30vh;
             width: 100%;
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 100px;
+            display: flex;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 2rem;
 
             .section {
-                width: 100%;
-
                 &.email {
                     .email-header-one {
                         padding-top: 1em;
-                        font-size: 2rem;
+                        font-size: 2.4rem;
                         font-weight: 700;
                     }
 
@@ -35,10 +33,24 @@
                     }
                 }
 
-                &.socials {
+                &.navigation {
+                    margin: 0 auto;
+                    .footer-nav {
+                        .footer-nav-link {
+                            padding-block: 10px;
+
+                            a {
+                                text-decoration: none;
+                                font-size: 8rem;
+                                font-weight: 500;
+                                color: $black;
+                            }
+                        }
+                    }
                 }
             }
         }
+
         .bottom-footer-row {
             padding-block: 5em;
             font-size: 1.1em;
