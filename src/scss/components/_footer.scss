@@ -7,34 +7,68 @@
             height: 30vh;
             width: 100%;
             display: flex;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 2rem;
 
             .section {
-                &.email {
-                    .email-header-one {
-                        padding-top: 1em;
-                        font-size: 2.4rem;
-                        font-weight: 700;
-                    }
+                width: 100%;
+                &.email-socials {
+                    .email {
+                        .email-header-one {
+                            padding-top: 1em;
+                            font-size: 2.4rem;
+                            font-weight: 700;
+                        }
 
-                    .contact-paragraph {
-                        color: grey;
-                        padding-block: 2em;
-                        font-size: 1.4rem;
-                    }
-                    a {
-                        text-decoration: none;
-                        font-weight: 700;
+                        .contact-paragraph {
+                            color: grey;
+                            padding-block: 2em;
+                            font-size: 1.4rem;
+                        }
+                        a {
+                            text-decoration: none;
+                            font-weight: 700;
 
-                        color: $black;
-                        font-family: 700;
-                        font-size: 2.3rem;
+                            color: $black;
+                            font-family: 700;
+                            font-size: 2.3rem;
+                        }
+                    }
+                    .socials {
+                        padding-top: 50px;
+                        .socialbtns,
+                        .socialbtns ul,
+                        .socialbtns li {
+                            padding: 5px;
+                        }
+
+                        .socialbtns li {
+                            list-style: none outside none;
+                            display: inline-block;
+                        }
+
+                        .socialbtns .fa {
+                            width: 40px;
+                            height: 28px;
+                            color: #000;
+                            background-color: #fff;
+                            border: 1px solid #000;
+                            padding-top: 12px;
+                            border-radius: 22px;
+                            -moz-border-radius: 22px;
+                            -webkit-border-radius: 22px;
+                            -o-border-radius: 22px;
+                        }
+
+                        .socialbtns .fa:hover {
+                            color: #ffffff;
+                            background-color: #000;
+                            border: 1px solid #000;
+                        }
                     }
                 }
 
                 &.navigation {
-                    margin: 0 auto;
                     .footer-nav {
                         .footer-nav-link {
                             padding-block: 10px;

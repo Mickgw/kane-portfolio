@@ -9,12 +9,7 @@ const Footer = () => {
       <div className='footer'>
         <div className='container'>
           <div className='top-footer-row'>
-            <div className='section email'>
-              <span className="divider-text">contact</span>
-              <h1 className='email-header-one'>Your story captured by me</h1>
-              <p className='contact-paragraph'>Are you interested in me capturing your story? Feel free to reach out to me anytime</p>
-              <a href='mailto:kanejansen@hotmail.nl'>Let's work together &#x279E;</a>
-            </div>
+
             {/* <div className='section socials'>
               <div class="buttons">
                 <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -34,14 +29,38 @@ const Footer = () => {
                 <li className='footer-nav-link'><Link to="/motion">Motion</Link></li>
               </ul>
             </div>
-            <div className='footer-navigation'></div>
+            <div className='section email-socials'>
+              <div className='email'>
+                <span className="divider-text">contact</span>
+                <h1 className='email-header-one'>Your story captured by me</h1>
+                <p className='contact-paragraph'>Are you interested in me capturing your story? Feel free to reach out to me anytime</p>
+                <a href='mailto:kanejansen@hotmail.nl'>Let's work together &#x279E;</a>
+              </div>
+              <div className='socials'>
+                <div class="socialbtns"> {/* https://codepen.io/hayran/pen/RPVJJZ */}
+                  <ul>
+                    <li><a href="#" class="fa fa-lg fa-facebook">wef</a></li>
+                    <li><a href="#" class="fa fa-lg fa-twitter">wef</a></li>
+                    <li><a href="#" class="fa fa-lg fa-google-plus"></a></li>
+                    <li><a href="#" class="fa fa-lg fa-github"></a></li>
+                    <li><a href="#" class="fa fa-lg fa-pinterest"></a></li>
+                    <li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+                    <li><a href="#" class="fa fa-lg fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-lg fa-youtube"></a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+            </div>
           </div>
 
 
           <div className='bottom-footer-row'>
             <div className='copyright'>© copyright Kane Jansen</div>
 
-            <div className="local-time"><Moment interval={1000} format="LT" /></div>
+            <div className="local-time">localtime - <Moment interval={1000} format="LT" /></div>
             <div className='made-by'>made by <a href='https://www.mickwaanders.dev' rel="noreferrer noopener" target="_blank">mick waanders</a></div>
           </div>
 
