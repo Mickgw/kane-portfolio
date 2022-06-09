@@ -45,7 +45,7 @@ const HomeAbout = () => {
                 </div>
                 <div className="home-about-content-line">
                   <div id="header-content-line" className="home-about-content-line-inner">
-                    at <span class="bolded">Rijn Ijssel Arnhem</span> studying
+                    at <span class="bolded">Rijn IJssel Arnhem</span> studying
                   </div>
                 </div>
                 <div className="home-about-content-line">

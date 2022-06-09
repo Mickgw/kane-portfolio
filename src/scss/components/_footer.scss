@@ -3,7 +3,7 @@
 
     .container {
         .top-footer-row {
-            padding-block: 20em;
+            padding-block: 30em;
             height: 30vh;
             width: 100%;
             display: flex;
@@ -32,38 +32,35 @@
                             color: $black;
                             font-family: 700;
                             font-size: 2.3rem;
+
+                            .email-arrow {
+                                font-size: 0.9em;
+                            }
+
+                            &:hover {
+                                color: blue;
+                            }
                         }
                     }
                     .socials {
-                        padding-top: 50px;
-                        .socialbtns,
-                        .socialbtns ul,
-                        .socialbtns li {
-                            padding: 5px;
-                        }
+                        font-size: 2rem;
+                        padding-top: 6em;
 
-                        .socialbtns li {
-                            list-style: none outside none;
-                            display: inline-block;
-                        }
+                        .social-link {
+                            .icon {
+                                width: 20px;
+                                margin-right: 1em;
+                                padding: 12px;
+                                border-radius: 50%;
+                                border: 2px solid $black;
+                                color: black;
+                                transition: 0.3s ease-in-out;
 
-                        .socialbtns .fa {
-                            width: 40px;
-                            height: 28px;
-                            color: #000;
-                            background-color: #fff;
-                            border: 1px solid #000;
-                            padding-top: 12px;
-                            border-radius: 22px;
-                            -moz-border-radius: 22px;
-                            -webkit-border-radius: 22px;
-                            -o-border-radius: 22px;
-                        }
-
-                        .socialbtns .fa:hover {
-                            color: #ffffff;
-                            background-color: #000;
-                            border: 1px solid #000;
+                                &:hover {
+                                    background-color: black;
+                                    color: white;
+                                }
+                            }
                         }
                     }
                 }
@@ -71,13 +68,23 @@
                 &.navigation {
                     .footer-nav {
                         .footer-nav-link {
-                            padding-block: 10px;
+                            padding-block: 20px;
 
                             a {
                                 text-decoration: none;
                                 font-size: 8rem;
                                 font-weight: 500;
                                 color: $black;
+                                transition: 0.3s ease-in-out;
+                            }
+
+                            .active {                              
+                                &:before { 
+                                    display: block;
+                                    float: left;
+                                    margin-left: -1.5em; 
+                                    content: "\279C"; 
+                                  }
                             }
                         }
                     }
@@ -86,31 +93,42 @@
         }
 
         .bottom-footer-row {
-            padding-block: 5em;
+            padding-block: 3em;
             font-size: 1.1em;
             font-weight: 500;
             color: grey;
+            text-transform: uppercase;
 
             width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-transform: uppercase;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 2rem;
 
-            .copyright {
-            }
+            .section {
+                width: 100%;
 
-            .local-time {
-            }
+                &.left {
+                    .copyright {
+                    }
+                }
 
-            .made-by {
-                a {
-                    text-decoration: none;
-                    color: grey;
-                    transition: 0.3s ease-in-out;
+                &.right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .local-time {
+                    }
 
-                    &:hover {
-                        color: black;
+                    .made-by {
+                        a {
+                            text-decoration: none;
+                            color: grey;
+                            transition: 0.3s ease-in-out;
+
+                            &:hover {
+                                color: black;
+                            }
+                        }
                     }
                 }
             }
