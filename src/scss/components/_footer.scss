@@ -3,8 +3,7 @@
 
     .container {
         .top-footer-row {
-            padding-block: 30em;
-            height: 30vh;
+            padding-block: 20em;
             width: 100%;
             display: flex;
             grid-template-rows: repeat(2, 1fr);
@@ -26,26 +25,35 @@
                             padding-block: 2em;
                             font-size: 1.4rem;
                         }
-                        a {
-                            text-decoration: none;
-                            font-weight: 700;
+                        .email-link {
+                            padding-block: 3em;
+                            a {
+                                position: absolute;
+                                text-decoration: none;
+                                font-weight: 700;
 
-                            color: $black;
-                            font-family: 700;
-                            font-size: 2.3rem;
+                                color: $black;
+                                font-family: 700;
+                                font-size: 4rem;
 
-                            .email-arrow {
-                                font-size: 0.9em;
-                            }
+                                .email-arrow {
+                                    transition: 0.3s ease-in-out;
+                                    font-size: 0.9em;
+                                }
 
-                            &:hover {
-                                color: blue;
+                                &:hover {
+                                    color: $black-text-hover;
+                                    
+                                    .email-arrow {
+                                        padding-left: 10px;
+                                    }
+                                }
                             }
                         }
                     }
                     .socials {
+                        padding-top: 8em;
                         font-size: 2rem;
-                        padding-top: 3.5em;
 
                         .social-link {
                             .icon {
@@ -76,16 +84,25 @@
                                 font-size: 8rem;
                                 font-weight: 500;
                                 color: $black;
-                                transition: 0.3s ease-in-out;
+                                transition: 0.5s ease-in-out;
+
+                                &:hover {
+                                    color: rgb(78, 78, 78);
+                                    letter-spacing: 1.5px;
+                                }
                             }
 
-                            .active {                              
-                                &:before { 
-                                    display: block;
+                            .active {
+                                transition: 0.5s ease-in-out;
+                                pointer-events: none;
+
+                                &:before {
+                                    color: $black;
+                                    opacity: 1;
                                     float: left;
-                                    margin-left: -1.5em; 
-                                    content: "\279C"; 
-                                  }
+                                    margin-left: -1.5em;
+                                    content: "\279C";
+                                }
                             }
                         }
                     }

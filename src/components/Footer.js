@@ -21,13 +21,16 @@ const Footer = () => {
               <ul className="footer-nav">
                 <li className="footer-nav-link">
                   <NavLink
-                    to="/portfolio"
+                    to="/"
                     className={({ isActive }) =>
                       isActive ? "active" : "not-active"
                     }
                   >
-                    Portfolio
+                    Home
                   </NavLink>
+                </li>
+                <li className="footer-nav-link">
+                  <NavLink to="/portfolio">Portfolio</NavLink>
                 </li>
                 <li className="footer-nav-link">
                   <NavLink to="/about">About</NavLink>
@@ -45,15 +48,17 @@ const Footer = () => {
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam, eaque
                   ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. 
+                  beatae vitae dicta sunt explicabo.
                 </p>
-                <a href="mailto:kanejansen@hotmail.nl">
-                  Let's work together{" "}
-                  <FontAwesomeIcon
-                    icon={faArrowRightLong}
-                    className="email-arrow"
-                  />
-                </a>
+                <div className="email-link">
+                  <a href="mailto:kanejansen@hotmail.nl">
+                    Let's work together{" "}
+                    <FontAwesomeIcon
+                      icon={faArrowRightLong}
+                      className="email-arrow"
+                    />
+                  </a>
+                </div>
               </div>
               <div className="socials">
                 <a href="/" className="social-link">

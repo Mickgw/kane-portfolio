@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap, Power4 } from "gsap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
@@ -26,9 +28,7 @@ const HomeAbout = () => {
         { scale: 1, delay: -ImageDuration, duration: ImageDuration * 1.5 }
       );
 
-    timeline
-      .from("#header-content-line", { y: 100, duration: 1, delay: -1 })
-
+    timeline.from("#header-content-line", { y: 100, duration: 1, delay: -1 });
   });
 
   return (
@@ -39,17 +39,26 @@ const HomeAbout = () => {
             <div className="home-about-content-inner">
               <h1>
                 <div className="home-about-content-line">
-                  <div id="header-content-line" className="home-about-content-line-inner">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
                     I am currently a <span class="bolded">student</span>
                   </div>
                 </div>
                 <div className="home-about-content-line">
-                  <div id="header-content-line" className="home-about-content-line-inner">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
                     at <span class="bolded">Rijn IJssel Arnhem</span> studying
                   </div>
                 </div>
                 <div className="home-about-content-line">
-                  <div id="header-content-line" className="home-about-content-line-inner">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
                     <span class="bolded">audio visual specialist</span>
                   </div>
                 </div>
@@ -75,7 +84,10 @@ const HomeAbout = () => {
                 <button className="view-collection-button">
                   view photo albums
                   <div className="arrow-icon">
-                    <img src={Arrow} alt="row" />
+                    <FontAwesomeIcon
+                      icon={faArrowDownLong}
+                      className="arrow-down-icon"
+                    />
                   </div>
                 </button>
               </div>

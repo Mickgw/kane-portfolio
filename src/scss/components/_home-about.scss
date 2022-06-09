@@ -39,9 +39,6 @@
             }
           }
 
-
-          
-
           p {
             margin-block: 2em;
             font-size: 1.43rem;
@@ -89,6 +86,7 @@
 
                 .arrow-icon {
                   background-color: $black-text-hover;
+                  color: $white;
                 }
               }
 
@@ -97,6 +95,7 @@
               }
 
               .arrow-icon {
+                color: $white;
                 position: absolute;
                 display: flex;
                 align-items: center;
