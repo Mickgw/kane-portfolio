@@ -8,7 +8,7 @@ import {
   faLinkedinIn,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -42,11 +42,17 @@ const Footer = () => {
                 <span className="divider-text">contact and socials</span>
                 <h1 className="email-header-one">Your story captured by me</h1>
                 <p className="contact-paragraph">
-                  Are you interested in me capturing your story? Feel free to
-                  reach out to me anytime
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. 
                 </p>
                 <a href="mailto:kanejansen@hotmail.nl">
-                  Let's work together <FontAwesomeIcon icon={faArrowRightLong}  className="email-arrow"/>
+                  Let's work together{" "}
+                  <FontAwesomeIcon
+                    icon={faArrowRightLong}
+                    className="email-arrow"
+                  />
                 </a>
               </div>
               <div className="socials">
