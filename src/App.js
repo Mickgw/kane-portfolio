@@ -5,12 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Work from "./pages/Work";
-import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import Motion from "./pages/Motion";
 import Footer from "./components/Footer";
 
 function App2() {
-
   return (
     <div className="App">
       <Router>
@@ -21,11 +20,10 @@ function App2() {
         <main>
           <Routes onChange={console.log("link has changed")}>
             <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/motion" element={<Motion />} />
           </Routes>
-
         </main>
 
         <footer>

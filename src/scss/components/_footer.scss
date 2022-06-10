@@ -1,150 +1,171 @@
 .footer {
+    margin-top: 10vh;
     bottom: 0;
 
-    .container {
-        .top-footer-row {
-            padding-block: 20em;
-            width: 100%;
-            display: flex;
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 2rem;
+    .video-container {
+        z-index: -1;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
 
-            .section {
+        video {
+            object-fit: fill;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .container {
+            padding-inline: $wrapper-value;
+            position: relative;
+            z-index: 2;
+            .top-footer-row {
+                padding-block: 20em;
                 width: 100%;
-                &.email-socials {
-                    .email {
-                        .email-header-one {
-                            padding-top: 1em;
-                            font-size: 2.4rem;
-                            font-weight: 700;
-                        }
+                display: flex;
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 2rem;
 
-                        .contact-paragraph {
-                            line-height: 1.7;
-                            color: grey;
-                            padding-block: 2em;
-                            font-size: 1.4rem;
-                        }
-                        .email-link {
-                            padding-block: 3em;
-                            a {
-                                position: absolute;
-                                text-decoration: none;
-                                font-weight: 700;
+                .section {
+                    width: 100%;
+                    &.email-socials {
+                        .email {
+                            .email-header-one {
+                                padding-top: 1em;
+                                font-size: 2.5rem;
+                                font-weight: 300;
+                            }
 
-                                color: $black;
-                                font-family: 700;
-                                font-size: 4rem;
+                            .contact-paragraph {
+                                line-height: 1.7;
+                                color: $text-color;
+                                padding-block: 2em;
+                                font-size: 1.4rem;
+                            }
+                            .email-link {
+                                padding-block: 3em;
+                                a {
+                                    position: absolute;
+                                    text-decoration: none;
+                                    font-weight: 700;
 
-                                .email-arrow {
-                                    transition: 0.3s ease-in-out;
-                                    font-size: 0.9em;
-                                }
+                                    color: $black;
+                                    font-family: 700;
+                                    font-size: 4rem;
 
-                                &:hover {
-                                    color: $black-text-hover;
-                                    
                                     .email-arrow {
-                                        padding-left: 10px;
+                                        transition: 0.3s ease-in-out;
+                                        font-size: 0.9em;
+                                    }
+
+                                    &:hover {
+                                        color: $black-text-hover;
+                                        .email-arrow {
+                                            padding-left: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .socials {
+                            padding-top: 6em;
+                            font-size: 2rem;
+
+                            .social-link {
+                                .icon {
+                                    width: 20px;
+                                    margin-right: 1em;
+                                    padding: 12px;
+                                    border-radius: 50%;
+                                    border: 2px solid $black;
+                                    color: black;
+                                    transition: 0.3s ease-in-out;
+
+                                    &:hover {
+                                        background-color: black;
+                                        color: white;
                                     }
                                 }
                             }
                         }
                     }
-                    .socials {
-                        padding-top: 8em;
-                        font-size: 2rem;
 
-                        .social-link {
-                            .icon {
-                                width: 20px;
-                                margin-right: 1em;
-                                padding: 12px;
-                                border-radius: 50%;
-                                border: 2px solid $black;
-                                color: black;
-                                transition: 0.3s ease-in-out;
+                    &.navigation {
+                        .footer-nav {
+                            .footer-nav-link {
+                                padding-block: 20px;
 
-                                &:hover {
-                                    background-color: black;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.navigation {
-                    .footer-nav {
-                        .footer-nav-link {
-                            padding-block: 20px;
-
-                            a {
-                                text-decoration: none;
-                                font-size: 8rem;
-                                font-weight: 500;
-                                color: $black;
-                                transition: 0.5s ease-in-out;
-
-                                &:hover {
-                                    color: rgb(78, 78, 78);
-                                    letter-spacing: 1.5px;
-                                }
-                            }
-
-                            .active {
-                                transition: 0.5s ease-in-out;
-                                pointer-events: none;
-
-                                &:before {
+                                a {
+                                    text-decoration: none;
+                                    font-size: 8rem;
+                                    font-weight: 500;
                                     color: $black;
-                                    opacity: 1;
-                                    float: left;
-                                    margin-left: -1.5em;
-                                    content: "\279C";
+                                    transition: 0.5s ease-in-out;
+
+                                    &:hover {
+                                        color: rgb(110, 110, 110);
+                                        // letter-spacing: 1.5px;
+                                    }
+                                }
+
+                                .active {
+                                    transition: 0.5s ease-in-out;
+                                    pointer-events: none;
+
+                                    &:before {
+                                        color: $black;
+                                        opacity: 1;
+                                        float: left;
+                                        margin-left: -1.5em;
+                                        content: "\279C";
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
 
-        .bottom-footer-row {
-            padding-block: 3em;
-            font-size: 1.1em;
-            font-weight: 500;
-            color: grey;
-            text-transform: uppercase;
+            .bottom-footer-row {
+                padding-block: 3em;
+                font-size: 1.1em;
+                font-weight: 500;
+                color: grey;
+                text-transform: uppercase;
 
-            width: 100%;
-            display: flex;
-            grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 2rem;
-
-            .section {
                 width: 100%;
+                display: flex;
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 2rem;
 
-                &.left {
-                    .copyright {
+                .section {
+                    width: 100%;
+
+                    &.left {
+                        .copyright {
+                        }
                     }
-                }
 
-                &.right {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    .local-time {
-                    }
+                    &.right {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .local-time {
+                        }
 
-                    .made-by {
-                        a {
-                            text-decoration: none;
-                            color: grey;
-                            transition: 0.3s ease-in-out;
+                        .made-by {
+                            a {
+                                text-decoration: none;
+                                color: grey;
+                                transition: 0.3s ease-in-out;
 
-                            &:hover {
-                                color: black;
+                                &:hover {
+                                    color: black;
+                                }
                             }
                         }
                     }

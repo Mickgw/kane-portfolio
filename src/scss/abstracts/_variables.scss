@@ -4,6 +4,7 @@ $layout-breakpoint-medium: 1440px;
 $layout-breakpoint-small: 960px;
 $layout-breakpoint-xsmall: 480px;
 
+
 // Colors
 $background: #ffffff;
 $white: #fff;
@@ -11,8 +12,9 @@ $black: #000000;
 $forest-green: #134e13;
 
 // Text
-$text-color: rgb(175, 175, 175);
+$text-color: grey;
 $black-text-hover: rgb(107, 107, 107);
 
 //Global
+$wrapper-value: 15vw;
 $divider-color: rgb(212, 212, 212);

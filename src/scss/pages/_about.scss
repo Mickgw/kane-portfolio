@@ -1,0 +1,66 @@
+.about {
+    .container {
+        margin-block: 10vh;
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10%;
+
+            .about-text {
+                .about-header {
+                    padding-bottom: 2em;
+                    .about-header-title {
+                        font-weight: 700;
+                    }
+                }
+
+                .about-paragraph {
+                    padding-block: 3em;
+                    p {
+                        color: $text-color;
+                        font-size: 1.4em;
+                        line-height: 1.7;
+                        padding-bottom: 1.5em;
+                    }
+                }
+
+                .services-and-tools {
+                    padding-block: 2em;
+                    .tools,
+                    .services {
+                        padding-block: 1em;
+
+                        font-size: 2em;
+                        font-weight: 700;
+
+                        em {
+                            color: $text-color;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            .about-images {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .image {
+                    position: relative;
+                    height: 400px;
+                    width: 270px;
+
+                    &.one {
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &.two {
+                        top: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

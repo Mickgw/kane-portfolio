@@ -14,6 +14,7 @@
     "framer-motion": "^6.3.3",
     "gsap": "^3.10.4",
     "moment": "^2.29.3",
+    "netlify-cms": "^2.10.192",
     "react": "^18.1.0",
     "react-delay-render": "^0.1.2",
     "react-dom": "^18.1.0",
@@ -28,9 +29,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node public/main.js && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node public/main.js"
   },
   "eslintConfig": {
     "extends": [

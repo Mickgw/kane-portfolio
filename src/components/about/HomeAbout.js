@@ -6,7 +6,6 @@ import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
-import Arrow from "../../assets/images/arrow-down-svgrepo-com.svg";
 
 const HomeAbout = () => {
   useEffect(() => {

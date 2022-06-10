@@ -19,10 +19,10 @@ const Navbar = () => {
         </div>
         <nav className="nav">
           <span className="navlink">
-            <NavLink to="/about">Portfolio</NavLink>
+            <NavLink to="/portfolio">Portfolio</NavLink>
           </span>
           <span className="navlink">
-            <NavLink to="/work">About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </span>
           <span className="navlink">
             <NavLink to="/motion">Motion</NavLink>
