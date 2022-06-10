@@ -19,23 +19,26 @@ collections:
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"} 
 
-  - name: "portfolio-image" # Used in routes, e.g., /admin/collections/blog
-    label: "Image" # Used in the UI
-    folder: "src/assets/images/image-for-portfolio" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+
+  # Images for portfolio page
+  - name: "portfolio-image"
+    label: "Image"
+    folder: "src/assets/images/image-for-portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - {label: "ID", name: "id", widget: "number"}
       - {label: "Image", name: "image", widget: "image"}
 
-  - name: "photo-album" # Used in routes, e.g., /admin/collections/blog
-    label: "Photo album" # Used in the UI
-    folder: "photo-albums" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  # Photo album
+  - name: "photo-album"
+    label: "Photo album"
+    folder: "photo-albums"
+    create: true
+    slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Year", name: "date", widget: "datetime"}
-      - {label: "Album description", name: "body", widget: "markdown"} 
+      - {label: "Album description", name: "description", widget: "text"} 
 
 
