@@ -37,7 +37,7 @@
                             .email-header-one {
                                 padding-top: 1em;
                                 font-size: 2.5rem;
-                                font-weight: 300;
+                                font-weight: 700;
                             }
 
                             .contact-paragraph {
@@ -76,9 +76,13 @@
                             font-size: 2rem;
 
                             .social-link {
+                                margin-inline: 1em;
+                                &:first-child {
+                                    margin-left: 0px !important;
+                                }
+
                                 .icon {
                                     width: 20px;
-                                    margin-right: 1em;
                                     padding: 12px;
                                     border-radius: 50%;
                                     border: 2px solid $black;
@@ -174,3 +178,26 @@
         }
     }
 }
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
+    transition: $property $duration $ease;
+}
+
+.get-in-touch-button {
+    padding: 0.7em;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: $black;
+    border: 2px solid $black;
+    width: 25rem;
+    border-radius: 3rem;
+    font-family: inherit;
+
+    .button-text {
+
+        // text-transform: uppercase;
+        font-size: 2rem;
+        color: $white;
+    }
+}
+

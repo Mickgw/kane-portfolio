@@ -7,14 +7,15 @@ import {
   faInstagram,
   faLinkedinIn,
   faYoutube,
+  faUnsplash,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-import footerBG from "../assets/videos/footer-bg-video.mp4";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import footerBG from "../assets/videos/footer-bg-test2.mp4";
 
 const Footer = () => {
   return (
     <footer>
-      {/* <hr className="divider" /> */}
+      <hr className="divider" />
 
       <div className="footer">
         <div class="video-container">
@@ -48,9 +49,7 @@ const Footer = () => {
               </div>
               <div className="section email-socials">
                 <div className="email">
-                  <h1 className="email-header-one">
-                    Let me capture your story!
-                  </h1>
+                  <h1 className="email-header-one">Let's work together</h1>
                   <p className="contact-paragraph">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
@@ -61,13 +60,10 @@ const Footer = () => {
                     ratione voluptatem sequi nesciunt.
                   </p>
                   <div className="email-link">
-                    <a href="mailto:kanejansen@hotmail.nl">
-                      Let's work together{" "}
-                      <FontAwesomeIcon
-                        icon={faArrowRightLong}
-                        className="email-arrow"
-                      />
-                    </a>
+                    <button class="get-in-touch-button">
+
+                      <span class="button-text">Get in touch! {" "}<FontAwesomeIcon icon={faPaperPlane} className="icon" /></span>
+                    </button>
                   </div>
                 </div>
                 <div className="socials">
@@ -82,6 +78,9 @@ const Footer = () => {
                   </a>
                   <a href="/" className="social-link">
                     <FontAwesomeIcon icon={faYoutube} className="icon" />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faUnsplash} className="icon" />
                   </a>
                 </div>
               </div>
