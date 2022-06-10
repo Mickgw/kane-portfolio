@@ -48,25 +48,30 @@
                             }
                             .email-link {
                                 padding-block: 3em;
-                                a {
-                                    position: absolute;
-                                    text-decoration: none;
-                                    font-weight: 700;
-
-                                    color: $black;
-                                    font-family: 700;
-                                    font-size: 4rem;
-
-                                    .email-arrow {
-                                        transition: 0.3s ease-in-out;
-                                        font-size: 0.9em;
-                                    }
+                                .get-in-touch-button {
+                                    padding: 0.7em;
+                                    position: relative;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    background-color: $black;
+                                    border: 2px solid $black;
+                                    width: 25rem;
+                                    border-radius: 3rem;
+                                    font-family: inherit;
+                                    transition: 0.3s ease-in-out;
 
                                     &:hover {
-                                        color: $black-text-hover;
-                                        .email-arrow {
-                                            padding-left: 10px;
+                                        background-color: transparent;
+
+                                        .button-text {
+                                            color: $black;
                                         }
+                                    }
+                                
+                                    .button-text {                                
+                                        // text-transform: uppercase;
+                                        font-size: 2rem;
+                                        color: $white;
                                     }
                                 }
                             }
@@ -178,26 +183,7 @@
         }
     }
 }
-@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
-    transition: $property $duration $ease;
-}
 
-.get-in-touch-button {
-    padding: 0.7em;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    background-color: $black;
-    border: 2px solid $black;
-    width: 25rem;
-    border-radius: 3rem;
-    font-family: inherit;
 
-    .button-text {
 
-        // text-transform: uppercase;
-        font-size: 2rem;
-        color: $white;
-    }
-}
 

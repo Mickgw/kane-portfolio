@@ -60,10 +60,17 @@ const Footer = () => {
                     ratione voluptatem sequi nesciunt.
                   </p>
                   <div className="email-link">
-                    <button class="get-in-touch-button">
-
-                      <span class="button-text">Get in touch! {" "}<FontAwesomeIcon icon={faPaperPlane} className="icon" /></span>
-                    </button>
+                    <a href="mailto:kanejansen@hotmail.nl">
+                      <button class="get-in-touch-button">
+                        <span class="button-text">
+                          Get in touch!{" "}
+                          <FontAwesomeIcon
+                            icon={faPaperPlane}
+                            className="icon"
+                          />
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
                 <div className="socials">
