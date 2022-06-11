@@ -1,11 +1,11 @@
-
+// import photoAlbum from "../content/photo-albums"
 
 const Work = () => {
 
   return (
     <>
 
-      <div></div>
+      {/* <div>{photoAlbum.album.map(album => { album.title })}</div> */}
     </>
   );
 };

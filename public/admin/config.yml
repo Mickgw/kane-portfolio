@@ -22,6 +22,7 @@ collections:
   - name: "photo-album"
     label: "Photo album"
     folder: "src/content/photo-albums"
+    file: "content/albums.json"
     create: true
     slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
     fields:
