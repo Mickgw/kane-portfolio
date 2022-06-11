@@ -1,14 +1,23 @@
 
 import test from "../content/photo-albums.json"
 
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(require.context('../content/photo-albums', false, /\.(png|jpe?g|svg)$/));
+
 const Work = () => {
 
 
   return (
     <>
-      <div>{test.title}</div>
+
+    <div>{images['title']}</div>
+      {/* <div>{test.title}</div>
       <br></br>
-      <div>{test.description}</div>
+      <div>{test.description}</div> */}
     </>
   );
 };

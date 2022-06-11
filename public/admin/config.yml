@@ -35,7 +35,7 @@ collections:
     create: true
     folder: "src/content/photo-albums"
     format: "json"
-    slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Year", name: "date", widget: "datetime"}
