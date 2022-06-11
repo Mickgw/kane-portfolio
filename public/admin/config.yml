@@ -35,8 +35,8 @@ collections:
     create: true
     files:
       - file: "src/content/photo-albums.json"
-      label: "Navigation"
-      name: "navigation"
+      label: "Test field"
+      name: "test"
       extension: "json"
       format: "json"
       fields:
