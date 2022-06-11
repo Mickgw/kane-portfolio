@@ -46,21 +46,21 @@ collections:
             widget: list
             required: false
 
-# Test            
-- name: "test field"
-  label: "Settings"
-  extension: "json"
-  editor:
-    preview: false
+  # Test            
+  - name: "test field"
+    label: "Settings"
+    extension: "json"
+    editor:
+      preview: false
 
-  files:
-    - file: "src/data/navigation.json"
-      label: "Navigation"
-      name: "navigation"
+    files:
+      - file: "src/data/navigation.json"
+        label: "Navigation"
+        name: "navigation"
 
-      fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Description", name: "description", widget: "text"} 
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"} 
 
 
 
