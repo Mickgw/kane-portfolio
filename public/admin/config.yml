@@ -57,13 +57,14 @@ collections:
   - name: "list-test"
     label: "Test"
     widget: "list"
-    file: "src/content/photo-albums"
     format: "json"
     create: true
-    slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+    files: 
+      - file: "src/content/photo-albums"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+
 
 
 
