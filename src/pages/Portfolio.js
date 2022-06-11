@@ -1,4 +1,4 @@
-// import photoAlbum from "../content/photo-albums"
+// import photoAlbum from "../content/photo-albums/"
 
 const Work = () => {
 
