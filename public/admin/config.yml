@@ -30,7 +30,7 @@ collections:
       - {label: "Album description", name: "description", widget: "text"} 
 
   # Photo album
-  - name: "photo-album"
+  - name: "test field"
     label: "Test"
     folder: "src/content/photo-albums"
     create: true
