@@ -29,35 +29,16 @@ collections:
       - {label: "Year", name: "date", widget: "datetime"}
       - {label: "Album description", name: "description", widget: "text"} 
 
-
-  - name: content
-    folder: "src/content/photo-albums"
-    label: Content
-    files:
-      - label: Resume
-        name: resume
-        file: "content/resume.json"
-        fields:
-          - { label: "Full Name", name: fullname, widget: string, required: false }
-          - { label: Role, name: role, widget: string, required: false }
-          - { label: Summary, name: summary, widget: text, required: false }
-          - label: Experience
-            name: experience
-            widget: list
-            required: false
-
   # Test            
   - name: "test field"
     create: true
     label: "Settings"
     extension: "json"
-    editor:
-      preview: false
 
     files:
       - file: "src/data/navigation.json"
-        label: "Navigation"
-        name: "navigation"
+        label: "Test"
+        name: "test"
 
         fields:
           - {label: "Title", name: "title", widget: "string"}
