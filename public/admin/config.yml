@@ -54,7 +54,7 @@ collections:
   #     - {label: "Album description", name: "description", widget: "text"} 
 
   # Test 3
-  - name: "list test"
+  - name: "list-test"
     label: "Gallery"
     name: "galleryImages"
     widget: "list"
