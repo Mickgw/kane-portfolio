@@ -33,16 +33,11 @@ collections:
   - name: "test field"
     label: "Test"
     create: true
-    extension: "json"
-    files:
-      - file: "src/content/photo-albums.json"
-        label: "Test"
-        name: "test"
-
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Year", name: "date", widget: "datetime"}
-          - {label: "Album description", name: "description", widget: "text"} 
+    file: "src/content/photo-albums.json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Year", name: "date", widget: "datetime"}
+      - {label: "Album description", name: "description", widget: "text"} 
 
 
 
