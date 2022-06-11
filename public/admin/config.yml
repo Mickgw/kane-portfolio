@@ -30,31 +30,20 @@ collections:
       - {label: "Album description", name: "description", widget: "text"} 
 
 
-- name: content
-  label: Content
-  files:
-    - label: Resume
-      name: resume
-      file: "content/resume.json"
-      fields:
-        - { label: "Full Name", name: fullname, widget: string, required: false }
-        - { label: Role, name: role, widget: string, required: false }
-        - { label: Summary, name: summary, widget: text, required: false }
-        - label: Experience
-          name: experience
-          widget: list
-          required: false
-          fields:
-            - { label: Role, name: role, widget: string }
-            - { label: Company, name: company, widget: string }
-            - { label: Description, name: description, widget: markdown }
-            - { label: "Start date", name: start, widget: date, format: 'MM/YYYY' }
-            - { label: "End date", name: end, widget: date, required: false, format: 'MM/YYYY' }
-        - label: Skills
-          name: skills
-          widget: list
-          required: false
-          fields:
-            - { label: Name, name: name, widget: string }
+  - name: content
+    label: Content
+    files:
+      - label: Resume
+        name: resume
+        file: "content/resume.json"
+        fields:
+          - { label: "Full Name", name: fullname, widget: string, required: false }
+          - { label: Role, name: role, widget: string, required: false }
+          - { label: Summary, name: summary, widget: text, required: false }
+          - label: Experience
+            name: experience
+            widget: list
+            required: false
+
 
 
