@@ -32,6 +32,7 @@ collections:
   # Test
   - name: "test-field"
     label: "Test"
+    create: true
     files:
       - file: "src/content/photo-albums.json"
         label: "Test field"
