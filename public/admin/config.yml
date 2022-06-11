@@ -31,6 +31,7 @@ collections:
 
 
   - name: content
+    folder: "src/content/photo-albums"
     label: Content
     files:
       - label: Resume
