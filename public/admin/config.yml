@@ -57,6 +57,7 @@ collections:
   - name: "list-test"
     label: "Test"
     widget: "list"
+    folder: "src/content/photo-albums"
     format: "json"
     create: true
     files: 
