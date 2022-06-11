@@ -48,6 +48,7 @@ collections:
 
   # Test            
   - name: "test field"
+    create: true
     label: "Settings"
     extension: "json"
     editor:

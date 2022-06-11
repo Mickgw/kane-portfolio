@@ -1,11 +1,12 @@
-// import photoAlbum from "../content/photo-albums/"
+import { useEffect } from "react";
+import test from "../data/navigation.json"
 
 const Work = () => {
 
+
   return (
     <>
-
-      {/* <div>{photoAlbum.album.map(album => { album.title })}</div> */}
+      <div>{test.title}</div>
     </>
   );
 };
