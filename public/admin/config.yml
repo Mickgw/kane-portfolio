@@ -29,20 +29,19 @@ collections:
       - {label: "Year", name: "date", widget: "datetime"}
       - {label: "Album description", name: "description", widget: "text"} 
 
-  # Photo album
+  # Test
   - name: "test-field"
     label: "Test"
-    create: true
     files:
       - file: "src/content/photo-albums.json"
-      label: "Test field"
-      name: "test"
-      extension: "json"
-      format: "json"
-      fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Year", name: "date", widget: "datetime"}
-        - {label: "Album description", name: "description", widget: "text"} 
+        label: "Test field"
+        name: "test"
+        extension: "json"
+        format: "json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Year", name: "date", widget: "datetime"}
+          - {label: "Album description", name: "description", widget: "text"} 
 
 
 
