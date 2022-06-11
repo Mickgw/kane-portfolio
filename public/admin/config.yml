@@ -55,12 +55,12 @@ collections:
 
   # Test 3
   - name: "list-test"
-    label: "Gallery"
-    name: "galleryImages"
+    label: "Test"
+    name: "test"
     widget: "list"
     fields:
-      - { label: "Source", name: "src", widget: "string" }
-      - { label: "Alt Text", name: "alt", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
 
 
 
