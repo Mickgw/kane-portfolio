@@ -1,5 +1,5 @@
 
-import test from "../data/navigation.json"
+import test from "../content/navigation.json"
 
 const Work = () => {
 
