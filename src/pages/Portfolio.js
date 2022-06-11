@@ -14,7 +14,7 @@ const Work = () => {
   return (
     <>
 
-    <div>{images['title']}</div>
+    {/* <div>{images['title']}</div> */}
       {/* <div>{test.title}</div>
       <br></br>
       <div>{test.description}</div> */}
