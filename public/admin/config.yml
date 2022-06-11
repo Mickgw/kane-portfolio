@@ -41,6 +41,18 @@ collections:
       - {label: "Year", name: "date", widget: "datetime"}
       - {label: "Album description", name: "description", widget: "text"} 
 
+  # Test 2
+  - name: "test-field 2"
+    label: "Test two"
+    create: true
+    file: "src/content"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Year", name: "date", widget: "datetime"}
+      - {label: "Album description", name: "description", widget: "text"} 
+
 
 
 
