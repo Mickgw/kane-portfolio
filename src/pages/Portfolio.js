@@ -1,14 +1,14 @@
 
-import test from "../content/navigation.json"
+// import test from "../content/navigation.json"
 
 const Work = () => {
 
 
   return (
     <>
-      <div>{test.title}</div>
+      {/* <div>{test.title}</div>
       <br></br>
-      <div>{test.description}</div>
+      <div>{test.description}</div> */}
     </>
   );
 };
