@@ -1,14 +1,12 @@
-// import PageLoader from "../components/loader/PageLoader";
-// import gsap from "gsap";
+
+import posts from "../../posts";
 
 const Work = () => {
-  // const page_loader = gsap.timeline();
 
   return (
     <>
-      {/* <PageLoader timeline={page_loader} /> */}
 
-      <div>This is the work page</div>
+      <div>{ posts.map() }</div>
     </>
   );
 };

@@ -21,7 +21,7 @@ collections:
   # Photo album
   - name: "photo-album"
     label: "Photo album"
-    folder: "photo-albums"
+    folder: "./src/content/photo-albums"
     create: true
     slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
     fields:

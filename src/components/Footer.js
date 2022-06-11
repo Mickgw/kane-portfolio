@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className="section email-socials">
                 <div className="email">
-                  <h1 className="email-header-one">Let's work together</h1>
+                  <h1 className="email-header-one">Let's work together!</h1>
                   <p className="contact-paragraph">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
