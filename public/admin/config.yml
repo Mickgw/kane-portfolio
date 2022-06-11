@@ -57,7 +57,8 @@ collections:
   - name: "list-test"
     label: "Test"
     widget: "list"
-    folder: "src/content/photo-albums"
+    file: "src/content/photo-albums"
+    format: "json"
     create: true
     slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
     fields:
