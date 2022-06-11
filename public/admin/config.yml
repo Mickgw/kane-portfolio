@@ -62,6 +62,8 @@ collections:
     create: true
     files: 
       - file: "src/content/photo-albums"
+        name: "idk"
+        label: "test"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
