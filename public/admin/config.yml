@@ -31,14 +31,17 @@ collections:
 
   - label: "Products-Section"
     name: "Products"
-    file: "src/content/productData.json"
-    fields:
-      - label: "Products"
-        name: "productList"
-        widget: "list"
+    files: 
+      - label: "Menu"
+        name: "menu"
+        file: "src/content/productData.json"
         fields:
-          - {label: "Caption", name: "text", widget: string,}
-          - {label: Image, name: image, widget: image}
+          - label: "Products"
+            name: "productList"
+            widget: "list"
+            fields:
+              - {label: "Caption", name: "text", widget: string,}
+              - {label: Image, name: image, widget: image}
 
   # Test
   # - name: "test-field"
