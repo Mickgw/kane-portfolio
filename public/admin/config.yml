@@ -54,20 +54,11 @@ collections:
   #     - {label: "Album description", name: "description", widget: "text"} 
 
   # Test 3
-  - name: "list-test"
-    label: "Test"
-    widget: "list"
-    folder: "src/content/photo-albums"
+  - name: test
+    label: Test
     format: "json"
-    create: true
-    files: 
-      - file: "src/content/photo-albums"
-        name: "idk"
-        label: "test"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-
+    file: "src/content/photo-albums.json" # this only makes sense for file collections
+    field: [{ name: title, label: Title, widget: string }, { name: description, label: Description, widget: string}]
 
 
 
