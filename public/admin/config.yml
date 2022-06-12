@@ -29,16 +29,16 @@ collections:
       - {label: "Year", name: "date", widget: "datetime"}
       - {label: "Album description", name: "description", widget: "text"} 
 
-  - label: "Products Section"
-      name: "Products"
-      file: "src/content/productData.json"
-      fields:
-        - label: "Products"
-          name: "productList"
-          widget: "list"
-          fields:
-            - {label: "Caption", name: "text", widget: string,}
-            - {label: Image, name: image, widget: image}
+  - label: "Products-Section"
+    name: "Products"
+    file: "src/content/productData.json"
+    fields:
+      - label: "Products"
+        name: "productList"
+        widget: "list"
+        fields:
+          - {label: "Caption", name: "text", widget: string,}
+          - {label: Image, name: image, widget: image}
 
   # Test
   # - name: "test-field"
