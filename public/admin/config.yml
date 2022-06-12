@@ -63,16 +63,13 @@ collections:
   - name: "photo-albums"
     label: "Albums"
     create: true
-    files:
-    - label: "Album"
-      name: "album"
+    files:  
       file: "src/content/photo-albums.json"
-      widget: "list"
-      config: allowAdd
       fields:
         - label: "Album"
-          name: "album"
-          widget: "object"
+          name: "album"      
+          widget: "list"
+          config: allowAdd
           fields:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Description", name: "description", widget: "string"}
