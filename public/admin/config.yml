@@ -32,11 +32,11 @@ collections:
   - label: "Photo album"
     name: "photo-album"
     files: 
-      - label: "Album"
+      - label: "Albums"
         name: "album"
         file: "src/content/photo-albums.json"
         fields:
-          - label: "Albums"
+          - label: "Album"
             name: "Album list"
             widget: "list"
             fields:
