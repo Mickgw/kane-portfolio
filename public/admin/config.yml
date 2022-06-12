@@ -23,7 +23,7 @@ collections:
     files: 
       - label: "Images for portfolio"
         name: "Image"
-        file: "src/content/portfolio-images.json"
+        file: "src/assets/images/images-for-portfolio/portfolio-images.json"
         fields:
           - label: "Image"
             name: "image_list"
