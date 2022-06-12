@@ -1,16 +1,3 @@
 {
-  "Album list": [
-    {
-      "text": "album 1",
-      "image": "/images/uploads/portrait-placeholder2.jpeg"
-    },
-    {
-      "text": "album 2",
-      "image": "/images/uploads/image-3-banner.jpeg"
-    },
-    {
-      "text": "album 3",
-      "image": "/images/uploads/aboutpage.jpg"
-    }
-  ]
+
 }

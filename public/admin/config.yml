@@ -40,8 +40,9 @@ collections:
             name: "album-list"
             widget: "list"
             fields:
-              - {label: "Caption", name: "text", widget: string,}
-              - {label: Image, name: image, widget: image}
+              - {label: "Album title", name: "title", widget: string}
+              - {label: "Year", name: year, widget: number}
+              - {label: "Album description", name: "description", widget: text}
 
   # Test
   # - name: "test-field"
