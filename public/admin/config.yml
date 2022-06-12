@@ -37,7 +37,7 @@ collections:
         file: "src/content/photo-albums.json"
         fields:
           - label: "Album"
-            name: "album-list"
+            name: "album_list"
             widget: "list"
             fields:
               - {label: "Album title", name: "title", widget: string}

@@ -1,5 +1,5 @@
 
-// import test from "../content/photo-albums.json"
+// import photoAlbums from "../content/photo-albums.json"
 
 
 const Work = () => {
@@ -7,13 +7,12 @@ const Work = () => {
 
   return (
     <>
-    {/* {items.map((item) => {
+    {/* {photoAlbums.album_list.map((album) => {
       return (
-        <div></div>
+        <h1>{album.title}</h1>
 
       );
     })} */}
-
     </>
   );
 };
