@@ -9,26 +9,30 @@ public_folder: "/images/uploads"
 collections:
 
   # Images for portfolio page
-  - name: "portfolio-image"
-    label: "Image"
-    folder: "src/assets/images/image-for-portfolio"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "ID", name: "id", widget: "number"}
-      - {label: "Image", name: "image", widget: "image"}
-
-  # Photo album
-  # - name: "photo-album"
-  #   label: "Photo album"
-  #   folder: "src/content/photo-albums"
+  # - name: "portfolio-image"
+  #   label: "Image"
+  #   folder: "src/assets/images/image-for-portfolio"
   #   create: true
-  #   slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
+  #   slug: "{{slug}}"
   #   fields:
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Year", name: "date", widget: "datetime"}
-  #     - {label: "Album description", name: "description", widget: "text"} 
+  #     - {label: "ID", name: "id", widget: "number"}
+  #     - {label: "Image", name: "image", widget: "image"}
 
+  - label: "Images for portfolio"
+    name: "portfolio-images"
+    files: 
+      - label: "Images for portfolio"
+        name: "Image"
+        file: "src/content/photo-albums.json"
+        fields:
+          - label: "Image"
+            name: "image_list"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Image", name: "image", widget: "image"}
+
+  # Photo albums
   - label: "Photo album"
     name: "photo-album"
     files: 
@@ -44,50 +48,6 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
 
-  # Test
-  # - name: "test-field"
-  #   label: "Test"
-  #   create: true
-  #   folder: "src/content/photo-albums"
-  #   format: "json"
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Year", name: "date", widget: "datetime"}
-  #     - {label: "Album description", name: "description", widget: "text"} 
-
-  # Test 2
-  # - name: "test-field 2"
-  #   label: "Test two"
-  #   create: true
-  #   file: "src/content"
-  #   format: "json"
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Year", name: "date", widget: "datetime"}
-  #     - {label: "Album description", name: "description", widget: "text"} 
-
-  # Test 3
-  # - name: test
-  #   label: Test
-  #   format: "json"
-  #   file: "src/content/photo-albums.json" # this only makes sense for file collections
-  #   field: [{ name: title, label: Title, widget: string }, { name: description, label: Description, widget: string}]
-
-  # - name: "photo-albums"
-  #   label: "Albums"
-  #   create: true
-  #   files:  
-  #     file: "src/content/photo-albums.json"
-  #     fields:
-  #       - label: "Album"
-  #         name: "album"      
-  #         widget: "list"
-  #         config: allowAdd
-  #         fields:
-  #         - { label: "Title", name: "title", widget: "string"}
-  #         - { label: "Description", name: "description", widget: "string"}
 
 
 
