@@ -29,6 +29,17 @@ collections:
       - {label: "Year", name: "date", widget: "datetime"}
       - {label: "Album description", name: "description", widget: "text"} 
 
+  - label: "Products Section"
+      name: "Products"
+      file: "src/content/productData.json"
+      fields:
+        - label: "Products"
+          name: "productList"
+          widget: "list"
+          fields:
+            - {label: "Caption", name: "text", widget: string,}
+            - {label: Image, name: image, widget: image}
+
   # Test
   # - name: "test-field"
   #   label: "Test"
@@ -60,19 +71,19 @@ collections:
   #   file: "src/content/photo-albums.json" # this only makes sense for file collections
   #   field: [{ name: title, label: Title, widget: string }, { name: description, label: Description, widget: string}]
 
-  - name: "photo-albums"
-    label: "Albums"
-    create: true
-    files:  
-      file: "src/content/photo-albums.json"
-      fields:
-        - label: "Album"
-          name: "album"      
-          widget: "list"
-          config: allowAdd
-          fields:
-          - { label: "Title", name: "title", widget: "string"}
-          - { label: "Description", name: "description", widget: "string"}
+  # - name: "photo-albums"
+  #   label: "Albums"
+  #   create: true
+  #   files:  
+  #     file: "src/content/photo-albums.json"
+  #     fields:
+  #       - label: "Album"
+  #         name: "album"      
+  #         widget: "list"
+  #         config: allowAdd
+  #         fields:
+  #         - { label: "Title", name: "title", widget: "string"}
+  #         - { label: "Description", name: "description", widget: "string"}
 
 
 
