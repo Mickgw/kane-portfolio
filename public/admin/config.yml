@@ -19,25 +19,25 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
 
   # Photo album
-  - name: "photo-album"
-    label: "Photo album"
-    folder: "src/content/photo-albums"
-    create: true
-    slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Year", name: "date", widget: "datetime"}
-      - {label: "Album description", name: "description", widget: "text"} 
+  # - name: "photo-album"
+  #   label: "Photo album"
+  #   folder: "src/content/photo-albums"
+  #   create: true
+  #   slug: "{{year}} - {{month}} - {{day}} - '{{slug}}'"
+  #   fields:
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Year", name: "date", widget: "datetime"}
+  #     - {label: "Album description", name: "description", widget: "text"} 
 
-  - label: "Products-Section"
-    name: "Products"
+  - label: "Photo album"
+    name: "photo-album"
     files: 
-      - label: "Menu"
-        name: "menu"
+      - label: "Album"
+        name: "album"
         file: "src/content/productData.json"
         fields:
-          - label: "Products"
-            name: "productList"
+          - label: "Albums"
+            name: "Album list"
             widget: "list"
             fields:
               - {label: "Caption", name: "text", widget: string,}
