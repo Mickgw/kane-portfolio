@@ -34,7 +34,7 @@ collections:
     files: 
       - label: "Album"
         name: "album"
-        file: "src/content/productData.json"
+        file: "src/content/photo-albums.json"
         fields:
           - label: "Albums"
             name: "Album list"
