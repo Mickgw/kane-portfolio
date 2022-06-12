@@ -71,6 +71,8 @@ collections:
         - label: "Album"
           name: "album"
           widget: "object"
+          config: allowAdd
+          create: true
           fields:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Description", name: "description", widget: "string"}
