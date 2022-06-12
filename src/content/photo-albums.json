@@ -1,24 +1,3 @@
 {
-  "album-list": [
-    {
-      "title": "Album 1",
-      "year": 2020,
-      "description": "This is album 1"
-    },
-    {
-      "title": "Album 2",
-      "year": 2022,
-      "description": "This is album 2"
-    },
-    {
-      "title": "Album 3",
-      "year": 2020,
-      "description": "This is album 3"
-    },
-    {
-      "title": "Album 4",
-      "year": 2021,
-      "description": "This is album 4"
-    }
-  ]
+
 }
