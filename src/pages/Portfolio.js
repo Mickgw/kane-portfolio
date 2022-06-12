@@ -1,5 +1,5 @@
 
-import test from "../content/photo-albums.json"
+// import test from "../content/photo-albums.json"
 
 
 const Work = () => {
