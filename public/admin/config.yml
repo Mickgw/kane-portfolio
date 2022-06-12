@@ -54,12 +54,26 @@ collections:
   #     - {label: "Album description", name: "description", widget: "text"} 
 
   # Test 3
-  - name: test
-    label: Test
-    format: "json"
-    file: "src/content/photo-albums.json" # this only makes sense for file collections
-    field: [{ name: title, label: Title, widget: string }, { name: description, label: Description, widget: string}]
+  # - name: test
+  #   label: Test
+  #   format: "json"
+  #   file: "src/content/photo-albums.json" # this only makes sense for file collections
+  #   field: [{ name: title, label: Title, widget: string }, { name: description, label: Description, widget: string}]
 
+  - name: "photo-albums"
+    label: "Albums"
+    files:
+    - label: "Album"
+      name: "album"
+      file: "src/content/photo-albums.json"
+      widget: "list"
+      fields:
+        - label: "Album"
+          name: "album"
+          widget: "object"
+          fields:
+          - { label: "Title", name: "title", widget: "string"}
+          - { label: "Description", name: "description", widget: "string"}
 
 
 
