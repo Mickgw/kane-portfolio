@@ -18,7 +18,7 @@ const Footer = () => {
       <hr className="divider" />
 
       <div className="footer">
-        <div class="video-container">
+        <div className="video-container">
           <video autoPlay muted loop>
             <source src={footerBG} type="video/mp4" />
           </video>
@@ -61,8 +61,8 @@ const Footer = () => {
                   </p>
                   <div className="email-link">
                     <a href="mailto:kanejansen@hotmail.nl">
-                      <button class="get-in-touch-button">
-                        <span class="button-text">
+                      <button className="get-in-touch-button">
+                        <span className="button-text">
                           Get in touch!{" "}
                           <FontAwesomeIcon
                             icon={faPaperPlane}
