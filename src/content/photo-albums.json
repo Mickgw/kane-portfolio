@@ -5,6 +5,18 @@
       "year": 2021,
       "description": "This is album 1",
       "image": "/images/portrait-placeholder2.jpeg"
+    },
+    {
+      "title": "Ford Mustang",
+      "year": 2022,
+      "description": "This is album 2",
+      "image": "/images/image-2-banner.jpeg"
+    },
+    {
+      "title": "Suzuki Swift 2011",
+      "year": 2021,
+      "description": "This is album 3",
+      "image": "/images/whatsapp-image-2022-05-31-at-1.28.41-pm-1-.jpeg"
     }
   ]
 }
