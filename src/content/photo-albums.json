@@ -13,6 +13,20 @@
       "title": "Mercedes",
       "year": 2022,
       "description": "Album3"
+    },
+    {
+      "title": "Test",
+      "year": 2021,
+      "description": "test description",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.39_PM_1_hyp4nq.jpg",
+      "image_list": [
+        {
+          "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_4_dncwga.jpg"
+        },
+        {
+          "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-3-banner_qsepek.jpg"
+        }
+      ]
     }
   ]
 }
