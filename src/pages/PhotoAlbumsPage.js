@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Navigate } from "react-router-dom";
-import photo_albums from "../content/photo-albums.json";
+// import React, { useEffect } from "react";
+// import { Navigate } from "react-router-dom";
+// import photo_albums from "../content/photo-albums.json";
 
 const PhotoAlbumsPage = (props) => {
   return (
