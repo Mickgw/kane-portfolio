@@ -37,7 +37,6 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "image", widget: "image"}
-              - {label: "test", name: "images", widget: "list"}
 
 
 
