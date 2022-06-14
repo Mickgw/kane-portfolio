@@ -1,28 +1,10 @@
 {
   "album_list": [
     {
-      "id": 1,
-      "title": "Album1",
+      "title": "BMW car shoot",
       "year": 2021,
-      "description": "This is album 1"
-    },
-    {
-      "id": 2,
-      "title": "Album2",
-      "year": 2019,
-      "description": "This is album 2"
-    },
-    {
-      "id": 3,
-      "title": "Album3",
-      "year": 2021,
-      "description": "This is album 3"
-    },
-    {
-      "id": 4,
-      "title": "Album4",
-      "year": 2022,
-      "description": "This is album 4"
+      "description": "This is album number 1",
+      "image": "/images/uploads/portrait-placeholder2.jpeg"
     }
   ]
 }
