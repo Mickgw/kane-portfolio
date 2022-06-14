@@ -15,11 +15,9 @@ const PhotoAlbums = () => {
           <div className="album-card-grid">
             {photoAlbums.album_list.length &&
               photoAlbums.album_list.map((album, i) => {
-                console.log("../../assets" + album.image);
-                console.log(test);
                 return (
                   <>
-                    <Link className="links" to={`/albums/${album.title.replace(" ", "-").toLowerCase()}`}>
+                    <Link className="links" to={`/albums/${album.id}`}>
                       <div key={i} className="album-card">
                         <div
                           className="album-card-bg"

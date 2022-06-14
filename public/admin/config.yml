@@ -39,43 +39,12 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: ID, name: id, widget: ncw-id, prefix: album, hint: This widget generate an unique read-only id}
+              - {label: ID, name: id, widget: ncw-id, prefix: album, timestamp: true, hint: This widget generates an unique read-only id}
               - {label: "Album title", name: "title", widget: string}
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "cover_image", widget: "image"}
               - {label: "Albums images", name: "images", widget: "image", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
-              # - label: "Images"
-              #   name: "image_list"
-              #   widget: "list"
-              #   fields: 
-              #     - {label: "Albums images", name: "images", widget: "image"}
-                  #               - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true,  }}
-
-
-
-
-  # - label: "Library"
-  #   name: "test"
-  #   files: 
-  #     - label: "Image library"
-  #       name: "library"
-  #       file: "src/content/photo-albums.json"
-  #       fields: 
-  #         - label: 'Cover Image'
-  #           name: 'image'
-  #           widget: 'image'
-  #           required: false
-  #           tagname: ''
-  #           media_library:
-  #             config:
-  #               default_transformations:
-  #                 - fetch_format: auto
-  #                   width: 300    
-  #                   quality: auto
-  #                   crop: fill
-  #                   effect: grayscale
-
     
 
 
