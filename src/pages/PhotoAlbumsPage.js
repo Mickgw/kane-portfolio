@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import photo_albums from "../content/photo-albums.json";
 
 const PhotoAlbumsPage = (props) => {
-  const validId = parseInt(props.match.params.id);
+  const validId = (props.match.params.title);
 
   useEffect(() => {
     console.log("ValidURL = ", validId);
