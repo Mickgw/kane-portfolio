@@ -6,6 +6,12 @@ backend:
 media_folder: "public/images/uploads" 
 public_folder: "/images/uploads" 
 
+media_library:
+  name: cloudinary
+  config: 
+    cloud_name: ddxnrgllz
+    api_key: 314693828169891
+
 collections:
   - label: "Images for portfolio"
     name: "portfolio-images"
@@ -37,6 +43,20 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "image", widget: "image"}
+    
+  - label: 'Cover Image'
+    name: 'image'
+    widget: 'image'
+    required: false
+    tagname: ''
+    media_library:
+      config:
+        default_transformations:
+          - fetch_format: auto
+            width: 300    
+            quality: auto
+            crop: fill
+            effect: grayscale
 
 
 
