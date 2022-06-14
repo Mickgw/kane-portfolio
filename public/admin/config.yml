@@ -39,7 +39,7 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: hidden, valueField: '{{slug}}'}
+              - {label: "Id", name: "id", widget: "hidden", default: "{{uuid}}"}
               - {label: "Album title", name: "title", widget: string}
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
