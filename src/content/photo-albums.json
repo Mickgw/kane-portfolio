@@ -1,15 +1,15 @@
 {
   "album_list": [
     {
-      "title": "BMW car shoot",
+      "title": "BMW",
       "year": 2021,
-      "description": "This is album 1",
-      "image": "/images/uploads/portrait-placeholder2.jpeg"
+      "description": "album1",
+      "image": "/images/uploads/portrait-placeholder1.jpeg"
     },
     {
-      "title": "Suzuki swift 2011",
-      "year": 2021,
-      "description": "This is album 2",
+      "title": "Suzuki swift",
+      "year": 2020,
+      "description": "album2",
       "image": "/images/uploads/whatsapp-image-2022-05-31-at-1.28.41-pm-1-.jpeg"
     }
   ]
