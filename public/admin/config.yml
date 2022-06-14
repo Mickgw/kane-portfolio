@@ -44,11 +44,11 @@ collections:
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "image", widget: "image"}
 
-  - label: "Photo album"
-    name: "photo-album"
+  - label: "Library"
+    name: "test"
     files: 
-      - label: "Albums"
-        name: "album"
+      - label: "Image library"
+        name: "library"
         file: "src/content/photo-albums.json"
         fields: 
           - label: 'Cover Image'
