@@ -2,8 +2,6 @@
 import photoAlbums from "../../content/photo-albums.json";
 import { Link } from "react-router-dom";
 
-import test from "../../assets/images/uploads/portrait-placeholder2.jpeg";
-
 const PhotoAlbums = () => {
   return (
     <>
