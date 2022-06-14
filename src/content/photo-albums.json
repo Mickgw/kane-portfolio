@@ -7,6 +7,17 @@
       "description": "The description",
       "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655211128/WhatsApp_Image_2022-05-31_at_1.28.40_PM_2_banwjn.jpg",
       "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
+    },
+    {
+      "id": "_oN0jA97C",
+      "title": "Album 2",
+      "year": 2222,
+      "description": "t",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.39_PM_1_hyp4nq.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-3-banner_qsepek.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_4_dncwga.jpg"
+      ]
     }
   ]
 }
