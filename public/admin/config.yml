@@ -7,17 +7,6 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads" 
 
 collections:
-
-  # Images for portfolio page
-  # - name: "portfolio-image"
-  #   label: "Image"
-  #   folder: "src/assets/images/image-for-portfolio"
-  #   create: true
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "ID", name: "id", widget: "number"}
-  #     - {label: "Image", name: "image", widget: "image"}
-
   - label: "Images for portfolio"
     name: "portfolio-images"
     files: 
@@ -48,6 +37,12 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "image", widget: "image"}
+                - label: "Album images"
+                  name: "album_image_list"
+                  widget: "list"
+                  fields: 
+                    - {label: "Image", name: "image", widget: "image"}
+
 
 
 
