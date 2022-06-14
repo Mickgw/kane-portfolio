@@ -23,7 +23,7 @@ const PhotoAlbums = () => {
                       <div key={i} className="album-card">
                         <div
                           className="album-card-bg"
-                          style={{ backgroundImage: `url(${album.image})` }}
+                          style={{ backgroundImage: `url(${album.cover_image})` }}
                         ></div>
                         <div className="album-card-cover-content">
                           <span className="content-year-date">

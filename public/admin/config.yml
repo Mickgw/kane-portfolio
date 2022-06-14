@@ -43,11 +43,12 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "cover_image", widget: "image"}
-              - label: "Images"
-                name: "image_list"
-                widget: "list"
-                fields: 
-                  - {label: "Albums images", name: "images", widget: "image"}
+              - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true }}
+              # - label: "Images"
+              #   name: "image_list"
+              #   widget: "list"
+              #   fields: 
+              #     - {label: "Albums images", name: "images", widget: "image"}
                   #               - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true }}
 
 
