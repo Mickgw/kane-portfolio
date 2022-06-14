@@ -42,28 +42,29 @@ collections:
               - {label: "Album title", name: "title", widget: string}
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
-              - {label: "Album cover image", name: "image", widget: "image"}
+              - {label: "Album cover image", name: "cover_image", widget: "image"}
+              - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true }}
 
-  - label: "Library"
-    name: "test"
-    files: 
-      - label: "Image library"
-        name: "library"
-        file: "src/content/photo-albums.json"
-        fields: 
-          - label: 'Cover Image'
-            name: 'image'
-            widget: 'image'
-            required: false
-            tagname: ''
-            media_library:
-              config:
-                default_transformations:
-                  - fetch_format: auto
-                    width: 300    
-                    quality: auto
-                    crop: fill
-                    effect: grayscale
+  # - label: "Library"
+  #   name: "test"
+  #   files: 
+  #     - label: "Image library"
+  #       name: "library"
+  #       file: "src/content/photo-albums.json"
+  #       fields: 
+  #         - label: 'Cover Image'
+  #           name: 'image'
+  #           widget: 'image'
+  #           required: false
+  #           tagname: ''
+  #           media_library:
+  #             config:
+  #               default_transformations:
+  #                 - fetch_format: auto
+  #                   width: 300    
+  #                   quality: auto
+  #                   crop: fill
+  #                   effect: grayscale
 
     
 
