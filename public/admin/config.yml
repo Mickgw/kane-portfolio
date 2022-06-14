@@ -29,7 +29,7 @@ collections:
             name: "image_list"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: "number"}
+              - {label: "ID (1 = Car, 2 = People, 3 = Nature)", name: "id", widget: "number"}
               - {label: "Image", name: "image", widget: "image"}
 
   # Photo albums
@@ -47,6 +47,7 @@ collections:
               - {label: "Album title", name: "title", widget: string}
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
+              - {label: "Album cover image", name: "image", widget: "image"}
 
 
 
