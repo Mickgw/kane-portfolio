@@ -43,20 +43,30 @@ collections:
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
               - {label: "Album cover image", name: "image", widget: "image"}
+
+  - label: "Photo album"
+    name: "photo-album"
+    files: 
+      - label: "Albums"
+        name: "album"
+        file: "src/content/photo-albums.json"
+        fields: 
+          - label: 'Cover Image'
+            name: 'image'
+            widget: 'image'
+            required: false
+            tagname: ''
+            media_library:
+              config:
+                default_transformations:
+                  - fetch_format: auto
+                    width: 300    
+                    quality: auto
+                    crop: fill
+                    effect: grayscale
+
     
-  - label: 'Cover Image'
-    name: 'image'
-    widget: 'image'
-    required: false
-    tagname: ''
-    media_library:
-      config:
-        default_transformations:
-          - fetch_format: auto
-            width: 300    
-            quality: auto
-            crop: fill
-            effect: grayscale
+
 
 
 
