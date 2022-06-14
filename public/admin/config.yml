@@ -4,7 +4,7 @@ backend:
 
 # These lines should *not* be indented
 media_folder: "public/images" 
-public_folder: "/images" 
+public_folder: "/images/uploads" 
 
 collections:
 
