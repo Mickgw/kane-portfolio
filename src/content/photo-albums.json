@@ -5,6 +5,12 @@
       "year": 2021,
       "description": "This is album number 1",
       "image": "/images/uploads/portrait-placeholder2.jpeg"
+    },
+    {
+      "title": "Ford Mustang",
+      "year": 2021,
+      "description": "This is album number 2",
+      "image": "/images/uploads/image-2-banner.jpeg"
     }
   ]
 }
