@@ -1,16 +1,18 @@
 {
   "album_list": [
     {
-      "title": "BMW",
-      "year": 2021,
-      "description": "album1",
-      "image": "/images/uploads/portrait-placeholder1.jpeg"
-    },
-    {
-      "title": "Suzuki swift",
-      "year": 2020,
-      "description": "album2",
-      "image": "/images/uploads/whatsapp-image-2022-05-31-at-1.28.41-pm-1-.jpeg"
+      "image_list": [
+        {
+          "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.40_PM_7_llwcia.jpg"
+        },
+        {
+          "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
+        }
+      ],
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg",
+      "title": "Mercedes",
+      "year": 2022,
+      "description": "Album3"
     }
   ]
 }
