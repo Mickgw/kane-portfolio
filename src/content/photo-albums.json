@@ -1,15 +1,12 @@
 {
   "album_list": [
     {
-      "id": "album-xJXdVtnIe",
-      "title": "Mercedes",
-      "year": 2021,
-      "description": "This is the description",
+      "id": "vVQXFLckF",
+      "title": "Album 1",
+      "year": 2022,
+      "description": "The description",
       "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655211128/WhatsApp_Image_2022-05-31_at_1.28.40_PM_2_banwjn.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.40_PM_7_llwcia.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
-      ]
+      "images": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
     }
   ]
 }
