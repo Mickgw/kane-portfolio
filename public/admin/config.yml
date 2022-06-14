@@ -3,7 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 # These lines should *not* be indented
-media_folder: "public/images" 
+media_folder: "public/images/uploads" 
 public_folder: "/images/uploads" 
 
 collections:
