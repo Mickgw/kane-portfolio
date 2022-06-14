@@ -39,7 +39,7 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: "Id", name: "id", widget: ncw-id, prefix: album, hint: This widget generate an unique read-only id}
+              - {label: ID name: id, widget: ncw-id, prefix: album, hint: This widget generate an unique read-only id}
               - {label: "Album title", name: "title", widget: string}
               - {label: "Year", name: year, widget: number}
               - {label: "Album description", name: "description", widget: text}
