@@ -47,7 +47,8 @@ collections:
                 name: "image_list"
                 widget: "list"
                 fields: 
-                  - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true }}
+                  - {label: "Albums images", name: "images", widget: "image"}
+                  #               - {label: "Albums images", name: "images", widget: "image", allow_multiple: true, media_library: { name: cloudinary, output_filename_only: true }}
 
 
 
