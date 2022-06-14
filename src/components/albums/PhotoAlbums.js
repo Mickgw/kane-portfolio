@@ -1,6 +1,8 @@
-import cardBGplaceholder from "../../assets/images/portrait-placeholder1.jpeg";
+// import cardBGplaceholder from "../../assets/images/portrait-placeholder1.jpeg";
 import photoAlbums from "../../content/photo-albums.json";
 import { Link } from "react-router-dom";
+
+import test from "../../assets/images/uploads/portrait-placeholder2.jpeg"
 
 const PhotoAlbums = () => {
   return (
@@ -12,12 +14,14 @@ const PhotoAlbums = () => {
         <div className="container">
           <div className="album-card-grid">
             {photoAlbums.album_list.length && photoAlbums.album_list.map((album, i) => {
+              console.log("../../assets" + album.image)
+              console.log(test)
               return (
                 <>
                   <div key={i} className="album-card">
                     <div
                       className="album-card-bg"
-                      style={{ backgroundImage: `url(${cardBGplaceholder})` }}
+                      style={{ backgroundImage: `url(${album.image})` }}
                     ></div>
                     <div className="album-card-cover-content">
                       <span className="content-year-date">{album.year}</span>
