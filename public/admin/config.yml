@@ -39,10 +39,10 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: ID, name: id, widget: ncw-id, hint: This is the album ID}
-              - {label: "Album title", name: "title", widget: string}
-              - {label: "Year", name: year, widget: number}
-              - {label: "Album description", name: "description", widget: text}
+              - {label: "ID", name: "id", widget: "ncw-id", hint: "This is the album ID"}
+              - {label: "Album title", name: "title", widget: "string"}
+              - {label: "Year", name: "year", widget: number}
+              - {label: "Album description", name: "description", widget: "text"}
               - {label: "Album cover image", name: "cover_image", widget: "image"}
               - {label: "Albums images", name: "images", widget: "image", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
     
