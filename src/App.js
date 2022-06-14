@@ -26,7 +26,7 @@ function App2() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/motion" element={<Motion />} />
-            <Route path="/posts/:id" render={props => <PhotoAlbum {...props} />} />
+            <Route path="/album/:id" render={props => <PhotoAlbum {...props} />} />
           </Routes>
         </main>
 
