@@ -9,6 +9,10 @@ body {
   text-transform: uppercase;
   font-size: 1.3rem;
   letter-spacing: 3px;
+
+  &.category {
+    padding-top: 5em;
+  }
 }
 
 .divider {
