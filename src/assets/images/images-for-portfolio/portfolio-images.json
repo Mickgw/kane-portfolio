@@ -2,15 +2,7 @@
   "image_list": [
     {
       "id": 1,
-      "image": "/images/uploads/portrait-placeholder2.jpeg"
-    },
-    {
-      "id": 1,
-      "image": "/images/uploads/image-3-banner.jpeg"
-    },
-    {
-      "id": 1,
-      "image": "/images/uploads/image-2-banner.jpeg"
+      "image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655320833/WhatsApp_Image_2022-05-31_at_1.28.41_PM_3_jivbpl.jpg"
     }
   ]
 }
