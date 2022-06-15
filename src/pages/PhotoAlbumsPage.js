@@ -38,7 +38,7 @@ const PhotoAlbumsPage = () => {
                 </div>
                 <div className="album-images">
                   {album.images.map((album_image) => {
-                    return <img className="album-image" src={album_image} />
+                    return <img className="album-image" src={album_image} alt="images photos" />
                   })}
                 </div>
               </div>
