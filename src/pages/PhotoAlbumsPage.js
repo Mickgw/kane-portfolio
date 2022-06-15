@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
-import photoAlbums from "../content/photo-albums.json";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+
+import photoAlbums from "../content/photo-albums.json";
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
