@@ -42,7 +42,7 @@ const HomeAbout = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    I am currently a <span class="bolded">student</span>
+                    I am currently a <span className="bolded">student</span>
                   </div>
                 </div>
                 <div className="home-about-content-line">
@@ -50,7 +50,7 @@ const HomeAbout = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    at <span class="bolded">Rijn IJssel Arnhem</span> studying
+                    at <span className="bolded">Rijn IJssel Arnhem</span> studying
                   </div>
                 </div>
                 <div className="home-about-content-line">
@@ -58,7 +58,7 @@ const HomeAbout = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    <span class="bolded">audio visual specialist</span>
+                    <span className="bolded">audio visual specialist</span>
                   </div>
                 </div>
               </h1>

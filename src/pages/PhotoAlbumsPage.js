@@ -1,15 +1,28 @@
 import React from "react";
-// import { Navigate } from "react-router-dom";
-// import photo_albums from "../content/photo-albums.json";
+import { useParams } from "react-router-dom";
+import photoAlbums from "../content/photo-albums.json";
 
-const PhotoAlbumsPage = (props) => {
-  console.log(props)
 
+const PhotoAlbumsPage = () => {
+  const { title } = useParams();
 
   return (
-    <>
-    <div>album page</div>
-    </>
+    <div className="album-page">
+      <div className="album-page-grid">
+
+      </div>
+      {photoAlbums.album_list.map((album) => {
+        if (title === album.title.replace(" ", "-").toLocaleLowerCase()) {
+          return (
+            <h1 className="album-title">{album.title}</h1> 
+
+          )
+          
+        }
+      })}
+
+
+    </div>
   );
 };
 

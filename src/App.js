@@ -10,7 +10,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
-import PhotoAlbum from "./pages/PhotoAlbumsPage"
+import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
+import photoAlbums from "./content/photo-albums.json";
 
 function App2() {
   return (
@@ -26,7 +27,10 @@ function App2() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/motion" element={<Motion />} />
-            <Route path="/album/:id" render={props => <PhotoAlbum {...props} />} />
+            {/* <Route path="/albums/:id" render={props => <PhotoAlbumsPage {...props}/>} /> */}
+            <Route exact path="/albums/:title" element={<PhotoAlbumsPage />}>
+              
+            </Route>
           </Routes>
         </main>
 
