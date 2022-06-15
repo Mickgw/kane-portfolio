@@ -12,6 +12,29 @@
         "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg",
         "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.40_PM_7_llwcia.jpg"
       ]
+    },
+    {
+      "id": "OZup2y9Zt",
+      "title": "Suzuki Swift 2011",
+      "year": 2021,
+      "camera": "Sony",
+      "camera_lens": "idk",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_1_tpoj19.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_4_dncwga.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-3-banner_qsepek.jpg"
+      ],
+      "album_description_paragraphs": [
+        {
+          "paragraph": "Paragraph 1"
+        },
+        {
+          "paragraph": "Paragraph 2"
+        },
+        {
+          "paragraph": "Paragraph 3"
+        }
+      ]
     }
   ]
 }
