@@ -4,6 +4,9 @@ import Image3 from "../assets/images/image-3-banner.jpeg";
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Banner2 = () => {
   // var timeline = gsap.timeline();
@@ -83,7 +86,7 @@ const Banner2 = () => {
           </div>
         </div>
         <div id="scrolldown-text" className="scroll">
-          <span>Scroll down</span>
+          <span>Scroll down{" "}<FontAwesomeIcon icon={faArrowDown} /></span>
         </div>
       </div>
       <div id="misc" className="fixed-misc">
