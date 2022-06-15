@@ -30,15 +30,23 @@ const PhotoAlbumsPage = () => {
                   </div>
 
                   <div className="album-description">
-                    <p className="album-description-paragraph">
-                      {album.description}
-                    </p>
+                    {album.album_description_paragraphs.map(
+                      (album_paragraph, index) => {
+                        return (
+                          <div key={index}>
+                            <p className="album-description-paragraph">
+                              {album_paragraph.paragraph}
+                            </p>
+                          </div>
+                        );
+                      }
+                    )}
                   </div>
                 </div>
                 <div className="album-images">
                   {album.images.map((album_image, index) => {
                     return (
-                      <div className="nothing" key={index}>
+                      <div key={index}>
                         <img
                           className="album-image"
                           src={album_image}

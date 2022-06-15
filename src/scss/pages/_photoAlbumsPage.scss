@@ -8,25 +8,24 @@
                 width: 100%;
 
                 .album-facts {
-                    h4 {
-                        padding-top: 1em;
-                        font-weight: 700;
-                        font-size: 2em;
-                    }
-
                     .album-title {
                         font-weight: 700;
                         font-size: 5em;
+                        letter-spacing: 1px;
+                    }
+                    h4 {
+                        padding-top: 1em;
+                        font-size: 2.2em;
                     }
                 }
 
                 .album-description {
                     .album-description-paragraph {
+                        padding-bottom: 2em;
                         line-height: 1.5;
-                        font-size: 1.7em;
+                        font-size: 1.8em;
                         color: $text-color;
                     }
-                    
                 }
             }
 
