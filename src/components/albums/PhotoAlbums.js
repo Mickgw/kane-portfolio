@@ -11,11 +11,11 @@ const PhotoAlbums = () => {
       <div className="photo-albums">
         <div className="container">
           <div className="album-card-grid">
-              {photoAlbums.album_list.map((album) => {
+              {photoAlbums.album_list.map((album, index) => {
                 return (
-                  <>
-                    <Link className="links" to={`/albums/${album.title.replace(" ", "-").toLocaleLowerCase()}`}>
-                      <div className="album-card">
+                  <div key={ index }>
+                    <Link to={`/albums/${album.title.replace(" ", "-").toLocaleLowerCase()}`}>
+                      <div className="album-card" >
                         <div
                           className="album-card-bg"
                           style={{ backgroundImage: `url(${album.cover_image})` }}
@@ -28,7 +28,7 @@ const PhotoAlbums = () => {
                         </div>
                       </div>
                     </Link>
-                  </>
+                  </div>
                 );
               })}
           </div>

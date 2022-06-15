@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import photoAlbums from "../content/photo-albums.json";
 import { useEffect } from "react";
 
-
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
 
@@ -15,10 +14,10 @@ const PhotoAlbumsPage = () => {
     <div className="album-page">
       <div className="divider-text category">Album</div>
       <div className="container">
-        {photoAlbums.album_list.map((album) => {
+        {photoAlbums.album_list.map((album, index) => {
           if (title === album.title.replace(" ", "-").toLocaleLowerCase()) {
             return (
-              <div className="album-data">
+              <div className="album-data" key={index}>
                 <div className="album-info-grid">
                   <div className="album-facts">
                     <h1 className="album-title">{album.title}</h1>
@@ -37,14 +36,21 @@ const PhotoAlbumsPage = () => {
                   </div>
                 </div>
                 <div className="album-images">
-                  {album.images.map((album_image) => {
-                    return <img className="album-image" src={album_image} alt="images photos" />
+                  {album.images.map((album_image, index) => {
+                    return (
+                      <div className="nothing" key={index}>
+                        <img
+                          className="album-image"
+                          src={album_image}
+                          alt="images photos"
+                        />
+                      </div>
+                    );
                   })}
                 </div>
               </div>
             );
           }
-          return null;
         })}
       </div>
     </div>

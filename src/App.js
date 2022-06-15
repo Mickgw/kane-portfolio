@@ -21,7 +21,7 @@ function App2() {
         </header>
 
         <main>
-          <Routes onChange={console.log("link has changed")}>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />

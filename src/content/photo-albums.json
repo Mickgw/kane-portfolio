@@ -1,7 +1,6 @@
 {
   "album_list": [
     {
-      "id": "9tQhIf2s-",
       "title": "Mercedes",
       "year": 2021,
       "camera": "Sony",
@@ -14,7 +13,6 @@
       "camera_lens": "not available"
     },
     {
-      "id": "c-MAk0_Yv",
       "title": "Suzuki Swift",
       "year": 2021,
       "camera": "Sony",
@@ -27,7 +25,6 @@
       ]
     },
     {
-      "id": "W8HDWxFXe",
       "description": "wefwefwefwe\n<br />\n\nwfewfwefwef",
       "title": "test album",
       "year": 0,

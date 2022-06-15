@@ -29,14 +29,15 @@
               overflow: hidden;
             }
 
-            &:before {
-              position: absolute;
-              content: "";
-              width: 3px;
-              height: 90%;
-              background: grey;
-              left: -40px;
-            }
+            //Line left to introduction
+            // &:before {
+            //   position: absolute;
+            //   content: "";
+            //   width: 3px;
+            //   height: 90%;
+            //   background: grey;
+            //   left: -40px;
+            // }
           }
 
           p {
