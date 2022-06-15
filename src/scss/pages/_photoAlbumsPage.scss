@@ -1,6 +1,7 @@
 .album-page {
     .container {
         .album-data {
+            padding-block: 3em;
             .album-info-grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -20,6 +21,12 @@
                 }
 
                 .album-description {
+                    .album-description-paragraph {
+                        line-height: 1.5;
+                        font-size: 1.7em;
+                        color: $text-color;
+                    }
+                    
                 }
             }
 

@@ -39,12 +39,12 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: "ncw-id", hint: "This is the album ID"}
+              - {label: "ID", name: "id", widget: "ncw-id", hint: "THIS IS THE ALBUM ID, THIS IS AUTO-GENERATED"}
               - {label: "Album title", name: "title", widget: "string"}
               - {label: "Year", name: "year", widget: number}
               - {label: "Camera", name: "camera", widget: "string"}
               - {label: "Camera lens", name: "camera_lens", widget: "string"}
-              - {label: "Album description", name: "description", widget: "text"}
+              - {label: "Album description", name: "description", widget: "markdown"}
               - {label: "Album cover image", name: "cover_image", widget: "image"}
               - {label: "Albums images", name: "images", widget: "image", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
     
