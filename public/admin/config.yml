@@ -44,9 +44,13 @@ collections:
               - {label: "Year", name: "year", widget: number}
               - {label: "Camera", name: "camera", widget: "string"}
               - {label: "Camera lens", name: "camera_lens", widget: "string"}
-              - {label: "Album description", name: "description", widget: "markdown"}
               - {label: "Album cover image", name: "cover_image", widget: "image"}
               - {label: "Albums images", name: "images", widget: "image", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
+              - label: "Album description paragraph"
+                name: "album_description_paragraphs"
+                widget: "list"
+                fields:
+                  - {label: "Album description", name: "description", widget: "text"}
     
 
 
