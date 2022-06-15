@@ -24,7 +24,7 @@ collections:
             name: "image_list"
             widget: "list"
             fields:
-              - {label: "ID (1 = Car, 2 = People, 3 = Nature)", name: "id", widget: "number"}
+              - {label: "ID", name: "id", widget: "number", hint: "You need to enter a single digit for a category (1 = Car, 2 = People, 3 = Nature)"}
               - {label: "Image", name: "image", widget: "image"}
 
   # Photo albums
@@ -39,13 +39,13 @@ collections:
             name: "album_list"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: "ncw-id", hint: "THIS IS THE ALBUM ID, THIS IS AUTO-GENERATED"}
+              - {label: "ID", name: "id", widget: "ncw-id", hint: "The album ID is auto-generated, pureley for back-end purposes"}
               - {label: "Album title", name: "title", widget: "string"}
               - {label: "Year", name: "year", widget: number}
               - {label: "Camera", name: "camera", widget: "string"}
               - {label: "Camera lens", name: "camera_lens", widget: "string"}
-              - {label: "Album cover image", name: "cover_image", widget: "image"}
-              - {label: "Albums images", name: "images", widget: "image", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
+              - {label: "Album cover image", name: "cover_image", widget: "image", hint: "The album cover is used on the home page, displayed beneath the short introduction"}
+              - {label: "Albums images", name: "images", widget: "image", hint: "These images will be displayed on the page of the album it self, you can select multiple (obviously)", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
               - label: "Album description paragraph"
                 name: "album_description_paragraphs"
                 widget: "list"
