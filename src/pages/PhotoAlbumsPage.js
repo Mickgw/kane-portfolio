@@ -1,7 +1,39 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import photoAlbums from "../content/photo-albums.json";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+function FadeInWhenVisible({ children }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      offset="100px"
+      initial="hidden"
+      transition={{ duration: 1.5 }}
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: "10vh",
+          transition: { ease: [0.2, 0.2, -0.05, 0.95] },
+        },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
@@ -47,11 +79,14 @@ const PhotoAlbumsPage = () => {
                   {album.images.map((album_image, index) => {
                     return (
                       <div key={index}>
-                        <img
-                          className="album-image"
-                          src={album_image}
-                          alt="images photos"
-                        />
+                        <FadeInWhenVisible>
+                          {" "}
+                          <img
+                            className="album-image"
+                            src={album_image}
+                            alt="images photos"
+                          />
+                        </FadeInWhenVisible>
                       </div>
                     );
                   })}
