@@ -24,12 +24,8 @@ collections:
             name: "image_list"
             widget: "list"
             fields:
-              # - {label: "ID", name: "id", widget: "number", hint: "You need to enter a single digit for a category (1 = Car, 2 = People, 3 = Nature)"}
-              - label: "Tags"
-                name: "tags"
-                widget: "list"
-                field: {label: Name, name: name, widget: string}
               - {label: "Image", name: "image", widget: "image"}
+              - {label: "Image category", name: "tag", widget: "select", options: ["car", "nature", "architecture", "people"], hint: "Choose in what category your chosen image needs to be"}
 
   # Photo albums
   - label: "Photo album"
