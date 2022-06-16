@@ -5,14 +5,45 @@
             text-align: center;
             place-items: center;
             justify-content: center;
+            padding-block: 3em;
 
-            .image-category-tag {
-                letter-spacing: 1px;
+            .tag-button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                letter-spacing: 1.5px;
                 padding-inline: 2em;
                 text-transform: uppercase;
-                font-size: 1.4rem;
-                // font-weight: 700;
+                font-size: 1.3rem;
+                font-weight: 500;
                 color: $text-color;
+                font-family: inherit;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    color: $black;
+                }
+
+                &.active {
+                    color: $black;
+                }
+            }
+        }
+        .gallery {
+            padding-block: 10vh;
+            columns: 4;
+            column-gap: 2rem;
+            width: 100%;
+
+            .image {
+                width: 100%;
+                margin-bottom: 2em;
+                transition: 0.5s ease-in-out;
+
+                &:hover {
+                    filter: brightness(0.7);
+                    cursor: pointer;
+                }
             }
         }
     }

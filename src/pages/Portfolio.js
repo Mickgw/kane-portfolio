@@ -1,69 +1,129 @@
-import { useParams, NavLink } from "react-router-dom";
-import { useEffect } from "react";
-// import { useInView } from "react-intersection-observer";
-// import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import ImageModal from "../components/ImageModal";
 
-// import portfolioImages from "../assets/images/images-for-portfolio/portfolio-images.json";
+// Images
+import portfolioImages from "../assets/images/images-for-portfolio/portfolio-images.json";
 
-// function FadeInWhenVisible({ children }) {
-//   const controls = useAnimation();
-//   const [ref, inView] = useInView();
-
-//   useEffect(() => {
-//     if (inView) {
-//       controls.start("visible");
-//     }
-//   }, [controls, inView]);
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       animate={controls}
-//       initial="hidden"
-//       transition={{ duration: 1, delay: 0.5 }}
-//       variants={{
-//         hidden: {
-//           opacity: 0,
-//           y: "5vh",
-//           transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-//         },
-//         visible: { opacity: 1, y: 0 },
-//       }}
-//     >
-//       {children}
-//     </motion.div>
-//   );
-// }
-
-const Portfolio = () => {
-  const { tag } = useParams();
-  console.log(tag)
+function FadeInWhenVisible({ children }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      transition={{ duration: 0.5, delay: 0.5 }}
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: "5vh",
+          transition: { ease: [0.2, 0.2, -0.05, 0.95] },
+        },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+const Portfolio = () => {
+  const [tag, setTag] = useState("all");
+  const [filteredImages, setFilteredImages] = useState([]);
+  const [isModal, setIsModal] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  useEffect(() => {
+    tag === "all"
+      ? setFilteredImages(portfolioImages.image_list)
+      : setFilteredImages(
+          portfolioImages.image_list.filter(
+            (image_data) => image_data.tag === tag
+          )
+        );
+  }, [tag]);
 
   return (
     <div className="image-gallery">
       <div className="container">
         <div className="image-category-tags">
-          <NavLink to="/portfolio/car">
-            <h4 className="image-category-tag">Car</h4>
-          </NavLink>
-          <NavLink to="/portfolio/nature">
-            <h4 className="image-category-tag">Nature</h4>
-          </NavLink>
-          <NavLink to="/portfolio/architecture">
-            <h4 className="image-category-tag">Architecture</h4>
-          </NavLink>
-          <NavLink to="/portfolio/people">
-            <h4 className="image-category-tag">People</h4>
-          </NavLink>
+          <TagButton
+            name="all"
+            tagActive={tag === "all" ? true : false}
+            handleSetTag={setTag}
+          />
+          <TagButton
+            name="car"
+            tagActive={tag === "car" ? true : false}
+            handleSetTag={setTag}
+          />
+          <TagButton
+            name="nature"
+            tagActive={tag === "nature" ? true : false}
+            handleSetTag={setTag}
+          />
+          <TagButton
+            name="architecture"
+            tagActive={tag === "architecture" ? true : false}
+            handleSetTag={setTag}
+          />
+          <TagButton
+            name="people"
+            tagActive={tag === "people" ? true : false}
+            handleSetTag={setTag}
+          />
+        </div>
+        <div className="gallery">
+          {filteredImages.map((image_data) => (
+            <div key={image_data.id} className="gallery-image">
+              <FadeInWhenVisible>
+                <img
+                  className="image"
+                  src={image_data.image}
+                  alt=""
+                  onClick={() => {
+                    setIsModal(true);
+                    setModalImage(image_data.image);
+                  }}
+                />
+              </FadeInWhenVisible>
+            </div>
+          ))}
+        </div>
+        <div className="image-modal">
+          <AnimatePresence exitBeforeEnter>
+            {isModal && (
+              <ImageModal
+                isModal={isModal}
+                setIsModal={setIsModal}
+                modalImage={modalImage}
+                setModalImage={setModalImage}
+              />
+            )}
+          </AnimatePresence>
         </div>
       </div>
-      <div className="gallery">
-      </div>
     </div>
+  );
+};
+
+const TagButton = ({ name, handleSetTag, tagActive }) => {
+  return (
+    <button
+      className={`tag-button ${tagActive ? "active" : null}`}
+      onClick={() => handleSetTag(name)}
+    >
+      {name.toUpperCase()}
+    </button>
   );
 };
 

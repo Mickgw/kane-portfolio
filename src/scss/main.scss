@@ -19,6 +19,7 @@
 @import "components/home-about";
 @import "components/photo-albums";
 @import "components/footer";
+@import "components/image-modal";
 
 body {
   overflow-x: hidden;
@@ -28,9 +29,9 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
-  
 }
 
-.App {
-  margin-inline: 15vw;
+main {
+  margin-inline: 15vw; //wrapper
 }
+
