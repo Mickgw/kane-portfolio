@@ -7,7 +7,7 @@ import photoAlbums from "../content/photo-albums.json";
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView ] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -19,16 +19,15 @@ function FadeInWhenVisible({ children }) {
     <motion.div
       ref={ref}
       animate={controls}
-      offset="100px"
       initial="hidden"
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1, delay: 0.5 }}
       variants={{
         hidden: {
           opacity: 0,
-          y: "10vh",
+          y: "5vh",
           transition: { ease: [0.2, 0.2, -0.05, 0.95] },
         },
-        visible: { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: 0},
       }}
     >
       {children}

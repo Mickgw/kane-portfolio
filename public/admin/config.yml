@@ -24,7 +24,11 @@ collections:
             name: "image_list"
             widget: "list"
             fields:
-              - {label: "ID", name: "id", widget: "number", hint: "You need to enter a single digit for a category (1 = Car, 2 = People, 3 = Nature)"}
+              # - {label: "ID", name: "id", widget: "number", hint: "You need to enter a single digit for a category (1 = Car, 2 = People, 3 = Nature)"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: {label: Name, name: name, widget: string}
               - {label: "Image", name: "image", widget: "image"}
 
   # Photo albums
