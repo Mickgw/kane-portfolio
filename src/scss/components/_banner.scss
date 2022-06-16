@@ -1,7 +1,7 @@
 $letter-spacing-banner-text: 42px;
 
 .banner {
-  visibility: hidden;
+  // visibility: hidden;
   background-color: $white;
   height: 100vh;
 
@@ -27,7 +27,7 @@ $letter-spacing-banner-text: 42px;
         grid-template-rows: none !important;
       }
 
-      .main-image {
+      .banner-image {
         width: 100%;
         height: 100%;
         display: inline-block;
@@ -79,8 +79,7 @@ $letter-spacing-banner-text: 42px;
   }
 }
 
-.main-text {
-  // overflow: hidden;
+.banner-text {
   font-size: 8rem;
   text-transform: uppercase;
   letter-spacing: 42px;
@@ -97,6 +96,11 @@ $letter-spacing-banner-text: 42px;
   @media (max-width: 1440px) {
     font-size: 6rem;
     letter-spacing: 36px;
+  }
+
+  .banner-marquee {
+    height: 100px;
+    overflow: hidden;
   }
 }
 

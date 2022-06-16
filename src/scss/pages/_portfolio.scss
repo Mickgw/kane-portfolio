@@ -8,17 +8,17 @@
             padding-block: 3em;
 
             .tag-button {
-                background: transparent;
                 border: none;
+                background: transparent;
                 cursor: pointer;
                 letter-spacing: 1.5px;
-                padding-inline: 2em;
-                text-transform: uppercase;
+                margin-inline: 1.5em;
                 font-size: 1.3rem;
                 font-weight: 500;
                 color: $text-color;
                 font-family: inherit;
                 transition: 0.3s ease-in-out;
+                text-transform: uppercase;
 
                 &:hover {
                     color: $black;

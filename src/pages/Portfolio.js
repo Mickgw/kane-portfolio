@@ -122,7 +122,7 @@ const TagButton = ({ name, handleSetTag, tagActive }) => {
       className={`tag-button ${tagActive ? "active" : null}`}
       onClick={() => handleSetTag(name)}
     >
-      {name.toUpperCase()}
+      {name}
     </button>
   );
 };

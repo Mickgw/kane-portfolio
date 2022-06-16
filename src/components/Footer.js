@@ -75,9 +75,6 @@ const Footer = () => {
                 </div>
                 <div className="socials">
                   <a href="/" className="social-link">
-                    <FontAwesomeIcon icon={faFacebookF} className="icon" />
-                  </a>
-                  <a href="/" className="social-link">
                     <FontAwesomeIcon icon={faInstagram} className="icon" />
                   </a>
                   <a href="/" className="social-link">
