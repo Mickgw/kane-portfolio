@@ -30,6 +30,21 @@
             }
 
             .album-images {
+                margin-block: 15vh;
+                .image-index {
+                    // transform: rotate(-90deg);
+                    margin-top: 10vh;
+                    left: 10vw;
+                    position: absolute;
+
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                    .image-count-divider {
+                        font-size: 1.3em;
+                    }
+                }
                 .album-image {
                     padding-block: 5em;
                     width: 100%;

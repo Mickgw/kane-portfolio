@@ -2,12 +2,14 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSolid } from "@fortawesome/free-solid-svg-icons";
 
 import photoAlbums from "../content/photo-albums.json";
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
-  const [ref, inView ] = useInView();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
@@ -27,7 +29,7 @@ function FadeInWhenVisible({ children }) {
           y: "5vh",
           transition: { ease: [0.2, 0.2, -0.05, 0.95] },
         },
-        visible: { opacity: 1, y: 0},
+        visible: { opacity: 1, y: 0 },
       }}
     >
       {children}
@@ -37,6 +39,28 @@ function FadeInWhenVisible({ children }) {
 
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  console.log(inView)
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const imageCountAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 2, ease: [0.2, 0.2, -0.05, 0.95] },
+    }
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -79,8 +103,10 @@ const PhotoAlbumsPage = () => {
                   {album.images.map((album_image, index) => {
                     return (
                       <div key={index}>
+                        <motion.div ref={ref} className="image-index" variants={imageCountAnimation} initial="hidden" animate="visible">
+                          {index + 1} <em className="image-count-divider">&#8213;</em> {album.images.length}
+                        </motion.div>
                         <FadeInWhenVisible>
-                          {" "}
                           <img
                             className="album-image"
                             src={album_image}

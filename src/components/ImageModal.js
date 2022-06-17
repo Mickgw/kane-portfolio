@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage, imageCount }) => {
+const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
   const modalRef = useRef();
   const animation_duration = 0.7;
 
