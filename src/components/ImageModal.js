@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
   const modalRef = useRef();
   const animation_duration = 0.7;
+  const body = document.querySelector("body");
 
   useEffect(() => {
     const getClickOutside = (e) => {
@@ -72,12 +73,15 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
         onClick={() => {
           setIsModal(false);
           setModalImage("");
+          body.classList.remove("modal-open");
         }}
       >
         close
       </button>
-        
+
       <motion.img
+        onClick={console.log("Image clicked!")}
+        className="modal-image"
         src={modalImage}
         alt="modal image"
         variants={image_animation}

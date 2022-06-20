@@ -41,6 +41,7 @@ const Portfolio = () => {
   const [filteredImages, setFilteredImages] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [modalImage, setModalImage] = useState("");
+  const body = document.querySelector("body");
 
   useEffect(() => {
     tag === "all"
@@ -93,6 +94,7 @@ const Portfolio = () => {
                   onClick={() => {
                     setIsModal(true);
                     setModalImage(image_data.image);
+                    body.classList.add("modal-open");
                   }}
                 />
               </FadeInWhenVisible>

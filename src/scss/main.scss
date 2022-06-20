@@ -20,6 +20,7 @@
 @import "components/photo-albums";
 @import "components/footer";
 @import "components/image-modal";
+@import "components/navbar-menu";
 
 body {
   overflow-x: hidden;
@@ -28,6 +29,10 @@ body {
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  &.modal-open {
+    overflow-y: hidden;
   }
 }
 

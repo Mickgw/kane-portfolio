@@ -23,6 +23,7 @@
     "react-images-viewer": "^1.7.1",
     "react-img-zoom": "^0.1.0",
     "react-intersection-observer": "^9.1.0",
+    "react-map-interaction": "^2.1.0",
     "react-modal-image": "^2.5.0",
     "react-moment": "^1.1.2",
     "react-router-dom": "^6.3.0",
