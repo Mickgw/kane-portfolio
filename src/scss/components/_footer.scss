@@ -23,6 +23,7 @@
             padding-inline: $wrapper-value;
             position: relative;
             z-index: 2;
+            align-items: flex-end;
             .top-footer-row {
                 padding-block: 20em;
                 width: 100%;
@@ -30,108 +31,78 @@
                 grid-template-rows: repeat(2, 1fr);
                 grid-column-gap: 2rem;
 
-                .section {
+                .email-header {
                     width: 100%;
-                    &.email-socials {
-                        .email {
-                            .email-header-one {
-                                padding-top: 1em;
-                                font-size: 3rem;
-                                font-weight: 700;
-                            }
+                    text-align: center;
 
-                            .contact-paragraph {
-                                line-height: 1.7;
-                                color: $text-color;
-                                padding-block: 2em;
-                                font-size: 1.4rem;
-                            }
-                            .email-link {
-                                padding-block: 3em;
-                                .get-in-touch-button {
-                                    padding: 0.7em;
-                                    position: relative;
-                                    display: inline-block;
-                                    cursor: pointer;
-                                    background-color: $black;
-                                    border: 2px solid $black;
-                                    width:30rem;
-                                    border-radius: 3rem;
-                                    font-family: inherit;
-                                    transition: 0.3s ease-in-out;
-
-                                    &:hover {
-                                        background-color: $white;
-
-                                        .button-text {
-                                            color: $black;
-                                        }
-                                    }
-                                
-                                    .button-text {                                
-                                        // text-transform: uppercase;
-                                        font-size: 2rem;
-                                        color: $white;
-                                    }
-                                }
-                            }
+                    .text-above-link {
+                        font-size: 1.3rem;
+                    }
+                    .email-header-link {
+                        a {
+                            font-size: 7.5rem;
+                            color: $black;
                         }
-                        .socials {
-                            padding-top: 3em;
-                            font-size: 2rem;
+                        
 
-                            .social-link {
-                                margin-inline: 1em;
-                                &:first-child {
-                                    margin-left: 0px !important;
-                                }
-
-                                .icon {
-                                    width: 20px;
-                                    padding: 12px;
-                                    border-radius: 50%;
-                                    border: 2px solid $black;
-                                    color: black;
-                                    transition: 0.3s ease-in-out;
-
-                                    &:hover {
-                                        background-color: black;
-                                        color: white;
-                                    }
-                                }
-                            }
+                        .email-link-icon {
+                            font-size: 8rem;
                         }
                     }
+                }
 
-                    &.navigation {
-                        .footer-nav {
-                            .footer-nav-link {
-                                padding-block: 20px;
+                .section-email-socials {
+                    width: 100%;
+                    grid-template-rows: repeat(2, 1fr);
+                    display: flex;
 
-                                a {
-                                    text-decoration: none;
-                                    font-size: 8rem;
-                                    font-weight: 500;
-                                    color: $black;
-                                    transition: 0.5s ease-in-out;
+                    .email {
+                        flex: 50%;
+                        .email-header-one {
+                            padding-top: 1em;
+                            font-size: 3rem;
+                            font-weight: 700;
+                        }
 
-                                    &:hover {
-                                        color: rgb(110, 110, 110);
-                                        // letter-spacing: 1.5px;
-                                    }
+                        .contact-paragraph {
+                            line-height: 1.7;
+                            color: $text-color;
+                            padding-block: 2em;
+                            font-size: 1.4rem;
+                        }
+                        .email-link {
+                        }
+                    }
+                }
+
+                .section-navigation {
+                    width: 100%;
+                    .footer-nav {
+                        .footer-nav-link {
+                            padding-block: 5px;
+
+                            a {
+                                letter-spacing: -1px;
+                                text-decoration: none;
+                                font-size: 3rem;
+                                color: $black;
+                                transition: 0.5s ease-in-out;
+
+                                &:hover {
+                                    color: rgb(110, 110, 110);
                                 }
+                            }
 
-                                .active {
-                                    transition: 0.5s ease-in-out;
-                                    pointer-events: none;
+                            .active {
+                                transition: 0.5s ease-in-out;
+                                pointer-events: none;
 
-                                    &:before {
-                                        color: $black;
-                                        opacity: 1;
-                                        float: left;
-                                        margin-left: -1.5em;
-                                        content: "\279C";
-                                    }
+                                &:before {
+                                    color: $black;
+                                    opacity: 1;
+                                    float: left;
+                                    margin-left: -0.7em;
+                                    content: "\2022";
                                 }
                             }
                         }
@@ -146,35 +117,23 @@
                 color: grey;
                 text-transform: uppercase;
 
-                width: 100%;
-                display: flex;
-                grid-template-rows: repeat(3, 1fr);
-                grid-column-gap: 2rem;
-
-                .section {
+                .footer-bottom-container {
                     width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
-                    &.left {
-                        .copyright {
-                        }
+                    .local-time {
                     }
 
-                    &.right {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        .local-time {
-                        }
+                    .made-by {
+                        a {
+                            text-decoration: none;
+                            color: grey;
+                            transition: 0.3s ease-in-out;
 
-                        .made-by {
-                            a {
-                                text-decoration: none;
-                                color: grey;
-                                transition: 0.3s ease-in-out;
-
-                                &:hover {
-                                    color: black;
-                                }
+                            &:hover {
+                                color: black;
                             }
                         }
                     }
@@ -184,6 +143,27 @@
     }
 }
 
+.socials {
+    font-size: 2rem;
 
+    .social-link {
+        margin-inline: 1em;
+        &:first-child {
+            margin-left: 0px !important;
+        }
 
+        .icon {
+            width: 20px;
+            padding: 12px;
+            border-radius: 50%;
+            border: 2px solid $black;
+            color: black;
+            transition: 0.3s ease-in-out;
 
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}

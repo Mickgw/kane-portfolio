@@ -1,16 +1,17 @@
 import React from "react";
 import Moment from "react-moment";
 import { NavLink } from "react-router-dom";
+import footerBG from "../assets/videos/footer-bg-test2.mp4";
+
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
   faInstagram,
   faLinkedinIn,
   faYoutube,
   faUnsplash,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import footerBG from "../assets/videos/footer-bg-test2.mp4";
+import { TbArrowUpRight } from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -24,7 +25,18 @@ const Footer = () => {
           </video>
           <div className="container">
             <div className="top-footer-row">
-              <div className="section navigation">
+              <div className="email-header">
+                <div className="text-above-link">
+                  Want me capturing your story?
+                </div>
+                <h2 className="email-header-link">
+                  <a href="/">
+                    hello@kanejansen.com{" "}
+                    <TbArrowUpRight className="email-link-icon" />
+                  </a>
+                </h2>
+              </div>
+              {/* <div className="section-navigation">
                 <ul className="footer-nav">
                   <li className="footer-nav-link">
                     <NavLink
@@ -46,8 +58,8 @@ const Footer = () => {
                     <NavLink to="/motion">Motion</NavLink>
                   </li>
                 </ul>
-              </div>
-              <div className="section email-socials">
+              </div> */}
+              {/* <div className="section-email-socials">
                 <div className="email">
                   <h1 className="email-header-one">Let's work together!</h1>
                   <p className="contact-paragraph">
@@ -60,45 +72,24 @@ const Footer = () => {
                     ratione voluptatem sequi nesciunt.
                   </p>
                   <div className="email-link">
-                    <a href="mailto:kanejansen@hotmail.nl">
-                      <button className="get-in-touch-button">
-                        <span className="button-text">
-                          Get in touch!{" "}
-                          <FontAwesomeIcon
-                            icon={faPaperPlane}
-                            className="icon"
-                          />
-                        </span>
-                      </button>
+                    <a
+                      href="mailto:kanejansen@hotmail.nl"
+                      className="email-button"
+                    >
+                      <span className="button-text">Reach out </span>
                     </a>
                   </div>
                 </div>
-                <div className="socials">
-                  <a href="/" className="social-link">
-                    <FontAwesomeIcon icon={faInstagram} className="icon" />
-                  </a>
-                  <a href="/" className="social-link">
-                    <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
-                  </a>
-                  <a href="/" className="social-link">
-                    <FontAwesomeIcon icon={faYoutube} className="icon" />
-                  </a>
-                  <a href="/" className="social-link">
-                    <FontAwesomeIcon icon={faUnsplash} className="icon" />
-                  </a>
-                </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="bottom-footer-row">
-              <div className="section left">
-                <div className="copyright">© copyright Kane Jansen</div>
-              </div>
-              <div className="section right">
+              <div className="footer-bottom-container">
+                <div className="footer-copyright">© kane jansen</div>
+
                 <div className="local-time">
                   localtime - <Moment interval={1000} format="LT" />
                 </div>
-                <div className="website-version">version - 2022</div>
                 <div className="made-by">
                   made by{" "}
                   <a
@@ -117,5 +108,22 @@ const Footer = () => {
     </footer>
   );
 };
+
+{
+  /* <div className="socials">
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faInstagram} className="icon" />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faYoutube} className="icon" />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faUnsplash} className="icon" />
+                  </a>
+                </div> */
+}
 
 export default Footer;
