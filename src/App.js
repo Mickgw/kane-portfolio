@@ -1,5 +1,7 @@
 import "./scss/main.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CustomCursor from "custom-cursor-react";
+import "custom-cursor-react/dist/index.css";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -15,6 +17,18 @@ import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 function App2() {
   return (
     <div className="App">
+      <CustomCursor
+        targets={["a", "button"]}
+        customClass="custom-cursor"
+        dimensions={30}
+        smoothness={{
+          movement: 0.2,
+          scale: 0.1,
+          opacity: 1,
+        }}
+        targetOpacity={1}
+        targetScale={4}
+      />
       <Router>
         <header>
           <Navbar />

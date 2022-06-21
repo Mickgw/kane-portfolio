@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "custom-cursor-react": "^1.0.5",
     "framer-motion": "^6.3.3",
     "gsap": "^3.10.4",
     "moment": "^2.29.3",
