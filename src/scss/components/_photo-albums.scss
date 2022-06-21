@@ -1,6 +1,5 @@
 $year-date-color: rgba(255, 255, 255, 0.6);
-$card-spacing: 3em;
-$card-content-padding: 1em;
+$card-spacing: 4vw;
 
 .photo-albums {
     padding-block: 5em;
@@ -12,57 +11,73 @@ $card-content-padding: 1em;
             grid-row-gap: $card-spacing;
             width: 100%;
 
-            .album-card-container {
+            a {
                 text-decoration: none;
-                .album-card {
-                    list-style: none;
-                    position: relative;
-                    cursor: pointer;
+            }
+
+            .album-card {
+                list-style: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+
+                .album-cover-container {
                     overflow: hidden;
 
-    
-                    .album-card-bg {
-                        background-size: cover;
-                        background-position: center;
-                        // border-radius: $spacing-l;
-                        transform-origin: center;
-                        transition: filter 350ms linear, transform 350ms linear;
-                        
-                    }
-    
-                    .album-cover {
-                        width: 100%;
-                        height: 50%;
-                    }
-    
-                    .album-card-cover-content {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        text-decoration: none !important;
-                        outline: none;
-                        
-                        .content-header {
-                            color: $black;
-                            font-weight: 500;
-                            font-size: 2rem;
-                            text-decoration: none;
-                            
-    
+                    &:hover {
+                        .dot {
+                            transform: scale(1.5);
                         }
-    
-                        .content-year-date {
-                            font-size: 1.5rem;
-                            font-weight: 700;
-    
+                    }
+
+                    .album-cover-dot {
+                        position: absolute;
+                        right: 2em;
+                        top: 2em;
+                        z-index: 10;
+                        .dot {
+                            transition: 0.5s ease-in-out;
+                            color: $white;
+                            mix-blend-mode: difference;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .album-cover {
+                        max-width: 100%;
+                        object-fit: contain;
+                        transform-origin: center;
+                        transition: 0.5s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.05);
                         }
                     }
                 }
 
+                .album-card-cover-content {
+                    margin-block: 3vh;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-decoration: none !important;
+
+                    .content-header {
+                        font-size: 0.7rem;
+                        color: $black;
+                        font-weight: 500;
+                        font-size: 2rem;
+                        text-decoration: none;
+                    }
+
+                    .content-year-date {
+                        color: $text-color;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                }
             }
-
-
         }
     }
 }
