@@ -74,22 +74,6 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
-              {/* <div className="btn-row">
-                <Link to="/about">
-                  <button className="read-about-button">read about me</button>
-                </Link>
-
-                <span className="button-divider"> or </span>
-                <button className="view-collection-button">
-                  view photo albums
-                  <div className="arrow-icon">
-                    <FontAwesomeIcon
-                      icon={faArrowDownLong}
-                      className="arrow-down-icon"
-                    />
-                  </div>
-                </button>
-              </div> */}
             </div>
           </div>
           <div className="home-about-images">

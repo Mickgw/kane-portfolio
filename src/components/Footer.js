@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <hr className="divider" />
 
-      <div className="footer">
+      <div id="footer" className="footer">
         <div className="video-container">
           <video autoPlay muted loop>
             <source src={footerBG} type="video/mp4" />

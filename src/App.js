@@ -7,7 +7,6 @@ import "custom-cursor-react/dist/index.css";
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ScrollContainer from "./components/hooks/ScrollContainer";
 
 // Pages
 import Home from "./pages/Home";
@@ -19,7 +18,6 @@ import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 function App2() {
   return (
     <div className="App">
-      <ScrollContainer>
         {/* <CustomCursor
         targets={["a", "button"]}
         customClass="custom-cursor"
@@ -29,14 +27,14 @@ function App2() {
           scale: 0.1,
           opacity: 1,
         }}
-        targetOpacity={1}
+        targetOpacity={0.7}
         targetScale={4}
       /> */}
         <Router>
           <header>
             <Navbar />
           </header>
-          
+
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -54,7 +52,6 @@ function App2() {
             <Footer />
           </footer>
         </Router>
-      </ScrollContainer>
     </div>
   );
 }

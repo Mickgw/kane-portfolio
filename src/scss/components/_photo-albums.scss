@@ -22,7 +22,7 @@ $card-spacing: 4vw;
                 overflow: hidden;
 
                 .album-cover-container {
-                    overflow: hidden;
+                    overflow: hidden !important;
 
                     &:hover {
                         .dot {
@@ -44,13 +44,14 @@ $card-spacing: 4vw;
                     }
 
                     .album-cover {
+                        overflow: hidden;
                         max-width: 100%;
                         object-fit: contain;
                         transform-origin: center;
                         transition: 0.5s ease-in-out;
 
                         &:hover {
-                            transform: scale(1.05);
+                            transform: scale(1.02);
                         }
                     }
                 }
