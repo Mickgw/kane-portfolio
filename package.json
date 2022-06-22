@@ -31,6 +31,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll-motion": "^0.2.6",
+    "react-spring": "^9.4.5",
+    "resize-observer": "^1.0.4",
     "sass": "^1.52.1",
     "smooth-scrollbar": "^8.7.4",
     "web-vitals": "^2.1.4"
@@ -59,5 +61,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "resize-observer-polyfill": "^1.5.1"
   }
 }

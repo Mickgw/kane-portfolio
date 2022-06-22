@@ -104,19 +104,4 @@ $letter-spacing-banner-text: 42px;
   }
 }
 
-.fixed-misc {
-  position: absolute;
-  top: 50%;
-  right: -100px;
-  transform: rotate(90deg);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 1.5px;
-  color: rgb(190, 190, 190);
-  z-index: 8;
-  @media (max-width: 1440px) {
-    right: -112px;
-  }
-}
 

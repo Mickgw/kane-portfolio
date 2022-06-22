@@ -5,7 +5,7 @@ import { TbArrowUpRight } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer>
+    <>
       <hr className="divider" />
 
       <div className="footer">
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </>
   );
 };
 

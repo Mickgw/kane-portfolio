@@ -103,9 +103,9 @@ const PhotoAlbumsPage = () => {
                   {album.images.map((album_image, index) => {
                     return (
                       <div key={index}>
-                        <motion.div ref={ref} className="image-index" variants={imageCountAnimation} initial="hidden" animate="visible">
+                        {/* <motion.div ref={ref} className="image-index" variants={imageCountAnimation} initial="hidden" animate="visible">
                           {index + 1}<em className="image-count-divider">&#8213;</em>{album.images.length}
-                        </motion.div>
+                        </motion.div> */}
                         <FadeInWhenVisible>
                           <img
                             className="album-image"

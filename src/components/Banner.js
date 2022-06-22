@@ -3,11 +3,10 @@ import Image2 from "../assets/images/portrait-placeholder1.jpeg";
 import Image3 from "../assets/images/image-3-banner.jpeg";
 
 import { useEffect, useState } from "react";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, AnimatePresence } from "framer-motion";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import Marquee from "react-fast-marquee";
 
 const Banner2 = () => {
   const [showShowScrollDown, setShowScrollDown] = useState(false);
@@ -118,9 +117,6 @@ const Banner2 = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-      <div id="misc" className="fixed-misc">
-        Arnhem, The Netherlands - 51°58'48"N, 5°54'40"E
       </div>
     </div>
   );

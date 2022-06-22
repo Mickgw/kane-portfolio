@@ -74,7 +74,7 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
-              <div className="btn-row">
+              {/* <div className="btn-row">
                 <Link to="/about">
                   <button className="read-about-button">read about me</button>
                 </Link>
@@ -89,7 +89,7 @@ const HomeAbout = () => {
                     />
                   </div>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="home-about-images">
