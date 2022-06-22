@@ -35,9 +35,9 @@
         font-size: 1rem;
       }
 
-      &:hover {
-        color: rgb(156, 156, 156);
-      }
+      // &:hover {
+      //   color: rgb(156, 156, 156);
+      // }
     }
   }
 }
@@ -54,10 +54,7 @@
     letter-spacing: 2px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    color: $black;
-
-    &:hover {
-      color: $text-color;
-    }
+    color: $white;
+    mix-blend-mode: difference;
   }
 }

@@ -22,7 +22,7 @@ function FadeInWhenVisible({ children }) {
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       variants={{
         hidden: {
           opacity: 0,

@@ -1,5 +1,5 @@
 import "./scss/main.scss";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
@@ -15,45 +15,30 @@ import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 
-function App2() {
+function App() {
   return (
     <div className="App">
-        {/* <CustomCursor
-        targets={["a", "button"]}
-        customClass="custom-cursor"
-        dimensions={45}
-        smoothness={{
-          movement: 0.2,
-          scale: 0.1,
-          opacity: 1,
-        }}
-        targetOpacity={0.7}
-        targetScale={4}
-      /> */}
-        <Router>
-          <header>
-            <Navbar />
-          </header>
+      <Router>
+        <header>
+          <Navbar />
+        </header>
 
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/motion" element={<Motion />} />
-              <Route
-                path="/albums/:title"
-                element={<PhotoAlbumsPage />}
-              ></Route>
-            </Routes>
-          </main>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/motion" element={<Motion />} />
+            <Route path="/albums/:title" element={<PhotoAlbumsPage />}></Route>
+          </Routes>
+        </main>
 
-          <footer>
-            <Footer />
-          </footer>
-        </Router>
+        <footer>
+          <Footer />
+        </footer>
+      </Router>
     </div>
   );
 }
 
-export default App2;
+export default App;

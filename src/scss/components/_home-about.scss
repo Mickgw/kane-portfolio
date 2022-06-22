@@ -1,13 +1,11 @@
 .home-about {
   margin-block: 20vh;
-  height: 100vh;
   .container {
     margin: 0 auto;
 
     .home-about-inner {
       display: flex;
       grid-template-columns: repeat(1, 1fr);
-      height: 100vh;
 
       .home-about-content {
         width: 100%;

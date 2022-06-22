@@ -103,7 +103,7 @@ const Banner2 = () => {
             </div>
           </div>
         </div>
-        <AnimatePresence exitBeforeEnter>
+        {/* <AnimatePresence exitBeforeEnter>
           {showShowScrollDown && (
             <motion.div
               id="scrolldown-text"
@@ -116,7 +116,7 @@ const Banner2 = () => {
               </span>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </div>
   );

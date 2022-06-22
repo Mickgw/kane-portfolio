@@ -23,13 +23,10 @@
 @import "components/navbar-menu";
 @import "components/cursor";
 
-
 body {
-  height: 100%;
-  overscroll-behavior-y: none;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
   &::-webkit-scrollbar {
     display: none;
@@ -44,10 +41,15 @@ main {
   margin-inline: 15vw; //wrapper
 }
 
-.scroll-container {
-  position: fixed;
-  will-change: transform;
-  right: 0;
-  left: 0;
+
+
+.custom-cursor {
+  circle {
+    content: "test";
+    fill: black !important;
+  }
 }
+
+
+
 
