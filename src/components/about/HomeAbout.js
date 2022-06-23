@@ -1,33 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { gsap, Power4 } from "gsap";
-
 
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
 
 const HomeAbout = () => {
-  // useEffect(() => {
-  //   var timeline = gsap.timeline();
 
-  //   const ImageDuration = 1.5;
-
-  //   timeline
-  //     .fromTo(
-  //       "#image-container",
-  //       { x: "100vw", skewY: 15 },
-  //       { x: 0, skewY: 0, ease: Power4.inOut, duration: ImageDuration }
-  //     )
-  //     .fromTo(
-  //       "#portrait",
-  //       {
-  //         scale: 1.3,
-  //       },
-  //       { scale: 1, delay: -ImageDuration, duration: ImageDuration * 1.5 }
-  //     );
-
-  //   timeline.from("#header-content-line", { y: 100, duration: 1, delay: -1 });
-  // });
+  
 
   return (
     <div className="home-about">

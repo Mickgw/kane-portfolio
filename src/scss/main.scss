@@ -24,6 +24,8 @@
 @import "components/cursor";
 
 body {
+  min-height: 100% !important;
+  height: 100%;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

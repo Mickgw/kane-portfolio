@@ -1,8 +1,5 @@
 import "./scss/main.scss";
-import { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CustomCursor from "custom-cursor-react";
-import "custom-cursor-react/dist/index.css";
 
 // Components
 import Navbar from "./components/Navbar";

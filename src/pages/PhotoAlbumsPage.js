@@ -1,66 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSolid } from "@fortawesome/free-solid-svg-icons";
-
+import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 import photoAlbums from "../content/photo-albums.json";
 
-function FadeInWhenVisible({ children }) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      transition={{ duration: 0.5, delay: 0.2 }}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: "5vh",
-          transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-        },
-        visible: { opacity: 1, y: 0 },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  console.log(inView)
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const imageCountAnimation = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 2, ease: [0.2, 0.2, -0.05, 0.95] },
-    }
-  }
 
   useEffect(() => {
     window.scrollTo(0, 0);

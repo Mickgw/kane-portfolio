@@ -1,6 +1,12 @@
 $year-date-color: rgba(255, 255, 255, 0.6);
 $card-spacing: 4vw;
 
+.photo-albums-header {
+    letter-spacing: -1px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
 .photo-albums {
     padding-block: 5em;
     .container {
@@ -13,20 +19,28 @@ $card-spacing: 4vw;
 
             a {
                 text-decoration: none;
+                outline: none !important;
+            }
+
+            @media (max-width: $layout-breakpoint-small) {
+                grid-template-columns: repeat(1, 1fr);
             }
 
             .album-card {
-                list-style: none;
-                position: relative;
-                cursor: pointer;
-                overflow: hidden;
-
                 .album-cover-container {
-                    overflow: hidden !important;
+                    aspect-ratio: 12/16;
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
 
                     &:hover {
                         .dot {
-                            transform: scale(1.5);
+                            animation-name: dot-pulse;
+                            animation-timing-function: ease;
+                        }
+
+                        .album-cover {
+                            transform: scale(1.05);
                         }
                     }
 
@@ -40,23 +54,24 @@ $card-spacing: 4vw;
                             color: $white;
                             mix-blend-mode: difference;
                             font-size: 2rem;
+                            animation-duration: 1.5s;
+                            animation-iteration-count: infinite;
                         }
                     }
+                    .image-container {
+                        transform: translateZ(1px);
 
-                    .album-cover {
-                        overflow: hidden;
-                        max-width: 100%;
-                        object-fit: contain;
-                        transform-origin: center;
-                        transition: 0.5s ease-in-out;
-
-                        &:hover {
-                            transform: scale(1.02);
+                        .album-cover {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: 1s ease-in-out;
                         }
                     }
                 }
 
                 .album-card-cover-content {
+                    position: relative;
                     margin-block: 3vh;
                     width: 100%;
                     display: flex;
@@ -83,3 +98,20 @@ $card-spacing: 4vw;
     }
 }
 
+@keyframes dot-pulse {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    75% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
