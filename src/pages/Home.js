@@ -10,6 +10,10 @@ const Home = () => {
   let tl = new gsap.timeline();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     tl.to(container, 0, { css: { visibility: "visible" } });
     tl.from("#id", 1.4, {
       scale: 1.6,

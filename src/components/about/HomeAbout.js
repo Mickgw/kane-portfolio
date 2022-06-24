@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 // Images
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
@@ -19,26 +21,35 @@ const HomeAbout = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#about-section",
-          start: "top center",
-          once: true
-        }
+          start: "top +=800px",
+          once: true,
+        },
       })
       .to("#about-section", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#image-container",
-        { opacity: 0, y: 500},
+        { opacity: 0, y: 500 },
         { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
       )
-      .fromTo("#image", { scale: 1.6, skewY: 20 }, { scale: 1, skewY: 0, duration: 2, delay: -1.5 })
+      .fromTo(
+        "#image",
+        { scale: 1.6, skewY: 20 },
+        { scale: 1, skewY: 0, duration: 2, delay: -1.5 }
+      )
       .fromTo(
         ".home-about-content-line-inner",
         { y: 100 },
-        { y: 0, duration: 1, stagger: delayChildrenDuration, delay: -1}
+        { y: 0, duration: 1, stagger: delayChildrenDuration, delay: -1 }
       )
       .fromTo(
         ".hero-content-paragraph",
         { opacity: 0, y: 100 },
-        { y: 0, opacity: 1, duration: 1, delay: -delayChildrenDuration * 3 /*3 is the amount of children*/ }
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: -delayChildrenDuration * 3 /*3 is the amount of children*/,
+        }
       );
   });
 
@@ -88,7 +99,11 @@ const HomeAbout = () => {
                 voluptatem.
               </p>
               <div className="read-about-button">
-                <Link to="/about"><h4 className="read-about-link">Read about me</h4></Link>
+                <Link to="/about">
+                  <h4 className="read-about-link">
+                    read about me <FontAwesomeIcon icon={faArrowRightLong} className="arrow-icon" />
+                  </h4>
+                </Link>
               </div>
             </div>
           </div>

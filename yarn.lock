@@ -11557,6 +11557,11 @@
     "object-assign" "^4.1.1"
     "react-is" "^16.12.0 || ^17.0.0"
 
+"react-smooth-scrollbar@^8.0.6":
+  "integrity" "sha512-yWiIC4L8DwfIRkLL+PdXq5rysEm6trxHzRk1Rx82bzuu2aWDcHhT+l1vXH/73Re/zHmGjBgrxts/wIrwC6yYJA=="
+  "resolved" "https://registry.npmjs.org/react-smooth-scrollbar/-/react-smooth-scrollbar-8.0.6.tgz"
+  "version" "8.0.6"
+
 "react-sortable-hoc@^2.0.0":
   "integrity" "sha512-JZUw7hBsAHXK7PTyErJyI7SopSBFRcFHDjWW5SWjcugY0i6iH7f+eJkY8cJmGMlZ1C9xz1J3Vjz0plFpavVeRg=="
   "resolved" "https://registry.npmjs.org/react-sortable-hoc/-/react-sortable-hoc-2.0.0.tgz"
@@ -11698,7 +11703,7 @@
     "resize-observer-polyfill" "^1.5.1"
     "scheduler" "0.13.3"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^15.0 || ^16.0 || ^17.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0", "react@^16.2.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^17.0.1", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.14", "react@>= 16.3", "react@>= 16.8.0 || 18.0.0", "react@>=15", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0", "react@>=16.x", "react@16.x":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^15.0 || ^16.0 || ^17.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0", "react@^16.2.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^17.0.1", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.14", "react@>= 16.3", "react@>= 16.8.0 || 18.0.0", "react@>=15", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0", "react@>=16.x", "react@16.x":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -12726,7 +12731,12 @@
     "astral-regex" "^1.0.0"
     "is-fullwidth-code-point" "^2.0.0"
 
-"smooth-scrollbar@^8.7.4":
+"smooth-scrollbar-react@^2.3.0":
+  "integrity" "sha512-cxHLN0jn6bRfsSPnEGdEI6UnqtTcoLFwkXNqXbdsv21MLmrib46nIg0D84Z8YoruQApYpf20SJoUi3wrTO6V1g=="
+  "resolved" "https://registry.npmjs.org/smooth-scrollbar-react/-/smooth-scrollbar-react-2.3.0.tgz"
+  "version" "2.3.0"
+
+"smooth-scrollbar@^8.0.0", "smooth-scrollbar@^8.7.4":
   "integrity" "sha512-BSqZJExXoGbl9FGA4ci33DNmlHFRvDxJk4Q8OXmYykRLa1Hzg2YiV5slVogMd1UsxzNf6m0nralT8GdanKWoYw=="
   "resolved" "https://registry.npmjs.org/smooth-scrollbar/-/smooth-scrollbar-8.7.4.tgz"
   "version" "8.7.4"

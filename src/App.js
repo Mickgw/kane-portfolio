@@ -14,27 +14,32 @@ import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <header>
-          <Navbar />
-        </header>
+    <>
+      <div className="App">
+        <Router>
+          <header>
+            <Navbar />
+          </header>
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/motion" element={<Motion />} />
-            <Route path="/albums/:title" element={<PhotoAlbumsPage />}></Route>
-          </Routes>
-        </main>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/motion" element={<Motion />} />
+              <Route
+                path="/albums/:title"
+                element={<PhotoAlbumsPage />}
+              ></Route>
+            </Routes>
+          </main>
 
-        <footer>
-          <Footer />
-        </footer>
-      </Router>
-    </div>
+          <footer>
+            <Footer />
+          </footer>
+        </Router>
+      </div>
+    </>
   );
 }
 
