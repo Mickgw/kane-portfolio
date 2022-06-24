@@ -1,6 +1,6 @@
 .home-about {
   visibility: hidden;
-  margin-block: 40vh;
+  margin-block: 10vh;
   .container {
     margin: 0 auto;
 
@@ -25,7 +25,7 @@
             margin-bottom: 24px;
             .home-about-content-line {
               margin: 0;
-              height: 60px;
+              line-height: 1.4;
               overflow: hidden;
             }
 

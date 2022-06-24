@@ -6,7 +6,7 @@ import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 
 const PhotoAlbums = () => {
   return (
-    <>
+    <div className="photo-album-section">
       <h2 className="photo-albums-header">My Photo Albums</h2>
       <hr className="divider" />
 
@@ -50,7 +50,7 @@ const PhotoAlbums = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

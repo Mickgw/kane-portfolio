@@ -1,47 +1,38 @@
-import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { gsap, Power3 } from "gsap";
-// import { Link } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
   const delayChildrenDuration = 0.2;
   const delayChildrenImages = 0.5;
-  let tl = gsap;
+  const [ref, inView] = useInView();
 
   useEffect(() => {
-    // tl.fromTo(
-    //   "#image-container",
-    //   { opacity: 0, y: 500 },
-    //   { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
-    // );
-    // tl.fromTo("#image", { scale: 1.4 }, { scale: 1, duration: 2 });
-    // tl.fromTo(
-    //   ".home-about-content-line-inner",
-    //   { y: 100 },
-    //   { y: 0, duration: 1, stagger: delayChildrenDuration }
-    // );
-    // tl.fromTo(
-    //   ".hero-content-paragraph",
-    //   { opacity: 0, y: 100 },
-    //   { y: 0, opacity: 1, duration: 1, delay: delayChildrenDuration * 3 }
-    // );
-
     gsap
-      .timeline()
-      .to(".home-about", { autoAlpha: 1, duration: 0 })
+      .timeline({
+        scrollTrigger: {
+          trigger: "#about-section",
+          start: "top center",
+          once: true
+        }
+      })
+      .to("#about-section", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#image-container",
-        { opacity: 0, y: 500 },
+        { opacity: 0, y: 500},
         { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
       )
-      .fromTo("#image", { scale: 1.4 }, { scale: 1, duration: 2, delay: -1.5 })
+      .fromTo("#image", { scale: 1.6, skewY: 20 }, { scale: 1, skewY: 0, duration: 2, delay: -1.5 })
       .fromTo(
         ".home-about-content-line-inner",
         { y: 100 },
-        { y: 0, duration: 1, stagger: delayChildrenDuration, delay: -1 }
+        { y: 0, duration: 1, stagger: delayChildrenDuration, delay: -1}
       )
       .fromTo(
         ".hero-content-paragraph",
@@ -51,7 +42,7 @@ const HomeAbout = () => {
   });
 
   return (
-    <div className="home-about">
+    <div className="home-about" id="about-section">
       <div className="container">
         <div className="home-about-inner">
           <div className="home-about-content">
@@ -95,6 +86,9 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
+              <div className="read-about-button">
+                <Link to="/about"><h4 className="read-about-link">Read about me</h4></Link>
+              </div>
             </div>
           </div>
           <div className="home-about-images">
