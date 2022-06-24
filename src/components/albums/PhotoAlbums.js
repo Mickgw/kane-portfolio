@@ -7,8 +7,10 @@ import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 const PhotoAlbums = () => {
   return (
     <div className="photo-album-section">
-      <h2 className="photo-albums-header">My Photo Albums</h2>
-      <hr className="divider" />
+      <FadeInWhenVisible>
+        <h2 className="photo-albums-header">My Photo Albums</h2>
+        <hr className="divider" />
+      </FadeInWhenVisible>
 
       <div className="photo-albums">
         <div className="container">
@@ -27,7 +29,7 @@ const PhotoAlbums = () => {
                           <span className="album-cover-dot">
                             <FontAwesomeIcon icon={faCircle} className="dot" />
                           </span>
-                          <div className="image-container"> 
+                          <div className="image-container">
                             <img
                               className="album-cover"
                               src={album.cover_image}

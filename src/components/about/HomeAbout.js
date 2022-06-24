@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Link } from "react-router-dom";
+
+// Images
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
 
+// GSAP
+import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
   const delayChildrenDuration = 0.2;
   const delayChildrenImages = 0.5;
-  const [ref, inView] = useInView();
 
   useEffect(() => {
     gsap
