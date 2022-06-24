@@ -4,20 +4,18 @@ import Image3 from "../assets/images/image-3-banner.jpeg";
 
 import { useEffect, useState } from "react";
 // import { gsap } from "gsap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, AnimatePresence } from "framer-motion";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
 
 const Banner2 = () => {
   const [showShowScrollDown, setShowScrollDown] = useState(false);
-  const ImageDuration = 1;
+  // const ImageDuration = 1;
 
-  const scrollDownTextAnimation = {
-    exit: {
-      y: 100,
-      opacity: 0,
-    },
-  };
+  // const scrollDownTextAnimation = {
+  //   exit: {
+  //     y: 100,
+  //     opacity: 0,
+  //   },
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {

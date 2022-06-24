@@ -1,18 +1,20 @@
 .home-about {
-  margin-block: 20vh;
+  visibility: hidden;
+  margin-block: 40vh;
   .container {
     margin: 0 auto;
 
     .home-about-inner {
-      display: flex;
-      grid-template-columns: repeat(1, 1fr);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
 
       .home-about-content {
         width: 100%;
         margin: 0 auto;
 
         .home-about-content-inner {
-          padding-top: 25em;
+          padding-top: 10em;
           width: 90%;
           color: #323232;
 
@@ -130,35 +132,28 @@
       }
       .home-about-images {
         width: 100%;
-        height: 100vh;
         position: relative;
-        .home-about-images-inner {
-          .home-about-image {
-            position: absolute;
-            overflow: hidden;
 
-            &.right {
-              top: 0;
-              right: 0px;
-              width: 48%;
-              height: 70%;
-            }
+        .home-about-images-inner {
+          display: flex;
+          .image-container {
+            flex: 48%;
+            overflow: hidden;
+            position: absolute;
 
             &.left {
-              bottom: 8em;
-
+              top: 20%;
               left: 0px;
               width: 48%;
-              height: 70%;
             }
 
-            img {
-              padding-block: 50px;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
+            &.right {
+              top: 0px;
+              right: 0px;
+              width: 48%;
+            }
+
+            .image {
               width: 100%;
             }
           }
@@ -167,3 +162,4 @@
     }
   }
 }
+

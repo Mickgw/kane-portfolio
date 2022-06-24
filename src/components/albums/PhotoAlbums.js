@@ -27,10 +27,11 @@ const PhotoAlbums = () => {
                           <span className="album-cover-dot">
                             <FontAwesomeIcon icon={faCircle} className="dot" />
                           </span>
-                          <div className="image-container">
+                          <div className="image-container"> 
                             <img
                               className="album-cover"
                               src={album.cover_image}
+                              alt="album cover"
                             />
                           </div>
                         </div>

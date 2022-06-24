@@ -45,6 +45,7 @@ $card-spacing: 4vw;
                     }
 
                     .album-cover-dot {
+                        mix-blend-mode: difference;
                         position: absolute;
                         right: 2em;
                         top: 2em;
@@ -103,13 +104,13 @@ $card-spacing: 4vw;
         transform: scale(1);
     }
     25% {
-        transform: scale(1.5);
+        transform: scale(1.30);
     }
     50% {
-        transform: scale(1.25);
+        transform: scale(1.15);
     }
     75% {
-        transform: scale(1.5);
+        transform: scale(1.30);
     }
     100% {
         transform: scale(1);
