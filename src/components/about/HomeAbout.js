@@ -21,7 +21,7 @@ const HomeAbout = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#about-section",
-          start: "top +=800px",
+          start: "top +=650px",
           once: true,
         },
       })

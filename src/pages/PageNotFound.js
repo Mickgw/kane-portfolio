@@ -11,8 +11,8 @@ const PageNotFound = () => {
       .to(".page-not-found", { autoAlpha: 1, duration: 0 })
       .fromTo(
         ".page-not-found-header",
-        { opacity: 0, x: -100 },
-        { opacity: 1, x: 0 }
+        { opacity: 0, y: 100 },
+        { opacity: 1, y: 0 }
       )
       .fromTo(
         "#page-not-found-divider",
@@ -21,8 +21,8 @@ const PageNotFound = () => {
       )
       .fromTo(
         ".text-line-inner",
-        { y: 200 },
-        { y: 0, duration: 1, stagger: 0.3, delay: -1.3 }
+        { y: 200, skewY: 5 },
+        { y: 0, skewY: 0, duration: 1, stagger: 0.3, delay: -1.3 }
       );
   });
 
@@ -40,7 +40,7 @@ const PageNotFound = () => {
             <div className="text-line-inner">
                 <span className="sub-text">The page you are looking for can not be found.</span>
                 <br />
-                <span className="sub-text"> Return back to <Link to="/">home page.</Link></span>
+                <span className="sub-text"> Return back to the <Link to="/">home page.</Link></span>
             </div>
           </div>
         </h1>

@@ -6,6 +6,9 @@ import ImageModal from "../components/ImageModal";
 // Images
 import portfolioImages from "../assets/images/images-for-portfolio/portfolio-images.json";
 
+// GSAP
+// import { gsap } from "gsap";
+
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -53,8 +56,19 @@ const Portfolio = () => {
         );
   }, [tag]);
 
+  // useEffect(() => {
+  //   gsap
+  //     .timeline()
+  //     .to("#test", { autoAlpha: 1, duration: 0 })
+  //     .fromTo(
+  //       "image",
+  //       { opacity: 0, y: 100 },
+  //       { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+  //     );
+  // });
+
   return (
-    <div className="image-gallery">
+    <div className="image-gallery" id="test">
       <div className="container">
         <div className="image-category-tags">
           <TagButton

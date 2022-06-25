@@ -42,9 +42,11 @@ body {
 
 main {
   margin-inline: 15vw; //wrapper
+
+  @media (max-width: $layout-breakpoint-small) {
+    margin-inline: 8vw;
+  }
 }
-
-
 
 .custom-cursor {
   circle {
@@ -52,7 +54,3 @@ main {
     fill: black !important;
   }
 }
-
-
-
-
