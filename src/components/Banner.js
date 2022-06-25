@@ -2,7 +2,7 @@ import Image1 from "../assets/images/image-1-banner.jpeg";
 import Image2 from "../assets/images/portrait-placeholder1.jpeg";
 import Image3 from "../assets/images/image-3-banner.jpeg";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { gsap, Power3 } from "gsap";
 
 const Banner = () => {

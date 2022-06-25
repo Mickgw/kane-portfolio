@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+// import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 // Images
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
