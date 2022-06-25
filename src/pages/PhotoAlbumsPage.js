@@ -64,7 +64,7 @@ const PhotoAlbumsPage = () => {
                 </div>
               </div>
             );
-          }
+          } 
           return null;
         })}
       </div>

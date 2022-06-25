@@ -6,8 +6,6 @@ import { TbArrowUpRight } from "react-icons/tb";
 const Footer = () => {
   return (
     <>
-      <hr className="divider" />
-
       <div id="footer" className="footer">
         <div className="video-container">
           <video autoPlay muted loop>

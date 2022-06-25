@@ -1,5 +1,5 @@
 import "./scss/main.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -27,10 +28,9 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
               <Route path="/motion" element={<Motion />} />
-              <Route
-                path="/albums/:title"
-                element={<PhotoAlbumsPage />}
-              ></Route>
+              <Route path="/albums/:title" element={<PhotoAlbumsPage />} />
+              <Route path="*" element={<PageNotFound />} />
+              {/* <Navigate to="/404" /> */}
             </Routes>
           </main>
 

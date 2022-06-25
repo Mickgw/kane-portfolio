@@ -41,7 +41,7 @@
                     }
                     .email-header-link {
                         a {
-                            font-size: 7.5rem;
+                            font-size: calc(clamp(3rem, 7vw, 8rem) * .875);
                             color: $black;
                         }
                         

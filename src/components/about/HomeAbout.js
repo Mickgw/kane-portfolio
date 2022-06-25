@@ -29,7 +29,7 @@ const HomeAbout = () => {
       .fromTo(
         "#image-container",
         { opacity: 0, y: 500 },
-        { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
+        { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages}
       )
       .fromTo(
         "#image",
