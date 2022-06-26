@@ -1,5 +1,6 @@
 import "./scss/main.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useRef, use } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -13,9 +14,15 @@ import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 import PageNotFound from "./pages/PageNotFound";
 
-
 function App() {
-
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 300) {
+      document.body.style.backgroundColor = "black";
+    } else {
+      document.body.style.transition = "1s ease"
+      document.body.style.backgroundColor = "white";
+    }
+  });
 
   return (
     <>
@@ -36,8 +43,7 @@ function App() {
             </Routes>
           </main>
 
-
-            <Footer />
+          <Footer />
         </Router>
       </div>
     </>

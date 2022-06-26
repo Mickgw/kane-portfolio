@@ -2,7 +2,7 @@ $letter-spacing-banner-text: 42px;
 
 .banner {
   visibility: hidden;
-  background-color: $white;
+  background-color: transparent;
   height: 100vh;
 
   .row {
@@ -68,30 +68,6 @@ $letter-spacing-banner-text: 42px;
     }
   }
 }
-
-// .scroll {
-//   font-weight: 700;
-//   font-size: 1.5rem;
-//   letter-spacing: 2px;
-//   color: $black;
-//   text-transform: uppercase;
-//   position: absolute;
-//   bottom: 48px;
-//   transition: 0.5s ease-in-out;
-//   animation: bounce 2s infinite ease-in-out;
-// }
-
-// @keyframes bounce {
-//   0% {
-//     transform: translateY(-5px);
-//   }
-//   50% {
-//     transform: translateY(5px);
-//   }
-//   100% {
-//     transform: translateY(-5px);
-//   }
-// }
 
 .banner-text {
   overflow: hidden;

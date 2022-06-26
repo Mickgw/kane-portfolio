@@ -35,13 +35,13 @@ const Navbar = () => {
 
   return (
     <motion.div
-      // initial={{ opacity: 0, y: -180 }}
-      // animate={{ opacity: 1, y: 0 }}
-      // transition={{
-      //   ease: "easeInOut",
-      //   duration: 1,
-      //   delay: 3,
-      // }}
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 3,
+      }}
       className="navbar"
     >
       <div className="navbar-inner">

@@ -6,23 +6,9 @@ import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 
 const Home = () => {
-  let container = useRef(null);
-  let tl = new gsap.timeline();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    tl.to(container, 0, { css: { visibility: "visible" } });
-    tl.from("#id", 1.4, {
-      scale: 1.6,
-      ease: Power2.easeInOut,
-      delay: -1.4,
-    });
-  });
-
-
 
   return (
     <>
