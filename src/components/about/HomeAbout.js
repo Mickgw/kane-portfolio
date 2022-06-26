@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 // Images
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
@@ -98,13 +98,13 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
-              {/* <div className="read-about-button">
+              <div className="read-about-button">
                 <Link to="/about">
                   <h4 className="read-about-link">
                     read about me <FontAwesomeIcon icon={faArrowRightLong} className="arrow-icon" />
                   </h4>
                 </Link>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="home-about-images">
