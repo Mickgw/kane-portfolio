@@ -11,7 +11,7 @@ const Banner = () => {
 
   useEffect(() => {
     gsap
-      .timeline()
+      .timeline({})
       .to("#banner", { autoAlpha: 1, duration: 0 }) //Prevents white flash
       .fromTo(
         "#banner-image-container",
@@ -22,6 +22,7 @@ const Banner = () => {
           duration: imageContainerAnimationDuration,
           stagger: staggerDuration,
           ease: Power3.easeOut,
+          delay: 0.5
         }
       )
 

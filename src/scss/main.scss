@@ -25,6 +25,7 @@
 @import "components/cursor";
 
 body {
+  background-color: $white;
   min-height: 100% !important;
   height: 100%;
   overflow-x: hidden;
@@ -48,9 +49,13 @@ main {
   }
 }
 
-.custom-cursor {
-  circle {
-    content: "test";
-    fill: black !important;
+.App {
+  ._12c4J {
+    mix-blend-mode: difference;
+
+    .custom-cursor {
+      circle {
+      }
+    }
   }
 }
