@@ -31,7 +31,7 @@ function App() {
     <>
       <div className="App">
         <CustomCursor
-          targets={["button", ".logo"]}
+          targets={["button", ".logo", "a"]}
           customClass="custom-cursor"
           dimensions={40}
           fill="white"
