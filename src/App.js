@@ -33,7 +33,6 @@ function App() {
               <Route path="/motion" element={<Motion />} />
               <Route path="/albums/:title" element={<PhotoAlbumsPage />} />
               <Route path="/404" element={<PageNotFound />} />
-              <Route path="/*" element={ <Navigate to="/404" /> } />
             </Routes>
           </main>
 
