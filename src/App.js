@@ -32,7 +32,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/motion" element={<Motion />} />
               <Route path="/albums/:title" element={<PhotoAlbumsPage />} />
-              <Route path="/404" element={<PageNotFound />} />
+              <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </main>
 
