@@ -1,8 +1,6 @@
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const PageNotFound = () => {
   useEffect(() => {
