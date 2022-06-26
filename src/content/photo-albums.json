@@ -46,6 +46,28 @@
           "paragraph": "Paragraph 3"
         }
       ]
+    },
+    {
+      "id": "Io2s6lqka",
+      "title": "Potraits",
+      "year": 2022,
+      "camera": "Sony a7iii",
+      "camera_lens": "Zeiss 24/70 F1.4",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1656272170/AD96740A-C3B4-4128-8C4F-A5A5EBC3021A_llajxy.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1656272171/C929FFBD-DCA2-4BAD-9AEB-B3C68D533626_qoannq.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655320833/WhatsApp_Image_2022-05-31_at_1.28.41_PM_3_jivbpl.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.39_PM_1_hyp4nq.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
+      ],
+      "album_description_paragraphs": [
+        {
+          "paragraph": "Dit is paragraaf 1"
+        },
+        {
+          "paragraph": "Dit is paragraaf 2"
+        }
+      ]
     }
   ]
 }
