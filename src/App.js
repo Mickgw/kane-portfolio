@@ -1,5 +1,5 @@
 import "./scss/main.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useCallback } from "react";
 
@@ -17,79 +17,29 @@ import PageNotFound from "./pages/PageNotFound";
 import { useEffect } from "react";
 
 function App() {
-  let location = useLocation();
+  // let location = useLocation();
 
-  // if (location.pathname === "/") {
-  //   window.addEventListener("scroll", () => {
+  // function changeBodyBackground() {
+  //   if (window.scrollY <= 300) {
+  //     document.body.style.transition = "1s ease";
   //     document.body.style.backgroundColor = "black";
-  //     if (window.scrollY < 300) {
-  //       document.body.style.backgroundColor = "black";
-  //     } else {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "white";
-  //     }
-  //   });
-  // } else {
-  //   document.body.style.backgroundColor = "white";
+  //   } else {
+  //     document.body.style.backgroundColor = "white";
+  //   }
   // }
-
-  const changeBodyBackground = useCallback(() => {
-    if (window.scrollY < 300) {
-      document.body.style.transition = "1s ease";
-      document.body.style.backgroundColor = "black";
-    } else {
-      document.body.style.transition = "1s ease";
-      document.body.style.backgroundColor = "white";
-    }
-  })
-
-  if (location.pathname === "/") {
-    document.body.style.backgroundColor = "black";
-    window.addEventListener("scroll", changeBodyBackground);
-  } else {
-    document.body.style.backgroundColor = "white";
-    window.removeEventListener("scroll", changeBodyBackground);
-  }
 
   // if (location.pathname === "/") {
   //   document.body.style.backgroundColor = "black";
-
-  //   window.addEventListener("scroll", () => {
-  //     if (window.scrollY < 300) {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "black";
-  //     } else {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "white";
-  //     }
-  //   });
-  // } else {
-  //   window.removeEventListener("scroll", () => {
-  //     if (window.scrollY < 300) {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "black";
-  //     } else {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "white";
-  //     }
-  //   })
+  //   window.addEventListener("scroll", changeBodyBackground);
   // }
-
-  // window.addEventListener("scroll", () => {
-  //   if (location.pathname === "/") {
-  //     if (window.scrollY < 300) {
-  //       document.body.style.transition = "1s ease";
-  //       document.body.style.backgroundColor = "white";
-  //     }
-  //   }
-  // });
-
-  // console.log(location);
+  // if (location.pathname === "*") {
+  //   document.body.style.backgroundColor = "white";
+  //   window.removeEventListener("scroll", changeBodyBackground);
+  // }
 
   return (
     <>
       <div className="App">
-        {/* <Router> */}
         <header>
           <Navbar />
         </header>
@@ -106,7 +56,6 @@ function App() {
         </main>
 
         <Footer />
-        {/* </Router> */}
       </div>
     </>
   );

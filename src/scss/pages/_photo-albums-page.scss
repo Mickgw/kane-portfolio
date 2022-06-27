@@ -38,6 +38,7 @@
             }
 
             .album-images {
+                width: 100%;
                 margin-block: 15vh;
                 .image-index {
                     // transform: rotate(-90deg);
@@ -55,8 +56,12 @@
                     }
                 }
                 .album-image {
-                    padding-block: 5em;
+                    padding-block: 2em;
+                    display: block;
                     width: 100%;
+                    // height: 100vh;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }

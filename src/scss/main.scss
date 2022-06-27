@@ -25,6 +25,7 @@
 @import "components/cursor";
 
 body {
+  background-color: $background;
   min-height: 100% !important;
   height: 100%;
   overflow-x: hidden;
