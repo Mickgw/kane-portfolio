@@ -36,16 +36,16 @@ body {
     display: none;
   }
 
-  &.modal-open {
+  &.disable-scroll {
     overflow-y: hidden;
   }
 }
 
 main {
-  margin-inline: 15vw; //wrapper
+  margin-inline: $wrapper-value; //wrapper
 
   @media (max-width: $layout-breakpoint-small) {
-    margin-inline: 8vw;
+    margin-inline: $wrapper-value-breakpoint-small;
   }
 }
 

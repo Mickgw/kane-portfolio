@@ -1,11 +1,12 @@
 import "./scss/main.scss";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useCallback } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/hooks/ScrollToTop";
 
 // Pages
 import Home from "./pages/Home";
@@ -14,7 +15,6 @@ import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 import PageNotFound from "./pages/PageNotFound";
-import { useEffect } from "react";
 
 function App() {
   // let location = useLocation();
@@ -40,22 +40,25 @@ function App() {
   return (
     <>
       <div className="App">
-        <header>
-          <Navbar />
-        </header>
+        <Router>
+          <ScrollToTop />
+          <header>
+            <Navbar />
+          </header>
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/motion" element={<Motion />} />
-            <Route path="/albums/:title" element={<PhotoAlbumsPage />} />
-            <Route path="/*" element={<PageNotFound />} />
-          </Routes>
-        </main>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/motion" element={<Motion />} />
+              <Route path="/albums/:title" element={<PhotoAlbumsPage />} />
+              <Route path="/*" element={<PageNotFound />} />
+            </Routes>
+          </main>
 
-        <Footer />
+          <Footer />
+        </Router>
       </div>
     </>
   );

@@ -28,7 +28,7 @@ const HomeAbout = () => {
       .to("#about-section", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#image-container",
-        { opacity: 0, y: 500 },
+        { opacity: 0, y: 200 },
         { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
       )
       .fromTo(

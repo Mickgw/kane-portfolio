@@ -1,20 +1,56 @@
 .navbar-menu {
-    display: none;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: green;
+    background-color: $black;
     width: 100%;
     height: 100%;
     position: fixed;
-    
+    z-index: 9;
+
+    //Wrapper
+    padding-inline: $wrapper-value;
+
+    @media (max-width: $layout-breakpoint-small) {
+        padding-inline: $wrapper-value-breakpoint-small;
+    }
+
     .container {
         .nav {
-            .navlink {
-                font-size: 5rem;
-                a {
-                    text-decoration: none;
+            padding-top: 20vh;
+            text-align: left;
+
+            .navlink-container {
+                cursor: pointer;
+                padding-bottom: 5em;
+                .navlink {
+                    display: block;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 8rem;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            color: rgb(121, 121, 121);
+                        }
+                    }
+                }
+
+                .navlink-description {
+                    display: none;
+                    font-size: 1.8rem;
+                    margin-block: 1.5em;
+                    color: $white;
+                }
+
+                &:hover {
+                    .navlink-description {
+                        display: block;
+                        position: absolute;
+                    }
                 }
             }
         }

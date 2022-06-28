@@ -108,7 +108,7 @@ const Portfolio = () => {
                   onClick={() => {
                     setIsModal(true);
                     setModalImage(image_data.image);
-                    body.classList.add("modal-open");
+                    body.classList.add("disable-scroll");
                   }}
                 />
               </FadeInWhenVisible>

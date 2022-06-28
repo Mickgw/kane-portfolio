@@ -73,7 +73,7 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
         onClick={() => {
           setIsModal(false);
           setModalImage("");
-          body.classList.remove("modal-open");
+          body.classList.remove("disable-scroll");
         }}
       >
         close

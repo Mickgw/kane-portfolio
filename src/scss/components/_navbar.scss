@@ -1,11 +1,9 @@
 .navbar {
-  background-color: transparent;
-  z-index: 10;
-  margin-inline: 8vw;
+  width: 100%;
+  background-color: $background;
   font-size: 1.8rem;
   height: 100px;
   display: flex;
-  justify-content: center;
 
   a {
     text-decoration: none;
@@ -13,10 +11,13 @@
 }
 
 .navbar-inner {
+  // padding-inline: 8vw;
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
 
   .logo {
     h1 {
@@ -48,6 +49,7 @@
 
 .menu {
   .menu-button {
+    color: $black;
     border: none;
     outline: none;
     background-color: transparent;
@@ -58,7 +60,10 @@
     letter-spacing: 2px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    color: $white;
     mix-blend-mode: difference;
+
+    &.active {
+      color: $white;
+    }
   }
 }
