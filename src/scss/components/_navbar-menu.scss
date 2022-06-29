@@ -27,10 +27,17 @@
                         font-size: calc(clamp(5rem, 7vw, 7.5rem) * .875);
                         transition: 0.3s ease-in-out;
 
+                        &.active::before {
+                            content: "\2022";
+                            position: absolute;
+                            margin-left: -50px;
+                        }
+
                         &:hover {
                             color: rgb(121, 121, 121);                        
                         }
                     }
+
                 }
             }
         }

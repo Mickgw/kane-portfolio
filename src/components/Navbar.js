@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 
 const Navbar = () => {
-  let lt = gsap.timeline();
+  let tl = gsap.timeline();
   const location = useLocation();
   const body = document.querySelector("body");
   const [disabled, setDisabled] = useState(false);
@@ -29,15 +29,15 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    lt.fromTo(
+    tl.fromTo(
       ".navlink-container",
       { y: -20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.4, stagger: 0.2, delay: 0.3 }
     ).fromTo(
       ".menu-email",
-      { x: -200, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.4 }
-    );
+      { y: -20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4 }
+    )
   }, [state]);
 
   //Listening for page changes.
@@ -57,6 +57,8 @@ const Navbar = () => {
       });
     } else if (state.clicked === true) {
       console.log(2);
+      tl.progress(1);
+      tl.reverse();
       body.classList.remove("disable-scroll");
       setState({
         clicked: !state.clicked,
@@ -77,7 +79,6 @@ const Navbar = () => {
     setTimeout(() => {
       setDisabled(false);
     }, 1200);
-    console.log();
   };
 
   return (
@@ -107,8 +108,8 @@ const Navbar = () => {
               }}
               disabled={disabled}
             >
-              <div className="button-lines">
-                <span
+              <div className={state.clicked ? "button-lines menu-open" : "button-lines"}>
+                {/* <span
                   class={
                     state.clicked ? "lines line-1 menu-open" : "lines line-1"
                   }
@@ -122,7 +123,7 @@ const Navbar = () => {
                   class={
                     state.clicked ? "lines line-3 menu-open" : "lines line-3"
                   }
-                ></span>
+                ></span> */}
               </div>
             </div>
           </div>
@@ -138,28 +139,38 @@ const Navbar = () => {
             exit="exit"
           >
             <div className="container">
-              <nav className="nav">
-                <div className="navlink-container" id="navlink">
+              <nav
+                className="nav"
+              >
+                <div className="navlink-container">
                   <span className="navlink">
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" activeClassName="active">
+                      Home
+                    </NavLink>
                   </span>
                 </div>
 
-                <div className="navlink-container" id="navlink">
+                <div className="navlink-container">
                   <span className="navlink">
-                    <NavLink to="/portfolio">Portfolio</NavLink>
+                    <NavLink to="/portfolio" activeClassName="active">
+                      Portfolio
+                    </NavLink>
                   </span>
                 </div>
 
-                <div className="navlink-container" id="navlink">
+                <div className="navlink-container">
                   <span className="navlink">
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/about" activeClassName="active">
+                      About
+                    </NavLink>
                   </span>
                 </div>
 
-                <div className="navlink-container" id="navlink">
+                <div className="navlink-container">
                   <span className="navlink">
-                    <NavLink to="/motion">Motion</NavLink>
+                    <NavLink to="/motion" activeClassName="active">
+                      Motion
+                    </NavLink>
                   </span>
                 </div>
               </nav>
