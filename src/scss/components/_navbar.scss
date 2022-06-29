@@ -59,10 +59,10 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 
-    //When disabled variable is passed undo disable the pointer events
-    // &[disabled] {
-    //   pointer-events: none;
-    // }
+    //When disabled variable is passed disable the pointer events
+    &[disabled] {
+      pointer-events: none;
+    }
 
     .button-lines {
       position: absolute;

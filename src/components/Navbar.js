@@ -4,6 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 
 const Navbar = () => {
+  const navlinkDelay = 0.2;
+  const navlinkDuration = 1;
+
   let tl = gsap.timeline();
   const location = useLocation();
   const body = document.querySelector("body");
@@ -24,23 +27,89 @@ const Navbar = () => {
     },
     exit: {
       y: "-100vh",
-      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1 },
+      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1, delay: 0.5 },
     },
   };
 
-  useEffect(() => {
-    gsap
-    .timeline()
-    .fromTo(
-      ".navlink-container",
-      { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.4, stagger: 0.2, delay: 0.3 }
-    ).fromTo(
-      ".menu-email",
-      { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.4 }
-    )
-  }, [state]);
+  const navlinkAnimationFirst = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6,
+        duration: navlinkDuration,
+      },
+    },
+    exit: {
+      opacity: 0,
+    }
+  };
+
+  const navlinkAnimationSecond = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6 + navlinkDelay,
+        duration: navlinkDuration,
+      },
+    },
+    exit: {
+      opacity: 0,
+    }
+  };
+
+  const navlinkAnimationThird = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: navlinkDuration,
+        delay: 0.6 + navlinkDelay * 2,
+      },
+    },
+    exit: {
+      opacity: 0,
+    }
+  };
+
+  const navlinkAnimationFourth = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6 + navlinkDelay * 3,
+        duration: navlinkDuration,
+      },
+    },
+    exit: {
+      opacity: 0,
+    }
+  };
+
+  const navlinkAnimationFifth = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6 + navlinkDelay * 4,
+        duration: navlinkDuration,
+      },
+    },
+    exit: {
+      opacity: 0,
+    }
+  };
 
   //Listening for page changes.
   useEffect(() => {
@@ -60,8 +129,6 @@ const Navbar = () => {
       });
     } else if (state.clicked === true) {
       console.log(2);
-      tl.progress(1);
-      tl.reverse();
       body.classList.remove("disable-scroll");
       setState({
         clicked: !state.clicked,
@@ -111,7 +178,11 @@ const Navbar = () => {
               }}
               disabled={disabled}
             >
-              <div className={state.clicked ? "button-lines menu-open" : "button-lines"}>
+              <div
+                className={
+                  state.clicked ? "button-lines menu-open" : "button-lines"
+                }
+              >
                 {/* <span
                   class={
                     state.clicked ? "lines line-1 menu-open" : "lines line-1"
@@ -142,45 +213,74 @@ const Navbar = () => {
             exit="exit"
           >
             <div className="container">
-              <nav
-                className="nav"
-              >
-                <div className="navlink-container">
+              <nav className="nav">
+                <motion.div
+                  className="navlink-container"
+                  variants={navlinkAnimationFirst}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
                   <span className="navlink">
                     <NavLink to="/" activeClassName="active">
                       Home
                     </NavLink>
                   </span>
-                </div>
+                </motion.div>
 
-                <div className="navlink-container">
+                <motion.div
+                  className="navlink-container"
+                  variants={navlinkAnimationSecond}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
                   <span className="navlink">
                     <NavLink to="/portfolio" activeClassName="active">
                       Portfolio
                     </NavLink>
                   </span>
-                </div>
+                </motion.div>
 
-                <div className="navlink-container">
+                <motion.div
+                  className="navlink-container"
+                  variants={navlinkAnimationThird}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
                   <span className="navlink">
                     <NavLink to="/about" activeClassName="active">
                       About
                     </NavLink>
                   </span>
-                </div>
+                </motion.div>
 
-                <div className="navlink-container">
+                <motion.div
+                  className="navlink-container"
+                  variants={navlinkAnimationFourth}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
                   <span className="navlink">
                     <NavLink to="/motion" activeClassName="active">
                       Motion
                     </NavLink>
                   </span>
-                </div>
+                </motion.div>
               </nav>
 
-              <div className="menu-email" id="email">
+              <motion.div
+                className="menu-email"
+                id="email"
+                variants={navlinkAnimationFifth}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
                 <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
