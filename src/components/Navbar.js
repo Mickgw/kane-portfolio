@@ -27,7 +27,7 @@ const Navbar = () => {
     },
     exit: {
       y: "-100vh",
-      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1, delay: 0.5 },
+      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1, delay: 0.3 },
     },
   };
 
