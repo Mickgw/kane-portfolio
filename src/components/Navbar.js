@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import NavbarMenu from "./NavbarMenu";
+import { AnimatePresence, motion } from "framer-motion";
+import gsap from "gsap";
 
 const Navbar = () => {
+  let lt = gsap.timeline();
   const location = useLocation();
   const body = document.querySelector("body");
   const [disabled, setDisabled] = useState(false);
@@ -11,6 +13,32 @@ const Navbar = () => {
     clicked: null,
     menuName: "Menu",
   });
+
+  const menuAnimation = {
+    hidden: {
+      y: "-100vh",
+    },
+    visible: {
+      y: 0,
+      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1 },
+    },
+    exit: {
+      y: "-100vh",
+      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1 },
+    },
+  };
+
+  useEffect(() => {
+    lt.fromTo(
+      ".navlink-container",
+      { y: -20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, stagger: 0.2, delay: 0.3 }
+    ).fromTo(
+      ".menu-email",
+      { x: -200, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.4 }
+    );
+  }, [state]);
 
   //Listening for page changes.
   useEffect(() => {
@@ -49,32 +77,101 @@ const Navbar = () => {
     setTimeout(() => {
       setDisabled(false);
     }, 1200);
+    console.log();
   };
 
-  console.log(state);
-
   return (
-    <div className="navbar">
-      <div className="navbar-inner">
-        <div className="logo">
-          <Link to="/">
-            <h1>kane</h1>
-          </Link>
-        </div>
-        <div className="menu">
-          <button
-            className={state.clicked ? "menu-button active" : "menu-button"}
-            onClick={() => {
-              handleMenu();
-            }}
-            disabled={disabled}
-          >
-            <span>{state.menuName}</span>
-          </button>
+    <>
+      <div className="navbar">
+        <div className="navbar-inner">
+          <div className="logo">
+            <Link to="/">
+              <h1
+                className={
+                  state.clicked
+                    ? "placeholder-logo menu-open"
+                    : "placeholder-logo"
+                }
+              >
+                kane
+              </h1>
+            </Link>
+          </div>
+          <div className="menu">
+            <div
+              className={
+                state.clicked ? "menu-button menu-open" : "menu-button"
+              }
+              onClick={() => {
+                handleMenu();
+              }}
+              disabled={disabled}
+            >
+              <div className="button-lines">
+                <span
+                  class={
+                    state.clicked ? "lines line-1 menu-open" : "lines line-1"
+                  }
+                ></span>
+                <span
+                  class={
+                    state.clicked ? "lines line-2 menu-open" : "lines line-2"
+                  }
+                ></span>
+                <span
+                  class={
+                    state.clicked ? "lines line-3 menu-open" : "lines line-3"
+                  }
+                ></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {state.clicked && <NavbarMenu state={state} />}
-    </div>
+      <AnimatePresence>
+        {state.clicked && (
+          <motion.div
+            className="navbar-menu"
+            variants={menuAnimation}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <div className="container">
+              <nav className="nav">
+                <div className="navlink-container" id="navlink">
+                  <span className="navlink">
+                    <NavLink to="/">Home</NavLink>
+                  </span>
+                </div>
+
+                <div className="navlink-container" id="navlink">
+                  <span className="navlink">
+                    <NavLink to="/portfolio">Portfolio</NavLink>
+                  </span>
+                </div>
+
+                <div className="navlink-container" id="navlink">
+                  <span className="navlink">
+                    <NavLink to="/about">About</NavLink>
+                  </span>
+                </div>
+
+                <div className="navlink-container" id="navlink">
+                  <span className="navlink">
+                    <NavLink to="/motion">Motion</NavLink>
+                  </span>
+                </div>
+              </nav>
+
+              <div className="menu-email" id="email">
+                <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 .navbar {
+  position: fixed;
   width: 100%;
-  background-color: $background;
   font-size: 1.8rem;
   height: 100px;
   display: flex;
+  z-index: 100;
 
   a {
     text-decoration: none;
@@ -11,23 +12,30 @@
 }
 
 .navbar-inner {
-  // padding-inline: 8vw;
-  position: fixed;
+  margin-inline: $wrapper-value-menu;
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+
+  
 
   .logo {
-    h1 {
+    .placeholder-logo {
+      color: $black;
       letter-spacing: 1px;
       transition: 0.3s ease-in-out;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 2.3rem;
-      color: $black;
+
       text-decoration: none;
+      mix-blend-mode: difference;
+
+      &.menu-open {
+        color: white;
+      }
 
       &a:hover,
       a:visited,
@@ -47,23 +55,85 @@
   }
 }
 
+// .menu {
+//   padding-top: 20px;
+//   padding-right: 8vw;
+//   .menu-button {
+//     color: $black;
+//     border: none;
+//     outline: none;
+//     background-color: transparent;
+//     font-size: 1.5rem;
+//     font-family: inherit;
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     cursor: pointer;
+//     transition: 0.3s ease-in-out;
+//     mix-blend-mode: difference;
+//     top: 20px;
+
+//     &.active {
+//       color: $white;
+//     }
+//   }
+// }
+
 .menu {
+  position: relative;
+  top: 2vh;
+
   .menu-button {
-    color: $black;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-family: inherit;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    width: clamp(3.5em, 5.5vw, 4em);
+    height: clamp(3.5em, 5.5vw, 4em);
+    border-radius: 50%;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    mix-blend-mode: difference;
 
-    &.active {
-      color: $white;
+    &:hover {
+      transform: scale(1.1)
+    }
+
+    &.menu-open {
+      background-color: $white;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+    }
+
+    .button-lines {
+      position: absolute;
+      justify-content: center;
+      width: 40%;
+      height: 20%;
+
+      .lines {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $background;
+
+        &.menu-open {
+          background-color: $black;
+        }
+
+        &.line-1 {
+          top: 0;
+        }
+
+        &.line-2 {
+          top: 50%;
+        }
+
+        &.line-3 {
+          bottom: 0;
+        }
+      }
     }
   }
 }

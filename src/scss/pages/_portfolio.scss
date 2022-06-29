@@ -14,12 +14,12 @@
                 cursor: pointer;
                 letter-spacing: 1.5px;
                 margin-inline: 1.5em;
-                font-size: 1.3rem;
+                font-size: 1.5rem;
                 font-weight: 500;
                 color: $text-color;
                 font-family: inherit;
                 transition: 0.3s ease-in-out;
-                text-transform: uppercase;
+                // text-transform: uppercase;
 
                 &:hover {
                     color: $black;
