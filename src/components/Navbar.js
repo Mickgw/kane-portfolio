@@ -29,7 +29,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    tl.fromTo(
+    gsap
+    .timeline()
+    .fromTo(
       ".navlink-container",
       { y: -20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.4, stagger: 0.2, delay: 0.3 }
@@ -42,6 +44,7 @@ const Navbar = () => {
 
   //Listening for page changes.
   useEffect(() => {
+    const body = document.querySelector("body");
     setState({ clicked: false, menuName: "Menu" });
     body.classList.remove("disable-scroll");
   }, [location]);

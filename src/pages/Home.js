@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { gsap, Power2 } from "gsap";
+import React, { useEffect } from "react";
 
 import Banner from "../components/Banner";
 import HomeAbout from "../components/about/HomeAbout";

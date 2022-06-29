@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   font-size: 1.8rem;
   height: 100px;
@@ -59,21 +59,19 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 
-    &:hover {
-      background-color: #292929;
-    }
-
-    &[disabled] {
-      pointer-events: none;
-    }
+    //When disabled variable is passed undo disable the pointer events
+    // &[disabled] {
+    //   pointer-events: none;
+    // }
 
     .button-lines {
       position: absolute;
-      justify-content: center;
       width: 40%;
-      height: 12%;
+      height: 10%;
+      opacity: 1;
 
       &::before {
+        transition: 0.3s ease-in-out;
         content: "";
         position: absolute;
         top: 0;
@@ -84,6 +82,7 @@
       }
 
       &::after {
+        transition: 0.3s ease-in-out;
         content: "";
         position: absolute;
         bottom: 0;
@@ -95,49 +94,29 @@
 
       &.menu-open {
         &::before {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          left: 50%;
           content: "";
+          display: block;
           position: absolute;
-          top: 0;
           height: 1px;
           width: 100%;
-          // background-color: $black;
           mix-blend-mode: difference;
         }
-  
+
         &::after {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          left: 50%;
           content: "";
           position: absolute;
           bottom: 0;
           height: 1px;
           width: 100%;
-          // background-color: $black;
           mix-blend-mode: difference;
         }
-
       }
-
-      // .lines {
-      //   position: absolute;
-      //   width: 100%;
-      //   height: 1px;
-      //   background-color: $background;
-
-      //   &.menu-open {
-      //     background-color: $black;
-      //   }
-
-      //   &.line-1 {
-      //     top: 0;
-      //   }
-
-      //   &.line-2 {
-      //     top: 50%;
-      //   }
-
-      //   &.line-3 {
-      //     bottom: 0;
-      //   }
-      // }
     }
   }
 }
