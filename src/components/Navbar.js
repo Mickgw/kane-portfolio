@@ -28,11 +28,11 @@ const Navbar = () => {
     },
     visible: {
       y: 0,
-      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 }
     },
     exit: {
       y: "-100vh",
-      transition: { ease: [0.3, 0.1, -0.05, 1], duration: 1, delay: 0.3 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1, delay: 0.3 }
     },
   };
 

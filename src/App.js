@@ -13,6 +13,7 @@ import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 import PageNotFound from "./pages/PageNotFound";
+import { useState } from "react";
 
 function App() {
   return (
