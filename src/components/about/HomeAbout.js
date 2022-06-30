@@ -13,6 +13,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
+  const smallerDeviceActive = window.matchMedia("(max-width: 960px)");
   const delayChildrenDuration = 0.2;
   const delayChildrenImages = 0.5;
 
@@ -101,7 +102,11 @@ const HomeAbout = () => {
               <div className="read-about-button">
                 <Link to="/about">
                   <h4 className="read-about-link">
-                    read about me <FontAwesomeIcon icon={faArrowRightLong} className="arrow-icon" />
+                    read about me{" "}
+                    <FontAwesomeIcon
+                      icon={faArrowRightLong}
+                      className="arrow-icon"
+                    />
                   </h4>
                 </Link>
               </div>

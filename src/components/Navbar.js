@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import gsap from "gsap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedinIn,
+  faYoutube,
+  faUnsplash,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
-  const navlinkDelay = 0.2;
+  const navlinkDelay = 0.17;
   const navlinkDuration = 1;
 
-  let tl = gsap.timeline();
   const location = useLocation();
   const body = document.querySelector("body");
   const [disabled, setDisabled] = useState(false);
@@ -44,7 +49,7 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-    }
+    },
   };
 
   const navlinkAnimationSecond = {
@@ -60,7 +65,7 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-    }
+    },
   };
 
   const navlinkAnimationThird = {
@@ -76,7 +81,7 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-    }
+    },
   };
 
   const navlinkAnimationFourth = {
@@ -92,7 +97,7 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-    }
+    },
   };
 
   const navlinkAnimationFifth = {
@@ -108,7 +113,23 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-    }
+    },
+  };
+
+  const navlinkAnimationSixth = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6 + navlinkDelay * 5,
+        duration: navlinkDuration,
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
   };
 
   //Listening for page changes.
@@ -182,23 +203,7 @@ const Navbar = () => {
                 className={
                   state.clicked ? "button-lines menu-open" : "button-lines"
                 }
-              >
-                {/* <span
-                  class={
-                    state.clicked ? "lines line-1 menu-open" : "lines line-1"
-                  }
-                ></span>
-                <span
-                  class={
-                    state.clicked ? "lines line-2 menu-open" : "lines line-2"
-                  }
-                ></span>
-                <span
-                  class={
-                    state.clicked ? "lines line-3 menu-open" : "lines line-3"
-                  }
-                ></span> */}
-              </div>
+              ></div>
             </div>
           </div>
         </div>
@@ -222,7 +227,7 @@ const Navbar = () => {
                   exit="exit"
                 >
                   <span className="navlink">
-                    <NavLink to="/" activeClassName="active">
+                    <NavLink to="/" activeclassname="active">
                       Home
                     </NavLink>
                   </span>
@@ -236,7 +241,7 @@ const Navbar = () => {
                   exit="exit"
                 >
                   <span className="navlink">
-                    <NavLink to="/portfolio" activeClassName="active">
+                    <NavLink to="/portfolio" activeclassname="active">
                       Portfolio
                     </NavLink>
                   </span>
@@ -250,7 +255,7 @@ const Navbar = () => {
                   exit="exit"
                 >
                   <span className="navlink">
-                    <NavLink to="/about" activeClassName="active">
+                    <NavLink to="/about" activeclassname="active">
                       About
                     </NavLink>
                   </span>
@@ -264,22 +269,57 @@ const Navbar = () => {
                   exit="exit"
                 >
                   <span className="navlink">
-                    <NavLink to="/motion" activeClassName="active">
+                    <NavLink to="/motion" activeclassname="active">
                       Motion
                     </NavLink>
                   </span>
                 </motion.div>
               </nav>
 
-              <motion.div
-                className="menu-email"
-                id="email"
+              <motion.hr
+                className="menu-footer-divider"
                 variants={navlinkAnimationFifth}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
+              />
+
+              <motion.div
+                className="menu-footer"
+                id="email"
+                variants={navlinkAnimationSixth}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
               >
-                <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
+                <div className="footer-email">
+                  <a href="mailto:kanejansen@hotmail.nl">
+                    kanejansen@hotmail.nl
+                  </a>
+                </div>
+                <div className="footer-socials">
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      className="social-icon"
+                    />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon
+                      icon={faLinkedinIn}
+                      className="social-icon"
+                    />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon icon={faYoutube} className="social-icon" />
+                  </a>
+                  <a href="/" className="social-link">
+                    <FontAwesomeIcon
+                      icon={faUnsplash}
+                      className="social-icon"
+                    />
+                  </a>
+                </div>
               </motion.div>
             </div>
           </motion.div>

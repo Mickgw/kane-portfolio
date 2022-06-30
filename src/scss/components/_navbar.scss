@@ -7,114 +7,133 @@
   z-index: 100;
   mix-blend-mode: difference;
 
+  //Disables blend mode so menu can get black
+  @media (max-width: $layout-breakpoint-small) {
+    mix-blend-mode: normal !important;
+  }
+
   a {
     text-decoration: none;
   }
-}
 
-.navbar-inner {
-  margin-inline: $wrapper-value-menu;
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .navbar-inner {
+    margin-inline: $wrapper-value-menu;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  .logo {
-    .placeholder-logo {
-      color: $white;
-      letter-spacing: 1px;
-      transition: 0.3s ease-in-out;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 2.3rem;
-      text-decoration: none;
-
-      &a:hover,
-      a:visited,
-      a:link,
-      a:active {
+    .logo {
+      .placeholder-logo {
+        color: $white;
+        letter-spacing: 1px;
+        transition: 0.3s ease-in-out;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2.3rem;
         text-decoration: none;
-      }
 
-      @media (max-width: $layout-breakpoint-medium) {
-        font-size: 1rem;
+        &a:hover,
+        a:visited,
+        a:link,
+        a:active {
+          text-decoration: none;
+        }
+
+        @media (max-width: $layout-breakpoint-small) {
+          display: none;
+        }
       }
     }
   }
-}
 
-.menu {
-  position: relative;
-  top: 2vh;
+  .menu {
+    z-index: 2525;
+    position: relative;
+    top: 2vh;
 
-  .menu-button {
-    width: clamp(3.5em, 5.5vw, 4em);
-    height: clamp(3.5em, 5.5vw, 4em);
-    border-radius: 50%;
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-
-    //When disabled variable is passed disable the pointer events
-    &[disabled] {
-      pointer-events: none;
+    @media (max-width: $layout-breakpoint-small) {
+      top: 0;
     }
 
-    .button-lines {
-      position: absolute;
-      width: 40%;
-      height: 10%;
-      opacity: 1;
+    .menu-button {
+      width: clamp(3.5em, 5.5vw, 4em);
+      height: clamp(3.5em, 5.5vw, 4em);
+      border-radius: 50%;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
 
-      &::before {
-        transition: 0.3s ease-in-out;
-        content: "";
-        position: absolute;
-        top: 0;
-        height: 1px;
-        width: 100%;
-        background-color: $white;
-        mix-blend-mode: difference;
-      }
-
-      &::after {
-        transition: 0.3s ease-in-out;
-        content: "";
-        position: absolute;
-        bottom: 0;
-        height: 1px;
-        width: 100%;
-        background-color: $white;
-        mix-blend-mode: difference;
+      @media (max-width: $layout-breakpoint-small) {
+        background-color: $black !important;
       }
 
       &.menu-open {
+        @media (max-width: $layout-breakpoint-small) {
+          background-color: $white !important;
+        }
+      }
+
+      //When disabled variable is passed disable the pointer events
+      &[disabled] {
+        pointer-events: none;
+      }
+
+      .button-lines {
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 35%;
+        height: 10%;
+        opacity: 1;
+
         &::before {
-          top: 50%;
-          transform: translate(-50%, -50%) rotate(-45deg);
-          left: 50%;
+          transition: 0.3s ease-in-out;
           content: "";
-          display: block;
           position: absolute;
+          top: 0;
           height: 1px;
           width: 100%;
+          background-color: $white;
           mix-blend-mode: difference;
         }
 
         &::after {
-          top: 50%;
-          transform: translate(-50%, -50%) rotate(45deg);
-          left: 50%;
+          transition: 0.3s ease-in-out;
           content: "";
           position: absolute;
           bottom: 0;
           height: 1px;
           width: 100%;
+          background-color: $white;
           mix-blend-mode: difference;
+        }
+
+        &.menu-open {
+          &::before {
+            top: 3.3px;
+            transform: rotate(-45deg);
+            content: "";
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            mix-blend-mode: difference;
+          }
+
+          &::after {
+            bottom: 2px;
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            mix-blend-mode: difference;
+          }
         }
       }
     }

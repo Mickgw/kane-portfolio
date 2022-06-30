@@ -2,6 +2,7 @@
     .container {
         padding-block: 15vh;
         .about-grid {
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 10%;
