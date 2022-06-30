@@ -13,7 +13,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
-  const smallerDeviceActive = window.matchMedia("(max-width: 960px)");
+  // const smallerDeviceActive = window.matchMedia("(max-width: 960px)");
   const delayChildrenDuration = 0.2;
   const delayChildrenImages = 0.5;
 

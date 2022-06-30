@@ -10,13 +10,19 @@ $background: #ffffff;
 $white: #fff;
 $black: #000000;
 $forest-green: #134e13;
+$divider-color: rgb(212, 212, 212);
+
 
 // Text
 $text-color: grey;
 $black-text-hover: rgb(107, 107, 107);
 
-//Global
+
+//Wrapper
 $wrapper-value: 15vw;
 $wrapper-value-breakpoint-small: 8vw;
 $wrapper-value-menu: 7vw;
-$divider-color: rgb(212, 212, 212);
+
+
+//Padding values
+$padding-top-global: 15vh;

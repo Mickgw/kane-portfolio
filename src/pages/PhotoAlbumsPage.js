@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 import photoAlbums from "../content/photo-albums.json";
 
-
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
 
@@ -52,11 +51,14 @@ const PhotoAlbumsPage = () => {
                           {index + 1}<em className="image-count-divider">&#8213;</em>{album.images.length}
                         </motion.div> */}
                         <FadeInWhenVisible>
-                          <img
-                            className="album-image"
-                            src={album_image}
-                            alt="images photos"
-                          />
+                          <div className="image-container">
+                            <img
+                              className="album-image"
+                              src={album_image}
+                              alt="images photos"
+                            />
+                            <div className="image-index">0{index + 1}</div>
+                          </div>
                         </FadeInWhenVisible>
                       </div>
                     );
@@ -64,7 +66,7 @@ const PhotoAlbumsPage = () => {
                 </div>
               </div>
             );
-          } 
+          }
           return null;
         })}
       </div>

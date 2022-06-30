@@ -1,4 +1,5 @@
 .album-page {
+    padding-top: $padding-top-global;
     .container {
         .album-data {
             padding-block: 3em;
@@ -42,11 +43,12 @@
                 margin-block: 15vh;
                 .image-index {
                     // transform: rotate(-90deg);
+                    top: 0;
                     margin-top: 10vh;
-                    left: 10vw;
+                    left: -5vw;
                     position: absolute;
 
-                    font-size: 1.3rem;
+                    font-size: 2.5rem;
                     font-weight: 700;
                     text-transform: uppercase;
 
