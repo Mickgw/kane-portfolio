@@ -24,6 +24,20 @@
 @import "components/navbar-menu";
 @import "components/cursor";
 
+* {
+  cursor: none;
+}
+
+a, button, div {
+  cursor: none;
+
+  &:hover {
+    .cursor {
+      transform: scaleX(4);
+    }
+  }
+}
+
 body {
   background-color: $background;
   min-height: 100% !important;
@@ -47,6 +61,20 @@ main {
   @media (max-width: $layout-breakpoint-small) {
     margin-inline: $wrapper-value-breakpoint-small;
   }
+}
+
+.cursor {
+  position: fixed;
+  background-color: $white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+  z-index: 1000;
 }
 
 

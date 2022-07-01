@@ -93,7 +93,7 @@
                     transition: 0.3s ease-in-out;
                     font-size: calc(clamp(1.6rem, 7vw, 2.5rem) * 0.875);
                     color: $white;
-                    padding-inline: .8em;
+                    padding-inline: 1em;
 
                     @media (max-width: $layout-breakpoint-small) {
                         padding-top: 5vh;
