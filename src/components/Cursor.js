@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Cursor = () => {
-  const defaultCursorWidth = 20;
+  const defaultCursorWidth = 15;
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
 
-  const [cursorVariant, setCursorVariant] = useState("default");
+  const [cursorVariant, setCursorVariant] = useState("hover");
 
   console.log(mousePosition);
 
@@ -32,7 +32,17 @@ const Cursor = () => {
       y: mousePosition.y - defaultCursorWidth / 2,
       transition: {
         type: "spring",
-        mass: 0.01
+        mass: 0.0001
+      }
+    },
+    hover: {
+      height: 100,
+      width: 100,
+      x: mousePosition.x - 50,
+      y: mousePosition.y - 50,
+      transition: {
+        type: "spring",
+        mass: 0.0001
       }
     },
   };

@@ -24,18 +24,9 @@
 @import "components/navbar-menu";
 @import "components/cursor";
 
-* {
-  cursor: none;
-}
 
-a, button, div {
-  cursor: none;
-
-  &:hover {
-    .cursor {
-      transform: scaleX(4);
-    }
-  }
+a:hover ~ .cursor {
+  transform: scale(10);
 }
 
 body {
@@ -53,6 +44,13 @@ body {
   &.disable-scroll {
     overflow-y: hidden;
   }
+
+  a:hover {
+    .cursor {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
 main {
@@ -66,8 +64,8 @@ main {
 .cursor {
   position: fixed;
   background-color: $white;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   top: 0;
   left: 0;
@@ -76,5 +74,3 @@ main {
 
   z-index: 1000;
 }
-
-

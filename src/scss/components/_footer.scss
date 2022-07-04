@@ -2,145 +2,145 @@
     width: 100%;
     margin-top: 10vh;
 
-    .video-container {
-        z-index: -1;
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        right: 0;
+    // .video-container {
+    //     z-index: -1;
+    //     overflow: hidden;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
 
-        video {
-            object-fit: fill;
-            min-width: 100%;
-            min-height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
+    //     video {
+    //         object-fit: fill;
+    //         min-width: 100%;
+    //         min-height: 100%;
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translateX(-50%) translateY(-50%);
+    //     }
 
-        .container {
-            height: 100%;
-            padding-inline: $wrapper-value;
-            position: relative;
-            z-index: 2;
-            align-items: flex-end;
-            .top-footer-row {
-                padding-block: 20em;
+    .container {
+        background-color: $black;
+        height: 100vh;
+        padding-inline: $wrapper-value;
+        position: relative;
+        z-index: 2;
+        align-items: flex-end;
+        .top-footer-row {
+            padding-block: 20em;
+            width: 100%;
+            display: flex;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 2rem;
+
+            .email-header {
                 width: 100%;
-                display: flex;
-                grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 2rem;
+                text-align: center;
 
-                .email-header {
-                    width: 100%;
-                    text-align: center;
-
-                    .text-above-link {
-                        font-size: 1.3rem;
-                    }
-                    .email-header-link {
-                        a {
-                            font-size: calc(clamp(3rem, 7vw, 8rem) * .875);
-                            color: $black;
-                        }
-                        
-
-                        .email-link-icon {
-                            font-size: 8rem;
-                        }
-                    }
+                .text-above-link {
+                    font-size: 1.3rem;
                 }
-
-                .section-email-socials {
-                    width: 100%;
-                    grid-template-rows: repeat(2, 1fr);
-                    display: flex;
-
-                    .email {
-                        flex: 50%;
-                        .email-header-one {
-                            padding-top: 1em;
-                            font-size: 3rem;
-                            font-weight: 700;
-                        }
-
-                        .contact-paragraph {
-                            line-height: 1.7;
-                            color: $text-color;
-                            padding-block: 2em;
-                            font-size: 1.4rem;
-                        }
-                        .email-link {
-                        }
+                .email-header-link {
+                    a {
+                        font-size: calc(clamp(3rem, 7vw, 8rem) * 0.875);
+                        color: $white;
                     }
-                }
 
-                .section-navigation {
-                    width: 100%;
-                    .footer-nav {
-                        .footer-nav-link {
-                            padding-block: 5px;
-
-                            a {
-                                letter-spacing: -1px;
-                                text-decoration: none;
-                                font-size: 3rem;
-                                color: $black;
-                                transition: 0.5s ease-in-out;
-
-                                &:hover {
-                                    color: rgb(110, 110, 110);
-                                }
-                            }
-
-                            .active {
-                                transition: 0.5s ease-in-out;
-                                pointer-events: none;
-
-                                &:before {
-                                    color: $black;
-                                    opacity: 1;
-                                    float: left;
-                                    margin-left: -0.7em;
-                                    content: "\2022";
-                                }
-                            }
-                        }
+                    .email-link-icon {
+                        font-size: 8rem;
                     }
                 }
             }
 
-            .bottom-footer-row {
-                padding-block: 3em;
-                font-size: 1.1em;
-                font-weight: 500;
-                color: grey;
-                text-transform: uppercase;
+            .section-email-socials {
+                width: 100%;
+                grid-template-rows: repeat(2, 1fr);
+                display: flex;
 
-                .footer-bottom-container {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    .local-time {
+                .email {
+                    flex: 50%;
+                    .email-header-one {
+                        padding-top: 1em;
+                        font-size: 3rem;
+                        font-weight: 700;
                     }
 
-                    .made-by {
+                    .contact-paragraph {
+                        line-height: 1.7;
+                        color: $text-color;
+                        padding-block: 2em;
+                        font-size: 1.4rem;
+                    }
+                    .email-link {
+                    }
+                }
+            }
+
+            .section-navigation {
+                width: 100%;
+                .footer-nav {
+                    .footer-nav-link {
+                        padding-block: 5px;
+
                         a {
+                            letter-spacing: -1px;
                             text-decoration: none;
-                            color: grey;
-                            transition: 0.3s ease-in-out;
+                            font-size: 3rem;
+                            color: $black;
+                            transition: 0.5s ease-in-out;
 
                             &:hover {
-                                color: black;
+                                color: rgb(110, 110, 110);
+                            }
+                        }
+
+                        .active {
+                            transition: 0.5s ease-in-out;
+                            pointer-events: none;
+
+                            &:before {
+                                color: $black;
+                                opacity: 1;
+                                float: left;
+                                margin-left: -0.7em;
+                                content: "\2022";
                             }
                         }
                     }
                 }
             }
         }
+
+        .bottom-footer-row {
+            padding-block: 3em;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: grey;
+            text-transform: uppercase;
+
+            .footer-bottom-container {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .local-time {
+                }
+
+                .made-by {
+                    a {
+                        text-decoration: none;
+                        color: grey;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+        // }
     }
 }
 

@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <>
       <div id="footer" className="footer">
-        <div className="video-container">
-          <video autoPlay muted loop>
+        {/* <div className="video-container"> */}
+          {/* <video autoPlay muted loop>
             <source src={footerBG} type="video/mp4" />
-          </video>
+          </video> */}
           <div className="container">
             <div className="top-footer-row">
               <div className="email-header">
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </>
   );
