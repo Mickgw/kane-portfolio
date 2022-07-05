@@ -51,6 +51,23 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Paragraph", name: "paragraph", widget: "text"}
+
+  - label: "Videos for Motion page"
+    name: "motion-videos"
+    files: 
+      - label: "Video for Motion page"
+        name: "Video"
+        file: "src/assets/videos/motion-videos.json"
+        fields:
+          - label: "Image"
+            name: "image_list"
+            widget: "list"
+            fields:
+              - {label: "Video title", name: "title", widget: "string"}
+              - {label: "Video description", name: "description", widget: "string"}
+              - {label: "Video file", name: "video", widget: "video"}
+
+ 
     
 
 

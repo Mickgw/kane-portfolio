@@ -8,7 +8,7 @@ const Cursor = () => {
     y: 0,
   });
 
-  const [cursorVariant, setCursorVariant] = useState("hover");
+  const [cursorVariant, setCursorVariant] = useState("default");
 
   console.log(mousePosition);
 

@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Cursor />
+        {/* <Cursor /> */}
 
         <Router>
           <ScrollToTop />
