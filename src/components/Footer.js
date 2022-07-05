@@ -1,6 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
-import footerBG from "../assets/videos/footer-bg-test2.mp4";
+// import footerBG from "../assets/videos/footer-bg-test2.mp4";
 import { TbArrowUpRight } from "react-icons/tb";
 
 const Footer = () => {
