@@ -60,7 +60,7 @@ collections:
         file: "src/assets/videos/motion-videos.json"
         fields:
           - label: "Image"
-            name: "image_list"
+            name: "video_projects_list"
             widget: "list"
             fields:
               - {label: "Video title", name: "title", widget: "string"}
