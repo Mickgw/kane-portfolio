@@ -65,7 +65,7 @@ collections:
             fields:
               - {label: "Video title", name: "title", widget: "string"}
               - {label: "Video description", name: "description", widget: "string"}
-              - {label: "Video file", name: "video", widget: "video"}
+              - {label: "Video file", name: "video", widget: "file"}
 
  
     
