@@ -1,14 +1,22 @@
 .motion {
+    padding-top: $padding-top-global;
     .container {
-        height: 100vw;
+        height: 100%;
         .video-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 30vh;
+            height: 100%;
             .video-container {
-                height: 100%;
                 .video-title {
-
+                    font-weight: 700;
                 }
                 .video-description {
+                }
 
+                video {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
