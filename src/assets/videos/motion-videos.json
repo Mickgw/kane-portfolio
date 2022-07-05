@@ -3,7 +3,13 @@
     {
       "video": "https://res.cloudinary.com/ddxnrgllz/video/upload/v1657024956/TrackMania_United_Forever_2022-06-19_22-26-33_qp9hgv.mp4",
       "description": "This video is a test",
-      "title": "TEST VIDEO"
+      "title": "TEST VIDEO",
+      "video_url": "https://res.cloudinary.com/ddxnrgllz/video/upload/v1657024956/TrackMania_United_Forever_2022-06-19_22-26-33_qp9hgv.mp4"
+    },
+    {
+      "title": "TEST VIDEO 2",
+      "description": "this is test video 2",
+      "video_url": "https://res.cloudinary.com/ddxnrgllz/video/upload/v1656272196/IMG_8816_f1y2qr.mov"
     }
   ]
 }
