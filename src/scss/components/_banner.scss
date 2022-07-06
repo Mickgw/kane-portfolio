@@ -74,9 +74,9 @@ $letter-spacing-banner-text: 42px;
 .banner-text {
   overflow: hidden;
   line-height: 1;
-  font-size: 8rem;
+  font-size: 11rem;
   text-transform: uppercase;
-  letter-spacing: 42px;
+  letter-spacing: 25px;
   font-weight: 700;
   color: $white;
   position: absolute;
@@ -87,6 +87,7 @@ $letter-spacing-banner-text: 42px;
   text-align: center;
   mix-blend-mode: difference;
   z-index: 2;
+
   @media (max-width: 1440px) {
     font-size: 6rem;
     letter-spacing: 36px;

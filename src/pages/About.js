@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <div className="about">
-        <div className="container">
+        {/* <div className="container">
           <div className="about-grid">
             <div className="about-text">
               <div className="about-header">
@@ -67,7 +67,7 @@ const About = () => {
               <img className="image two" src={portait2} alt="right" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

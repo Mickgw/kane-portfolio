@@ -1,3 +1,6 @@
+$menu-button-bar-height: 2px;
+$menu-button-bar-height-responsive: 1px;
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -102,10 +105,14 @@
           content: "";
           position: absolute;
           top: 0;
-          height: 1px;
+          height: $menu-button-bar-height;
           width: 100%;
           background-color: $white;
           mix-blend-mode: difference;
+
+          @media (max-width: $layout-breakpoint-small) {
+            height: $menu-button-bar-height-responsive;
+          }
         }
 
         &::after {
@@ -113,10 +120,14 @@
           content: "";
           position: absolute;
           bottom: 0;
-          height: 1px;
+          height: $menu-button-bar-height;
           width: 100%;
           background-color: $white;
           mix-blend-mode: difference;
+
+          @media (max-width: $layout-breakpoint-small) {
+            height: $menu-button-bar-height-responsive;
+          }
         }
 
         &.menu-open {
@@ -126,9 +137,14 @@
             content: "";
             display: block;
             position: absolute;
-            height: 1px;
+            height: $menu-button-bar-height;
             width: 100%;
-            mix-blend-mode: difference;
+
+
+            @media (max-width: $layout-breakpoint-small) {
+              mix-blend-mode: difference;
+              height: $menu-button-bar-height-responsive;
+            }
           }
 
           &::after {
@@ -136,9 +152,13 @@
             transform: rotate(45deg);
             content: "";
             position: absolute;
-            height: 1px;
+            height: $menu-button-bar-height;
             width: 100%;
-            mix-blend-mode: difference;
+
+            @media (max-width: $layout-breakpoint-small) {
+              mix-blend-mode: difference;
+              height: $menu-button-bar-height-responsive;
+            }
           }
         }
       }

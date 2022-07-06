@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <HomeAbout />
       <PhotoAlbums />
     </>
   );

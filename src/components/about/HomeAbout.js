@@ -30,7 +30,7 @@ const HomeAbout = () => {
       .fromTo(
         "#image-container",
         { opacity: 0, y: 200 },
-        { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages }
+        { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages, delay: 1 }
       )
       .fromTo(
         "#image",
@@ -99,7 +99,7 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
-              <div className="read-about-button">
+              {/* <div className="read-about-button">
                 <Link to="/about">
                   <h4 className="read-about-link">
                     read about me{" "}
@@ -109,7 +109,7 @@ const HomeAbout = () => {
                     />
                   </h4>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="home-about-images">

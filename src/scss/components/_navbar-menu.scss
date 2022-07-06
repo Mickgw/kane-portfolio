@@ -16,7 +16,7 @@
             text-align: left;
 
             @media (max-width: $layout-breakpoint-small) {
-                padding-top: 18vh;
+                padding-top: 25vh;
             }
 
             .navlink-container {
@@ -81,6 +81,7 @@
                     color: $white;
 
                     @media (max-width: $layout-breakpoint-small) {
+                        display: none;
                         font-size: 1.8rem;
                     }
                 }
@@ -89,11 +90,16 @@
             .footer-socials {
                 display: flex;
 
+                @media (max-width: $layout-breakpoint-small) {
+                    width: 100vw - ($wrapper-value-menu * 2);
+                    justify-content: space-between;
+                }
+
                 .social-icon {
                     transition: 0.3s ease-in-out;
-                    font-size: calc(clamp(1.6rem, 7vw, 2.5rem) * 0.875);
+                    font-size: calc(clamp(2.5rem, 7vw, 3rem) * 0.875);
                     color: $white;
-                    padding-inline: 1em;
+                    padding-inline: 1.3em;
 
                     @media (max-width: $layout-breakpoint-small) {
                         padding-top: 5vh;
@@ -101,6 +107,10 @@
 
                     &:first-child {
                         padding-left: 0px !important;
+
+                        @media (max-width: $layout-breakpoint-small) {
+                            padding-inline: 0px !important;
+                        }
                     }
 
                     &:hover {

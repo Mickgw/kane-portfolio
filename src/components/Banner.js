@@ -57,7 +57,7 @@ const Banner = () => {
           delay: -2.5 + (staggerDuration * 2)
         }
       )
-      .fromTo("#reveal-banner-text", {opacity: 0, skewY: 10}, {opacity: 1, skewY: 0, duration: 1, delay: -.5});
+      .fromTo("#reveal-banner-text", {opacity: 0, scale: 1.1, skewY: 10, skewX: 10}, {opacity: 1, scale: 1, skewY: 0, skewX: 0, duration: 1, delay: -.5});
   });
 
   return (
@@ -65,7 +65,7 @@ const Banner = () => {
       <div className="container">
         <div className="row">
           <div id="reveal-banner-text" className="banner-text">
-            kane jansen        
+            Kane Jansen        
           </div>
           <div className="section left">
             <div className="inner-section">
