@@ -27,8 +27,13 @@ const PhotoAlbums = () => {
                       <div className="album-card">
                         <div className="album-cover-container">
                           <span className="album-cover-dot">
+                            {/* https://codepen.io/zachtownsend/pen/ZGQJOB */}
                             <FontAwesomeIcon icon={faCircle} className="dot" />
+                            <div className="album-cover-dot">
+                              <span>view</span>
+                            </div>
                           </span>
+
                           <div className="image-container">
                             <img
                               className="album-cover"

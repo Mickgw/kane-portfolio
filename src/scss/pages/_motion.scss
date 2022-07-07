@@ -1,17 +1,23 @@
 .motion {
+    padding-inline: 5vw;
     padding-top: $padding-top-global;
     .container {
         height: 100%;
         .video-grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            grid-row-gap: 30vh;
+            grid-row-gap: 10vh;
             height: 100%;
             .video-container {
                 .video-title {
-                    font-weight: 700;
+                    font-size: clamp(2rem, 5vw, 3rem);
+                    font-weight: 500;
                 }
                 .video-description {
+                    padding-block: 3vh;
+                    font-size: clamp(0.8rem, 3vw, 1.5rem);
+                    color: $text-color;
+                    line-height: 1.4;
                 }
 
                 video {
