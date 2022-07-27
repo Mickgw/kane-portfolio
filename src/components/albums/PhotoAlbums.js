@@ -33,7 +33,9 @@ const PhotoAlbums = () => {
                               className="dot"
                               id="dot-stroke"
                             />
-                            <span className="album-cover-dot-text">view</span>
+                            <div className="album-cover-dot-text-container">
+                              <span className="album-cover-dot-text">view</span>
+                            </div>
                           </div>
                           {/* <div className="album-cover-dot">
                             <span className="album-cover-dot-text">

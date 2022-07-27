@@ -84,15 +84,18 @@ $card-spacing: 2vw;
 
                         .album-cover-dot {
                             position: absolute;
-                            right: 2em;
-                            top: 2em;
+                            right: 3em;
+                            top: 3em;
+                            width: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
+                            height: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);;
                             z-index: 10;
-                            // display: table;
 
                             .dot {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
                                 transition: 0.5s ease-in-out;
                                 color: rgb(59, 59, 59);
-                                font-size: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
                                 transition: all 0.8s ease-out 0s;
                                 -webkit-transform: rotate(-90deg);
                                 -ms-transform: rotate(-90deg);
@@ -106,18 +109,23 @@ $card-spacing: 2vw;
                                 pointer-events: none;
                             }
 
-                            .album-cover-dot-text {
-                                // display: table-cell;
-                                // vertical-align: middle;
-                                right: 1em;
-                                top: 2.2em;
-                                position: absolute;
+                            .album-cover-dot-text-container {
+                                text-align: center;
+                                display: table;
+                                width: 100%;
+                                height: 100%;
                                 z-index: 11;
-                                letter-spacing: 1px;
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                color: $white;
-                                font-size: 1rem;
+                                .album-cover-dot-text {
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    position: relative;
+                                    z-index: 11;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    color: $white;
+                                    font-size: 1rem;
+                                }
                             }
                         }
 
@@ -133,7 +141,6 @@ $card-spacing: 2vw;
 
                         //     width: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
                         //     height: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
-
 
                         // }
 
@@ -186,7 +193,7 @@ $card-spacing: 2vw;
 }
 
 @keyframes fadeIn {
-	to {
-		stroke-opacity: 1;
-	}
+    to {
+        stroke-opacity: 1;
+    }
 }
