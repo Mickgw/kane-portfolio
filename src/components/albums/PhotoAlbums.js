@@ -26,18 +26,20 @@ const PhotoAlbums = () => {
                     <FadeInWhenVisible>
                       <div className="album-card">
                         <div className="album-cover-container">
-                          {/* <span className="album-cover-dot"> */}
-                            {/* https://codepen.io/zachtownsend/pen/ZGQJOB */}
-                            {/* <FontAwesomeIcon icon={faCircle} className="dot" /> */}
-                            {/* <div className="album-cover-dot">
-                              <span>view</span>
-                            </div>
-                          </span> */}
                           <div className="album-cover-dot">
+                            {/* https://codepen.io/zachtownsend/pen/ZGQJOB */}
+                            <FontAwesomeIcon
+                              icon={faCircle}
+                              className="dot"
+                              id="dot-stroke"
+                            />
+                            <span className="album-cover-dot-text">view</span>
+                          </div>
+                          {/* <div className="album-cover-dot">
                             <span className="album-cover-dot-text">
                               view
                             </span>
-                          </div>
+                          </div> */}
 
                           <div className="image-container">
                             <img
