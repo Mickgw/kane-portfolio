@@ -57,7 +57,7 @@ const Banner = () => {
           delay: -2.5 + (staggerDuration * 2)
         }
       )
-      .fromTo("#reveal-banner-text", {opacity: 0, scale: 1.1, skewY: 10, skewX: 10}, {opacity: 1, scale: 1, skewY: 0, skewX: 0, duration: 1, delay: -.5});
+      .fromTo("#reveal-banner-text", {opacity: 0, skewY: 10, scale: 0.96}, {opacity: 1, skewY: 0, scale: 1, duration: 1, delay: -.5});
   });
 
   return (

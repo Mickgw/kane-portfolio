@@ -46,44 +46,8 @@ $card-spacing: 2vw;
                             }
                         }
 
-                        .album-cover-dot {
-                            mix-blend-mode: difference;
-                            position: absolute;
-                            right: 2em;
-                            top: 2em;
-                            z-index: 10;
-                            display: table;
-                            text-align: center;
-
-                            .dot {
-                                transition: 0.5s ease-in-out;
-                                color: rgb(59, 59, 59);
-                                font-size: calc(clamp(3.5rem, 5vw, 6.5rem) * 0.875);
-                                // animation-duration: 1.5s;
-                                // animation-iteration-count: infinite;
-                                fill: red;
-                                transition: all 0.8s ease-out 0s;
-                                stroke-width: 10px;
-                            }
-
-                            span {
-                                letter-spacing: 1px;
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                color: $white;
-                                position: relative;
-                                display: table-cell;
-                                vertical-align: middle;
-                                margin: 0 auto;
-                                font-size: 1rem;
-                            }
-                        }
-
                         // .album-cover-dot {
-                        //     border-radius: 50%;
-                        //     background-color: rgb(59, 59, 59);
-                        //     width: 50px;
-                        //     height: 50px;
+                        //     mix-blend-mode: difference;
                         //     position: absolute;
                         //     right: 2em;
                         //     top: 2em;
@@ -91,18 +55,56 @@ $card-spacing: 2vw;
                         //     display: table;
                         //     text-align: center;
 
+                        //     .dot {
+                        //         transition: 0.5s ease-in-out;
+                        //         color: rgb(59, 59, 59);
+                        //         font-size: calc(clamp(3.5rem, 5vw, 6.5rem) * 0.875);
+                        //         // animation-duration: 1.5s;
+                        //         // animation-iteration-count: infinite;
+                        //         fill: red;
+                        //         transition: all 0.8s ease-out 0s;
+                        //         stroke-width: 10px;
+                        //         stroke-dasharray:480px;
+                        //         stroke-dashoffset: 480px;
+                        //         // fill: #eee;
+                        //         transition: all 0.8s ease-out 0s;
+                        //     }
+
                         //     span {
+                        //         position: relative;
+                        //         top: 55%;
+                        //         left: 25%;
                         //         letter-spacing: 1px;
                         //         text-transform: uppercase;
                         //         font-weight: 700;
                         //         color: $white;
-                        //         position: relative;
-                        //         display: table-cell;
-                        //         vertical-align: middle;
-                        //         margin: 0 auto;
                         //         font-size: 1rem;
                         //     }
                         // }
+
+                        .album-cover-dot {
+                            border-radius: 50%;
+                            position: absolute;
+                            right: 2em;
+                            top: 2em;
+                            z-index: 10;
+                            display: table;
+                            text-align: center;
+                            background-color: rgb(59, 59, 59);
+
+                            width: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
+                            height: calc(clamp(3.5rem, 5vw, 6rem) * 0.875);
+
+                            .album-cover-dot-text {
+                                display: table-cell;
+                                vertical-align: middle;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                                font-weight: 700;
+                                color: $white;
+                                font-size: 1rem;
+                            }
+                        }
                         .image-container {
                             transform: translateZ(1px);
 

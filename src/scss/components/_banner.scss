@@ -72,20 +72,21 @@ $letter-spacing-banner-text: 42px;
 }
 
 .banner-text {
-  overflow: hidden;
-  line-height: 1;
-  font-size: 11rem;
-  text-transform: uppercase;
-  letter-spacing: 25px;
+  color: #fff;
+  font-size: 8rem;
   font-weight: 700;
-  color: $white;
-  position: absolute;
-  width: 100%;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+  letter-spacing: 42px;
+  line-height: 1;
   mix-blend-mode: difference;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
   z-index: 2;
 
   @media (max-width: 1440px) {
