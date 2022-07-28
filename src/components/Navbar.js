@@ -190,6 +190,9 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu">
+            <span className="text-next-to-button">
+              {state.menuName}
+            </span>
             <div
               className={
                 state.clicked ? "menu-button menu-open" : "menu-button"
@@ -297,7 +300,7 @@ const Navbar = () => {
                     kanejansen@hotmail.nl
                   </a>
                 </div>
-                <div className="footer-socials">
+                {/* <div className="footer-socials">
                   <a href="/" className="social-link">
                     <FontAwesomeIcon
                       icon={faInstagram}
@@ -319,7 +322,7 @@ const Navbar = () => {
                       className="social-icon"
                     />
                   </a>
-                </div>
+                </div> */}
               </motion.div>
             </div>
           </motion.div>

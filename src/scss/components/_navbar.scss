@@ -1,26 +1,26 @@
 $menu-button-bar-height: 1px;
-$menu-button-bar-height-responsive: 1px;
 
 .navbar {
+  pointer-events: none; 
   position: fixed;
   width: 100%;
   font-size: 1.8rem;
-  height: 100px;
+  height: 150px;
   display: flex;
   z-index: 100;
   mix-blend-mode: difference;
 
   //Disables blend mode so menu can get black
-  @media (max-width: $layout-breakpoint-small) {
-    mix-blend-mode: normal !important;
-  }
+  // @media (max-width: $layout-breakpoint-small) {
+  //   mix-blend-mode: normal !important;
+  // }
 
   a {
     text-decoration: none;
   }
 
   .navbar-inner {
-    margin-inline: $wrapper-value-menu;
+    margin-inline: $wrapper-value-navbar;
     position: relative;
     width: 100%;
     display: flex;
@@ -28,6 +28,7 @@ $menu-button-bar-height-responsive: 1px;
     justify-content: space-between;
 
     .logo {
+      pointer-events: all;
       .placeholder-logo {
         color: $white;
         letter-spacing: 1px;
@@ -44,9 +45,9 @@ $menu-button-bar-height-responsive: 1px;
           text-decoration: none;
         }
 
-        @media (max-width: $layout-breakpoint-small) {
-          display: none;
-        }
+        // @media (max-width: $layout-breakpoint-small) {
+        //   display: none;
+        // }
 
         &a:hover {
           .cursor {
@@ -58,17 +59,29 @@ $menu-button-bar-height-responsive: 1px;
   }
 
   .menu {
+    display: flex;
     z-index: 2525;
     position: relative;
-    top: 2vh;
 
-    @media (max-width: $layout-breakpoint-small) {
-      top: 0;
+    .text-next-to-button {
+      font-weight: 600;
+      padding-right: 1em;
+      letter-spacing: 1.5px;
+      margin-block: auto;
+      font-size: clamp(1rem, 5.5vw, 1.3rem);
+      text-transform: uppercase;
+      color: $white;
+
+      //Makes text next to button disappear
+      @media (max-width: $layout-breakpoint-small) {
+        display: none;
+      }
     }
 
     .menu-button {
-      width: clamp(3.5em, 5.5vw, 4em);
-      height: clamp(3.5em, 5.5vw, 4em);
+      pointer-events: all;
+      width: clamp(2em, 5.5vw, 2.5em);
+      height: clamp(2em, 5.5vw, 2.5em);
       border-radius: 50%;
       background-color: $white;
       display: flex;
@@ -77,14 +90,11 @@ $menu-button-bar-height-responsive: 1px;
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
+      //Makes button bigger and changes color
       @media (max-width: $layout-breakpoint-small) {
-        background-color: $black !important;
-      }
-
-      &.menu-open {
-        @media (max-width: $layout-breakpoint-small) {
-          background-color: $white !important;
-        }
+        width: 3em;
+        height: 3em;
+        background-color: $white;
       }
 
       //When disabled variable is passed disable the pointer events
@@ -96,9 +106,14 @@ $menu-button-bar-height-responsive: 1px;
         align-items: center;
         justify-content: center;
         position: absolute;
-        width: 35%;
-        height: 10%;
+        width: 15%;
+        height: 12%;
         opacity: 1;
+
+        //Makes lines in button bigger
+        @media (max-width: $layout-breakpoint-small) {
+          width: 35%;
+        }
 
         &::before {
           transition: 0.3s ease-in-out;
@@ -107,12 +122,8 @@ $menu-button-bar-height-responsive: 1px;
           top: 0;
           height: $menu-button-bar-height;
           width: 100%;
-          background-color: $white;
-          mix-blend-mode: difference;
-
-          @media (max-width: $layout-breakpoint-small) {
-            height: $menu-button-bar-height-responsive;
-          }
+          background-color: $black;
+          border-radius: 5px;
         }
 
         &::after {
@@ -122,12 +133,8 @@ $menu-button-bar-height-responsive: 1px;
           bottom: 0;
           height: $menu-button-bar-height;
           width: 100%;
-          background-color: $white;
-          mix-blend-mode: difference;
-
-          @media (max-width: $layout-breakpoint-small) {
-            height: $menu-button-bar-height-responsive;
-          }
+          background-color: $black;
+          border-radius: 2px;
         }
 
         &.menu-open {
@@ -139,16 +146,10 @@ $menu-button-bar-height-responsive: 1px;
             position: absolute;
             height: $menu-button-bar-height;
             width: 100%;
-
-
-            @media (max-width: $layout-breakpoint-small) {
-              mix-blend-mode: difference;
-              height: $menu-button-bar-height-responsive;
-            }
           }
 
           &::after {
-            bottom: 2px;
+            bottom: 1px;
             transform: rotate(45deg);
             content: "";
             position: absolute;
@@ -156,8 +157,7 @@ $menu-button-bar-height-responsive: 1px;
             width: 100%;
 
             @media (max-width: $layout-breakpoint-small) {
-              mix-blend-mode: difference;
-              height: $menu-button-bar-height-responsive;
+              bottom: 2px;
             }
           }
         }

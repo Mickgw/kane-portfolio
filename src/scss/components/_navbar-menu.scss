@@ -10,13 +10,19 @@
     z-index: 99;
 
     .container {
-        padding-inline: $wrapper-value-menu;
+        padding-inline: $wrapper-value;
+
+        //Inherit padding inline from the navbar
+        @media (max-width: $layout-breakpoint-small) {
+            padding-inline: $wrapper-value-navbar;
+        }
+        
         .nav {
             padding-top: 27vh;
             text-align: left;
 
             @media (max-width: $layout-breakpoint-small) {
-                padding-top: 25vh;
+                padding-top: 27vh;
             }
 
             .navlink-container {
@@ -26,15 +32,19 @@
                     display: block;
 
                     a {
+                        font-weight: 100;
+                        letter-spacing: 1px;
                         color: $white;
                         text-decoration: none;
                         font-size: calc(clamp(5rem, 7vw, 7.5rem) * 0.875);
                         transition: 0.3s ease-in-out;
 
                         &.active::before {
+                            padding-top: 10px;
                             content: "\2022";
                             position: absolute;
                             margin-left: -35px;
+                            font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
 
                             @media (max-width: $layout-breakpoint-small) {
                                 right: 8vw;
@@ -51,6 +61,7 @@
         }
 
         .menu-footer-divider {
+            margin-block: 10vh;
             border: none !important;
             width: 100%;
             height: 1px;
@@ -77,7 +88,7 @@
             .footer-email {
                 a {
                     text-decoration: none;
-                    font-size: 3rem;
+                    font-size: 1.5rem;
                     color: $white;
 
                     @media (max-width: $layout-breakpoint-small) {
@@ -91,13 +102,13 @@
                 display: flex;
 
                 @media (max-width: $layout-breakpoint-small) {
-                    width: 100vw - ($wrapper-value-menu * 2);
+                    width: 100vw - ($wrapper-value-navbar * 2);
                     justify-content: space-between;
                 }
 
                 .social-icon {
                     transition: 0.3s ease-in-out;
-                    font-size: calc(clamp(2.5rem, 7vw, 3rem) * 0.875);
+                    font-size: calc(clamp(1.5rem, 7vw, 2rem) * 0.875);
                     color: $white;
                     padding-inline: 1.3em;
 
