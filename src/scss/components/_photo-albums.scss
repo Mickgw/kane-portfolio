@@ -58,14 +58,13 @@ $card-spacing: 2vw;
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
-                                transition: 0.5s ease-in-out;
                                 color: rgb(59, 59, 59);
                                 transition: all 0.8s ease-out 0s;
                                 -webkit-transform: rotate(-90deg);
                                 -ms-transform: rotate(-90deg);
                                 transform: rotate(-90deg);
                                 stroke: white;
-                                stroke-width: 30px;
+                                stroke-width: 3em;
 
                                 stroke-dasharray: 2000;
                                 stroke-dashoffset: 2000;

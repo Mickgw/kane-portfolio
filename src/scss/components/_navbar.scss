@@ -1,7 +1,7 @@
 $menu-button-bar-height: 1px;
 
 .navbar {
-  pointer-events: none; 
+  pointer-events: none;
   position: fixed;
   width: 100%;
   font-size: 1.8rem;
@@ -63,18 +63,24 @@ $menu-button-bar-height: 1px;
     z-index: 2525;
     position: relative;
 
-    .text-next-to-button {
-      font-weight: 600;
-      padding-right: 1em;
+    .desktop-menu-button-text {
+      pointer-events: all;
+      cursor: pointer;
+      font-weight: 700;
       letter-spacing: 1.5px;
       margin-block: auto;
-      font-size: clamp(1rem, 5.5vw, 1.3rem);
+      font-size: clamp(1rem, 5.5vw, 1.6rem);
       text-transform: uppercase;
       color: $white;
 
-      //Makes text next to button disappear
+      //Display none after certain view width
       @media (max-width: $layout-breakpoint-small) {
         display: none;
+      }
+
+      //Takes the disabled attribute that is added and manually disabled the pointer events
+      &[disabled] {
+        pointer-events: none;
       }
     }
 
@@ -89,6 +95,10 @@ $menu-button-bar-height: 1px;
       justify-content: center;
       cursor: pointer;
       transition: 0.3s ease-in-out;
+
+      @media (min-width: $layout-breakpoint-small) {
+        display: none !important;
+      }
 
       //Makes button bigger and changes color
       @media (max-width: $layout-breakpoint-small) {

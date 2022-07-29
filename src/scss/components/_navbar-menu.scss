@@ -16,68 +16,98 @@
         @media (max-width: $layout-breakpoint-small) {
             padding-inline: $wrapper-value-navbar;
         }
-        
-        .nav {
-            padding-top: 27vh;
-            text-align: left;
 
-            @media (max-width: $layout-breakpoint-small) {
-                padding-top: 27vh;
+        .navigation {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: $card-spacing;
+            grid-row-gap: $card-spacing;
+            width: 100%;
+            padding-top: 27vh;
+
+            @media (max-width: $layout-breakpoint-medium) {
+                grid-template-columns: repeat(1, 1fr);
             }
 
-            .navlink-container {
-                cursor: pointer;
-                padding-bottom: 3em;
-                .navlink {
-                    display: block;
+            .nav-links {
+                width: 100%;
 
-                    a {
-                        font-weight: 100;
-                        letter-spacing: 1px;
-                        color: $white;
-                        text-decoration: none;
-                        font-size: calc(clamp(5rem, 7vw, 7.5rem) * 0.875);
-                        transition: 0.3s ease-in-out;
+                text-align: left;
 
-                        &.active::before {
-                            padding-top: 10px;
-                            content: "\2022";
-                            position: absolute;
-                            margin-left: -35px;
-                            font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
+                .navlink-container {
+                    cursor: pointer;
+                    padding-bottom: 3em;
+                    .navlink {
+                        display: block;
 
-                            @media (max-width: $layout-breakpoint-small) {
-                                right: 8vw;
+                        a {
+                            font-weight: 100;
+                            letter-spacing: 1px;
+                            color: $white;
+                            text-decoration: none;
+                            font-size: calc(clamp(5rem, 7vw, 7.5rem) * 0.875);
+                            transition: 0.3s ease-in-out;
+
+                            &.active::before {
+                                padding-top: 10px;
+                                content: "\2022";
+                                position: absolute;
+                                margin-left: -35px;
+                                font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
+
+                                @media (max-width: $layout-breakpoint-small) {
+                                    right: 17vw;
+                                }
+                            }
+
+                            &:hover {
+                                margin-left: 10px;
+                                color: rgb(121, 121, 121);
                             }
                         }
-
-                        &:hover {
-                            margin-left: 10px;
-                            color: rgb(121, 121, 121);
-                        }
                     }
+                }
+            }
+
+            .menu-image {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+
+                @media (max-width: $layout-breakpoint-medium) {
+                    display: none;
+                }           
+
+                .navigation-image {
+                    position: absolute;
+                    height: auto; /* Make sure images are scaled correctly. */
+                    width: 100%; /* Adhere to container width. */
+                    display: block;
+                    flex-shrink: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;                    
                 }
             }
         }
 
         .menu-footer-divider {
-            margin-block: 10vh;
+            margin-top: 12vh;
             border: none !important;
             width: 100%;
             height: 1px;
-            background-color: $divider-color;
-
-            @media (min-width: $layout-breakpoint-small) {
-                display: none;
-            }
+            background-color: rgb(83, 83, 83);
         }
 
         .menu-footer {
+            padding-top: 5vh;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-block: 15vh;
 
             @media (max-width: $layout-breakpoint-small) {
                 padding-block: 5vh;

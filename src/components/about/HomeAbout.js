@@ -30,12 +30,12 @@ const HomeAbout = () => {
       .fromTo(
         "#image-container",
         { opacity: 0, y: 200 },
-        { opacity: 1, y: 0, duration: 1, stagger: delayChildrenImages, delay: .5 }
+        { opacity: 1, y: 0, duration: 1.5, stagger: delayChildrenImages, delay: .5 }
       )
       .fromTo(
         "#image",
         { scale: 1.6, skewY: 20 },
-        { scale: 1, skewY: 0, duration: 2, delay: -1.5 }
+        { scale: 1, skewY: 0, duration: 2, delay: -2 }
       )
       .fromTo(
         ".home-about-content-line-inner",

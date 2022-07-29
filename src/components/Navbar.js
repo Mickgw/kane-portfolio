@@ -9,6 +9,8 @@ import {
   faUnsplash,
 } from "@fortawesome/free-brands-svg-icons";
 
+import portait1 from "../assets/images/image-1-banner.jpeg";
+
 const Navbar = () => {
   const navlinkDelay = 0.17;
   const navlinkDuration = 1;
@@ -28,11 +30,31 @@ const Navbar = () => {
     },
     visible: {
       y: 0,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 }
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 },
     },
     exit: {
       y: "-100vh",
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1, delay: 0.3 }
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1, delay: 0.3 },
+    },
+  };
+
+  const navMenuImageAnimation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.6,
+        duration: 0.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 1,
+      }
     },
   };
 
@@ -49,6 +71,10 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        delay: navlinkDelay * 5,
+        duration: 0.3,
+      },
     },
   };
 
@@ -65,6 +91,10 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        delay: navlinkDelay * 4,
+        duration: 0.3,
+      },
     },
   };
 
@@ -81,6 +111,10 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        delay: navlinkDelay * 3,
+        duration: 0.3,
+      },
     },
   };
 
@@ -97,6 +131,10 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        delay: navlinkDelay * 3,
+        duration: 0.3,
+      },
     },
   };
 
@@ -113,6 +151,10 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        delay: navlinkDelay * 2,
+        duration: 0.3,
+      },
     },
   };
 
@@ -129,6 +171,9 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
+      transition: {
+        duration: 0.3,
+      },
     },
   };
 
@@ -169,7 +214,7 @@ const Navbar = () => {
     setDisabled(!disabled);
     setTimeout(() => {
       setDisabled(false);
-    }, 1200);
+    }, 2000);
   };
 
   return (
@@ -190,9 +235,16 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu">
-            <span className="text-next-to-button">
+            <div
+              className="desktop-menu-button-text"
+              onClick={() => {
+                handleMenu();
+              }}
+              disabled={disabled}
+            >
               {state.menuName}
-            </span>
+            </div>
+
             <div
               className={
                 state.clicked ? "menu-button menu-open" : "menu-button"
@@ -221,63 +273,75 @@ const Navbar = () => {
             exit="exit"
           >
             <div className="container">
-              <nav className="nav">
-                <motion.div
-                  className="navlink-container"
-                  variants={navlinkAnimationFirst}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <span className="navlink">
-                    <NavLink to="/" activeclassname="active">
-                      Home
-                    </NavLink>
-                  </span>
-                </motion.div>
+              <div className="navigation">
+                <nav className="nav-links">
+                  <motion.div
+                    className="navlink-container"
+                    variants={navlinkAnimationFirst}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <span className="navlink">
+                      <NavLink to="/" activeclassname="active">
+                        Home
+                      </NavLink>
+                    </span>
+                  </motion.div>
+
+                  <motion.div
+                    className="navlink-container"
+                    variants={navlinkAnimationSecond}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <span className="navlink">
+                      <NavLink to="/portfolio" activeclassname="active">
+                        Portfolio
+                      </NavLink>
+                    </span>
+                  </motion.div>
+
+                  <motion.div
+                    className="navlink-container"
+                    variants={navlinkAnimationThird}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <span className="navlink">
+                      <NavLink to="/about" activeclassname="active">
+                        About
+                      </NavLink>
+                    </span>
+                  </motion.div>
+
+                  <motion.div
+                    className="navlink-container"
+                    variants={navlinkAnimationFourth}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <span className="navlink">
+                      <NavLink to="/motion" activeclassname="active">
+                        Motion
+                      </NavLink>
+                    </span>
+                  </motion.div>
+                </nav>
 
                 <motion.div
-                  className="navlink-container"
-                  variants={navlinkAnimationSecond}
+                  className="menu-image"
+                  variants={navMenuImageAnimation}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
                 >
-                  <span className="navlink">
-                    <NavLink to="/portfolio" activeclassname="active">
-                      Portfolio
-                    </NavLink>
-                  </span>
+                  <img className="navigation-image" src={portait1} />
                 </motion.div>
-
-                <motion.div
-                  className="navlink-container"
-                  variants={navlinkAnimationThird}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <span className="navlink">
-                    <NavLink to="/about" activeclassname="active">
-                      About
-                    </NavLink>
-                  </span>
-                </motion.div>
-
-                <motion.div
-                  className="navlink-container"
-                  variants={navlinkAnimationFourth}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <span className="navlink">
-                    <NavLink to="/motion" activeclassname="active">
-                      Motion
-                    </NavLink>
-                  </span>
-                </motion.div>
-              </nav>
+              </div>
 
               <motion.hr
                 className="menu-footer-divider"
@@ -300,7 +364,7 @@ const Navbar = () => {
                     kanejansen@hotmail.nl
                   </a>
                 </div>
-                {/* <div className="footer-socials">
+                <div className="footer-socials">
                   <a href="/" className="social-link">
                     <FontAwesomeIcon
                       icon={faInstagram}
@@ -322,7 +386,7 @@ const Navbar = () => {
                       className="social-icon"
                     />
                   </a>
-                </div> */}
+                </div>
               </motion.div>
             </div>
           </motion.div>
