@@ -9,7 +9,10 @@ import {
   faUnsplash,
 } from "@fortawesome/free-brands-svg-icons";
 
-import portait1 from "../assets/images/image-1-banner.jpeg";
+import homeImage from "../assets/images/image-1-banner.jpeg";
+import portfolioImage from "../assets/images/image-3-banner.jpeg";
+import aboutImage from "../assets/images/image_3_menu.jpeg";
+import motionImage from "../assets/images/image_4_menu.jpeg";
 
 const Navbar = () => {
   const navlinkDelay = 0.17;
@@ -34,7 +37,7 @@ const Navbar = () => {
     },
     exit: {
       y: "-100vh",
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1, delay: 0.3 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 },
     },
   };
 
@@ -54,7 +57,7 @@ const Navbar = () => {
       opacity: 0,
       transition: {
         duration: 1,
-      }
+      },
     },
   };
 
@@ -297,7 +300,11 @@ const Navbar = () => {
                     exit="exit"
                   >
                     <span className="navlink">
-                      <NavLink to="/portfolio" activeclassname="active">
+                      <NavLink
+                        to="/portfolio"
+                        activeclassname="active"
+                        id="homepage-link"
+                      >
                         Portfolio
                       </NavLink>
                     </span>
@@ -339,7 +346,16 @@ const Navbar = () => {
                   animate="visible"
                   exit="exit"
                 >
-                  <img className="navigation-image" src={portait1} />
+                  {/* <img
+                    className="navigation-image portfolio"
+                    src={portfolioImage}
+                  />
+                  <img className="navigation-image about" src={aboutImage} />
+                  <img className="navigation-image motion" src={motionImage} /> */}
+                  <div className="navigation-image home-image" />
+                  <div className="navigation-image portfolio-image" />
+                  <div className="navigation-image about-image" />
+                  <div className="navigation-image motion-image" />
                 </motion.div>
               </div>
 

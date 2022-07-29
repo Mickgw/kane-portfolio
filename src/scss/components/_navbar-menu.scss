@@ -1,3 +1,8 @@
+$homeImage: url("../../assets/images/image-1-banner.jpeg");
+$portfolioImage: url("../../assets/images/image-3-banner.jpeg");
+$aboutImage: url("../../assets/images/image_3_menu.jpeg");
+$motionImage: url("../../assets/images/image_4_menu.jpeg");
+
 .navbar-menu {
     top: 0;
     right: 0;
@@ -25,7 +30,7 @@
             width: 100%;
             padding-top: 27vh;
 
-            @media (max-width: $layout-breakpoint-medium) {
+            @media (max-width: $layout-breakpoint-small) {
                 grid-template-columns: repeat(1, 1fr);
             }
 
@@ -37,6 +42,43 @@
                 .navlink-container {
                     cursor: pointer;
                     padding-bottom: 3em;
+
+                    // &:nth-child(1):hover {
+                    //     background-color: red;
+
+                    //     .navlink a {
+                    //         color: blue;
+                    //     }
+
+                    //     // .navigation {
+                    //             .navigation-image.home {
+                    //                 visibility: visible;
+                    //             }
+
+                    //     // }
+                    // }
+                    // &:nth-child(2):hover {
+                    //     background-color: green;
+
+                    //     .navigation-image .portfolio {
+                    //         display: block;
+                    //     }
+                    // }
+                    // &:nth-child(3):hover {
+                    //     background-color: blue;
+
+                    //     .navigation-image .about {
+                    //         display: block;
+                    //     }
+                    // }
+                    // &:nth-child(4):hover {
+                    //     background-color: yellow;
+
+                    //     .navigation-image .motion {
+                    //         display: block;
+                    //     }
+                    // }
+
                     .navlink {
                         display: block;
 
@@ -77,19 +119,34 @@
                 align-items: center;
                 overflow: hidden;
 
-                @media (max-width: $layout-breakpoint-medium) {
+                @media (max-width: $layout-breakpoint-small) {
                     display: none;
-                }           
+                }
 
                 .navigation-image {
-                    position: absolute;
-                    height: auto; /* Make sure images are scaled correctly. */
-                    width: 100%; /* Adhere to container width. */
-                    display: block;
-                    flex-shrink: 0;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
                     min-width: 100%;
                     min-height: 100%;
-                    object-fit: cover;                    
+                    position: absolute;
+
+                    &.home-image {
+                        background-image: $homeImage;
+                    }
+
+                    &.portfolio-image {
+                        background-image: $portfolioImage;
+                    }
+
+                    &.about-image {
+                        background-image: $aboutImage;
+                    }
+
+                    &.motion-image {
+                        background-image: $motionImage;
+                    }
                 }
             }
         }
@@ -118,7 +175,7 @@
             .footer-email {
                 a {
                     text-decoration: none;
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                     color: $white;
 
                     @media (max-width: $layout-breakpoint-small) {
