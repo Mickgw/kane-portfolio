@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +17,15 @@ import motionImage from "../assets/images/image_4_menu.jpeg";
 const NavbarMenu = () => {
   const navlinkDelay = 0.17;
   const navlinkDuration = 1;
+
+  const [isHoveringHome, setisHoveringHome] = useState(false);
+  const [isHoveringPortfolio, setisHoveringPortfolio] = useState(false);
+  const [isHoveringAbout, setisHoveringAbout] = useState(false);
+  const [isHoveringMotion, setisHoveringMotion] = useState(false);
+
+  {
+    /*======================== Menu animation properties ============================ */
+  }
 
   const menuAnimation = {
     hidden: {
@@ -165,6 +174,65 @@ const NavbarMenu = () => {
       },
     },
   };
+
+  {
+    /*======================== Handle hover navlinks ============================ */
+  }
+
+  {
+    /* Home navlink */
+  }
+  const handleMouseOverHome = () => {
+    setisHoveringHome(true);
+  };
+
+  const handleMouseOutHome = () => {
+    setisHoveringHome(false);
+  };
+
+  {
+    /* Portfolio navlink */
+  }
+  const handleMouseOverPortfolio = () => {
+    setisHoveringPortfolio(true);
+  };
+
+  const handleMouseOutPortfolio = () => {
+    setisHoveringPortfolio(false);
+  };
+
+  {
+    /* About navlink */
+  }
+  const handleMouseOverAbout = () => {
+    setisHoveringAbout(true);
+  };
+
+  const handleMouseOutAbout = () => {
+    setisHoveringAbout(false);
+  };
+
+  {
+    /* Motion navlink */
+  }
+  const handleMouseOverMotion = () => {
+    setisHoveringMotion(true);
+  };
+
+  const handleMouseOutMotion = () => {
+    setisHoveringMotion(false);
+  };
+
+  const navMenuImageAnimationHover = {
+    hidden: {
+      y: 500,
+    },
+    visible: {
+      y: 0,
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 },
+    },
+  };
+
   return (
     <motion.div
       className="navbar-menu"
@@ -184,7 +252,12 @@ const NavbarMenu = () => {
               exit="exit"
             >
               <span className="navlink">
-                <NavLink to="/" activeclassname="active">
+                <NavLink
+                  to="/"
+                  activeclassname="active"
+                  onMouseOver={handleMouseOverHome}
+                  onMouseOut={handleMouseOutHome}
+                >
                   Home
                 </NavLink>
               </span>
@@ -201,7 +274,8 @@ const NavbarMenu = () => {
                 <NavLink
                   to="/portfolio"
                   activeclassname="active"
-                  id="homepage-link"
+                  onMouseOver={handleMouseOverPortfolio}
+                  onMouseOut={handleMouseOutPortfolio}
                 >
                   Portfolio
                 </NavLink>
@@ -216,7 +290,12 @@ const NavbarMenu = () => {
               exit="exit"
             >
               <span className="navlink">
-                <NavLink to="/about" activeclassname="active">
+                <NavLink
+                  to="/about"
+                  activeclassname="active"
+                  onMouseOver={handleMouseOverAbout}
+                  onMouseOut={handleMouseOutAbout}
+                >
                   About
                 </NavLink>
               </span>
@@ -230,7 +309,12 @@ const NavbarMenu = () => {
               exit="exit"
             >
               <span className="navlink">
-                <NavLink to="/motion" activeclassname="active">
+                <NavLink
+                  to="/motion"
+                  activeclassname="active"
+                  onMouseOver={handleMouseOverMotion}
+                  onMouseOut={handleMouseOutMotion}
+                >
                   Motion
                 </NavLink>
               </span>
@@ -244,16 +328,49 @@ const NavbarMenu = () => {
             animate="visible"
             exit="exit"
           >
-            {/* <img
-            className="navigation-image portfolio"
-            src={portfolioImage}
-          />
-          <img className="navigation-image about" src={aboutImage} />
-          <img className="navigation-image motion" src={motionImage} /> */}
-            <div className="navigation-image home-image" />
+            {isHoveringHome && (
+              <motion.img
+                className="navigation-image"
+                src={homeImage}
+                variants={navMenuImageAnimationHover}
+                initial="hidden"
+                animate="visible"
+              />
+            )}
+            {isHoveringPortfolio && (
+              <motion.img
+                className="navigation-image portfolio"
+                src={portfolioImage}
+                variants={navMenuImageAnimationHover}
+                initial="hidden"
+                animate="visible"
+              />
+            )}
+            {isHoveringAbout && (
+              <motion.img
+                className="navigation-image"
+                src={aboutImage}
+                variants={navMenuImageAnimationHover}
+                initial="hidden"
+                animate="visible"
+              />
+            )}
+            {isHoveringMotion && (
+              <motion.img
+                className="navigation-image"
+                src={motionImage}
+                variants={navMenuImageAnimationHover}
+                initial="hidden"
+                animate="visible"
+              />
+            )}
+
+            {/* <img className="navigation-image about" src={aboutImage} />
+            <img className="navigation-image motion" src={motionImage} /> */}
+            {/* <div className="navigation-image home-image" />
             <div className="navigation-image portfolio-image" />
             <div className="navigation-image about-image" />
-            <div className="navigation-image motion-image" />
+            <div className="navigation-image motion-image" /> */}
           </motion.div>
         </div>
 

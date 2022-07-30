@@ -43,41 +43,10 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     cursor: pointer;
                     padding-bottom: 3em;
 
-                    // &:nth-child(1):hover {
-                    //     background-color: red;
-
-                    //     .navlink a {
-                    //         color: blue;
-                    //     }
-
-                    //     // .navigation {
-                    //             .navigation-image.home {
-                    //                 visibility: visible;
-                    //             }
-
-                    //     // }
-                    // }
-                    // &:nth-child(2):hover {
-                    //     background-color: green;
-
-                    //     .navigation-image .portfolio {
-                    //         display: block;
-                    //     }
-                    // }
-                    // &:nth-child(3):hover {
-                    //     background-color: blue;
-
-                    //     .navigation-image .about {
-                    //         display: block;
-                    //     }
-                    // }
-                    // &:nth-child(4):hover {
-                    //     background-color: yellow;
-
-                    //     .navigation-image .motion {
-                    //         display: block;
-                    //     }
-                    // }
+                    //Disables padding on bottom for the last child
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
 
                     .navlink {
                         display: block;
@@ -124,29 +93,37 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                 }
 
                 .navigation-image {
-                    width: 100%;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    background-position: center;
+                    // width: 100%;
+                    // background-repeat: no-repeat;
+                    // background-size: contain;
+                    // background-position: center;
+                    // min-width: 100%;
+                    // min-height: 100%;
+                    // position: absolute;
+                    position: absolute;
+                    height: auto; /* Make sure images are scaled correctly. */
+                    width: 100%; /* Adhere to container width. */
+                    display: block;
+                    flex-shrink: 0;
                     min-width: 100%;
                     min-height: 100%;
-                    position: absolute;
+                    object-fit: cover;
 
-                    &.home-image {
-                        background-image: $homeImage;
-                    }
+                    // &.home-image {
 
-                    &.portfolio-image {
-                        background-image: $portfolioImage;
-                    }
+                    // }
 
-                    &.about-image {
-                        background-image: $aboutImage;
-                    }
+                    // &.portfolio-image {
 
-                    &.motion-image {
-                        background-image: $motionImage;
-                    }
+                    // }
+
+                    // &.about-image {
+
+                    // }
+
+                    // &.motion-image {
+
+                    // }
                 }
             }
         }
