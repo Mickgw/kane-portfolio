@@ -225,11 +225,13 @@ const NavbarMenu = () => {
 
   const navMenuImageAnimationHover = {
     hidden: {
+      scale: 1.1,
       y: 500,
     },
     visible: {
+      scale: 1,
       y: 0,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1.3 },
     },
   };
 
