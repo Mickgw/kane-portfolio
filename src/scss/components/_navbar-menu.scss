@@ -98,7 +98,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                                 font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
 
                                 @media (max-width: $layout-breakpoint-small) {
-                                    right: 17vw;
+                                    right: $wrapper-value-navbar;
                                 }
                             }
 
@@ -191,6 +191,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                 @media (max-width: $layout-breakpoint-small) {
                     width: 100vw - ($wrapper-value-navbar * 2);
                     justify-content: space-between;
+                    display: none;
                 }
 
                 .social-icon {

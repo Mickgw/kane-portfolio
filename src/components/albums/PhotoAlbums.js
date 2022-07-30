@@ -1,7 +1,5 @@
 import photoAlbums from "../../content/photo-albums.json";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 
 const PhotoAlbums = () => {
@@ -27,22 +25,19 @@ const PhotoAlbums = () => {
                       <div className="album-card">
                         <div className="album-cover-container">
                           <div className="album-cover-dot">
-                            {/* https://codepen.io/zachtownsend/pen/ZGQJOB */}
-                            <FontAwesomeIcon
-                              icon={faCircle}
+                            <svg
+                              viewBox="0 0 100 100"
+                              xmlns="http://www.w3.org/2000/svg"
                               className="dot"
-                              id="dot-stroke"
-                            />
+                            >
+                              <circle cx="50" cy="50" r="43" id="dot-stroke"/>
+                            </svg>
+
                             <div className="album-cover-dot-text-container">
                               <span className="album-cover-dot-text">view</span>
+                              <span className="album-cover-dot-text-responsive">+</span>
                             </div>
                           </div>
-                          {/* <div className="album-cover-dot">
-                            <span className="album-cover-dot-text">
-                              view
-                            </span>
-                          </div> */}
-
                           <div className="image-container">
                             <img
                               className="album-cover"

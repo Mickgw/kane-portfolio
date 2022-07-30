@@ -42,7 +42,7 @@ $card-spacing: 2vw;
                             }
 
                             .album-cover {
-                                transform: scale(1.07);
+                                transform: scale(1.025);
                             }
                         }
 
@@ -50,26 +50,30 @@ $card-spacing: 2vw;
                             position: absolute;
                             right: 3em;
                             top: 3em;
-                            width: calc(clamp(5rem, 5vw, 6rem) * 0.875);
-                            height: calc(clamp(5rem, 5vw, 6rem) * 0.875);;
+                            width: calc(clamp(5rem, 5vw, 6.5rem) * 0.875);
+                            height: calc(clamp(5rem, 5vw, 6.5rem) * 0.875);
                             z-index: 10;
 
                             .dot {
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
-                                color: rgb(59, 59, 59);
+
                                 transition: all 0.8s ease-out 0s;
                                 -webkit-transform: rotate(-90deg);
                                 -ms-transform: rotate(-90deg);
                                 transform: rotate(-90deg);
-                                stroke: white;
-                                stroke-width: 3em;
 
-                                stroke-dasharray: 2000;
-                                stroke-dashoffset: 2000;
-                                stroke-opacity: 0;
-                                pointer-events: none;
+                                circle {
+                                    fill: rgb(59, 59, 59);
+                                    stroke: white;
+                                    stroke-width: 5px;
+
+                                    stroke-dasharray: 400;
+                                    stroke-dashoffset: 400;
+                                    stroke-opacity: 0;
+                                    pointer-events: none;
+                                }
                             }
 
                             .album-cover-dot-text-container {
@@ -78,7 +82,9 @@ $card-spacing: 2vw;
                                 width: 100%;
                                 height: 100%;
                                 z-index: 11;
-                                .album-cover-dot-text {
+
+                                .album-cover-dot-text,
+                                .album-cover-dot-text-responsive {
                                     display: table-cell;
                                     vertical-align: middle;
                                     position: relative;
@@ -88,6 +94,23 @@ $card-spacing: 2vw;
                                     font-weight: 700;
                                     color: $white;
                                     font-size: 1rem;
+                                }
+
+                                @media (min-width: $layout-breakpoint-small) {
+                                    .album-cover-dot-text-responsive {
+                                        display: none;
+                                    }
+                                }
+
+                                @media (max-width: $layout-breakpoint-small) {
+                                    .album-cover-dot-text {
+                                        display: none;
+                                    }
+
+                                    .album-cover-dot-text-responsive {
+                                        font-weight: 200;
+                                        font-size: 2rem;
+                                    }
                                 }
                             }
                         }
@@ -99,7 +122,7 @@ $card-spacing: 2vw;
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
-                                transition: 1s ease-in-out;
+                                transition: 0.5s ease-in-out;
                             }
                         }
                     }
