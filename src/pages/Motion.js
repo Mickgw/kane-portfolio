@@ -1,6 +1,5 @@
 import videoProjects from "../assets/videos/motion-videos.json";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
-import ReactPlayer from "react-player";
 
 const Motion = () => {
   return (

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import ImageModal from "../components/ImageModal";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 

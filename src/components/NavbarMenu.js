@@ -186,13 +186,10 @@ const NavbarMenu = () => {
     },
   };
 
-  {
-    /*======================== Handle hover navlinks ============================ */
-  }
+  /*======================== Handle hover navlinks ============================ */
 
-  {
-    /* Home navlink */
-  }
+  
+  /* Home navlink */  
   const handleMouseOverHome = () => {
     setisHoveringHome(true);
   };
@@ -201,9 +198,8 @@ const NavbarMenu = () => {
     setisHoveringHome(false);
   };
 
-  {
-    /* Portfolio navlink */
-  }
+  
+  /* Portfolio navlink */  
   const handleMouseOverPortfolio = () => {
     setisHoveringPortfolio(true);
   };
@@ -212,9 +208,7 @@ const NavbarMenu = () => {
     setisHoveringPortfolio(false);
   };
 
-  {
-    /* About navlink */
-  }
+  /* About navlink */  
   const handleMouseOverAbout = () => {
     setisHoveringAbout(true);
   };
@@ -223,9 +217,8 @@ const NavbarMenu = () => {
     setisHoveringAbout(false);
   };
 
-  {
-    /* Motion navlink */
-  }
+
+  /* Motion navlink */
   const handleMouseOverMotion = () => {
     setisHoveringMotion(true);
   };
@@ -365,15 +358,17 @@ const NavbarMenu = () => {
             {(() => {
               switch (splitLocation[1]) {
                 case "":
-                  return <img className="navigation-image" src={homeImage} />;
+                  return <img className="navigation-image" src={homeImage} alt="home-image"/>;
                 case "portfolio":
                   return (
-                    <img className="navigation-image" src={portfolioImage} />
+                    <img className="navigation-image" src={portfolioImage} alt="portfolio-image"/>
                   );
                 case "about":
-                  return <img className="navigation-image" src={aboutImage} />;
+                  return <img className="navigation-image" src={aboutImage} alt="about-image"/>;
                 case "motion":
-                  return <img className="navigation-image" src={motionImage} />;
+                  return <img className="navigation-image" src={motionImage} alt="motion-image"/>;
+                default: 
+                    return null;
               }
             })()}
             { /* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
