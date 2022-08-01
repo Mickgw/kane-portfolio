@@ -1,7 +1,5 @@
 import "./scss/main.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useCallback } from "react";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";

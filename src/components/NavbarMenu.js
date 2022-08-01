@@ -34,9 +34,8 @@ const NavbarMenu = () => {
   const [isHoveringAbout, setisHoveringAbout] = useState(false);
   const [isHoveringMotion, setisHoveringMotion] = useState(false);
 
-  {
-    /*======================== Menu animation properties ============================ */
-  }
+  
+  /*======================== Menu animation properties ============================ */
 
   const menuAnimation = {
     hidden: {
@@ -358,15 +357,15 @@ const NavbarMenu = () => {
             {(() => {
               switch (splitLocation[1]) {
                 case "":
-                  return <img className="navigation-image" src={homeImage} alt="home-image"/>;
+                  return <img className="navigation-image" src={homeImage} alt="home"/>;
                 case "portfolio":
                   return (
-                    <img className="navigation-image" src={portfolioImage} alt="portfolio-image"/>
+                    <img className="navigation-image" src={portfolioImage} alt="portfolio"/>
                   );
                 case "about":
-                  return <img className="navigation-image" src={aboutImage} alt="about-image"/>;
+                  return <img className="navigation-image" src={aboutImage} alt="about"/>;
                 case "motion":
-                  return <img className="navigation-image" src={motionImage} alt="motion-image"/>;
+                  return <img className="navigation-image" src={motionImage} alt="motion"/>;
                 default: 
                     return null;
               }
