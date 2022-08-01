@@ -50,9 +50,19 @@ $card-spacing: 2vw;
                             position: absolute;
                             right: 3em;
                             top: 3em;
-                            width: calc(clamp(5rem, 5vw, 6.5rem) * 0.875);
-                            height: calc(clamp(5rem, 5vw, 6.5rem) * 0.875);
+                            width: calc(clamp(5.5rem, 5vw, 6.5rem) * 0.875);
+                            height: calc(clamp(5.5rem, 5vw, 6.5rem) * 0.875);
                             z-index: 10;
+
+                            @media (max-width: $layout-breakpoint-medium) {
+                                right: 2.5em;
+                                top: 2.5em;
+                            }
+
+                            @media (max-width: $layout-breakpoint-small) {
+                                right: 2.2em;
+                                top: 2.2em;
+                            }
 
                             .dot {
                                 position: absolute;

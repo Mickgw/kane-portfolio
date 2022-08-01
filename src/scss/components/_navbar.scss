@@ -55,6 +55,9 @@ $menu-button-bar-height: 1px;
           }
         }
       }
+      @media (max-width: $layout-breakpoint-small) {
+        visibility: hidden;
+      }
     }
   }
 
