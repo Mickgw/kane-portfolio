@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import LinkWithCallbacksWorkaround from "./hooks/LinkWithCallbacksWorkaround";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -15,10 +17,20 @@ import aboutImage from "../assets/images/image_3_menu.jpeg";
 import motionImage from "../assets/images/image_4_menu.jpeg";
 
 const NavbarMenu = () => {
+  //assigning location variable
+  const location = useLocation();
+
+  //destructuring pathname from location
+  const { pathname } = location;
+
+  //Javascript split method to get the name of the path in array
+  const splitLocation = pathname.split("/");
+
   const navlinkDelay = 0.17;
   const navlinkDuration = 1;
 
-  const [isHoveringHome, setisHoveringHome] = useState(false);
+  const [isHoveringHome, setisHoveringHome] = useState(false); // const [isHomeLinkActive, setisHomeLinkActive] = useState(false);
+
   const [isHoveringPortfolio, setisHoveringPortfolio] = useState(false);
   const [isHoveringAbout, setisHoveringAbout] = useState(false);
   const [isHoveringMotion, setisHoveringMotion] = useState(false);
@@ -225,13 +237,20 @@ const NavbarMenu = () => {
 
   const navMenuImageAnimationHover = {
     hidden: {
-      scale: 1.1,
+      scale: 1.3,
+      rotate: -5,
       y: 500,
     },
     visible: {
       scale: 1,
+      rotate: 0,
       y: 0,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1.3 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
+    },
+    exit: {
+      y: 500,
+      rotate: -5,
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
     },
   };
 
@@ -257,7 +276,10 @@ const NavbarMenu = () => {
                 <NavLink
                   to="/"
                   activeclassname="active"
-                  onMouseOver={handleMouseOverHome}
+                  //When route is active disable onMouseOver event
+                  onMouseOver={
+                    splitLocation[1] === "" ? null : handleMouseOverHome
+                  }
                   onMouseOut={handleMouseOutHome}
                 >
                   Home
@@ -276,7 +298,12 @@ const NavbarMenu = () => {
                 <NavLink
                   to="/portfolio"
                   activeclassname="active"
-                  onMouseOver={handleMouseOverPortfolio}
+                  //When route is active disable onMouseOver event
+                  onMouseOver={
+                    splitLocation[1] === "portfolio"
+                      ? null
+                      : handleMouseOverPortfolio
+                  }
                   onMouseOut={handleMouseOutPortfolio}
                 >
                   Portfolio
@@ -295,7 +322,10 @@ const NavbarMenu = () => {
                 <NavLink
                   to="/about"
                   activeclassname="active"
-                  onMouseOver={handleMouseOverAbout}
+                  //When route is active disable onMouseOver event
+                  onMouseOver={
+                    splitLocation[1] === "about" ? null : handleMouseOverAbout
+                  }
                   onMouseOut={handleMouseOutAbout}
                 >
                   About
@@ -314,7 +344,10 @@ const NavbarMenu = () => {
                 <NavLink
                   to="/motion"
                   activeclassname="active"
-                  onMouseOver={handleMouseOverMotion}
+                  //When route is active disable onMouseOver event
+                  onMouseOver={
+                    splitLocation[1] === "motion" ? null : handleMouseOverMotion
+                  }
                   onMouseOut={handleMouseOutMotion}
                 >
                   Motion
@@ -330,49 +363,62 @@ const NavbarMenu = () => {
             animate="visible"
             exit="exit"
           >
-            {isHoveringHome && (
-              <motion.img
-                className="navigation-image"
-                src={homeImage}
-                variants={navMenuImageAnimationHover}
-                initial="hidden"
-                animate="visible"
-              />
-            )}
-            {isHoveringPortfolio && (
-              <motion.img
-                className="navigation-image portfolio"
-                src={portfolioImage}
-                variants={navMenuImageAnimationHover}
-                initial="hidden"
-                animate="visible"
-              />
-            )}
-            {isHoveringAbout && (
-              <motion.img
-                className="navigation-image"
-                src={aboutImage}
-                variants={navMenuImageAnimationHover}
-                initial="hidden"
-                animate="visible"
-              />
-            )}
-            {isHoveringMotion && (
-              <motion.img
-                className="navigation-image"
-                src={motionImage}
-                variants={navMenuImageAnimationHover}
-                initial="hidden"
-                animate="visible"
-              />
-            )}
-
-            {/* <img className="navigation-image about" src={aboutImage} />
-            <img className="navigation-image motion" src={motionImage} /> */}
-            {/* <div className="navigation-image home-image" />
-            <div className="navigation-image portfolio-image" />
-            <div className="navigation-image about-image" />
-            <div className="navigation-image motion-image" /> */}
+            {(() => {
+              switch (splitLocation[1]) {
+                case "":
+                  return <img className="navigation-image" src={homeImage} />;
+                case "portfolio":
+                  return (
+                    <img className="navigation-image" src={portfolioImage} />
+                  );
+                case "about":
+                  return <img className="navigation-image" src={aboutImage} />;
+                case "motion":
+                  return <img className="navigation-image" src={motionImage} />;
+              }
+            })()}
+            <AnimatePresence>
+              {isHoveringHome && (
+                <motion.img
+                  className="navigation-image"
+                  src={homeImage}
+                  variants={navMenuImageAnimationHover}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {isHoveringPortfolio && (
+                <motion.img
+                  className="navigation-image portfolio"
+                  src={portfolioImage}
+                  variants={navMenuImageAnimationHover}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {isHoveringAbout && (
+                <motion.img
+                  className="navigation-image"
+                  src={aboutImage}
+                  variants={navMenuImageAnimationHover}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {isHoveringMotion && (
+                <motion.img
+                  className="navigation-image"
+                  src={motionImage}
+                  variants={navMenuImageAnimationHover}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
 
