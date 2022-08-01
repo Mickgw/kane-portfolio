@@ -1,5 +1,4 @@
 import { useState } from "react";
-import LinkWithCallbacksWorkaround from "./hooks/LinkWithCallbacksWorkaround";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
@@ -377,6 +376,7 @@ const NavbarMenu = () => {
                   return <img className="navigation-image" src={motionImage} />;
               }
             })()}
+            { /* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
             <AnimatePresence>
               {isHoveringHome && (
                 <motion.img
