@@ -101,22 +101,6 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     min-width: 100%;
                     min-height: 100%;
                     object-fit: cover;
-
-                    // &.home-image {
-
-                    // }
-
-                    // &.portfolio-image {
-
-                    // }
-
-                    // &.about-image {
-
-                    // }
-
-                    // &.motion-image {
-
-                    // }
                 }
             }
         }
@@ -130,6 +114,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
         }
 
         .menu-footer {
+            display: block;
             padding-top: 5vh;
             width: 100%;
             display: flex;
@@ -137,9 +122,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
             justify-content: space-between;
 
             @media (max-width: $layout-breakpoint-small) {
-                padding-block: 5vh;
-                display: grid;
-                grid-template-rows: repeat(1, 1fr);
+                display: none;
             }
 
             .footer-email {
@@ -147,22 +130,11 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     text-decoration: none;
                     font-size: 1.6rem;
                     color: $white;
-
-                    @media (max-width: $layout-breakpoint-small) {
-                        display: none;
-                        font-size: 1.8rem;
-                    }
                 }
             }
 
             .footer-socials {
                 display: flex;
-
-                @media (max-width: $layout-breakpoint-small) {
-                    width: 100vw - ($wrapper-value-navbar * 2);
-                    justify-content: space-between;
-                    display: none;
-                }
 
                 .social-icon {
                     transition: 0.3s ease-in-out;
@@ -170,20 +142,70 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     color: $white;
                     padding-inline: 1.3em;
 
-                    @media (max-width: $layout-breakpoint-small) {
-                        padding-top: 5vh;
-                    }
-
                     &:first-child {
                         padding-left: 0px !important;
-
-                        @media (max-width: $layout-breakpoint-small) {
-                            padding-inline: 0px !important;
-                        }
                     }
 
                     &:hover {
                         color: rgb(199, 199, 199);
+                    }
+                }
+            }
+        }
+
+        .menu-footer-responsive {
+            padding-top: 3vh;
+            width: 100%;
+            display: none;
+
+            @media (max-width: $layout-breakpoint-small) {
+                display: block;
+            }
+
+            .menu-footer-responsive-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @media (max-width: $layout-breakpoint-xsmall) {
+                    display: block;
+                }
+
+                .footer-socials-responsive {
+                    display: flex;
+
+                    @media (max-width: $layout-breakpoint-xsmall) {
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .menu-text-divider {
+                        color: $white;
+
+                        @media (min-width: $layout-breakpoint-xsmall) {
+                            padding-inline: 2vw;
+                        }
+                    }
+
+                    .social-link-responsive {
+                        font-size: 1.5rem;
+                        color: $white;
+                        text-decoration: none;
+
+                        &:hover {
+                            transition: 0.3s ease-in-out;
+                            color: $white-text-hover;
+                        }
+                    }
+                }
+                .local-time-footer {
+                    width: auto;
+                    display: block;
+                    font-size: 1.5rem;
+                    color: $white;
+
+                    @media (max-width: $layout-breakpoint-xsmall) {
+                        display: none;
                     }
                 }
             }

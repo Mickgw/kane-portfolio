@@ -11,9 +11,10 @@ $menu-button-bar-height: 1px;
   mix-blend-mode: difference;
 
   //Disables blend mode so menu can get black
-  // @media (max-width: $layout-breakpoint-small) {
-  //   mix-blend-mode: normal !important;
-  // }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding-top: $wrapper-value-breakpoint-small;
+    height: auto;
+  }
 
   a {
     text-decoration: none;
@@ -26,6 +27,10 @@ $menu-button-bar-height: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $layout-breakpoint-small) {
+      margin-inline: $wrapper-value-breakpoint-small;
+    }
 
     .logo {
       pointer-events: all;
@@ -44,10 +49,6 @@ $menu-button-bar-height: 1px;
         a:active {
           text-decoration: none;
         }
-
-        // @media (max-width: $layout-breakpoint-small) {
-        //   display: none;
-        // }
 
         &a:hover {
           .cursor {
@@ -105,8 +106,8 @@ $menu-button-bar-height: 1px;
 
       //Makes button bigger and changes color
       @media (max-width: $layout-breakpoint-small) {
-        width: 3em;
-        height: 3em;
+        width: 3.5em;
+        height: 3.5em;
         background-color: $white;
       }
 
@@ -170,7 +171,7 @@ $menu-button-bar-height: 1px;
             width: 100%;
 
             @media (max-width: $layout-breakpoint-small) {
-              bottom: 2px;
+              bottom: 3px;
             }
           }
         }

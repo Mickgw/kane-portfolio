@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +10,7 @@ import {
   faUnsplash,
 } from "@fortawesome/free-brands-svg-icons";
 
+//Menu images on navlink hover
 import homeImage from "../assets/images/image-1-banner.jpeg";
 import portfolioImage from "../assets/images/image-3-banner.jpeg";
 import aboutImage from "../assets/images/image_3_menu.jpeg";
@@ -477,6 +478,31 @@ const NavbarMenu = () => {
               <FontAwesomeIcon icon={faUnsplash} className="social-icon" />
             </a>
           </div>
+        </motion.div>
+        <motion.div className="menu-footer-responsive">
+          <div className="menu-footer-responsive-container">
+                      <div className="footer-socials-responsive">
+            <a href="/" className="social-link-responsive">
+              Instagram
+            </a>
+            <em className="menu-text-divider">&bull;</em>
+            <a href="/" className="social-link-responsive">
+              LinkedIn
+            </a>
+            <em className="menu-text-divider">&bull;</em>
+            <a href="/" className="social-link-responsive">
+              Youtube
+            </a>
+            <em className="menu-text-divider">&bull;</em>
+            <a href="/" className="social-link-responsive">
+              Unsplash
+            </a>
+          </div>
+          <div className="local-time-footer">
+              <Moment interval={1000} format="LT" />
+            </div>
+          </div>
+
         </motion.div>
       </div>
     </motion.div>

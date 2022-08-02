@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 import NavbarMenu from "./NavbarMenu";
@@ -76,16 +76,21 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu">
-            <div
+            {/*Menu button desktop or medium sized screens*/}
+            <motion.div
               className="desktop-menu-button-text"
               onClick={() => {
                 handleMenu();
               }}
               disabled={disabled}
+              // whileHover={{ scale: 1.2, rotate: 360, transition: {
+              //   duration: .5,
+              // } }}
             >
               {state.menuName}
-            </div>
+            </motion.div>
 
+            {/*Menu button small screen sizes*/} 
             <div
               className={
                 state.clicked ? "menu-button menu-open" : "menu-button"
