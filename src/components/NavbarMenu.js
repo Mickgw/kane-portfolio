@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -34,7 +34,6 @@ const NavbarMenu = () => {
   const [isHoveringAbout, setisHoveringAbout] = useState(false);
   const [isHoveringMotion, setisHoveringMotion] = useState(false);
 
-  
   /*======================== Menu animation properties ============================ */
 
   const menuAnimation = {
@@ -187,8 +186,7 @@ const NavbarMenu = () => {
 
   /*======================== Handle hover navlinks ============================ */
 
-  
-  /* Home navlink */  
+  /* Home navlink */
   const handleMouseOverHome = () => {
     setisHoveringHome(true);
   };
@@ -197,8 +195,7 @@ const NavbarMenu = () => {
     setisHoveringHome(false);
   };
 
-  
-  /* Portfolio navlink */  
+  /* Portfolio navlink */
   const handleMouseOverPortfolio = () => {
     setisHoveringPortfolio(true);
   };
@@ -207,7 +204,7 @@ const NavbarMenu = () => {
     setisHoveringPortfolio(false);
   };
 
-  /* About navlink */  
+  /* About navlink */
   const handleMouseOverAbout = () => {
     setisHoveringAbout(true);
   };
@@ -215,7 +212,6 @@ const NavbarMenu = () => {
   const handleMouseOutAbout = () => {
     setisHoveringAbout(false);
   };
-
 
   /* Motion navlink */
   const handleMouseOverMotion = () => {
@@ -359,20 +355,42 @@ const NavbarMenu = () => {
             {(() => {
               switch (splitLocation[1]) {
                 case "":
-                  return <img className="navigation-image" src={homeImage} alt="home"/>;
+                  return (
+                    <img
+                      className="navigation-image"
+                      src={homeImage}
+                      alt="home"
+                    />
+                  );
                 case "portfolio":
                   return (
-                    <img className="navigation-image" src={portfolioImage} alt="portfolio"/>
+                    <img
+                      className="navigation-image"
+                      src={portfolioImage}
+                      alt="portfolio"
+                    />
                   );
                 case "about":
-                  return <img className="navigation-image" src={aboutImage} alt="about"/>;
+                  return (
+                    <img
+                      className="navigation-image"
+                      src={aboutImage}
+                      alt="about"
+                    />
+                  );
                 case "motion":
-                  return <img className="navigation-image" src={motionImage} alt="motion"/>;
-                default: 
-                    return null;
+                  return (
+                    <img
+                      className="navigation-image"
+                      src={motionImage}
+                      alt="motion"
+                    />
+                  );
+                default:
+                  return null;
               }
             })()}
-            { /* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
+            {/* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
             <AnimatePresence>
               {isHoveringHome && (
                 <motion.img
@@ -384,6 +402,9 @@ const NavbarMenu = () => {
                   exit="exit"
                 />
               )}
+            </AnimatePresence>
+
+            <AnimatePresence>
               {isHoveringPortfolio && (
                 <motion.img
                   className="navigation-image portfolio"
@@ -394,6 +415,9 @@ const NavbarMenu = () => {
                   exit="exit"
                 />
               )}
+            </AnimatePresence>
+
+            <AnimatePresence>
               {isHoveringAbout && (
                 <motion.img
                   className="navigation-image"
@@ -404,6 +428,9 @@ const NavbarMenu = () => {
                   exit="exit"
                 />
               )}
+            </AnimatePresence>
+
+            <AnimatePresence>
               {isHoveringMotion && (
                 <motion.img
                   className="navigation-image"
@@ -428,7 +455,6 @@ const NavbarMenu = () => {
 
         <motion.div
           className="menu-footer"
-          id="email"
           variants={navlinkAnimationSixth}
           initial="hidden"
           animate="visible"
