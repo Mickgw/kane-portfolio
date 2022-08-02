@@ -29,6 +29,10 @@ $card-spacing: 2vw;
                 }
 
                 .album-card {
+                    @media (max-width: $layout-breakpoint-small) {
+                        padding-bottom: 3em;
+                    }
+
                     .album-cover-container {
                         aspect-ratio: 12/16;
                         display: block;
