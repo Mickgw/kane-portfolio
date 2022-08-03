@@ -32,6 +32,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
 
             @media (max-width: $layout-breakpoint-small) {
                 grid-template-columns: repeat(1, 1fr);
+                padding-top: 22vh;
             }
 
             .nav-links {
@@ -188,7 +189,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     }
 
                     .social-link-responsive {
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         color: $white;
                         text-decoration: none;
 

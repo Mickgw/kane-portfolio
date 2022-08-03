@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ImageModal from "../components/ImageModal";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 
@@ -7,6 +7,7 @@ import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 import portfolioImages from "../assets/images/images-for-portfolio/portfolio-images.json";
 
 const Portfolio = () => {
+  const [loading, setLoading] = useState(true);
   const [tag, setTag] = useState("all");
   const [filteredImages, setFilteredImages] = useState([]);
   const [isModal, setIsModal] = useState(false);
@@ -22,6 +23,13 @@ const Portfolio = () => {
           )
         );
   }, [tag]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1400);
+    return () => clearTimeout(timer);
+  });
 
   return (
     <div className="image-gallery" id="test">

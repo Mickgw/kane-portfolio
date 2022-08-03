@@ -225,13 +225,10 @@ const NavbarMenu = () => {
 
   const navMenuImageAnimationHover = {
     hidden: {
-      x: 100,
       scale: 1.3,
-      rotate: -5,
       y: 500,
     },
     visible: {
-      x: 0,
       scale: 1,
       rotate: 0,
       y: 0,
@@ -239,7 +236,6 @@ const NavbarMenu = () => {
     },
     exit: {
       y: 500,
-      rotate: -5,
       transition: { ease: [0.6, 0.2, 0.25, 1] },
     },
   };
@@ -479,30 +475,35 @@ const NavbarMenu = () => {
             </a>
           </div>
         </motion.div>
-        <motion.div className="menu-footer-responsive">
+        <motion.div
+          className="menu-footer-responsive"
+          variants={navlinkAnimationSixth}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <div className="menu-footer-responsive-container">
-                      <div className="footer-socials-responsive">
-            <a href="/" className="social-link-responsive">
-              Instagram
-            </a>
-            <em className="menu-text-divider">&bull;</em>
-            <a href="/" className="social-link-responsive">
-              LinkedIn
-            </a>
-            <em className="menu-text-divider">&bull;</em>
-            <a href="/" className="social-link-responsive">
-              Youtube
-            </a>
-            <em className="menu-text-divider">&bull;</em>
-            <a href="/" className="social-link-responsive">
-              Unsplash
-            </a>
-          </div>
-          <div className="local-time-footer">
+            <div className="footer-socials-responsive">
+              <a href="/" className="social-link-responsive">
+                Instagram
+              </a>
+              <em className="menu-text-divider">&bull;</em>
+              <a href="/" className="social-link-responsive">
+                LinkedIn
+              </a>
+              <em className="menu-text-divider">&bull;</em>
+              <a href="/" className="social-link-responsive">
+                Youtube
+              </a>
+              <em className="menu-text-divider">&bull;</em>
+              <a href="/" className="social-link-responsive">
+                Unsplash
+              </a>
+            </div>
+            <div className="local-time-footer">
               <Moment interval={1000} format="LT" />
             </div>
           </div>
-
         </motion.div>
       </div>
     </motion.div>

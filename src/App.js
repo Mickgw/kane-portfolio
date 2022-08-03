@@ -1,11 +1,12 @@
 import "./scss/main.scss";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/hooks/ScrollToTop";
-// import Cursor from "./components/Cursor";
+import MainLoader from "./components/loader/MainLoader";
 
 // Pages
 import Home from "./pages/Home";
@@ -14,12 +15,57 @@ import Portfolio from "./pages/Portfolio";
 import Motion from "./pages/Motion";
 import PhotoAlbumsPage from "./pages/PhotoAlbumsPage";
 import PageNotFound from "./pages/PageNotFound";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
+  const [routeChanged, setRouteChanged] = useState(true);
+  const loaderTimer = 1400; //2700 mili seconds
+  const [loading, setLoading] = useState(true);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    loading
+      ? document.querySelector("body").classList.add("loading")
+      : document.querySelector("body").classList.remove("loading");
+  }, [loading]);
+
+  const loader_animation = {
+    visible: {
+      y: 0,
+
+      transition: {
+        ease: [0.2, 0.3, 0.3, 1],
+        // ease: "easeIn",
+        duration: loaderTimer / 1000 / 2,
+      },
+    },
+
+    exit: {
+      y: "-100vh",
+
+      transition: {
+        ease: [0.2, 0.3, 0.3, 1],
+        duration: 1,
+      },
+    },
+  };
+
   return (
-    <>
-      <div className="App">
-        {/* <Cursor /> */}
+    <AnimatePresence>
+      {/* {loading ? (
+        <motion.div
+          className="loader"
+          key="loader"
+          variants={loader_animation}
+          animate="visible"
+          exit="exit"
+        >
+          <MainLoader setLoading={setLoading}/>
+        </motion.div>
+      ) : ( */}
+        <div className="App">
+          {/* <Cursor /> */}
 
           <ScrollToTop />
           <header>
@@ -27,7 +73,7 @@ function App() {
           </header>
 
           <main>
-            <Routes>
+            <Routes onChange={console.log("Route has changed")}>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
@@ -38,8 +84,9 @@ function App() {
           </main>
 
           <Footer />
-      </div>
-    </>
+        </div>
+      {/* )} */}
+    </AnimatePresence>
   );
 }
 
