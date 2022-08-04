@@ -27,9 +27,10 @@ $menu-button-bar-height: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.5s ease-in-out;
 
     &.loading {
-      display: none;
+      opacity: 0;
     }
 
     @media (max-width: $layout-breakpoint-small) {

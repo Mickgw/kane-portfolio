@@ -37,7 +37,9 @@ function App() {
           </Routes>
         </main>
 
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </AnimatePresence>
   );
