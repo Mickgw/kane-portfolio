@@ -226,17 +226,17 @@ const NavbarMenu = () => {
   const navMenuImageAnimationHover = {
     hidden: {
       scale: 1.3,
-      y: 500,
+      x: 500,
     },
     visible: {
       scale: 1,
       rotate: 0,
-      y: 0,
+      x: 0,
       transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
     },
     exit: {
-      y: 500,
-      transition: { ease: [0.6, 0.2, 0.25, 1] },
+      x: -800,
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1},
     },
   };
 

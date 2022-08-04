@@ -24,12 +24,6 @@ function App() {
 
   const location = useLocation();
 
-  useEffect(() => {
-    loading
-      ? document.querySelector("body").classList.add("loading")
-      : document.querySelector("body").classList.remove("loading");
-  }, [loading]);
-
   const loader_animation = {
     visible: {
       y: 0,

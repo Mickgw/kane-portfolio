@@ -28,6 +28,10 @@ $menu-button-bar-height: 1px;
     align-items: center;
     justify-content: space-between;
 
+    &.loading {
+      display: none;
+    }
+
     @media (max-width: $layout-breakpoint-small) {
       margin-inline: $wrapper-value-breakpoint-small;
     }
