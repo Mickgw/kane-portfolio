@@ -1,16 +1,7 @@
-import { useLocation } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
-function Transition() {
-  //assigning location variable
-  const location = useLocation();
-
-  //destructuring pathname from location
-  const { pathname } = location;
-
-  //Javascript split method to get the name of the path in array
-  const splitLocation = pathname.split("/");
-
+function Transition({ loaderText }) {
   const loader_text_animation = {
     hidden: {
       opacity: 0,
@@ -26,12 +17,18 @@ function Transition() {
         delay: .5,
       },
     },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      }
+    }
   };
 
   return (
     <div className="pageloader-inner">
-      <motion.h2 className="pageloader-text" variants={loader_text_animation} initial="hidden" animate="visible">
-        {splitLocation[1].replace(/\//g, "")}
+      <motion.h2 className="pageloader-text" variants={loader_text_animation} initial="hidden" animate="visible" exit="exit">
+        {loaderText}
       </motion.h2>
     </div>
   );

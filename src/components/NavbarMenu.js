@@ -232,11 +232,11 @@ const NavbarMenu = () => {
       scale: 1,
       rotate: 0,
       x: 0,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: .5 },
     },
     exit: {
       x: -800,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 1},
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: .5 },
     },
   };
 

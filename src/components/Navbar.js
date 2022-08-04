@@ -16,8 +16,6 @@ const Navbar = () => {
     menuName: "Menu",
   });
 
-
-
   //Listening for page changes.
   useEffect(() => {
     const body = document.querySelector("body");
@@ -58,9 +56,25 @@ const Navbar = () => {
     }, 2000);
   };
 
+  const navbar_animation = {
+    hidden: {
+      y: -200,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1,
+        delay: 2,
+      }
+    },
+  }
+
   return (
     <>
-      <div className="navbar">
+      <motion.div className="navbar" variants={navbar_animation} initial="hidden" animate="visible">
         <div className="navbar-inner">
           <div className="logo">
             <Link to="/">
@@ -108,11 +122,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <AnimatePresence>
         {state.clicked && (
           <NavbarMenu />
-
         )}
       </AnimatePresence>
     </>
