@@ -8,7 +8,7 @@ $menu-button-bar-height: 1px;
   height: 150px;
   display: flex;
   z-index: 100;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
 
   //Disables blend mode so menu can get black
   @media (max-width: $layout-breakpoint-xsmall) {
@@ -105,6 +105,13 @@ $menu-button-bar-height: 1px;
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
+      .responsive-menu-button-text {
+        letter-spacing: .5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+      }
+
       @media (min-width: $layout-breakpoint-small) {
         display: none !important;
       }
@@ -121,66 +128,65 @@ $menu-button-bar-height: 1px;
         pointer-events: none;
       }
 
-      .button-lines {
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 15%;
-        height: 12%;
-        opacity: 1;
+      // .button-lines {
+      //   align-items: center;
+      //   justify-content: center;
+      //   position: absolute;
+      //   width: 15%;
+      //   height: 12%;
+      //   opacity: 1;
 
-        //Makes lines in button bigger
-        @media (max-width: $layout-breakpoint-small) {
-          width: 35%;
-        }
+      //   //Makes lines in button bigger
+      //   @media (max-width: $layout-breakpoint-small) {
+      //     width: 35%;
+      //   }
 
-        &::before {
-          transition: 0.3s ease-in-out;
-          content: "";
-          position: absolute;
-          top: 0;
-          height: $menu-button-bar-height;
-          width: 100%;
-          background-color: $black;
-          border-radius: 5px;
-        }
+      //   &::before {
+      //     transition: 0.3s ease-in-out;
+      //     content: "";
+      //     position: absolute;
+      //     top: 0;
+      //     height: $menu-button-bar-height;
+      //     width: 100%;
+      //     background-color: $black;
+      //     border-radius: 5px;
+      //   }
 
-        &::after {
-          transition: 0.3s ease-in-out;
-          content: "";
-          position: absolute;
-          bottom: 0;
-          height: $menu-button-bar-height;
-          width: 100%;
-          background-color: $black;
-          border-radius: 2px;
-        }
+      //   &::after {
+      //     transition: 0.3s ease-in-out;
+      //     content: "";
+      //     position: absolute;
+      //     bottom: 0;
+      //     height: $menu-button-bar-height;
+      //     width: 100%;
+      //     background-color: $black;
+      //     border-radius: 2px;
+      //   }
 
-        &.menu-open {
-          &::before {
-            top: 3.3px;
-            transform: rotate(-45deg);
-            content: "";
-            display: block;
-            position: absolute;
-            height: $menu-button-bar-height;
-            width: 100%;
-          }
+      //   &.menu-open {
+      //     &::before {
+      //       top: 3.3px;
+      //       transform: rotate(-45deg);
+      //       content: "";
+      //       display: block;
+      //       position: absolute;
+      //       height: $menu-button-bar-height;
+      //       width: 100%;
+      //     }
 
-          &::after {
-            bottom: 1px;
-            transform: rotate(45deg);
-            content: "";
-            position: absolute;
-            height: $menu-button-bar-height;
-            width: 100%;
+      //     &::after {
+      //       bottom: 1px;
+      //       transform: rotate(45deg);
+      //       content: "";
+      //       position: absolute;
+      //       height: $menu-button-bar-height;
+      //       width: 100%;
 
-            @media (max-width: $layout-breakpoint-small) {
-              bottom: 3px;
-            }
-          }
-        }
-      }
+      //       @media (max-width: $layout-breakpoint-small) {
+      //         bottom: 3px;
+      //       }
+      //     }
+      //   }
     }
   }
 }

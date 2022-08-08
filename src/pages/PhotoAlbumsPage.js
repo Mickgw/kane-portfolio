@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 import photoAlbums from "../content/photo-albums.json";
 
@@ -10,6 +10,11 @@ const PhotoAlbumsPage = () => {
   const { title } = useParams();
   const [loading, setLoading] = useState(true);
   const timer_duration = 1400;
+  const location = useLocation();
+
+ console.log(location.pathname)
+
+
 
   //Set loading to false after time
   useEffect(() => {
@@ -47,7 +52,7 @@ const PhotoAlbumsPage = () => {
           variants={loader_animation}
           exit="exit"
         >
-          <PageLoader />
+          <PageLoader loaderText={location.pathname.replace(/\s+/g, '-').replace("%20", '-').substring(1)}/>
         </motion.div>
       ) : (
         <div className="album-page">

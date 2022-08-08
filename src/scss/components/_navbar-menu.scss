@@ -131,6 +131,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                     text-decoration: none;
                     font-size: 1.6rem;
                     color: $white;
+                    transition: 0.3s ease-in-out;
                 }
             }
 
@@ -175,17 +176,14 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                 .footer-socials-responsive {
                     display: flex;
 
-                    @media (max-width: $layout-breakpoint-xsmall) {
+                    @media (min-width: $layout-breakpoint-xsmall) {
                         align-items: center;
                         justify-content: space-between;
                     }
 
                     .menu-text-divider {
                         color: $white;
-
-                        @media (min-width: $layout-breakpoint-xsmall) {
-                            padding-inline: 2vw;
-                        }
+                        padding-inline: 2vw;
                     }
 
                     .social-link-responsive {

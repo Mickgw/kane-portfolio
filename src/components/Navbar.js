@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-
 import NavbarMenu from "./NavbarMenu";
 
 const Navbar = () => {
-
   const location = useLocation();
   const body = document.querySelector("body");
   const [disabled, setDisabled] = useState(false);
@@ -68,13 +66,18 @@ const Navbar = () => {
         ease: "easeInOut",
         duration: 1,
         delay: 2,
-      }
+      },
     },
-  }
+  };
 
   return (
     <>
-      <motion.div className="navbar" variants={navbar_animation} initial="hidden" animate="visible">
+      <motion.div
+        className="navbar"
+        variants={navbar_animation}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="navbar-inner">
           <div className="logo">
             <Link to="/">
@@ -97,14 +100,11 @@ const Navbar = () => {
                 handleMenu();
               }}
               disabled={disabled}
-              // whileHover={{ scale: 1.2, rotate: 360, transition: {
-              //   duration: .5,
-              // } }}
             >
               {state.menuName}
             </motion.div>
 
-            {/*Menu button small screen sizes*/} 
+            {/*Menu button small screen sizes*/}
             <div
               className={
                 state.clicked ? "menu-button menu-open" : "menu-button"
@@ -114,20 +114,19 @@ const Navbar = () => {
               }}
               disabled={disabled}
             >
-              <div
+              <span className="responsive-menu-button-text">
+                {state.menuName}
+              </span>
+              {/* <div
                 className={
                   state.clicked ? "button-lines menu-open" : "button-lines"
                 }
-              ></div>
+              ></div> */}
             </div>
           </div>
         </div>
       </motion.div>
-      <AnimatePresence>
-        {state.clicked && (
-          <NavbarMenu />
-        )}
-      </AnimatePresence>
+      <AnimatePresence>{state.clicked && <NavbarMenu />}</AnimatePresence>
     </>
   );
 };

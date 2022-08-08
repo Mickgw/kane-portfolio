@@ -43,15 +43,14 @@ const Portfolio = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : setTimeout(() => navbar_inner.classList.remove("loading"), 900)
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 900);
   }, [loading]);
 
   const loader_animation = {
     exit: {
       y: "-100vh",
       transition: {
-         
-        duration: .8,
+        duration: 0.8,
       },
     },
   };
@@ -65,7 +64,7 @@ const Portfolio = () => {
           variants={loader_animation}
           exit="exit"
         >
-          <PageLoader loaderText="Portfolio"/>
+          <PageLoader loaderText="Portfolio" />
         </motion.div>
       ) : (
         <div className="image-gallery" id="test">

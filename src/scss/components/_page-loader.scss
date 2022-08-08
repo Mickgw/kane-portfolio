@@ -16,6 +16,10 @@
     .pageloader-text {
       font-size: calc(clamp(4.5rem, 7vw, 6rem) * 0.875);
       color: white;
+
+      &::first-letter {
+        text-transform:capitalize;
+      }
     }
   }
 }
