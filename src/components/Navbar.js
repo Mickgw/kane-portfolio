@@ -114,14 +114,11 @@ const Navbar = () => {
               }}
               disabled={disabled}
             >
-              <span className="responsive-menu-button-text">
-                {state.menuName}
-              </span>
-              {/* <div
+              <div
                 className={
                   state.clicked ? "button-lines menu-open" : "button-lines"
                 }
-              ></div> */}
+              ></div>
             </div>
           </div>
         </div>

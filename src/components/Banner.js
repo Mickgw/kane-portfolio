@@ -5,6 +5,10 @@ import Image3 from "../assets/images/image-3-banner.jpeg";
 import { useEffect } from "react";
 import { gsap, Power3 } from "gsap";
 
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Banner = () => {
   const imageContainerAnimationDuration = 1.5;
   const staggerDuration = 0.5;
@@ -22,11 +26,21 @@ const Banner = () => {
           duration: imageContainerAnimationDuration,
           stagger: staggerDuration,
           ease: Power3.easeOut,
-          delay: 0.5
+          delay: 0.5,
         }
       )
 
-      .fromTo("#banner-image-container-middle", {y: 200, opacity: 0}, {y: 0, opacity: 1, duration: imageContainerAnimationDuration, delay: -(imageContainerAnimationDuration - staggerDuration), ease: Power3.easeOut})
+      .fromTo(
+        "#banner-image-container-middle",
+        { y: 200, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: imageContainerAnimationDuration,
+          delay: -(imageContainerAnimationDuration - staggerDuration),
+          ease: Power3.easeOut,
+        }
+      )
       .fromTo(
         "#banner-image-left",
         { scale: 2, skewY: 5 },
@@ -49,24 +63,42 @@ const Banner = () => {
       )
       .fromTo(
         "#banner-image-middle",
-        { y: 200, scale: 1.3},
+        { y: 200, scale: 1.3 },
         {
           y: 0,
           scale: 1,
           duration: 1.5,
-          delay: -2.5 + (staggerDuration * 2)
+          delay: -2.5 + staggerDuration * 2,
         }
       )
-      .fromTo("#reveal-banner-text", {opacity: 0, skewY: 10, scale: 0.96}, {opacity: 1, skewY: 0, scale: 1, duration: 1, delay: -.5});
+      .fromTo(
+        "#reveal-banner-text",
+        { opacity: 0, skewY: 10, scale: 0.96 },
+        { opacity: 1, skewY: 0, scale: 1, duration: 1, delay: -0.5 }
+      );
   });
+
+  // useEffect(() => {
+  //   gsap
+  //   .timeline({
+  //     scrollTrigger: {
+  //       trigger: "#banner",
+  //       start: "top 0%",
+  //     },
+  //   })
+  //   .to("#banner-image-container", {
+  //     y: -300,
+  //   })
+  // });
 
   return (
     <div id="banner" className="banner">
       <div className="container">
         <div className="row">
           <div id="reveal-banner-text" className="banner-text">
-            Kane Jansen        
+            Kane Jansen
           </div>
+
           <div className="section left">
             <div className="inner-section">
               <div
@@ -84,7 +116,10 @@ const Banner = () => {
             <div className="inner-section" />
           </div>
           <div id="middle-image-container" className="section middle">
-            <div id="banner-image-container-middle" className="banner-images-container">
+            <div
+              id="banner-image-container-middle"
+              className="banner-images-container"
+            >
               <img
                 id="banner-image-middle"
                 className="banner-image"
@@ -110,20 +145,6 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        {/* <AnimatePresence exitBeforeEnter>
-          {showShowScrollDown && (
-            <motion.div
-              id="scrolldown-text"
-              className="scroll"
-              variants={scrollDownTextAnimation}
-              exit="exit"
-            >
-              <span>
-                Scroll down <FontAwesomeIcon icon={faArrowDown} />
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence> */}
       </div>
     </div>
   );

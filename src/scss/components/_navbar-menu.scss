@@ -19,7 +19,7 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
 
         //Inherit padding inline from the navbar
         @media (max-width: $layout-breakpoint-small) {
-            padding-inline: $wrapper-value-navbar;
+            padding-inline: $wrapper-value-breakpoint-small;
         }
 
         .navigation {
@@ -67,8 +67,9 @@ $motionImage: url("../../assets/images/image_4_menu.jpeg");
                                 margin-left: -35px;
                                 font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
 
+                                //Keeps the dot between the wrapper
                                 @media (max-width: $layout-breakpoint-small) {
-                                    right: $wrapper-value-navbar;
+                                    right: $wrapper-value-breakpoint-small;
                                 }
                             }
 
