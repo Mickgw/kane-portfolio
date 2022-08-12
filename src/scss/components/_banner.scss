@@ -1,4 +1,5 @@
 $letter-spacing-banner-text: 42px;
+$gap-banner-images: 50px;
 
 .banner {
   // visibility: hidden;
@@ -14,7 +15,7 @@ $letter-spacing-banner-text: 42px;
     position: relative;
     padding-inline: 100px;
     display: flex;
-    grid-column-gap: 60px;
+    grid-column-gap: $gap-banner-images;
     grid-template-rows: repeat(3, 1fr);
 
     @media (max-width: 1440px) {

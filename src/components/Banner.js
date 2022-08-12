@@ -34,6 +34,7 @@ const Banner = () => {
     visible: {
       y: 0,
       opacity: 1,
+      transform: 'matrix',
       transition: {
         delay: .1,
         duration: 1,
