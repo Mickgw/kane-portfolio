@@ -1,11 +1,12 @@
 $letter-spacing-banner-text: 42px;
 
 .banner {
-  visibility: hidden;
+  // visibility: hidden;
   background-color: transparent;
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .row {
     overflow: hidden;
