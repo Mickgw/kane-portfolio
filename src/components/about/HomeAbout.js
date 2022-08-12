@@ -44,7 +44,7 @@ const HomeAbout = () => {
       )
       .fromTo(
         ".hero-content-paragraph",
-        { opacity: 0, y: 100 },
+        { opacity: 0, y: 65 },
         {
           y: 0,
           opacity: 1,

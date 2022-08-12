@@ -20,6 +20,7 @@ const Banner = () => {
       y: 0,
       opacity: 1,
       transition: {
+        // delay: -1,
         duration: 1,
         transition: { ease: [0.2, 0.2, -0.05, 0.95] },
       }
@@ -28,15 +29,15 @@ const Banner = () => {
 
   const textAnimation = {
     hidden: {
-      y: 50,
+      y: "15vh",
       opacity: 0,
     },
     visible: {
-      y: 0,
+      y: -35,
       opacity: 1,
       transform: 'matrix',
       transition: {
-        delay: .1,
+        // delay: -1,
         duration: 1,
         transition: { ease: [0.2, 0.2, -0.05, 0.95] },
       }
