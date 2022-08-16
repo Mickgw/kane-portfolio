@@ -22,14 +22,14 @@ const HomeAbout = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#about-section",
-          start: "top +=800px",
+          start: "top +=900px",
           once: true,
         },
       })
       .to("#about-section", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#image-container",
-        { opacity: 0, y: 200 },
+        { opacity: 0, y: 150 },
         { opacity: 1, y: 0, duration: 1.5, stagger: delayChildrenImages, delay: .5 }
       )
       .fromTo(

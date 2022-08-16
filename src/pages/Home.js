@@ -6,7 +6,7 @@ import Banner from "../components/Banner";
 import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 
-const Home = () => {
+const Home = () => {  
   const [loading, setLoading] = useState(true);
   const timer_duration = 1400;
 
@@ -49,11 +49,11 @@ const Home = () => {
           <PageLoader loaderText="Home" />
         </motion.div>
       ) : (
-        <>
+        <div id="main-container">
           <Banner />
           <HomeAbout />
           <PhotoAlbums />
-        </>
+        </div>
       )}
     </AnimatePresence>
   );

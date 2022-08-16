@@ -2,13 +2,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faLinkedinIn,
-  faYoutube,
-  faUnsplash,
-} from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faInstagram,
+//   faLinkedinIn,
+//   faYoutube,
+//   faUnsplash,
+// } from "@fortawesome/free-brands-svg-icons";
 
 //Menu images on navlink hover
 import homeImage from "../assets/images/image-1-banner.jpeg";
@@ -226,17 +226,17 @@ const NavbarMenu = () => {
   const navMenuImageAnimationHover = {
     hidden: {
       scale: 1.3,
-      x: 500,
+      x: 800,
     },
     visible: {
       scale: 1,
       rotate: 0,
       x: 0,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: .7 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
     },
     exit: {
       x: -800,
-      transition: { ease: [0.6, 0.2, 0.25, 1], duration: .7 },
+      transition: { ease: [0.6, 0.2, 0.25, 1], duration: 0.7 },
     },
   };
 
@@ -461,6 +461,14 @@ const NavbarMenu = () => {
             <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
           </div>
           <div className="footer-socials">
+            <a href="/">Instagram</a>
+            <a href="/">Youtube</a>
+          </div>
+          <div className="footer-copyright">
+            ©2022
+          </div>
+
+          {/* <div className="footer-socials">
             <a href="/" className="social-link">
               <FontAwesomeIcon icon={faInstagram} className="social-icon" />
             </a>
@@ -473,7 +481,7 @@ const NavbarMenu = () => {
             <a href="/" className="social-link">
               <FontAwesomeIcon icon={faUnsplash} className="social-icon" />
             </a>
-          </div>
+          </div> */}
         </motion.div>
         <motion.div
           className="menu-footer-responsive"

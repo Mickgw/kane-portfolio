@@ -2,47 +2,40 @@ import Image1 from "../assets/images/image-1-banner.jpeg";
 import Image2 from "../assets/images/portrait-placeholder1.jpeg";
 import Image3 from "../assets/images/image-3-banner.jpeg";
 
-import { useEffect } from "react";
-import { gsap, Power3 } from "gsap";
 import { motion } from "framer-motion";
 
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
-
 const Banner = () => {
+  const yAxis = "10vh";
   const imagesAnimation = {
     hidden: {
-      y: "15vh",
+      y: yAxis,
       opacity: 0,
     },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        // delay: -1,
         duration: 1,
         transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-      }
+      },
     },
-  }
+  };
 
   const textAnimation = {
     hidden: {
-      y: "15vh",
+      y: yAxis,
       opacity: 0,
     },
     visible: {
       y: -35,
       opacity: 1,
-      transform: 'matrix',
+      transform: "matrix",
       transition: {
-        // delay: -1,
         duration: 1,
         transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-      }
+      },
     },
-  }
+  };
   // const imageContainerAnimationDuration = 1.5;
   // const staggerDuration = 0.5;
 
@@ -111,24 +104,17 @@ const Banner = () => {
   //     );
   // });
 
-  // useEffect(() => {
-  //   gsap
-  //   .timeline({
-  //     scrollTrigger: {
-  //       trigger: "#banner",
-  //       start: "top 0%",
-  //     },
-  //   })
-  //   .to("#banner-image-container", {
-  //     y: -300,
-  //   })
-  // });
-
   return (
     <div id="banner" className="banner">
       <div className="container">
         <div className="row">
-          <motion.div  variants={textAnimation}  initial="hidden" animate="visible" id="reveal-banner-text" className="banner-text">
+          <motion.div
+            variants={textAnimation}
+            initial="hidden"
+            animate="visible"
+            id="reveal-banner-text"
+            className="banner-text"
+          >
             Kane Jansen
           </motion.div>
 
@@ -137,7 +123,9 @@ const Banner = () => {
               <motion.div
                 id="banner-image-container"
                 className="banner-images-container"
-                variants={imagesAnimation}  initial="hidden" animate="visible"
+                variants={imagesAnimation}
+                initial="hidden"
+                animate="visible"
               >
                 <img
                   id="banner-image-left"
@@ -153,7 +141,9 @@ const Banner = () => {
             <motion.div
               id="banner-image-container-middle"
               className="banner-images-container"
-              variants={imagesAnimation}  initial="hidden" animate="visible"
+              variants={imagesAnimation}
+              initial="hidden"
+              animate="visible"
             >
               <img
                 id="banner-image-middle"
@@ -169,7 +159,9 @@ const Banner = () => {
               <motion.div
                 id="banner-image-container"
                 className="banner-images-container"
-                variants={imagesAnimation}  initial="hidden" animate="visible"
+                variants={imagesAnimation}
+                initial="hidden"
+                animate="visible"
               >
                 <img
                   id="banner-image-right"
