@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 // Images
 import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
@@ -50,6 +48,16 @@ const HomeAbout = () => {
           opacity: 1,
           duration: 1,
           delay: -delayChildrenDuration * 3 /*3 is the amount of children*/,
+        }
+      )
+      .fromTo(
+        ".read-about-button",
+        { opacity: 0, y: 65 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: -delayChildrenDuration * 4 /*3 is the amount of children*/,
         }
       );
   });
@@ -99,17 +107,13 @@ const HomeAbout = () => {
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.
               </p>
-              {/* <div className="read-about-button">
+              <div className="read-about-button">
                 <Link to="/about">
                   <h4 className="read-about-link">
-                    read about me{" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRightLong}
-                      className="arrow-icon"
-                    />
+                    read about me
                   </h4>
                 </Link>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="home-about-images">

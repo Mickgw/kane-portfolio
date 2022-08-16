@@ -23,23 +23,19 @@ function App() {
       <div className="App">
         <div className="cursor__dot">
           <AnimatedCursor
-            innerSize={20}
-            innerScale={3}
-            outerSize={null}
-            outerScale={null}
-            outerAlpha={null}
+            innerSize={12}
+            innerScale={5}
+            outerSize={null} //Disabled the dot that's following the cursor
+            outerScale={null} //Disabled the dot that's following the cursor
+            outerAlpha={null} //Disabled the dot that's following the cursor
             clickables={[
               "a",
-              'input[type="text"]',
-              'input[type="email"]',
-              'input[type="number"]',
-              'input[type="submit"]',
-              'input[type="image"]',
-              "label[for]",
-              "select",
-              "textarea",
               "button",
               ".link",
+              '.desktop-menu-button-text',
+              '.gallery-image',
+              '.read-about-link',
+              '.album-card'
             ]}
           />
         </div>
@@ -48,8 +44,8 @@ function App() {
           <Navbar />
         </header>
 
-        <main data-scroll-section>
-          <Routes onChange={console.log("Route has changed")}>
+        <main>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />

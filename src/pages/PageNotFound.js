@@ -22,7 +22,7 @@ const PageNotFound = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : setTimeout(() => navbar_inner.classList.remove("loading"), 1000);
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 600);
   }, [loading]);
 
   const loader_animation = {

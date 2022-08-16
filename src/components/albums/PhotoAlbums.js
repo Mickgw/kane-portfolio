@@ -52,7 +52,6 @@ const PhotoAlbums = () => {
                             {album.year}
                           </span>
                         </div>
-                        <hr className="divider" />
                       </div>
                     </FadeInWhenVisible>
                   </Link>

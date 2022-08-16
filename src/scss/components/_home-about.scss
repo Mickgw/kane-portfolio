@@ -25,9 +25,10 @@
           h1 {
             position: relative;
             font-weight: 500;
-            font-size: calc(clamp(3rem, 7vw, 4em) * 0.875);
+
             margin-bottom: 24px;
             .home-about-content-line {
+              font-size: 3rem;
               margin: 0;
               line-height: 1.4;
               overflow: hidden;
@@ -38,7 +39,7 @@
           }
 
           p {
-            margin-block: 2em;
+            margin-block: 3em;
             font-size: 1.43rem;
             line-height: 24px;
             font-weight: 300;
@@ -52,19 +53,20 @@
             }
 
             .read-about-link {
+              font-weight: 600;
               text-transform: uppercase;
-              font-size: 1.5rem;
+              font-size: 1.4rem;
               position: relative;
 
-              &:before {
-                position: absolute;
-                content: "";
-                width: 56px;
-                height: 1px;
-                background: #dfdfdf;
-                top: 50%;
-                left: -80px;
-              }
+              // &:before {
+              //   position: absolute;
+              //   content: "";
+              //   width: 56px;
+              //   height: 1px;
+              //   background: #dfdfdf;
+              //   top: 50%;
+              //   left: -80px;
+              // }
 
               .arrow-icon {
               }

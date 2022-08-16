@@ -30,7 +30,7 @@ const PhotoAlbumsPage = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : navbar_inner.classList.remove("loading");
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 600);
   }, [loading]);
 
   const loader_animation = {

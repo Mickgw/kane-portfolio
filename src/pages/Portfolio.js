@@ -43,7 +43,7 @@ const Portfolio = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : setTimeout(() => navbar_inner.classList.remove("loading"), 900);
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 600);
   }, [loading]);
 
   const loader_animation = {

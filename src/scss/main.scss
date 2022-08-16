@@ -49,28 +49,9 @@ main {
   }
 }
 
-// .cursor {
-//   position: fixed;
-//   background-color: $white;
-//   width: 15px;
-//   height: 15px;
-//   border-radius: 50%;
-//   top: 0;
-//   left: 0;
-//   pointer-events: none;
-//   mix-blend-mode: difference;
-
-//   z-index: 1000;
-// }
-
 .cursor__dot div {
   z-index: 999999 !important;
 }
-
-// .cursor__dot div:last-child {
-//   mix-blend-mode: difference;
-//   background-color: $white !important;
-// }
 
 .cursor__dot div:last-child {
   mix-blend-mode: difference;

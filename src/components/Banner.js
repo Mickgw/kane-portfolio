@@ -29,7 +29,6 @@ const Banner = () => {
     visible: {
       y: -35,
       opacity: 1,
-      transform: "matrix",
       transition: {
         duration: 1,
         transition: { ease: [0.2, 0.2, -0.05, 0.95] },
