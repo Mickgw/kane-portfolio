@@ -21,6 +21,7 @@ function App() {
   return (
     <AnimatePresence>
       <div className="App">
+      <ScrollToTop />
         <div className="cursor__dot">
           <AnimatedCursor
             innerSize={12}
@@ -35,12 +36,12 @@ function App() {
               '.desktop-menu-button-text',
               '.gallery-image',
               '.read-about-link',
-              '.album-card',
-              ".read-about-link",
+              // '.album-card',
+              // ".read-about-link",
             ]}
           />
         </div>
-        <ScrollToTop />
+
         <header>
           <Navbar />
         </header>

@@ -30,6 +30,7 @@ $card-spacing: 3vw;
                 }
 
                 .album-card {
+                    cursor: none !important;
                     .album-cover-container {
                         aspect-ratio: 12/16;
                         display: block;

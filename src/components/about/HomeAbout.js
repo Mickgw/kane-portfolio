@@ -253,6 +253,7 @@ const HomeAbout = () => {
           </div>
         </div>
       </div>
+      {/* <hr className="home-about-divider" /> */}
     </div>
   );
 };

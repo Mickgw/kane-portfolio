@@ -17,6 +17,7 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
 
     return () => {
       window.removeEventListener("click", getClickOutside);
+      body.classList.remove("disable-scroll");
     };
   }, [isModal, setIsModal, setModalImage]);
 

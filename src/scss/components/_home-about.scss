@@ -10,11 +10,12 @@
 
     .home-about-inner {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 40% 60%;
       width: 100%;
 
       .home-about-content {
-        width: 80%;
+        position: relative;
+        width: 90%;
 
         .home-about-content-inner {
           width: 100%;
@@ -26,7 +27,7 @@
 
             margin-bottom: 24px;
             .home-about-content-line {
-              font-size: 3rem;
+              font-size: 2.8rem;
               margin: 0;
               line-height: 1.4;
               overflow: hidden;
@@ -38,7 +39,7 @@
               .home-about-content-line-inner {
                 .bolded {
                   letter-spacing: 1px;
-                  font-size: 3.3rem;
+                  font-size: 3rem;
                   color: $black;
 
                   @media (max-width: $layout-breakpoint-medium) {
@@ -70,7 +71,6 @@
               }
 
               .read-about-link {
-                overflow: hidden;
                 border-radius: 5rem;
                 padding-block: 1rem;
                 padding-inline: 3rem;
@@ -78,6 +78,7 @@
                 background-color: transparent;
                 border: 1px solid rgb(196, 196, 196);
                 transition: 0.5s ease-in-out;
+                cursor: none !important;
 
                 color: #323232;
                 font-weight: 600;
