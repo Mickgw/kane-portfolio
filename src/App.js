@@ -35,7 +35,8 @@ function App() {
               '.desktop-menu-button-text',
               '.gallery-image',
               '.read-about-link',
-              '.album-card'
+              '.album-card',
+              ".read-about-link",
             ]}
           />
         </div>

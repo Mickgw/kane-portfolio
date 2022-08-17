@@ -3,7 +3,7 @@ $portfolioImage: url("../../assets/images/image-3-banner.jpeg");
 $aboutImage: url("../../assets/images/image_3_menu.jpeg");
 $motionImage: url("../../assets/images/image_4_menu.jpeg");
 
-$footer-menu-font-size: 1.2rem;
+$footer-menu-font-size: 2rem;
 
 .navbar-menu {
     top: 0;
@@ -116,77 +116,65 @@ $footer-menu-font-size: 1.2rem;
             height: 1px;
             background-color: rgb(83, 83, 83);
 
-            @media (min-width: $layout-breakpoint-small) {
-                display: none;
-            }
+            // @media (min-width: $layout-breakpoint-small) {
+            //     display: none;
+            // }
         }
 
         .menu-footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
-            margin-bottom: 4vh;
+            margin-top: 8vh;
 
             @media (max-width: $layout-breakpoint-small) {
                 display: none;
             }
 
             .footer-email {
-                position: absolute;
-                left: $wrapper-value-navbar;
-
                 a {
                     text-decoration: none;
                     font-size: $footer-menu-font-size;
                     color: $white;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
+                    letter-spacing: 1px;
                 }
             }
 
-            .footer-socials {
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 0);
+            // .footer-socials {
+            //     position: absolute;
+            //     left: 50%;
+            //     transform: translate(-50%, 0);
 
-                a {
-                    color: $white;
-                    text-transform: uppercase;
-                    font-size: $footer-menu-font-size;
-                    padding-inline: 1.5em;
-                    text-decoration: none;
-                    letter-spacing: 2px;
-                }
-                // display: flex;
+            //     a {
+            //         color: $white;
+            //         text-transform: uppercase;
+            //         font-size: $footer-menu-font-size;
+            //         padding-inline: 1.5em;
+            //         text-decoration: none;
+            //         letter-spacing: 2px;
+            //     }
+            //     // display: flex;
 
-                // .social-icon {
-                //     transition: 0.3s ease-in-out;
-                //     font-size: calc(clamp(1.5rem, 7vw, 2rem) * 0.875);
-                //     color: $white;
-                //     padding-inline: 1.3em;
+            //     // .social-icon {
+            //     //     transition: 0.3s ease-in-out;
+            //     //     font-size: calc(clamp(1.5rem, 7vw, 2rem) * 0.875);
+            //     //     color: $white;
+            //     //     padding-inline: 1.3em;
 
-                //     &:first-child {
-                //         padding-left: 0px !important;
-                //     }
+            //     //     &:first-child {
+            //     //         padding-left: 0px !important;
+            //     //     }
 
-                //     &:hover {
-                //         color: rgb(199, 199, 199);
-                //     }
-                // }
-            }
+            //     //     &:hover {
+            //     //         color: rgb(199, 199, 199);
+            //     //     }
+            //     // }
+            // }
 
             .footer-copyright {
-                position: absolute;
-                right: $wrapper-value-navbar;
                 color: $white;
-                text-transform: uppercase;
                 font-size: $footer-menu-font-size;
-                padding-inline: 1.5em;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             }
         }
 

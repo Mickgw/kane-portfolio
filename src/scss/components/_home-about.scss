@@ -14,12 +14,10 @@
       width: 100%;
 
       .home-about-content {
-        width: 100%;
-        margin: 0 auto;
+        width: 80%;
 
         .home-about-content-inner {
-          padding-top: 10em;
-          width: 90%;
+          width: 100%;
           color: #323232;
 
           h1 {
@@ -33,7 +31,20 @@
               line-height: 1.4;
               overflow: hidden;
 
+              @media (max-width: $layout-breakpoint-medium) {
+                font-size: 2.5rem;
+              }
+
               .home-about-content-line-inner {
+                .bolded {
+                  letter-spacing: 1px;
+                  font-size: 3.3rem;
+                  color: $black;
+
+                  @media (max-width: $layout-breakpoint-medium) {
+                    font-size: 2.6rem;
+                  }
+                }
               }
             }
           }
@@ -44,31 +55,46 @@
             line-height: 24px;
             font-weight: 300;
             padding-right: 48px;
+
+            @media (max-width: $layout-breakpoint-medium) {
+              font-size: 1.3rem;
+            }
           }
 
-          .read-about-button {
-            a {
-              color: $black;
-              text-decoration: none;
-            }
+          .home-about-buttons {
+            display: flex;
 
-            .read-about-link {
-              font-weight: 600;
-              text-transform: uppercase;
-              font-size: 1.4rem;
-              position: relative;
+            .read-about-button {
+              &:last-child {
+                padding-left: 1vw;
+              }
 
-              // &:before {
-              //   position: absolute;
-              //   content: "";
-              //   width: 56px;
-              //   height: 1px;
-              //   background: #dfdfdf;
-              //   top: 50%;
-              //   left: -80px;
-              // }
+              .read-about-link {
+                overflow: hidden;
+                border-radius: 5rem;
+                padding-block: 1rem;
+                padding-inline: 3rem;
+                position: relative;
+                background-color: transparent;
+                border: 1px solid rgb(196, 196, 196);
+                transition: 0.5s ease-in-out;
 
-              .arrow-icon {
+                color: #323232;
+                font-weight: 600;
+                font-size: 1.4rem;
+                font-family: inherit;
+
+                @media (max-width: $layout-breakpoint-medium) {
+                  padding-block: .8rem;
+                  padding-inline: 2.5rem;   
+                  font-size: 1.3rem;               
+                }
+
+                &:hover {
+                  background-color: $black;
+                  border: 1px solid $black;
+                  color: $white;
+                }
               }
             }
           }
@@ -86,15 +112,28 @@
             position: absolute;
 
             &.left {
-              top: 20%;
+              top: 0px;
               left: 0px;
               width: 48%;
+
+              @media (max-width: $layout-breakpoint-medium) {
+                top: 0px;
+                left: 0px;
+                width: 54%;
+              }
             }
 
             &.right {
+              z-index: 2;
               top: 0px;
               right: 0px;
               width: 48%;
+
+              @media (max-width: $layout-breakpoint-medium) {
+                top: 20%;
+                right: 0px;
+                width: 54%;
+              }
             }
 
             .image {

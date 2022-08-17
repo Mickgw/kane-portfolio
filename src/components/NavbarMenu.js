@@ -460,10 +460,10 @@ const NavbarMenu = () => {
           <div className="footer-email">
             <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
           </div>
-          <div className="footer-socials">
+          {/* <div className="footer-socials">
             <a href="/">Instagram</a>
             <a href="/">Youtube</a>
-          </div>
+          </div> */}
           <div className="footer-copyright">
             ©2022
           </div>
