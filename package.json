@@ -28,6 +28,7 @@
     "react-img-zoom": "^0.1.0",
     "react-intersection-observer": "^9.1.0",
     "react-lazy-load-image-component": "^1.5.5",
+    "react-locomotive-scroll": "^0.2.2",
     "react-map-interaction": "^2.1.0",
     "react-modal-image": "^2.5.0",
     "react-moment": "^1.1.2",

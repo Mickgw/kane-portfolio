@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  cursor: auto !important;
 
   &::-webkit-scrollbar {
     display: none;
@@ -54,14 +55,19 @@ main {
 }
 
 .cursor__dot div:last-child {
-  mix-blend-mode: difference;
-  background-color: $white !important;
+  background-color: transparent !important;
 }
 
 .cursor__dot div:first-child {
   mix-blend-mode: difference;
   background-color: $white !important;
 }
+
+
+
+
+
+
 
 
 

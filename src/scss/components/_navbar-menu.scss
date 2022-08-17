@@ -43,8 +43,8 @@ $footer-menu-font-size: 2rem;
                 text-align: left;
 
                 .navlink-container {
-                    cursor: pointer;
                     padding-bottom: 5em;
+                    cursor: pointer !important;
 
                     //Disables padding on bottom for the last child
                     &:last-child {
@@ -61,6 +61,7 @@ $footer-menu-font-size: 2rem;
                             text-decoration: none;
                             font-size: calc(clamp(5rem, 7vw, 6rem) * 0.875);
                             transition: 0.3s ease-in-out;
+                            cursor: pointer !important;
 
                             &.active::before {
                                 padding-top: 10px;

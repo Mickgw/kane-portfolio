@@ -21,21 +21,20 @@ function App() {
   return (
     <AnimatePresence>
       <div className="App">
-      <ScrollToTop />
+        <ScrollToTop />
         <div className="cursor__dot">
           <AnimatedCursor
-            innerSize={12}
-            innerScale={5}
-            outerSize={null} //Disabled the dot that's following the cursor
-            outerScale={null} //Disabled the dot that's following the cursor
-            outerAlpha={null} //Disabled the dot that's following the cursor
+            innerSize={null} //Disabled the the main dot
+            innerScale={null} //Disabled the dot that's following the cursor
+            outerSize={15}
+            outerScale={5}
             clickables={[
               "a",
               "button",
               ".link",
-              '.desktop-menu-button-text',
-              '.gallery-image',
-              '.read-about-link',
+              ".desktop-menu-button-text",
+              ".gallery-image",
+              ".read-about-link",
               // '.album-card',
               // ".read-about-link",
             ]}

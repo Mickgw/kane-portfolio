@@ -7,13 +7,12 @@ import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
 import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
 
 // GSAP
-import { gsap } from "gsap";
+import { gsap, Expo } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
   const smallerDeviceActive = window.matchMedia("(max-width: 1440px)");
   const delayChildrenDuration = 0.2;
-  const delayChildrenImages = 0.1;
 
   useEffect(() => {
     if (smallerDeviceActive.matches) {
@@ -33,7 +32,7 @@ const HomeAbout = () => {
           {
             opacity: 1,
             y: 0,
-            duration: 1.5,
+            duration: 1.5,            
           }
         )
         .fromTo(
@@ -98,7 +97,7 @@ const HomeAbout = () => {
         .timeline({
           scrollTrigger: {
             trigger: "#about-section",
-            start: "top +=900px",
+            start: "top +=1000px",
             once: true,
           },
         })
@@ -171,8 +170,6 @@ const HomeAbout = () => {
     }
   });
 
-  console.log(smallerDeviceActive);
-
   return (
     <div className="home-about" id="about-section">
       <div className="container">
@@ -212,10 +209,7 @@ const HomeAbout = () => {
                 quae ab illo inventore veritatis et quasi architecto beatae
                 vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste
                 natus error sit voluptatem accusantium doloremque laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-                et quasi architecto beatae vitae dicta sunt explicabo, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo.
+                totam rem aperiam.
               </p>
               <div className="home-about-buttons">
                 <div className="read-about-button">
