@@ -69,7 +69,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=1.4" //Add a delay because other way didnt work
+          "-=.8" //Add a delay because other way didnt work
         )
         .fromTo(
           "#button",
@@ -79,7 +79,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=1.2" //Add a delay because other way didnt work
+          "-=.8" //Add a delay because other way didnt work
         );
     } else {
       //===============================================Desktop timeline
@@ -113,8 +113,8 @@ const HomeAboutNormal = () => {
         )
         .fromTo(
           "#image",
-          { scale: 1.8, skewX: 10, skewY: 10 },
-          { scale: 1, skewX: 0, skewY: 0, duration: 2, delay: -2 }
+          { scale: 1.8, skewY: 10 },
+          { scale: 1, skewY: 0, duration: 2, delay: -2 }
         )
         .fromTo(
           "#header-content-line",
@@ -135,7 +135,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=1.2"
+          "-=.8"
         )
         .fromTo(
           "#button",
@@ -145,7 +145,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=1" //Add a delay because other way didnt work
+          "-=.8" //Add a delay because other way didnt work
         );
     }
   });

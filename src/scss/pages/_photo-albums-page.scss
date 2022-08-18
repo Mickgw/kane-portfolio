@@ -18,8 +18,12 @@
                         font-size: 5rem;
                         letter-spacing: 1px;
 
+                        @media (max-width: $layout-breakpoint-medium) {
+                            font-size: 3.6rem;
+                        }
+
                         @media (max-width: $layout-breakpoint-small) {
-                            font-size: 4rem;
+                            font-size: 3.2rem;
                         }
 
                         @media (max-width: $layout-breakpoint-xsmall) {
@@ -53,19 +57,24 @@
                 width: 100%;
                 margin-block: 15vh;
                 .image-index {
-                    // transform: rotate(-90deg);
-                    top: 0;
-                    margin-top: 10vh;
-                    left: -5vw;
+                    top: 2.5vh;
+                    left: -35px;
                     position: absolute;
 
-                    font-size: 2.5rem;
+                    font-size: 2rem;
+                    color: $black;
                     font-weight: 700;
-                    text-transform: uppercase;
 
-                    .image-count-divider {
-                        padding-inline: 10px;
-                        font-size: 1.3em;
+                    @media (max-width: $layout-breakpoint-small) {
+                        left: -30px;
+                        font-size: 1.5rem;
+                        color: $text-color;
+                        font-weight: 500;
+                    }
+
+                    @media (max-width: $layout-breakpoint-xsmall) {
+                        left: -25px;
+                        font-size: 1.2rem;
                     }
                 }
                 .album-image {

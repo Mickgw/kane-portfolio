@@ -46,6 +46,10 @@ $footer-menu-font-size: 1.6rem;
                     padding-bottom: 5.3em;
                     cursor: pointer !important;
 
+                    @media (max-width: $layout-breakpoint-small) {
+                        padding-bottom: 3.5em;
+                    }
+
                     //Disables padding on bottom for the last child
                     &:last-child {
                         padding-bottom: 0;

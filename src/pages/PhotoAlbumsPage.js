@@ -12,7 +12,7 @@ const PhotoAlbumsPage = () => {
   const timer_duration = 1400;
   const location = useLocation();
 
- console.log(location.pathname)
+  console.log(location.pathname);
 
   //Set loading to false after time
   useEffect(() => {
@@ -50,7 +50,12 @@ const PhotoAlbumsPage = () => {
           variants={loader_animation}
           exit="exit"
         >
-          <PageLoader loaderText={location.pathname.replace(/\s/g,'-').replace(/%20/g, "-").substring(1)}/>
+          <PageLoader
+            loaderText={location.pathname
+              .replace(/\s/g, "-")
+              .replace(/%20/g, "-")
+              .substring(1)}
+          />
         </motion.div>
       ) : (
         <div className="album-page">
@@ -89,9 +94,6 @@ const PhotoAlbumsPage = () => {
                       {album.images.map((album_image, index) => {
                         return (
                           <div key={index}>
-                            {/* <motion.div ref={ref} className="image-index" variants={imageCountAnimation} initial="hidden" animate="visible">
-                          {index + 1}<em className="image-count-divider">&#8213;</em>{album.images.length}
-                        </motion.div> */}
                             <FadeInWhenVisible>
                               <div className="image-container">
                                 <img
