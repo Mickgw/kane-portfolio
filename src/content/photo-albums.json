@@ -68,6 +68,25 @@
           "paragraph": "Dit is paragraaf 2"
         }
       ]
+    },
+    {
+      "id": "ezsllY-HX",
+      "title": "This is a test",
+      "year": 2014,
+      "camera": "unknown",
+      "camera_lens": "unknown",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825458/f9175a16afc06b0c5a25772b0f258f39_fueqg7.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/Frank_Ocean_-_endless_am3jug.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/slowedreverb_zdil7j.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/acoustic_oov1u7.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825473/night_dstza9.jpg"
+      ],
+      "album_description_paragraphs": [
+        {
+          "paragraph": "Dit is een test g "
+        }
+      ]
     }
   ]
 }
