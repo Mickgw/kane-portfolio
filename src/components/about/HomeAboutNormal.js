@@ -20,12 +20,12 @@ const HomeAboutNormal = () => {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#about-section",
+            trigger: "#home-about",
             start: "top +=900px",
             once: true,
           },
         })
-        .to("#about-section", { autoAlpha: 1, duration: 0 })
+        .to("#home-about", { autoAlpha: 1, duration: 0 })
         .fromTo(
           "#image-container-left",
           { y: 100, opacity: 0 },
@@ -51,7 +51,7 @@ const HomeAboutNormal = () => {
           { scale: 1, skewY: 0, duration: 2, delay: -2 }
         )
         .fromTo(
-          ".home-about-content-line-inner",
+          "#header-content-line",
           { y: 100, skewY: 10 },
           {
             y: 0,
@@ -62,7 +62,7 @@ const HomeAboutNormal = () => {
           }
         )
         .fromTo(
-          ".hero-content-paragraph",
+          "#paragraph",
           { opacity: 0, y: 65 },
           {
             y: 0,
@@ -72,7 +72,7 @@ const HomeAboutNormal = () => {
           "-=1.4" //Add a delay because other way didnt work
         )
         .fromTo(
-          ".read-about-button",
+          "#button",
           { opacity: 0, y: 65 },
           {
             y: 0,
@@ -80,18 +80,18 @@ const HomeAboutNormal = () => {
             duration: 1,
           },
           "-=1.2" //Add a delay because other way didnt work
-        )
+        );
     } else {
       //===============================================Desktop timeline
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#about-section",
+            trigger: "#home-about",
             start: "top +=1000px",
             once: true,
           },
         })
-        .to("#about-section", { autoAlpha: 1, duration: 0 })
+        .to("#home-about", { autoAlpha: 1, duration: 0 })
         .fromTo(
           "#image-container-left",
           { opacity: 0, y: 100 },
@@ -117,7 +117,7 @@ const HomeAboutNormal = () => {
           { scale: 1, skewX: 0, skewY: 0, duration: 2, delay: -2 }
         )
         .fromTo(
-          ".home-about-content-line-inner",
+          "#header-content-line",
           { y: 100, skewY: 10 },
           {
             y: 0,
@@ -128,7 +128,7 @@ const HomeAboutNormal = () => {
           }
         )
         .fromTo(
-          ".hero-content-paragraph",
+          "#paragraph",
           { opacity: 0, y: 65 },
           {
             y: 0,
@@ -138,7 +138,7 @@ const HomeAboutNormal = () => {
           "-=1.2"
         )
         .fromTo(
-          ".read-about-button",
+          "#button",
           { opacity: 0, y: 65 },
           {
             y: 0,
@@ -146,89 +146,82 @@ const HomeAboutNormal = () => {
             duration: 1,
           },
           "-=1" //Add a delay because other way didnt work
-        )
+        );
     }
   });
 
   return (
-    <div className="home-about" id="about-section">
-      <div className="home-about-normal">
-        <div className="container">
-          <div className="home-about-inner">
-            <div className="home-about-content">
-              <div className="home-about-content-inner">
-                <h1>
-                  <div className="home-about-content-line">
-                    <div
-                      id="header-content-line"
-                      className="home-about-content-line-inner"
-                    >
-                      I am currently a <span className="bolded">student</span>
-                    </div>
+    <div className="home-about-normal" id="home-about">
+      <div className="container">
+        <div className="home-about-inner">
+          <div className="home-about-content">
+            <div className="home-about-content-inner">
+              <h1>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    I am currently a <span className="bolded">student</span>
                   </div>
-                  <div className="home-about-content-line">
-                    <div
-                      id="header-content-line"
-                      className="home-about-content-line-inner"
-                    >
-                      at <span className="bolded">Rijn IJssel Arnhem</span>{" "}
-                      studying
-                    </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    at <span className="bolded">Rijn IJssel Arnhem</span>{" "}
+                    studying
                   </div>
-                  <div className="home-about-content-line">
-                    <div
-                      id="header-content-line"
-                      className="home-about-content-line-inner"
-                    >
-                      <span className="bolded">audio visual specialist</span>
-                    </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    <span className="bolded">audio visual specialist</span>
                   </div>
-                </h1>
-                <p className="hero-content-paragraph">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde
-                  omnis iste natus error sit voluptatem accusantium doloremque
-                  laudantium, totam rem aperiam.
-                </p>
-                <div className="home-about-buttons">
-                  <div className="read-about-button">
-                    <Link to="/about">
-                      <button className="read-about-link">Read About me</button>
-                    </Link>
-                  </div>
-                  <div className="read-about-button">
-                    <Link to="/portfolio">
-                      <button className="read-about-link">
-                        View Portfolio
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+              </h1>
+              <p className="hero-content-paragraph" id="paragraph">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam.
+              </p>
+              <div className="home-about-buttons">
+                <div className="read-about-button" id="button">
+                  <Link to="/about">
+                    <button className="read-about-link">Read About me</button>
+                  </Link>
+                </div>
+                <div className="read-about-button" id="button">
+                  <Link to="/portfolio">
+                    <button className="read-about-link">View Portfolio</button>
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="home-about-images">
-              <div className="home-about-images-container">
-                <div className="image-container left" id="image-container-left">
-                  <img
-                    id="image"
-                    className="image"
-                    src={Portrait2}
-                    alt="portrait2"
-                  />
-                </div>
-                <div
-                  className="image-container right"
-                  id="image-container-right"
-                >
-                  <img
-                    id="image"
-                    className="image"
-                    src={Portrait1}
-                    alt="portrait1"
-                  />
-                </div>
+          </div>
+          <div className="home-about-images">
+            <div className="home-about-images-container">
+              <div className="image-container left" id="image-container-left">
+                <img
+                  id="image"
+                  className="image"
+                  src={Portrait2}
+                  alt="portrait2"
+                />
+              </div>
+              <div className="image-container right" id="image-container-right">
+                <img
+                  id="image"
+                  className="image"
+                  src={Portrait1}
+                  alt="portrait1"
+                />
               </div>
             </div>
           </div>

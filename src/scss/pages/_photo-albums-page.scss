@@ -15,8 +15,16 @@
                 .album-facts {
                     .album-title {
                         font-weight: 700;
-                        font-size: 5em;
+                        font-size: 5rem;
                         letter-spacing: 1px;
+
+                        @media (max-width: $layout-breakpoint-small) {
+                            font-size: 4rem;
+                        }
+
+                        @media (max-width: $layout-breakpoint-xsmall) {
+                            font-size: 3rem;
+                        }
                     }
                     h4 {
                         padding-top: 1em;
