@@ -464,9 +464,7 @@ const NavbarMenu = () => {
             <a href="/">Instagram</a>
             <a href="/">Youtube</a>
           </div> */}
-          <div className="footer-copyright">
-            ©2022
-          </div>
+          <div className="footer-copyright">©2022</div>
 
           {/* <div className="footer-socials">
             <a href="/" className="social-link">
@@ -491,26 +489,10 @@ const NavbarMenu = () => {
           exit="exit"
         >
           <div className="menu-footer-responsive-container">
-            <div className="footer-socials-responsive">
-              <a href="/" className="social-link-responsive">
-                Instagram
-              </a>
-              <em className="menu-text-divider">&bull;</em>
-              <a href="/" className="social-link-responsive">
-                LinkedIn
-              </a>
-              <em className="menu-text-divider">&bull;</em>
-              <a href="/" className="social-link-responsive">
-                Youtube
-              </a>
-              <em className="menu-text-divider">&bull;</em>
-              <a href="/" className="social-link-responsive">
-                Unsplash
-              </a>
-            </div>
             <div className="local-time-footer">
               <Moment interval={1000} format="LT" />
             </div>
+            <div className="footer-copyright-responsive">©{new Date().getFullYear()}</div>
           </div>
         </motion.div>
       </div>

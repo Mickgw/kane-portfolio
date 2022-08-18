@@ -37,6 +37,10 @@ $menu-button-bar-height: 1px;
       margin-inline: $wrapper-value-breakpoint-small;
     }
 
+    @media (max-width: $layout-breakpoint-medium) {
+      margin-inline: $wrapper-value-navbar-breakpoint-medium;
+    }
+
     .logo {
       pointer-events: all;
       .placeholder-logo {
@@ -101,7 +105,7 @@ $menu-button-bar-height: 1px;
       cursor: pointer;
       transition: 0.3s ease-in-out;
 
-      @media (min-width: $layout-breakpoint-small) {
+      @media (min-width: 991px) {
         display: none !important;
       }
 

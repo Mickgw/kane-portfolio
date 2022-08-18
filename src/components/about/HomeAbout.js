@@ -3,11 +3,11 @@ import { ScrollTrigger } from "gsap/all";
 import { Link } from "react-router-dom";
 
 // Images
-import Portrait1 from "../../assets/images/portrait-placeholder1.jpeg";
-import Portrait2 from "../../assets/images/portrait-placeholder2.jpeg";
+import Portrait1 from "../../assets/portraits/portrait-2.jpg";
+import Portrait2 from "../../assets/portraits/portrait-1.jpg";
 
 // GSAP
-import { gsap, Expo } from "gsap";
+import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAbout = () => {
@@ -28,16 +28,16 @@ const HomeAbout = () => {
         .to("#about-section", { autoAlpha: 1, duration: 0 })
         .fromTo(
           "#image-container-left",
-          {y: 100, opacity: 0},
+          { y: 100, opacity: 0 },
           {
             opacity: 1,
             y: 0,
-            duration: 1.5,            
+            duration: 1.5,
           }
         )
         .fromTo(
           "#image-container-right",
-          {y: 150, x: 100},
+          { y: 150, x: 100 },
           {
             y: 0,
             x: 0,
@@ -226,6 +226,26 @@ const HomeAbout = () => {
             </div>
           </div>
           <div className="home-about-images">
+            <div className="home-about-images-container">
+              <div className="image-container left" id="image-container-left">
+                <img
+                  id="image"
+                  className="image"
+                  src={Portrait2}
+                  alt="portrait2"
+                />
+              </div>
+              <div className="image-container right" id="image-container-right">
+                <img
+                  id="image"
+                  className="image"
+                  src={Portrait1}
+                  alt="portrait1"
+                />
+              </div>
+            </div>
+          </div>
+          {/* <div className="home-about-images">
             <div className="home-about-images-inner">
               <div id="image-container-left" className="image-container left">
                 <img
@@ -244,10 +264,9 @@ const HomeAbout = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      {/* <hr className="home-about-divider" /> */}
     </div>
   );
 };

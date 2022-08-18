@@ -13,7 +13,6 @@ $gap-banner-images: 50px;
     overflow: hidden;
     padding-block: 10vh;
     position: relative;
-    padding-inline: 100px;
     display: flex;
     grid-column-gap: $gap-banner-images;
     grid-template-rows: repeat(3, 1fr);
