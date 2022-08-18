@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images
@@ -7,6 +6,7 @@ import Portrait1 from "../../assets/portraits/portrait-2.jpg";
 import Portrait2 from "../../assets/portraits/portrait-1.jpg";
 
 // GSAP
+import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,10 +52,9 @@ const HomeAboutNormal = () => {
         )
         .fromTo(
           "#header-content-line",
-          { y: 100, skewY: 10 },
+          { y: 100 },
           {
             y: 0,
-            skewY: 0,
             duration: 1,
             stagger: delayChildrenDuration,
             delay: -1.2,
@@ -118,10 +117,9 @@ const HomeAboutNormal = () => {
         )
         .fromTo(
           "#header-content-line",
-          { y: 100, skewY: 10 },
+          { y: 100 },
           {
             y: 0,
-            skewY: 0,
             duration: 1,
             stagger: delayChildrenDuration,
             delay: -1.2,
@@ -156,40 +154,27 @@ const HomeAboutNormal = () => {
         <div className="home-about-inner">
           <div className="home-about-content">
             <div className="home-about-content-inner">
+              <div className="who-am-i-container">
+                <h1 className="who-am-i" id="header-content-line">Hello!</h1>
+              </div>
+
               <h1>
                 <div className="home-about-content-line">
                   <div
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    I am currently a <span className="bolded">student</span>
-                  </div>
-                </div>
-                <div className="home-about-content-line">
-                  <div
-                    id="header-content-line"
-                    className="home-about-content-line-inner"
-                  >
-                    at <span className="bolded">Rijn IJssel Arnhem</span>{" "}
-                    studying
-                  </div>
-                </div>
-                <div className="home-about-content-line">
-                  <div
-                    id="header-content-line"
-                    className="home-about-content-line-inner"
-                  >
-                    <span className="bolded">audio visual specialist</span>
+                    <span className="what-am-i">I am Kane Jansen.</span>
                   </div>
                 </div>
               </h1>
               <p className="hero-content-paragraph" id="paragraph">
+                I am a photographer and videographer. Sed ut perspiciatis unde
+                omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste
-                natus error sit voluptatem accusantium doloremque laudantium,
-                totam rem aperiam.
+                accusantium doloremque laudantium, totam rem aperiam.
               </p>
               <div className="home-about-buttons">
                 <div className="read-about-button" id="button">

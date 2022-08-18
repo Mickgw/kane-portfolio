@@ -47,6 +47,33 @@ const About = () => {
       ) : (
         <div className="about">
           <div className="container">
+          <h1>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    I am currently a <span className="bolded">student</span>
+                  </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    at <span className="bolded">Rijn IJssel Arnhem</span>{" "}
+                    studying
+                  </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    <span className="bolded">audio visual specialist</span>
+                  </div>
+                </div>
+              </h1>
             {/* <div className="about-grid">
               <div className="about-text">
                 <div className="about-header">

@@ -27,7 +27,7 @@ const Banner = () => {
       opacity: 0,
     },
     visible: {
-      y: -35,
+      y: -45,
       opacity: 1,
       transition: {
         duration: 1,
@@ -35,73 +35,6 @@ const Banner = () => {
       },
     },
   };
-  // const imageContainerAnimationDuration = 1.5;
-  // const staggerDuration = 0.5;
-
-  // useEffect(() => {
-  //   gsap
-  //     .timeline()
-  //     .to("#banner", { autoAlpha: 1, duration: 0 }) //Prevents white flash
-  //     .fromTo(
-  //       "#banner-image-container",
-  //       { y: 200, opacity: 0 },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         duration: imageContainerAnimationDuration,
-  //         stagger: staggerDuration,
-  //         ease: Power3.easeOut,
-  //         delay: 0.5,
-  //       }
-  //     )
-
-  //     .fromTo(
-  //       "#banner-image-container-middle",
-  //       { y: 200, opacity: 0 },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         duration: imageContainerAnimationDuration,
-  //         delay: -(imageContainerAnimationDuration - staggerDuration),
-  //         ease: Power3.easeOut,
-  //       }
-  //     )
-  //     .fromTo(
-  //       "#banner-image-left",
-  //       { scale: 2, skewY: 5 },
-  //       {
-  //         scale: 1,
-  //         skewY: 0,
-  //         duration: 1.5,
-  //         delay: -2.5,
-  //       }
-  //     )
-  //     .fromTo(
-  //       "#banner-image-right",
-  //       { scale: 2, skewY: -5 },
-  //       {
-  //         scale: 1,
-  //         skewY: 0,
-  //         duration: 1.5,
-  //         delay: -2.5 + staggerDuration,
-  //       }
-  //     )
-  //     .fromTo(
-  //       "#banner-image-middle",
-  //       { y: 200, scale: 1.3 },
-  //       {
-  //         y: 0,
-  //         scale: 1,
-  //         duration: 1.5,
-  //         delay: -2.5 + staggerDuration * 2,
-  //       }
-  //     )
-  //     .fromTo(
-  //       "#reveal-banner-text",
-  //       { opacity: 0, skewY: 10, scale: 0.96 },
-  //       { opacity: 1, skewY: 0, scale: 1, duration: 1, delay: -0.5 }
-  //     );
-  // });
 
   return (
     <div id="banner" className="banner">

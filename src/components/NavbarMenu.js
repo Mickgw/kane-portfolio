@@ -460,26 +460,7 @@ const NavbarMenu = () => {
           <div className="footer-email">
             <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
           </div>
-          {/* <div className="footer-socials">
-            <a href="/">Instagram</a>
-            <a href="/">Youtube</a>
-          </div> */}
           <div className="footer-copyright">©2022</div>
-
-          {/* <div className="footer-socials">
-            <a href="/" className="social-link">
-              <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-            </a>
-            <a href="/" className="social-link">
-              <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
-            </a>
-            <a href="/" className="social-link">
-              <FontAwesomeIcon icon={faYoutube} className="social-icon" />
-            </a>
-            <a href="/" className="social-link">
-              <FontAwesomeIcon icon={faUnsplash} className="social-icon" />
-            </a>
-          </div> */}
         </motion.div>
         <motion.div
           className="menu-footer-responsive"

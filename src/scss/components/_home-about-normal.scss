@@ -37,6 +37,38 @@ $layout-breakpoint-home-about: 1150px;
                         display: table-cell;
                         vertical-align: middle;
 
+                        .who-am-i-container {
+                            line-height: 1;
+                            overflow: hidden;
+                            margin-bottom: 5rem;
+
+                            .who-am-i {
+                                font-size: 6.3rem;
+                                color: $black;
+                                font-weight: 700;
+
+    
+                                @media (max-width: $layout-breakpoint-medium) {
+                                    font-size: 5.5rem;
+                                }
+    
+                                @media (max-width: 1260px) {
+                                    font-size: 5rem;
+                                }
+    
+                                @media (max-width: $layout-breakpoint-home-about) {
+                                    font-size: 4.5rem;
+                                }
+                            }
+
+                        }
+
+
+
+                        .title-divider {
+                            font-weight: 500;
+                        }
+
                         h1 {
                             position: relative;
                             font-weight: 500;
@@ -57,17 +89,14 @@ $layout-breakpoint-home-about: 1150px;
                                 }
 
                                 .home-about-content-line-inner {
-                                    .bolded {
+                                    .what-am-i {
                                         letter-spacing: 1px;
-                                        font-size: 3rem;
+                                        font-size: 3.1rem;
                                         color: $black;
+                                        font-weight: 700;
 
-                                        @media (max-width: $layout-breakpoint-medium) {
-                                            font-size: 2.6rem;
-                                        }
-
-                                        @media (max-width: $layout-breakpoint-home-about) {
-                                            font-size: 2.2rem;
+                                        @media (max-width: 1370px) {
+                                            font-size: 2.5rem;
                                         }
                                     }
                                 }
@@ -84,6 +113,10 @@ $layout-breakpoint-home-about: 1150px;
                             @media (max-width: $layout-breakpoint-medium) {
                                 font-size: 1.3rem;
                             }
+
+                            @media (max-width: $layout-breakpoint-home-about) {
+                                padding-right: 0px;
+                            }
                         }
 
                         .home-about-buttons {
@@ -96,8 +129,8 @@ $layout-breakpoint-home-about: 1150px;
 
                                 .read-about-link {
                                     border-radius: 5rem;
-                                    padding-block: 1rem;
-                                    padding-inline: 3rem;
+                                    padding-block: .7rem;
+                                    padding-inline: 2.4rem;
                                     position: relative;
                                     background-color: transparent;
                                     border: 1px solid rgb(196, 196, 196);
@@ -106,14 +139,8 @@ $layout-breakpoint-home-about: 1150px;
 
                                     color: #323232;
                                     font-weight: 600;
-                                    font-size: 1.4rem;
+                                    font-size: 1.3rem;
                                     font-family: inherit;
-
-                                    @media (max-width: $layout-breakpoint-medium) {
-                                        padding-block: 0.8rem;
-                                        padding-inline: 2.5rem;
-                                        font-size: 1.3rem;
-                                    }
 
                                     &:hover {
                                         background-color: $black;
@@ -129,11 +156,11 @@ $layout-breakpoint-home-about: 1150px;
                     .home-about-images-container {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
-                        grid-column-gap: 2vw;
+                        grid-column-gap: .1vw;
                         width: 100%;
                         position: relative;
                         .image-container {
-                            width: 100%;
+                            width: 90%;
                             height: 100%;
                             overflow: hidden;
 

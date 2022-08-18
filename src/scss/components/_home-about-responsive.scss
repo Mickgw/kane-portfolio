@@ -1,6 +1,7 @@
 $layout-breakpoint-home-about: 1150px;
 
 .home-about-responsive {
+    visibility: hidden;
     display: none;
     width: 100%;
     margin-block: 30vh;
@@ -31,7 +32,7 @@ $layout-breakpoint-home-about: 1150px;
             }
 
             .home-about-content {
-                margin-block: 10vh;
+                margin-top: 10vh;
                 display: table;
                 width: 100%;
                 position: relative;
@@ -42,6 +43,22 @@ $layout-breakpoint-home-about: 1150px;
                     color: #323232;
                     display: table-cell;
                     vertical-align: middle;
+
+                    .who-am-i {
+                        font-size: 4.5rem;
+                        color: $black;
+                        font-weight: 700;
+                        padding-bottom: 2rem;
+                        letter-spacing: 2px;
+
+                        @media (max-width: $layout-breakpoint-xsmall) {
+                            font-size: 4rem;
+                        }
+                    }
+                    
+                    .title-divider {
+                        font-weight: 500;
+                    }
 
                     h1 {
                         position: relative;
@@ -55,10 +72,15 @@ $layout-breakpoint-home-about: 1150px;
                             overflow: hidden;
 
                             .home-about-content-line-inner {
-                                .bolded {
+                                .what-am-i {
                                     letter-spacing: 1px;
-                                    font-size: 2.6rem;
+                                    font-size: 2.5rem;
                                     color: $black;
+                                    font-weight: 700;
+
+                                    @media (max-width: $layout-breakpoint-xsmall) {
+                                        font-size: 2rem;
+                                    }
                                 }
                             }
                         }
@@ -78,12 +100,16 @@ $layout-breakpoint-home-about: 1150px;
                         .read-about-button {
                             &:last-child {
                                 padding-left: 1vw;
+
+                                @media (max-width: $layout-breakpoint-xsmall) {
+                                    padding-left: 3vw;
+                                }
                             }
 
                             .read-about-link {
                                 border-radius: 5rem;
-                                padding-block: 0.8rem;
-                                padding-inline: 2.5rem;
+                                padding-block: .6rem;
+                                padding-inline: 2.1rem;
                                 position: relative;
                                 background-color: transparent;
                                 border: 1px solid rgb(196, 196, 196);
@@ -92,7 +118,7 @@ $layout-breakpoint-home-about: 1150px;
 
                                 color: #323232;
                                 font-weight: 600;
-                                font-size: 1.4rem;
+                                font-size: 1.25rem;
                                 font-family: inherit;
 
                                 &:hover {

@@ -17,7 +17,7 @@ const Navbar = () => {
   //Listening for page changes.
   useEffect(() => {
     const body = document.querySelector("body");
-    setState({ clicked: false, menuName: "Menu" });
+    setState({ clicked: false, menuName: "menu" });
     body.classList.remove("disable-scroll");
   }, [location]);
 
