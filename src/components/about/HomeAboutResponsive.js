@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutResponsive = () => {
   const phoneActive = window.matchMedia("(max-width: 480px)");
-  const delayChildrenDuration = 0.2;
 
   useEffect(() => {
     gsap
