@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageLoader from "../components/loader/PageLoader";
 
-//Images
-import portait1 from "../assets/portraits/portrait-1.jpg";
-import portait2 from "../assets/portraits/portrait-2.jpg";
-
 const About = () => {
   const [loading, setLoading] = useState(true);
   const timer_duration = 1400;
@@ -51,7 +47,7 @@ const About = () => {
       ) : (
         <div className="about">
           <div className="container">
-            <div className="about-grid">
+            {/* <div className="about-grid">
               <div className="about-text">
                 <div className="about-header">
                   <h2 className="about-header-title">Hey, I am Kane Jansen</h2>
@@ -112,7 +108,7 @@ const About = () => {
                 <img className="image one" src={portait1} alt="left" />
                 <img className="image two" src={portait2} alt="right" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

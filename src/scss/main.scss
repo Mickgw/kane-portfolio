@@ -17,12 +17,13 @@
 @import "components/main-loader";
 @import "components/page-loader";
 @import "components/banner";
-@import "components/home-about";
 @import "components/photo-albums";
 @import "components/footer";
 @import "components/image-modal";
 @import "components/navbar-menu";
 @import "components/cursor";
+@import "components/home-about-responsive";
+@import "components/home-about-normal";
 
 body {
   background-color: $background;

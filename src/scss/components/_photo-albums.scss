@@ -2,7 +2,7 @@ $year-date-color: rgba(255, 255, 255, 0.6);
 $card-spacing: 3vw;
 
 .photo-album-section {
-    margin-block: 50vh;
+    margin-block: 30vh;
     .photo-albums-header {
         letter-spacing: -1px;
         font-size: 3rem;
@@ -26,7 +26,7 @@ $card-spacing: 3vw;
 
                 @media (max-width: $layout-breakpoint-small) {
                     grid-template-columns: repeat(1, 1fr);
-                    grid-row-gap: 10vh;
+                    grid-row-gap: 8vh;
                 }
 
                 .album-card {

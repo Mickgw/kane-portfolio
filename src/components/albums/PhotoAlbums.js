@@ -35,7 +35,7 @@ const PhotoAlbums = () => {
 
                             <div className="album-cover-dot-text-container">
                               <span className="album-cover-dot-text">view</span>
-                              <span className="album-cover-dot-text-responsive">+</span>
+                              <span className="album-cover-dot-text-responsive">&#8599;</span>
                             </div>
                           </div>
                           <div className="image-container">
@@ -53,6 +53,7 @@ const PhotoAlbums = () => {
                           </span>
                         </div>
                       </div>
+                      <hr className="divider" />
                     </FadeInWhenVisible>
                   </Link>
                 </div>

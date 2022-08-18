@@ -14,8 +14,6 @@ const PhotoAlbumsPage = () => {
 
  console.log(location.pathname)
 
-
-
   //Set loading to false after time
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -52,7 +50,7 @@ const PhotoAlbumsPage = () => {
           variants={loader_animation}
           exit="exit"
         >
-          <PageLoader loaderText={location.pathname.replace(/\s+/g, '-').replace("%20", '-').substring(1)}/>
+          <PageLoader loaderText={location.pathname.replace(/\s/g,'-').replace(/%20/g, "-").substring(1)}/>
         </motion.div>
       ) : (
         <div className="album-page">
