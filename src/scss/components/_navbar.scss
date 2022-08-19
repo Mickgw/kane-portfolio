@@ -1,4 +1,5 @@
 $menu-button-bar-height: 1px;
+$desktop-menu-button-bar-height: 3px;
 
 .navbar {
   pointer-events: none;
@@ -71,122 +72,210 @@ $menu-button-bar-height: 1px;
     z-index: 2525;
     position: relative;
 
-    .desktop-menu-button-text {
-      background-color: $white;
-      border-radius: 5rem;
-      padding-block: .6em;
-      padding-inline: 2.2em;
+    // .desktop-menu-button-text {
+    //   pointer-events: all;
+    //   cursor: pointer;
+    //   font-weight: 700;
+    //   letter-spacing: 2px;
+    //   margin-block: auto;
+    //   font-size: clamp(1rem, 5.5vw, 1.7rem);
+    //   color: $white;
+    //   cursor: pointer !important;
+
+    //   //Display none after certain view width
+    //   @media (max-width: $layout-breakpoint-small) {
+    //     display: none;
+    //   }
+
+    //   //Takes the disabled attribute that is added and manually disabled the pointer events
+    //   &[disabled] {
+    //     pointer-events: none;
+    //   }
+    .desktop-menu-button {
+      display: flex;
       pointer-events: all;
-      cursor: pointer;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-block: auto;
-      font-size: clamp(1rem, 5.5vw, 1.5rem);
-      color: $black;
-      cursor: pointer !important;
 
-      border: 2px solid $white;
-
-      @media (max-width: 1250px) {
-        padding-inline: 1.4em;
-      }
-
-      //Display none after certain view width
       @media (max-width: $layout-breakpoint-small) {
         display: none;
       }
 
-      //Takes the disabled attribute that is added and manually disabled the pointer events
-      &[disabled] {
-        pointer-events: none;
-      }
-    }
-
-    .menu-button {
-      pointer-events: all;
-      width: clamp(2em, 5.5vw, 2.5em);
-      height: clamp(2em, 5.5vw, 2.5em);
-      border-radius: 50%;
-      background-color: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-
-      @media (min-width: 991px) {
-        display: none !important;
-      }
-
-      //Makes button bigger and changes color
-      @media (max-width: $layout-breakpoint-small) {
-        width: 3.5em;
-        height: 3.5em;
-        background-color: $white;
-      }
-
-      //When disabled variable is passed disable the pointer events
       &[disabled] {
         pointer-events: none;
       }
 
-      .button-lines {
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 15%;
-        height: 12%;
-        opacity: 1;
+      .button-text {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        color: $white;
+        mix-blend-mode: difference;
+        letter-spacing: 2px;
+      }
 
-        //Makes lines in button bigger
-        @media (max-width: $layout-breakpoint-small) {
-          width: 35%;
-        }
+      .button-lines-next-to-button {
+        margin-left: 35px;
 
-        &::before {
-          transition: 0.3s ease-in-out;
-          content: "";
+        .desktop-button-lines {
+          margin-top: 0px;
+          align-items: center;
+          justify-content: center;
           position: absolute;
-          top: 0;
-          height: $menu-button-bar-height;
-          width: 100%;
-          background-color: $black;
-          border-radius: 5px;
-        }
+          width: 25%;
+          height: 90%;
+          opacity: 1;
 
-        &::after {
-          transition: 0.3s ease-in-out;
-          content: "";
-          position: absolute;
-          bottom: 0;
-          height: $menu-button-bar-height;
-          width: 100%;
-          background-color: $black;
-          border-radius: 2px;
-        }
+          //Makes lines in button bigger
+          @media (max-width: $layout-breakpoint-small) {
+            width: 35%;
+          }
 
-        &.menu-open {
-          &::before {
-            top: 3.3px;
-            transform: rotate(-45deg);
-            content: "";
-            display: block;
+          .middle-line {
             position: absolute;
-            height: $menu-button-bar-height;
+            top: 42%;
+            left: -100%;
+            height: $desktop-menu-button-bar-height + .1px;
             width: 100%;
+            background-color: $white;
+            opacity: 1;
+
+            transition: 0.1s ease-in-out;
+
+            &.desktop-menu-open {
+              opacity: 0;
+            }
+          }
+
+          &::before {
+            transition: 0.3s ease-in-out;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: $desktop-menu-button-bar-height;
+            width: 100%;
+            background-color: $white;
           }
 
           &::after {
-            bottom: 1px;
-            transform: rotate(45deg);
+            transition: 0.3s ease-in-out;
             content: "";
             position: absolute;
-            height: $menu-button-bar-height;
+            bottom: 0;
+            left: -100%;
+            height: $desktop-menu-button-bar-height;
             width: 100%;
+            background-color: $white;
+          }
 
-            @media (max-width: $layout-breakpoint-small) {
-              bottom: 3px;
+          &.desktop-menu-open {
+            &::before {
+              top: 6.3px;
+              transform: rotate(-45deg);
+              content: "";
+              display: block;
+              position: absolute;
+              height: $desktop-menu-button-bar-height;
+              width: 100%;
             }
+
+            &::after {
+              bottom: 6px;
+              transform: rotate(45deg);
+              content: "";
+              position: absolute;
+              height: $desktop-menu-button-bar-height;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-button {
+    pointer-events: all;
+    width: clamp(2em, 5.5vw, 2.5em);
+    height: clamp(2em, 5.5vw, 2.5em);
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    @media (min-width: 991px) {
+      display: none !important;
+    }
+
+    //Makes button bigger and changes color
+    @media (max-width: $layout-breakpoint-small) {
+      width: 3.5em;
+      height: 3.5em;
+      background-color: $white;
+    }
+
+    //When disabled variable is passed disable the pointer events
+    &[disabled] {
+      pointer-events: none;
+    }
+
+    .button-lines {
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 15%;
+      height: 12%;
+      opacity: 1;
+
+      //Makes lines in button bigger
+      @media (max-width: $layout-breakpoint-small) {
+        width: 35%;
+      }
+
+      &::before {
+        transition: 0.3s ease-in-out;
+        content: "";
+        position: absolute;
+        top: 0;
+        height: $menu-button-bar-height;
+        width: 100%;
+        background-color: $black;
+        border-radius: 5px;
+      }
+
+      &::after {
+        transition: 0.3s ease-in-out;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: $menu-button-bar-height;
+        width: 100%;
+        background-color: $black;
+        border-radius: 2px;
+      }
+
+      &.menu-open {
+        &::before {
+          top: 3.3px;
+          transform: rotate(-45deg);
+          content: "";
+          display: block;
+          position: absolute;
+          height: $menu-button-bar-height;
+          width: 100%;
+        }
+
+        &::after {
+          bottom: 1px;
+          transform: rotate(45deg);
+          content: "";
+          position: absolute;
+          height: $menu-button-bar-height;
+          width: 100%;
+
+          @media (max-width: $layout-breakpoint-small) {
+            bottom: 3px;
           }
         }
       }

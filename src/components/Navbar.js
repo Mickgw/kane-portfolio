@@ -94,7 +94,7 @@ const Navbar = () => {
           </div>
           <div className="menu">
             {/*Menu button desktop or medium sized screens*/}
-            <motion.div
+            {/* <motion.div
               className="desktop-menu-button-text"
               onClick={() => {
                 handleMenu();
@@ -102,7 +102,33 @@ const Navbar = () => {
               disabled={disabled}
             >
               {state.menuName}
-            </motion.div>
+            </motion.div> */}
+            <div
+              className="desktop-menu-button"
+              onClick={() => {
+                handleMenu();
+              }}
+              disabled={disabled}
+            >
+              <div className="button-text">{state.menuName}</div>
+              <div className="button-lines-next-to-button">
+                <div
+                  className={
+                    state.clicked
+                      ? "desktop-button-lines desktop-menu-open"
+                      : "desktop-button-lines"
+                  }
+                >
+                  <div
+                    className={
+                      state.clicked
+                        ? "middle-line desktop-menu-open"
+                        : "middle-line"
+                    }
+                  />
+                </div>
+              </div>
+            </div>
 
             {/*Menu button small screen sizes*/}
             <div
