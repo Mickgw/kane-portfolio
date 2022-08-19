@@ -27,7 +27,7 @@ const Banner = () => {
       opacity: 0,
     },
     visible: {
-      y: -45,
+      y: -35,
       opacity: 1,
       transition: {
         duration: 1,

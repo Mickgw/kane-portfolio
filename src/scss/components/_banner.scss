@@ -74,7 +74,7 @@ $gap-banner-images: 50px;
 
 .banner-text {
   color: #fff;
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 700;
   left: 0;
   letter-spacing: 42px;
@@ -83,7 +83,7 @@ $gap-banner-images: 50px;
   overflow: hidden;
   position: absolute;
   text-align: center;
-  // text-transform: uppercase;
+  text-transform: uppercase;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
