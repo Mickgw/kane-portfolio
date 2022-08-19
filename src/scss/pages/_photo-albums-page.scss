@@ -2,7 +2,8 @@
     padding-top: $padding-top-global;
     .container {
         .album-data {
-            padding-block: 3em;
+            padding-block: 3.7em;
+            
             .album-info-grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -33,6 +34,11 @@
                     h4 {
                         padding-top: 1em;
                         font-size: 2.2em;
+                        font-weight: 500;
+
+                        @media (max-width: $layout-breakpoint-small) {
+                            font-size: 1.9em;
+                        }
                     }
                     .divider-text.category {
                         padding-top: 3em;
@@ -43,11 +49,12 @@
                     .album-description-paragraph {
                         padding-bottom: 2em;
                         line-height: 1.5;
-                        font-size: 1.8em;
+                        font-size: 1.7em;
                         color: $text-color;
 
                         @media (max-width: $layout-breakpoint-small) {
                             padding-top: 4em;
+                            font-size: 1.6em;
                         }
                     }
                 }

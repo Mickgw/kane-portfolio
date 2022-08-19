@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import PageLoader from "../components/loader/PageLoader";
 
-import videoProjects from "../assets/videos/motion-videos.json";
+//Components
+import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
+
+//Files
+import videoProjects from "../assets/videos/motion-videos.json";
+
 
 const Motion = () => {
   const [loading, setLoading] = useState(true);

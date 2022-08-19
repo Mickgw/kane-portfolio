@@ -2,19 +2,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faInstagram,
-//   faLinkedinIn,
-//   faYoutube,
-//   faUnsplash,
-// } from "@fortawesome/free-brands-svg-icons";
 
 //Menu images on navlink hover
 import homeImage from "../assets/images/image-1-banner.jpeg";
 import portfolioImage from "../assets/images/image-3-banner.jpeg";
 import aboutImage from "../assets/images/image_3_menu.jpeg";
 import motionImage from "../assets/images/image_4_menu.jpeg";
+import otherPage from "../assets/images/other-page-image.jpeg";
 
 const NavbarMenu = () => {
   //assigning location variable
@@ -383,6 +377,14 @@ const NavbarMenu = () => {
                       alt="motion"
                     />
                   );
+                case "Albums":
+                  return (
+                    <img
+                      className="navigation-image"
+                      src={otherPage}
+                      alt="motion"
+                    />
+                  );
                 default:
                   return null;
               }
@@ -473,7 +475,9 @@ const NavbarMenu = () => {
             <div className="local-time-footer">
               <Moment interval={1000} format="LT" />
             </div>
-            <div className="footer-copyright-responsive">©{new Date().getFullYear()}</div>
+            <div className="footer-copyright-responsive">
+              ©{new Date().getFullYear()}
+            </div>
           </div>
         </motion.div>
       </div>

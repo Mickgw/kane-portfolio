@@ -1,8 +1,10 @@
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import PageLoader from "../components/loader/PageLoader";
 import { Link } from "react-router-dom";
+
+//Components
+import PageLoader from "../components/loader/PageLoader";
 
 const PageNotFound = () => {
   const [loading, setLoading] = useState(true);

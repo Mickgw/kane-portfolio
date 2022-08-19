@@ -102,7 +102,7 @@ const HomeAboutResponsive = () => {
                 <h1>
                   <div className="home-about-content-line">
                     <div
-                      id="header-content-line"
+                      id="header-content-line-responsive"
                       className="home-about-content-line-inner"
                     >
                       <span className="what-am-i">I am Kane Jansen</span>

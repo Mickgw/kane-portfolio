@@ -1,10 +1,13 @@
 import { useParams, useLocation } from "react-router-dom";
-import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
-import photoAlbums from "../content/photo-albums.json";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+//Files
+import photoAlbums from "../content/photo-albums.json";
+
+//Components
 import PageLoader from "../components/loader/PageLoader";
+import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 
 const PhotoAlbumsPage = () => {
   const { title } = useParams();
@@ -41,6 +44,21 @@ const PhotoAlbumsPage = () => {
     },
   };
 
+  const infoGridAnimation = {
+    hidden: {
+      y: "5vh",
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        transition: { ease: [0.2, 0.2, -0.05, 0.95] },
+      },
+    },
+  };
+
   return (
     <AnimatePresence>
       {loading ? (
@@ -58,14 +76,14 @@ const PhotoAlbumsPage = () => {
           />
         </motion.div>
       ) : (
-        <div className="album-page">
+        <motion.div className="album-page" variants={infoGridAnimation} initial="hidden" animate="visible">
           <div className="divider-text category">Album</div>
           <div className="container">
             {photoAlbums.album_list.map((album, index) => {
               if (title === album.title.replace(" ", "-").toLocaleLowerCase()) {
                 return (
                   <div className="album-data" key={index}>
-                    <div className="album-info-grid">
+                    <motion.div className="album-info-grid">
                       <div className="album-facts">
                         <h1 className="album-title">{album.title}</h1>
                         <div className="divider-text category">year</div>
@@ -89,7 +107,7 @@ const PhotoAlbumsPage = () => {
                           }
                         )}
                       </div>
-                    </div>
+                    </motion.div>
                     <div className="album-images">
                       {album.images.map((album_image, index) => {
                         return (
@@ -114,7 +132,7 @@ const PhotoAlbumsPage = () => {
               return null;
             })}
           </div>
-        </div>
+        </motion.div>
       )}
     </AnimatePresence>
   );

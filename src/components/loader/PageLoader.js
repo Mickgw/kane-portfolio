@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 
 function Transition({ loaderText }) {
+  const phoneActive = window.matchMedia("(max-width: 480px)");
+
   const loader_text_animation = {
     hidden: {
       opacity: 0,
@@ -27,7 +29,7 @@ function Transition({ loaderText }) {
 
   return (
     <div className="pageloader-inner">
-      <motion.h2 className="pageloader-text" variants={loader_text_animation} initial="hidden" animate="visible" exit="exit">
+      <motion.h2 className={phoneActive.matches ? "pageloader-text responsive" : "pageloader-text"} variants={loader_text_animation} initial="hidden" animate="visible" exit="exit">
         {loaderText}
       </motion.h2>
     </div>

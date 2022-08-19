@@ -72,14 +72,24 @@ $menu-button-bar-height: 1px;
     position: relative;
 
     .desktop-menu-button-text {
+      background-color: $white;
+      border-radius: 5rem;
+      padding-block: .6em;
+      padding-inline: 2.2em;
       pointer-events: all;
       cursor: pointer;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       margin-block: auto;
-      font-size: clamp(1rem, 5.5vw, 1.8rem);
-      color: $white;
+      font-size: clamp(1rem, 5.5vw, 1.5rem);
+      color: $black;
       cursor: pointer !important;
+
+      border: 2px solid $white;
+
+      @media (max-width: 1250px) {
+        padding-inline: 1.4em;
+      }
 
       //Display none after certain view width
       @media (max-width: $layout-breakpoint-small) {

@@ -1,26 +1,53 @@
 .about {
-    padding-block: $padding-top-global + 5;
+    visibility: hidden;
+    padding-block: $padding-top-global + 15;
     .container {
         h1 {
             position: relative;
             font-weight: 500;
             margin-bottom: 24px;
 
-            .home-about-content-line {
-                font-size: 6rem;
+            .about-header-line {
+                word-spacing: 10px;
+                font-size: 5.5rem;
                 margin: 0;
-                line-height: 1.4;
+                line-height: 1.5;
                 overflow: hidden;
+                font-weight: 600;
 
-                .home-about-content-line-inner {
-                    .bolded {
-                        letter-spacing: 1px;
-                        font-size: 3rem;
-                        color: $black;
+                .header-text {
+                    .outlined {
+                        color: $white;
+                        -webkit-text-stroke: 1px black;
                     }
                 }
             }
         }
+
+        .about-details {
+            .about-details-grid {
+                display: grid;
+                grid-template-columns: 70% 30%;
+
+                .big-portrait {
+                    .about-image {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .about-details-text {
+                    padding-inline: 2rem;
+                    .about-paragraph {
+                        padding-bottom: 2em;
+                        color: $text-color;
+                        font-size: 2rem;
+                        word-spacing: 7px;
+                    }
+                }
+            }
+        }
+
 
         // .about-text {
         //     .about-header {
