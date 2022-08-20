@@ -68,7 +68,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=.8" //Add a delay because other way didnt work
+          "-=.2" //Add a delay because other way didnt work
         )
         .fromTo(
           "#button",
@@ -154,9 +154,9 @@ const HomeAboutNormal = () => {
         <div className="home-about-inner">
           <div className="home-about-content">
             <div className="home-about-content-inner">
-              <div className="who-am-i-container">
-                <h1 className="who-am-i" id="header-content-line">Hello!</h1>
-              </div>
+              {/* <div className="who-am-i-container">
+                <h1 className="who-am-i" id="header-content-line">I'm Kane Jansen</h1>
+              </div> */}
 
               <h1>
                 <div className="home-about-content-line">
@@ -164,7 +164,7 @@ const HomeAboutNormal = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    <span className="what-am-i">I am Kane Jansen.</span>
+                    <span className="what-am-i">Photographer & Videographer</span>
                   </div>
                 </div>
               </h1>
@@ -179,12 +179,13 @@ const HomeAboutNormal = () => {
               <div className="home-about-buttons">
                 <div className="read-about-button" id="button">
                   <Link to="/about">
-                    <button className="read-about-link">Read About me</button>
+                    <div className="read-about-link">Read About me</div>
                   </Link>
                 </div>
+                <em className="home-about-divider">or</em>
                 <div className="read-about-button" id="button">
                   <Link to="/portfolio">
-                    <button className="read-about-link">View Portfolio</button>
+                    <div className="read-about-link">View Portfolio</div>
                   </Link>
                 </div>
               </div>

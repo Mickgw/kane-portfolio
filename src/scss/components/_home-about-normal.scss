@@ -1,211 +1,234 @@
 $layout-breakpoint-home-about: 1150px;
 
+.home-about-normal {
+    display: block;
+    width: 100%;
+    margin-block: 30vh;
+    visibility: hidden;
 
+    @media (max-width: $layout-breakpoint-small) {
+        display: none;
+    }
 
-    .home-about-normal {
-        display: block;
-        width: 100%;
-        margin-block: 30vh;
-        visibility: hidden;
+    .container {
+        margin: 0 auto;
 
-        @media (max-width: $layout-breakpoint-small) {
-            display: none;
-        }
+        .home-about-inner {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-column-gap: 2vw;
+            width: 100%;
 
-        .container {
-            margin: 0 auto;
+            @media (max-width: $layout-breakpoint-small) {
+                grid-template-columns: repeat(1, 1fr);
+            }
 
-            .home-about-inner {
-                display: grid;
-                grid-template-columns: 40% 60%;
-                grid-column-gap: 2vw;
+            .home-about-content {
+                display: table;
+                width: 100%;
+                position: relative;
                 width: 100%;
 
-                @media (max-width: $layout-breakpoint-small) {
-                    grid-template-columns: repeat(1, 1fr);
-                }
-
-                .home-about-content {
-                    display: table;
+                .home-about-content-inner {
                     width: 100%;
-                    position: relative;
-                    width: 100%;
+                    color: #323232;
+                    display: table-cell;
+                    vertical-align: middle;
 
-                    .home-about-content-inner {
-                        width: 100%;
-                        color: #323232;
-                        display: table-cell;
-                        vertical-align: middle;
+                    .who-am-i-container {
+                        line-height: 1;
+                        overflow: hidden;
+                        margin-bottom: 5rem;
 
-                        .who-am-i-container {
-                            line-height: 1;
-                            overflow: hidden;
-                            margin-bottom: 5rem;
-
-                            .who-am-i {
-                                font-size: 6.3rem;
-                                color: $black;
-                                font-weight: 700;
-
-    
-                                @media (max-width: $layout-breakpoint-medium) {
-                                    font-size: 5.5rem;
-                                }
-    
-                                @media (max-width: 1260px) {
-                                    font-size: 5rem;
-                                }
-    
-                                @media (max-width: $layout-breakpoint-home-about) {
-                                    font-size: 4.5rem;
-                                }
-                            }
-
-                        }
-
-
-
-                        .title-divider {
-                            font-weight: 500;
-                        }
-
-                        h1 {
-                            position: relative;
-                            font-weight: 500;
-                            margin-bottom: 24px;
-
-                            .home-about-content-line {
-                                font-size: 2.8rem;
-                                margin: 0;
-                                line-height: 1.4;
-                                overflow: hidden;
-
-                                @media (max-width: $layout-breakpoint-medium) {
-                                    font-size: 2.5rem;
-                                }
-
-                                @media (max-width: $layout-breakpoint-home-about) {
-                                    font-size: 2.1rem;
-                                }
-
-                                .home-about-content-line-inner {
-                                    .what-am-i {
-                                        letter-spacing: 1px;
-                                        font-size: 3.1rem;
-                                        color: $black;
-                                        font-weight: 700;
-
-                                        @media (max-width: 1370px) {
-                                            font-size: 2.5rem;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        p {
-                            margin-block: 3em;
-                            font-size: 1.43rem;
-                            line-height: 30px;
-                            font-weight: 300;
-                            padding-right: 48px;
+                        .who-am-i {
+                            font-size: 6.3rem;
+                            color: $black;
+                            font-weight: 700;
 
                             @media (max-width: $layout-breakpoint-medium) {
-                                font-size: 1.3rem;
+                                font-size: 5.5rem;
+                            }
+
+                            @media (max-width: 1260px) {
+                                font-size: 5rem;
                             }
 
                             @media (max-width: $layout-breakpoint-home-about) {
-                                padding-right: 0px;
+                                font-size: 4.5rem;
                             }
                         }
+                    }
 
-                        .home-about-buttons {
-                            display: flex;
+                    .title-divider {
+                        font-weight: 500;
+                    }
 
-                            .read-about-button {
-                                &:last-child {
-                                    padding-left: 1vw;
-                                }
+                    h1 {
+                        position: relative;
+                        font-weight: 500;
+                        margin-bottom: 24px;
 
-                                .read-about-link {
-                                    border-radius: 5rem;
-                                    padding-block: .7rem;
-                                    padding-inline: 2.4rem;
-                                    position: relative;
-                                    background-color: transparent;
-                                    border: 1px solid rgb(196, 196, 196);
-                                    transition: 0.5s ease-in-out;
-                                    cursor: pointer !important;
+                        .home-about-content-line {
+                            font-size: 2.8rem;
+                            margin: 0;
+                            line-height: 1.4;
+                            overflow: hidden;
 
-                                    color: #323232;
-                                    font-weight: 600;
-                                    font-size: 1.3rem;
-                                    font-family: inherit;
+                            @media (max-width: $layout-breakpoint-medium) {
+                                font-size: 2.5rem;
+                            }
 
-                                    &:hover {
-                                        background-color: $black;
-                                        border: 1px solid $black;
-                                        color: $white;
+                            @media (max-width: $layout-breakpoint-home-about) {
+                                font-size: 2.1rem;
+                            }
+
+                            .home-about-content-line-inner {
+                                .what-am-i {
+                                    letter-spacing: 1px;
+                                    font-size: 3.1rem;
+                                    color: $black;
+                                    font-weight: 700;
+
+                                    @media (max-width: 1370px) {
+                                        font-size: 2.5rem;
                                     }
                                 }
                             }
                         }
                     }
-                }
-                .home-about-images {
-                    .home-about-images-container {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        grid-column-gap: .1vw;
-                        width: 100%;
-                        position: relative;
-                        .image-container {
-                            width: 90%;
-                            height: 100%;
-                            overflow: hidden;
 
-                            @media (max-width: $layout-breakpoint-medium) {
-                                position: absolute;
-                            }
+                    p {
+                        margin-block: 3em;
+                        font-size: 1.43rem;
+                        line-height: 30px;
+                        font-weight: 300;
+                        padding-right: 48px;
 
-                            &.left {
-                                @media (max-width: $layout-breakpoint-medium) {
-                                    position: relative;
-                                    top: -10%;
-                                    left: 10%;
-                                    width: 100%;
-                                }
+                        @media (max-width: $layout-breakpoint-medium) {
+                            font-size: 1.3rem;
+                        }
 
-                                @media (max-width: $layout-breakpoint-home-about) {
-                                    position: relative;
-                                    width: 170%;
-                                    margin-inline: 20%;
-                                    left: 0;
+                        @media (max-width: $layout-breakpoint-home-about) {
+                            padding-right: 0px;
+                        }
+                    }
+
+                    .home-about-buttons {
+                        display: flex;
+
+                        .home-about-divider {
+                            margin-block: auto;
+                            font-size: 1.4rem;
+                            padding-inline: 2rem;
+                        }
+
+                        .read-about-button {
+                            // &:last-child {
+                            //     padding-left: 1vw;
+                            // }
+                            text-decoration: none;
+
+                            .read-about-link {
+                                // border-radius: 5rem;
+                                // padding-block: .7rem;
+                                // padding-inline: 2.4rem;
+                                // border: 1px solid rgb(196, 196, 196);
+                                position: relative;
+                                background-color: transparent;
+                                transition: 0.5s ease-in-out;
+                                cursor: pointer !important;
+                                border: none;
+
+                                // color: #323232;
+                                color: $black;
+                                font-weight: 600;
+                                font-size: 1.6rem;
+                                font-family: inherit;
+                                text-decoration: none;
+                                
+
+                                // &:hover {
+                                //     background-color: $black;
+                                //     border: 1px solid $black;
+                                //     color: $white;
+                                // }
+
+                                &::after {
+                                    height: 1px;
+                                    border-bottom: 1px solid #0f141e;
+                                    border-bottom-width: 1px;
+                                    background: 0 0;
+                                    position: absolute;
+                                    display: block;
+                                    top: 100%;
                                     right: 0;
-                                    top: 0;
-                                }
-                            }
-
-                            &.right {
-                                @media (max-width: $layout-breakpoint-medium) {
-                                    position: relative;
-                                    top: 30%;
-                                    right: 10%;
                                     width: 100%;
+                                    content: "";
+                                    transition: opacity 0.2s linear;
+                                    opacity: 0;
                                 }
 
-                                @media (max-width: $layout-breakpoint-home-about) {
-                                    display: none;
+                                &:hover::after {
+                                    opacity: 1;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            .home-about-images {
+                .home-about-images-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 0.1vw;
+                    width: 100%;
+                    position: relative;
+                    .image-container {
+                        width: 90%;
+                        height: 100%;
+                        overflow: hidden;
 
-                            .image {
+                        @media (max-width: $layout-breakpoint-medium) {
+                            position: absolute;
+                        }
+
+                        &.left {
+                            @media (max-width: $layout-breakpoint-medium) {
+                                position: relative;
+                                top: -10%;
+                                left: 10%;
                                 width: 100%;
                             }
+
+                            @media (max-width: $layout-breakpoint-home-about) {
+                                position: relative;
+                                width: 170%;
+                                margin-inline: 20%;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                            }
+                        }
+
+                        &.right {
+                            @media (max-width: $layout-breakpoint-medium) {
+                                position: relative;
+                                top: 30%;
+                                right: 10%;
+                                width: 100%;
+                            }
+
+                            @media (max-width: $layout-breakpoint-home-about) {
+                                display: none;
+                            }
+                        }
+
+                        .image {
+                            width: 100%;
                         }
                     }
                 }
             }
         }
     }
-
+}

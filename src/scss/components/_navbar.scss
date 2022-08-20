@@ -95,6 +95,7 @@ $desktop-menu-button-bar-height: 3px;
       height: 17px;
       display: flex;
       pointer-events: all;
+      cursor: pointer !important;
 
       @media (max-width: $layout-breakpoint-small) {
         display: none;
@@ -108,7 +109,7 @@ $desktop-menu-button-bar-height: 3px;
         margin-block: auto;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         color: $white;
         mix-blend-mode: difference;
         letter-spacing: 2px;

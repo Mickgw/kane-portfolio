@@ -32,11 +32,9 @@ function App() {
               "a",
               "button",
               ".link",
-              ".desktop-menu-button-text",
+              ".desktop-menu-button",
               ".gallery-image",
               ".read-about-link",
-              // '.album-card',
-              // ".read-about-link",
             ]}
           />
         </div>
