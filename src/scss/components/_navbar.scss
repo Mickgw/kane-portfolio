@@ -92,6 +92,7 @@ $desktop-menu-button-bar-height: 3px;
     //     pointer-events: none;
     //   }
     .desktop-menu-button {
+      height: 17px;
       display: flex;
       pointer-events: all;
 
@@ -104,9 +105,10 @@ $desktop-menu-button-bar-height: 3px;
       }
 
       .button-text {
+        margin-block: auto;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         color: $white;
         mix-blend-mode: difference;
         letter-spacing: 2px;
@@ -130,6 +132,7 @@ $desktop-menu-button-bar-height: 3px;
           }
 
           .middle-line {
+            border-radius: 5px;
             position: absolute;
             top: 42%;
             left: -100%;
@@ -154,6 +157,7 @@ $desktop-menu-button-bar-height: 3px;
             height: $desktop-menu-button-bar-height;
             width: 100%;
             background-color: $white;
+            border-radius: 5px;
           }
 
           &::after {
@@ -165,6 +169,7 @@ $desktop-menu-button-bar-height: 3px;
             height: $desktop-menu-button-bar-height;
             width: 100%;
             background-color: $white;
+            border-radius: 5px;
           }
 
           &.desktop-menu-open {

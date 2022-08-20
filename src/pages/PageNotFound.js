@@ -38,6 +38,11 @@ const PageNotFound = () => {
   };
 
   useEffect(() => {
+    gsap.config({
+      nullTargetWarn: false,
+      trialWarn: false,
+    });
+    
     gsap
       .timeline()
       .to(".page-not-found", { autoAlpha: 1, duration: 0 })

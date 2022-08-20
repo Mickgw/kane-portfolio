@@ -149,6 +149,11 @@ $footer-menu-font-size: 1.6rem;
                 color: $white;
                 font-size: $footer-menu-font-size;
                 letter-spacing: 1px;
+
+                .footer-copyright-divider {
+                    padding-inline: .2vw;
+                    font-weight: 700;
+                }
             }
         }
 
@@ -169,7 +174,7 @@ $footer-menu-font-size: 1.6rem;
                 .local-time-footer, .footer-copyright-responsive {
                     width: auto;
                     display: block;
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
                     color: $white;
                     letter-spacing: .5px;
                 }

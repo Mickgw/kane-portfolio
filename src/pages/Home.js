@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 
-const Home = () => {  
+const Home = () => {
   const [loading, setLoading] = useState(true);
   const timer_duration = 1400;
 
@@ -25,7 +25,7 @@ const Home = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : setTimeout(() => navbar_inner.classList.remove("loading"), 600)
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 600);
   }, [loading]);
 
   const loader_animation = {

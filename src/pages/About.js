@@ -43,39 +43,53 @@ const About = () => {
   };
 
   useEffect(() => {
+    gsap.config({
+      nullTargetWarn: false,
+      trialWarn: false,
+    });
+
     gsap
       .timeline()
-      .to(".about", { autoAlpha: 1, duration: 0 })
+      .to("#about-page", { autoAlpha: 1, duration: 0 })
       .fromTo(
-        ".header-text",
+        "#about-header-text",
         { y: 250, skewY: 5 },
         {
           skewY: 0,
           y: 0,
-          duration: 1.5,
+          duration: 1,
           stagger: delayChildrenDuration,
           delay: 0,
         }
       )
       .fromTo(
-        ".big-portrait",
+        "#big-portrait",
         { opacity: 0, y: 100 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: .7,
         },
-        "-=.9" 
+        "-=.6" 
       )
       .fromTo(
-        ".about-details-text",
+        "#about-image",
+        { scale: 1.2 },
+        {
+          scale: 1, 
+          duration: .7,
+        },
+        "-=.7" 
+      )
+      .fromTo(
+        "#about-details-text",
         { opacity: 0, y: 100 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: .7,
         },
-        "-=.8" 
+        "-=.5" 
       );
   });
  
@@ -92,25 +106,25 @@ const About = () => {
           <PageLoader loaderText="About" />
         </motion.div>
       ) : (
-        <div className="about">
+        <div className="about" id="about-page">
           <div className="container">
             <h1>
               <div className="about-header-line">
-                <div className="header-text">Kane Jansen.</div>
+                <div className="header-text" id="about-header-text">Kane Jansen.</div>
               </div>
               <div className="about-header-line">
-                <div className="header-text">
+                <div className="header-text" id="about-header-text">
                   I am currently a <span className="outlined">student</span>
                 </div>
               </div>
               <div className="about-header-line">
-                <div className="header-text">
+                <div className="header-text" id="about-header-text">
                   at{" "}
                   <span className="outlined">Rijn IJssel College Arnhem</span>
                 </div>
               </div>
               <div className="about-header-line">
-                <div className="header-text">
+                <div className="header-text" id="about-header-text">
                   studying{" "}
                   <span className="outlined">Audio Visual Specialist</span>
                 </div>
@@ -119,14 +133,15 @@ const About = () => {
 
             <div className="about-details">
               <div className="about-details-grid">
-                <div className="big-portrait">
+                <div className="big-portrait" id="big-portrait">
                   <img
                     className="about-image"
                     src={bigPortrait}
                     alt="big portrait"
+                    id="about-image"
                   />
                 </div>
-                <div className="about-details-text">
+                <div className="about-details-text" id="about-details-text">
                   <p className="about-paragraph">
                     My expertise is art direction, animation and anything
                     interactive. I’ve had over 7 years of industry experience,

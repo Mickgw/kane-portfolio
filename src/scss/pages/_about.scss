@@ -30,6 +30,9 @@
                 grid-template-columns: 70% 30%;
 
                 .big-portrait {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
                     .about-image {
                         width: 100%;
                         object-fit: cover;
@@ -41,7 +44,7 @@
                     .about-paragraph {
                         padding-bottom: 2em;
                         color: $text-color;
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         word-spacing: 7px;
                     }
                 }
