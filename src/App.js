@@ -2,6 +2,7 @@ import "./scss/main.scss";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -45,10 +46,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
+            <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/motion" element={<Motion />} />

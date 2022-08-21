@@ -4,7 +4,6 @@ $layout-breakpoint-home-about: 1150px;
     display: block;
     width: 100%;
     margin-block: 30vh;
-    visibility: hidden;
 
     @media (max-width: $layout-breakpoint-small) {
         display: none;

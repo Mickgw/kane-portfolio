@@ -44,6 +44,7 @@
     "sass": "^1.52.1",
     "smooth-scrollbar": "^8.7.4",
     "smooth-scrollbar-react": "^2.3.0",
+    "smooth-scrolling": "^2.3.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -1,0 +1,106 @@
+.re-designed-banner {
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    .banner-container {
+        width: 100%;
+        height: 90%;
+
+        .banner-grid {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 40% 60%;
+
+            .hero-text {
+                display: table;
+
+                .hero-text-inner {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .my-name-line {
+                        display: flex;
+                        line-height: 1.4;
+                        overflow: hidden;
+                        margin-bottom: 3vh;
+                        .my-name-text {
+                            z-index: 2;
+                            font-size: 7rem;
+                            font-weight: 600;
+                            letter-spacing: 4px;
+                        }
+
+                        .name-divider {
+                            padding-inline: 1vw;
+                        }
+                    }
+
+                    .profession-line {
+                        line-height: 1.4;
+                        overflow: hidden;
+                        margin-bottom: 5vh;
+                        .profession-text {
+                            font-weight: 500;
+                            letter-spacing: 1px;
+                            font-size: 2rem;
+                            color: $text-color;
+                        }
+                    }
+
+                    .scrolldown-line {
+                        overflow: hidden;
+                        line-height: 1.4;
+                        display: flex;
+
+                        .scrolldown-text {
+                            font-weight: 500;
+                            letter-spacing: 1px;
+                            font-size: 1.7rem;
+                            padding-right: 10px;
+                        }
+
+                        .arrow-down-icon {
+                            margin-block: auto;
+                            font-size: 1.45rem;                           
+                        }
+                    }
+                }
+            }
+
+            .big-banner-image {
+                position: relative;
+                top: 5%;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                .banner-reveal {
+                    z-index: 2;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $background;
+                }
+
+                img {
+                    position: absolute;
+                    height: auto; /* Make sure images are scaled correctly. */
+                    width: 100%; /* Adhere to container width. */
+                    display: block;
+                    flex-shrink: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        transform: translateZ(0) scale(1, 1);
+                        rotate: 0.01;
+                    }
+                }
+            }
+        }
+    }
+}

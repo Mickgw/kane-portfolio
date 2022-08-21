@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // Images
@@ -8,145 +8,144 @@ import Portrait2 from "../../assets/portraits/portrait-1.jpg";
 // GSAP
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutNormal = () => {
   const smallDeviceActive = window.matchMedia("(max-width: 1440px)");
   const delayChildrenDuration = 0.2;
 
-  useEffect(() => {
-    if (smallDeviceActive.matches) {
-      //===============================================Smaller device timeline
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: "#home-about",
-            start: "top +=900px",
-            once: true,
-          },
-        })
-        .to("#home-about", { autoAlpha: 1, duration: 0 })
-        .fromTo(
-          "#image-container-left",
-          { y: 100, opacity: 0 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-          }
-        )
-        .fromTo(
-          "#image-container-right",
-          { y: 150, x: 100 },
-          {
-            y: 0,
-            x: 0,
-            duration: 1.5,
-            delay: -1.5,
-          }
-        )
-        .fromTo(
-          "#image",
-          { scale: 1.6, skewY: 20 },
-          { scale: 1, skewY: 0, duration: 2, delay: -2 }
-        )
-        .fromTo(
-          "#header-content-line",
-          { y: 100 },
-          {
-            y: 0,
-            duration: 1,
-            stagger: delayChildrenDuration,
-            delay: -1.2,
-          }
-        )
-        .fromTo(
-          "#paragraph",
-          { opacity: 0, y: 65 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-          },
-          "-=.2" //Add a delay because other way didnt work
-        )
-        .fromTo(
-          "#button",
-          { opacity: 0, y: 65 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-          },
-          "-=.8" //Add a delay because other way didnt work
-        );
-    } else {
-      //===============================================Desktop timeline
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: "#home-about",
-            start: "top +=1000px",
-            once: true,
-          },
-        })
-        .to("#home-about", { autoAlpha: 1, duration: 0 })
-        .fromTo(
-          "#image-container-left",
-          { opacity: 0, y: 100 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-          }
-        )
-        .fromTo(
-          "#image-container-right",
-          { opacity: 0, y: 100 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-            delay: -1.5,
-          }
-        )
-        .fromTo(
-          "#image",
-          { scale: 1.8, skewY: 10 },
-          { scale: 1, skewY: 0, duration: 2, delay: -2 }
-        )
-        .fromTo(
-          "#header-content-line",
-          { y: 100 },
-          {
-            y: 0,
-            duration: 1,
-            stagger: delayChildrenDuration,
-            delay: -1.2,
-          }
-        )
-        .fromTo(
-          "#paragraph",
-          { opacity: 0, y: 65 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-          },
-          "-=.8"
-        )
-        .fromTo(
-          "#button",
-          { opacity: 0, y: 65 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-          },
-          "-=.8" //Add a delay because other way didnt work
-        );
-    }
-  });
+  // useEffect(() => {
+  //   if (reveal) {
+  //     if (smallDeviceActive.matches) {
+  //       //===============================================Smaller device timeline
+  //       gsap
+  //         .timeline({
+  //           once: true,
+  //         })
+  //         .to("#home-about", { autoAlpha: 1, duration: 0 })
+  //         .fromTo(
+  //           "#image-container-left",
+  //           { y: 100, opacity: 0 },
+  //           {
+  //             opacity: 1,
+  //             y: 0,
+  //             duration: 1.5,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#image-container-right",
+  //           { y: 150, x: 100 },
+  //           {
+  //             y: 0,
+  //             x: 0,
+  //             duration: 1.5,
+  //             delay: -1.5,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#image",
+  //           { scale: 1.6, skewY: 20 },
+  //           { scale: 1, skewY: 0, duration: 2, delay: -2 }
+  //         )
+  //         .fromTo(
+  //           "#header-content-line",
+  //           { y: 100 },
+  //           {
+  //             y: 0,
+  //             duration: 1,
+  //             stagger: delayChildrenDuration,
+  //             delay: -1.2,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#paragraph",
+  //           { opacity: 0, y: 65 },
+  //           {
+  //             y: 0,
+  //             opacity: 1,
+  //             duration: 1,
+  //           },
+  //           "-=.2" //Add a delay because other way didnt work
+  //         )
+  //         .fromTo(
+  //           "#button",
+  //           { opacity: 0, y: 65 },
+  //           {
+  //             y: 0,
+  //             opacity: 1,
+  //             duration: 1,
+  //           },
+  //           "-=.8" //Add a delay because other way didnt work
+  //         );
+  //     } else {
+  //       //===============================================Desktop timeline
+  //       gsap
+  //         .timeline({
+  //           scrollTrigger: {
+  //             trigger: "#home-about",
+  //             start: "top +=1000px",
+  //             once: true,
+  //           },
+  //         })
+  //         .to("#home-about", { autoAlpha: 1, duration: 0 })
+  //         .fromTo(
+  //           "#image-container-left",
+  //           { opacity: 0, y: 100 },
+  //           {
+  //             opacity: 1,
+  //             y: 0,
+  //             duration: 1.5,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#image-container-right",
+  //           { opacity: 0, y: 100 },
+  //           {
+  //             opacity: 1,
+  //             y: 0,
+  //             duration: 1.5,
+  //             delay: -1.5,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#image",
+  //           { scale: 1.8, skewY: 10 },
+  //           { scale: 1, skewY: 0, duration: 2, delay: -2 }
+  //         )
+  //         .fromTo(
+  //           "#header-content-line",
+  //           { y: 100 },
+  //           {
+  //             y: 0,
+  //             duration: 1,
+  //             stagger: delayChildrenDuration,
+  //             delay: -1.2,
+  //           }
+  //         )
+  //         .fromTo(
+  //           "#paragraph",
+  //           { opacity: 0, y: 65 },
+  //           {
+  //             y: 0,
+  //             opacity: 1,
+  //             duration: 1,
+  //           },
+  //           "-=.8"
+  //         )
+  //         .fromTo(
+  //           "#button",
+  //           { opacity: 0, y: 65 },
+  //           {
+  //             y: 0,
+  //             opacity: 1,
+  //             duration: 1,
+  //           },
+  //           "-=.8" //Add a delay because other way didnt work
+  //         );
+  //     }
+  //   }
+  // }, [reveal]);
 
   return (
     <div className="home-about-normal" id="home-about">
@@ -164,7 +163,9 @@ const HomeAboutNormal = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    <span className="what-am-i">Photographer & Videographer</span>
+                    <span className="what-am-i">
+                      Photographer & Videographer
+                    </span>
                   </div>
                 </div>
               </h1>

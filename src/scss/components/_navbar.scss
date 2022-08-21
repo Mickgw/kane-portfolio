@@ -1,5 +1,5 @@
 $menu-button-bar-height: 1px;
-$desktop-menu-button-bar-height: 3px;
+$desktop-menu-button-bar-height: 2px;
 
 .navbar {
   pointer-events: none;
@@ -72,27 +72,9 @@ $desktop-menu-button-bar-height: 3px;
     z-index: 2525;
     position: relative;
 
-    // .desktop-menu-button-text {
-    //   pointer-events: all;
-    //   cursor: pointer;
-    //   font-weight: 700;
-    //   letter-spacing: 2px;
-    //   margin-block: auto;
-    //   font-size: clamp(1rem, 5.5vw, 1.7rem);
-    //   color: $white;
-    //   cursor: pointer !important;
-
-    //   //Display none after certain view width
-    //   @media (max-width: $layout-breakpoint-small) {
-    //     display: none;
-    //   }
-
-    //   //Takes the disabled attribute that is added and manually disabled the pointer events
-    //   &[disabled] {
-    //     pointer-events: none;
-    //   }
     .desktop-menu-button {
-      height: 17px;
+      width: 40px;
+      height: 40px;
       display: flex;
       pointer-events: all;
       cursor: pointer !important;
@@ -115,83 +97,62 @@ $desktop-menu-button-bar-height: 3px;
         letter-spacing: 2px;
       }
 
-      .button-lines-next-to-button {
-        margin-left: 35px;
+      .desktop-button-lines {
+        left: 15%;
+        top: 37.5%;
+        position: absolute;
+        width: 70%;
+        height: 25%;
+        opacity: 1;
 
-        .desktop-button-lines {
-          margin-top: 0px;
-          align-items: center;
-          justify-content: center;
+        //Makes lines in button bigger
+        @media (max-width: $layout-breakpoint-small) {
+          width: 35%;
+        }
+
+        &::before {
+          margin: 0 auto;
+          transition: 0.3s ease-in-out;
+          content: "";
           position: absolute;
-          width: 25%;
-          height: 90%;
-          opacity: 1;
+          top: 0;
+          left: 0;
+          height: $desktop-menu-button-bar-height;
+          width: 100%;
+          background-color: $white;
+          border-radius: 5px;
+        }
 
-          //Makes lines in button bigger
-          @media (max-width: $layout-breakpoint-small) {
-            width: 35%;
-          }
+        &::after {
+          transition: 0.3s ease-in-out;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: $desktop-menu-button-bar-height;
+          width: 100%;
+          background-color: $white;
+          border-radius: 5px;
+        }
 
-          .middle-line {
-            border-radius: 5px;
-            position: absolute;
-            top: 42%;
-            left: -100%;
-            height: $desktop-menu-button-bar-height + .1px;
-            width: 100%;
-            background-color: $white;
-            opacity: 1;
-
-            transition: 0.1s ease-in-out;
-
-            &.desktop-menu-open {
-              opacity: 0;
-            }
-          }
-
+        &.desktop-menu-open {
           &::before {
-            transition: 0.3s ease-in-out;
+            top: 3px;
+            transform: rotate(-45deg);
             content: "";
+            display: block;
             position: absolute;
-            top: 0;
-            left: -100%;
             height: $desktop-menu-button-bar-height;
             width: 100%;
-            background-color: $white;
-            border-radius: 5px;
           }
 
           &::after {
-            transition: 0.3s ease-in-out;
+            bottom: 5px;
+            transform: rotate(45deg);
             content: "";
             position: absolute;
-            bottom: 0;
-            left: -100%;
             height: $desktop-menu-button-bar-height;
             width: 100%;
-            background-color: $white;
-            border-radius: 5px;
-          }
-
-          &.desktop-menu-open {
-            &::before {
-              top: 6.3px;
-              transform: rotate(-45deg);
-              content: "";
-              display: block;
-              position: absolute;
-              height: $desktop-menu-button-bar-height;
-              width: 100%;
-            }
-
-            &::after {
-              bottom: 6px;
-              transform: rotate(45deg);
-              content: "";
-              position: absolute;
-              height: $desktop-menu-button-bar-height;
-              width: 100%;
-            }
           }
         }
       }

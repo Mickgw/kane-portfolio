@@ -10,14 +10,13 @@ const Navbar = () => {
   const [disabled, setDisabled] = useState(false);
   const [state, setState] = useState({
     initial: false,
-    clicked: null,
-    menuName: "Menu",
+    clicked: null
   });
 
   //Listening for page changes.
   useEffect(() => {
     const body = document.querySelector("body");
-    setState({ clicked: false, menuName: "menu" });
+    setState({ clicked: false });
     body.classList.remove("disable-scroll");
   }, [location]);
 
@@ -27,22 +26,19 @@ const Navbar = () => {
       console.log(1);
       setState({
         initial: null,
-        clicked: true,
-        menuName: "close",
+        clicked: true
       });
     } else if (state.clicked === true) {
       console.log(2);
       body.classList.remove("disable-scroll");
       setState({
-        clicked: !state.clicked,
-        menuName: "menu",
+        clicked: !state.clicked
       });
     } else if (state.clicked === false) {
       console.log(3);
       body.classList.add("disable-scroll");
       setState({
-        clicked: !state.clicked,
-        menuName: "close",
+        clicked: !state.clicked
       });
     }
   };
@@ -94,15 +90,6 @@ const Navbar = () => {
           </div>
           <div className="menu">
             {/*Menu button desktop or medium sized screens*/}
-            {/* <motion.div
-              className="desktop-menu-button-text"
-              onClick={() => {
-                handleMenu();
-              }}
-              disabled={disabled}
-            >
-              {state.menuName}
-            </motion.div> */}
             <div
               className="desktop-menu-button"
               onClick={() => {
@@ -110,24 +97,13 @@ const Navbar = () => {
               }}
               disabled={disabled}
             >
-              <div className="button-text">{state.menuName}</div>
-              <div className="button-lines-next-to-button">
-                <div
-                  className={
-                    state.clicked
-                      ? "desktop-button-lines desktop-menu-open"
-                      : "desktop-button-lines"
-                  }
-                >
-                  <div
-                    className={
-                      state.clicked
-                        ? "middle-line desktop-menu-open"
-                        : "middle-line"
-                    }
-                  />
-                </div>
-              </div>
+              <div
+                className={
+                  state.clicked
+                    ? "desktop-button-lines desktop-menu-open"
+                    : "desktop-button-lines"
+                }
+              ></div>
             </div>
 
             {/*Menu button small screen sizes*/}

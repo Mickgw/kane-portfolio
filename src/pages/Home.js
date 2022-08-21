@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageLoader from "../components/loader/PageLoader";
 
 //Components
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
+import BannerV2 from "../components/BannerV2";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -51,7 +52,8 @@ const Home = () => {
         </motion.div>
       ) : (
         <div id="main-container">
-          <Banner />
+          {/* <Banner /> */}
+          <BannerV2 />
           <HomeAbout />
           <PhotoAlbums />
         </div>

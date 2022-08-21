@@ -462,7 +462,7 @@ const NavbarMenu = () => {
           <div className="footer-email">
             <a href="mailto:kanejansen@hotmail.nl">kanejansen@hotmail.nl</a>
           </div>
-          <div className="footer-copyright">©{" "}{new Date().getFullYear()} <span className="footer-copyright-divider">&#8213;</span> Netherlands</div>
+          <div className="footer-copyright">©{" "}{new Date().getFullYear()}</div>
         </motion.div>
         <motion.div
           className="menu-footer-responsive"

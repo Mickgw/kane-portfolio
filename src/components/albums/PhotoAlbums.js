@@ -4,7 +4,7 @@ import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 
 const PhotoAlbums = () => {
   return (
-    <div className="photo-album-section">
+    <div className="photo-album-section" data-scroll-section>
       <FadeInWhenVisible>
         <h2 className="photo-albums-header">My Photo Albums</h2>
         <hr className="divider" />
