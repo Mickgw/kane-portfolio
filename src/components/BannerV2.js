@@ -17,7 +17,7 @@ const BannerV2 = () => {
     gsap
       .timeline()
       .to("#banner", { autoAlpha: 1, duration: 0 })
-      .fromTo("#banner-reveal", { width: "100%"}, { width: "0%", duration: 1.5, delay: .5 })
+      .fromTo("#banner-reveal", { height: "100%"}, { height: "0%", duration: 1.2, delay: .4, ease: Power3.easeOut })
       .fromTo(
         "#banner-image",
         { scale: 1.5 },
