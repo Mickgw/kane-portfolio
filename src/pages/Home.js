@@ -52,7 +52,6 @@ const Home = () => {
         </motion.div>
       ) : (
         <div id="main-container">
-          {/* <Banner /> */}
           <Banner />
           <HomeAbout />
           <PhotoAlbums />
