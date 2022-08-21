@@ -1,113 +1,63 @@
-import Image1 from "../assets/images/image-1-banner.jpeg";
-import Image2 from "../assets/images/portrait-placeholder1.jpeg";
-import Image3 from "../assets/images/image-3-banner.jpeg";
+import bigBannerImage1 from "../assets/images/banner_V2_image1.jpg";
+import bigBannerImage2 from "../assets/images/banner_V2_image2.jpg";
+import bigBannerImage3 from "../assets/images/banner_V2_image3.jpg";
 
+import { gsap, Power3} from "gsap";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Banner = () => {
-  const yAxis = "10vh";
-  const imagesAnimation = {
-    hidden: {
-      y: yAxis,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-      },
-    },
-  };
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
-  const textAnimation = {
-    hidden: {
-      y: yAxis,
-      opacity: 0,
-    },
-    visible: {
-      y: -35,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        transition: { ease: [0.2, 0.2, -0.05, 0.95] },
-      },
-    },
-  };
+const BannerV2 = () => {
+  var images = [bigBannerImage1, bigBannerImage2, bigBannerImage3];
+  const banner_image = images[Math.floor(Math.random() * images.length)];
+
+  useEffect(() => {
+    gsap
+      .timeline()
+      .to("#banner", { autoAlpha: 1, duration: 0 })
+      .fromTo("#banner-reveal", { height: "100%"}, { height: "0%", duration: 1.2, delay: .4, ease: Power3.easeOut })
+      .fromTo(
+        "#banner-image",
+        { scale: 1.5 },
+        { scale: 1, duration: 1.5 },
+        "-=1.5"
+      )
+      .fromTo("#my-name", {y: 100 }, {y: 0, duration: 1, ease: Power3.easeOut}, "-=.3")
+      .fromTo("#my-profession", {y: 100 }, {y: 0, duration: 1, ease: Power3.easeOut}, "-=.9")
+      .fromTo("#scrolldown", {y: 100 }, {y: 0, duration: 1, ease: Power3.easeOut}, "-=.9")
+  });
 
   return (
-    <div id="banner" className="banner">
-      <div className="container">
-        <div className="row">
-          <motion.div
-            variants={textAnimation}
-            initial="hidden"
-            animate="visible"
-            id="reveal-banner-text"
-            className="banner-text"
-          >
-            Kane Jansen
+    <div className="re-designed-banner" id="banner">
+      <div className="banner-container">
+        <div className="banner-grid">
+          <div className="hero-text">
+            <div className="hero-text-inner">
+              <div className="my-name-line">
+                <h1 className="my-name-text" id="my-name">Kane Jansen</h1>
+              </div>
+              <div className="profession-line">
+                <h3 className="profession-text" id="my-profession">
+                  Photographer and Videographer
+                </h3>
+              </div>
+              <div className="scrolldown-line">
+                <span className="scrolldown-text" id="scrolldown">scroll </span>
+                <FontAwesomeIcon icon={faAngleDown} className="arrow-down-icon" id="scrolldown"/>
+              </div>
+            </div>
+          </div>
+          <motion.div className="big-banner-image" id="banner-image-container">
+            <div className="banner-reveal" id="banner-reveal" />
+            <img src={banner_image} alt="big-banner-car" id="banner-image" />
           </motion.div>
-
-          <div className="section left">
-            <div className="inner-section">
-              <motion.div
-                id="banner-image-container"
-                className="banner-images-container"
-                variants={imagesAnimation}
-                initial="hidden"
-                animate="visible"
-              >
-                <img
-                  id="banner-image-left"
-                  className="side-image left"
-                  src={Image1}
-                  alt="left"
-                />
-              </motion.div>
-            </div>
-            <div className="inner-section" />
-          </div>
-          <div id="middle-image-container" className="section middle">
-            <motion.div
-              id="banner-image-container-middle"
-              className="banner-images-container"
-              variants={imagesAnimation}
-              initial="hidden"
-              animate="visible"
-            >
-              <img
-                id="banner-image-middle"
-                className="banner-image"
-                src={Image2}
-                alt="middle"
-              />
-            </motion.div>
-          </div>
-          <div className="section right">
-            <div className="inner-section" />
-            <div className="inner-section">
-              <motion.div
-                id="banner-image-container"
-                className="banner-images-container"
-                variants={imagesAnimation}
-                initial="hidden"
-                animate="visible"
-              >
-                <img
-                  id="banner-image-right"
-                  className="side-image right"
-                  src={Image3}
-                  alt="right"
-                />
-              </motion.div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Banner;
+
+export default BannerV2;

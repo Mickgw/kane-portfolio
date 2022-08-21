@@ -2,7 +2,6 @@ import "./scss/main.scss";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
 
 // Components
 import Navbar from "./components/Navbar";

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+
 import { Link } from "react-router-dom";
 
 // Images
@@ -12,8 +12,8 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutNormal = () => {
-  const smallDeviceActive = window.matchMedia("(max-width: 1440px)");
-  const delayChildrenDuration = 0.2;
+  // const smallDeviceActive = window.matchMedia("(max-width: 1440px)");
+  // const delayChildrenDuration = 0.2;
 
   // useEffect(() => {
   //   if (reveal) {
