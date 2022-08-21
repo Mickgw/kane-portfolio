@@ -16,7 +16,7 @@
 @import "components/header";
 @import "components/main-loader";
 @import "components/page-loader";
-@import "components/banner";
+@import "components/old-banner";
 @import "components/photo-albums";
 @import "components/footer";
 @import "components/image-modal";
@@ -24,7 +24,7 @@
 @import "components/cursor";
 @import "components/home-about-responsive";
 @import "components/home-about-normal";
-@import "components/bannerV2";
+@import "components/banner";
 
 body {
   background-color: $background;

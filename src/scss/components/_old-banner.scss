@@ -1,0 +1,97 @@
+$letter-spacing-banner-text: 42px;
+$gap-banner-images: 50px;
+
+.banner {
+  // visibility: hidden;
+  background-color: transparent;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .row {
+    overflow: hidden;
+    padding-block: 10vh;
+    position: relative;
+    display: flex;
+    grid-column-gap: $gap-banner-images;
+    grid-template-rows: repeat(3, 1fr);
+
+    @media (max-width: 1440px) {
+      padding-inline: 0;
+    }
+
+    .section {
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+
+      img:-moz-loading {
+        visibility: hidden;
+      }
+
+      &.left {
+        margin-block: 50px;
+      }
+
+      &.middle {
+        grid-template-rows: none !important;
+      }
+
+      &.right {
+        margin-block: 50px;
+      }
+    }
+
+    .banner-images-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .banner-image {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .side-image {
+        position: absolute;
+        height: auto; /* Make sure images are scaled correctly. */
+        width: 100%; /* Adhere to container width. */
+        display: block;
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.banner-text {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 42px;
+  line-height: 1;
+  mix-blend-mode: difference;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 2;
+
+  @media (max-width: 1440px) {
+    font-size: 6rem;
+    letter-spacing: 36px;
+  }
+}
