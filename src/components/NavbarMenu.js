@@ -444,9 +444,17 @@ const NavbarMenu = () => {
           </motion.div>
         </div>
 
+        <motion.hr
+          className="menu-footer-divider"
+          variants={navlinkAnimationFifth}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        />
+
         <motion.div
           className="menu-footer"
-          variants={navlinkAnimationFifth}
+          variants={navlinkAnimationSixth}
           initial="hidden"
           animate="visible"
           exit="exit"

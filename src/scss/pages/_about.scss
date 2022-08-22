@@ -39,14 +39,54 @@
                     }
                 }
 
-                .about-details-text {
-                    padding-inline: 2rem;
+                .about-details-data {
+                    width: 100%;
+                    position: relative;
+                    margin-inline: 2rem;
                     .about-paragraph {
                         padding-bottom: 2em;
                         color: $text-color;
                         font-size: 1.5rem;
                         word-spacing: 7px;
                     }
+
+                    .about-socials {
+                        width:inherit;
+                        position: absolute;
+                        bottom: 0;
+
+                        .about-socials-list {
+                            .about-social {
+                                padding: 1rem;
+
+                                border-bottom: 1px solid $divider-color;
+                                .about-social-link {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    text-decoration: none;
+                                    cursor: pointer !important;
+
+                                    .social-link-text {
+                                        color: $black;
+                                        font-size: 1.4rem;
+                                        font-weight: 600;
+                                    }
+
+                                    .about-social-link-arrow {
+
+                                        color: $black;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+
+                            }
+                        }
+
+                    }
+
+                    
                 }
             }
         }

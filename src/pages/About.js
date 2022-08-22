@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { TbArrowUpRight } from "react-icons/tb";
 import gsap from "gsap";
 
 //Components
@@ -8,12 +9,10 @@ import PageLoader from "../components/loader/PageLoader";
 //Images
 import bigPortrait from "../assets/images/image-1-banner.jpeg";
 
-
 const About = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 1400;
+  const timer_duration = 0;
   const delayChildrenDuration = 0.1;
-  
 
   //Set loading to false after time
   useEffect(() => {
@@ -68,31 +67,31 @@ const About = () => {
         {
           opacity: 1,
           y: 0,
-          duration: .7,
+          duration: 1,
         },
-        "-=.6" 
+        "-=.6"
       )
       .fromTo(
         "#about-image",
         { scale: 1.2 },
         {
-          scale: 1, 
-          duration: .7,
+          scale: 1,
+          duration: 1,
         },
-        "-=.7" 
+        "-=.7"
       )
       .fromTo(
-        "#about-details-text",
+        "#about-paragraph",
         { opacity: 0, y: 100 },
         {
           opacity: 1,
           y: 0,
-          duration: .7,
+          duration: 1,
+          stagger: delayChildrenDuration,
         },
-        "-=.5" 
+        "-=1"
       );
   });
- 
 
   return (
     <AnimatePresence>
@@ -110,7 +109,9 @@ const About = () => {
           <div className="container">
             <h1>
               <div className="about-header-line">
-                <div className="header-text" id="about-header-text">Kane Jansen.</div>
+                <div className="header-text" id="about-header-text">
+                  Kane Jansen.
+                </div>
               </div>
               <div className="about-header-line">
                 <div className="header-text" id="about-header-text">
@@ -141,19 +142,41 @@ const About = () => {
                     id="about-image"
                   />
                 </div>
-                <div className="about-details-text" id="about-details-text">
-                  <p className="about-paragraph">
+                <div className="about-details-data">
+                  <p className="about-paragraph" id="about-paragraph">
                     My expertise is art direction, animation and anything
                     interactive. I’ve had over 7 years of industry experience,
                     from working with startups, agencies and international
                     clients from concept to final deliverables.
                   </p>
-                  <p className="about-paragraph">
+                  <p className="about-paragraph" id="about-paragraph">
                     My expertise is art direction, animation and anything
                     interactive. I’ve had over 7 years of industry experience,
                     from working with startups, agencies and international
                     clients from concept to final deliverables.
                   </p>
+                  <div className="about-socials">
+                    <ul className="about-socials-list">
+                      <li className="about-social">
+                        <a className="about-social-link" href="https://www.instagram.com/kj.026/" target="_blank" rel="noopener noreferrer">
+                          <span className="social-link-text">Instagram</span>
+                          <TbArrowUpRight className="about-social-link-arrow" />
+                        </a>
+                      </li>
+                      <li className="about-social">
+                        <a className="about-social-link" href="/" target="_blank" rel="noopener noreferrer">
+                          <span className="social-link-text">Youtube</span>
+                          <TbArrowUpRight className="about-social-link-arrow" />
+                        </a>
+                      </li>
+                      <li className="about-social">
+                        <a className="about-social-link" href="/" target="_blank" rel="noopener noreferrer">
+                          <span className="social-link-text">Unsplash</span>
+                          <TbArrowUpRight className="about-social-link-arrow" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,4 +188,3 @@ const About = () => {
 };
 
 export default About;
-

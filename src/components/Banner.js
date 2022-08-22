@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 const BannerV2 = () => {
   var images = [bigBannerImage1, bigBannerImage2, bigBannerImage3];
@@ -61,7 +61,7 @@ const BannerV2 = () => {
               </div>
               <div className="profession-line">
                 <h3 className="profession-text" id="my-profession">
-                  Photographer and Videographer
+                  Photographer and Cinematographer
                 </h3>
               </div>
               <div className="scrolldown-line">
@@ -69,7 +69,7 @@ const BannerV2 = () => {
                   scroll{" "}
                 </span>
                 <FontAwesomeIcon
-                  icon={faAngleDown}
+                  icon={faArrowDownLong}
                   className="arrow-down-icon"
                   id="scrolldown"
                 />
