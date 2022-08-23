@@ -11,7 +11,7 @@ import bigPortrait from "../assets/images/image-1-banner.jpeg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 0;
+  const timer_duration = 1400;
   const delayChildrenDuration = 0.1;
 
   //Set loading to false after time
