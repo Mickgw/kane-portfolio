@@ -6,8 +6,10 @@ import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const BannerV2 = () => {
   var images = [bigBannerImage1, bigBannerImage2, bigBannerImage3];
@@ -20,11 +22,11 @@ const BannerV2 = () => {
       .fromTo(
         "#banner-reveal",
         { height: "100%" },
-        { height: "0%", duration: 1.2, delay: 0.4, ease: Power3.easeOut }
+        { height: "0%", duration: 1.5, delay: 0.4, ease: Power3.easeOut }
       )
       .fromTo(
         "#banner-image",
-        { scale: 1.5 },
+        { scale: 1.3 },
         { scale: 1, duration: 1.5 },
         "-=1.5"
       )
@@ -48,6 +50,14 @@ const BannerV2 = () => {
       );
   });
 
+  useEffect(() => {
+    gsap
+    .timeline({ repeat: -1, repeatDelay: 2.5 })
+    .to("#scrolldown-container", { y: -5 })
+    .to("#scrolldown-container", { y: 0 })
+    
+  })
+
   return (
     <div className="re-designed-banner" id="banner">
       <div className="banner-container">
@@ -64,15 +74,16 @@ const BannerV2 = () => {
                   Photographer and Cinematographer
                 </h3>
               </div>
-              <div className="scrolldown-line">
+              <div className="scrolldown-line" id="scrolldown-container">
                 <span className="scrolldown-text" id="scrolldown">
-                  scroll{" "}
+                  scroll down{" "}
                 </span>
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                   icon={faArrowDownLong}
                   className="arrow-down-icon"
                   id="scrolldown"
-                />
+                /> */}
+                <IoIosArrowDropdownCircle className="arrow-down-icon" id="scrolldown"/>
               </div>
             </div>
           </div>

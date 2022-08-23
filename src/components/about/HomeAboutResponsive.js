@@ -19,7 +19,7 @@ const HomeAboutResponsive = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#home-about-responsive",
-          start: "top +=800px",
+          start: "top +=900px",
           once: true,
         },
       })
@@ -27,24 +27,26 @@ const HomeAboutResponsive = () => {
       .fromTo(
         "#image-container-left-responsive",
         {
-          y: 300,
-          x: phoneActive.matches ? -100 : 0,
-          opacity: phoneActive.matches ? 1 : 0,
+          skewY: 20,
+          x: phoneActive.matches ? -700 : 0,
+          opacity: 0,
         },
         {
+          skewY: 0,
           opacity: 1,
-          y: 0,
           x: 0,
-          duration: 1.5,
+          duration: 2,
+          delay: -1,
         }
       )
       .fromTo(
         "#image-container-right-responsive",
-        { y: 300, x: phoneActive.matches ? 100 : 0 },
+        { x: phoneActive.matches ? 700 : 0, opacity: 0, skewY: -20 },
         {
-          y: 0,
+          skewY: 0, 
+          opacity: 1,
           x: 0,
-          duration: 1.5,
+          duration: 2,
           delay: -1.5,
         }
       )
@@ -91,56 +93,63 @@ const HomeAboutResponsive = () => {
           >
             <div className="home-about-content-inner">
               <FadeInWhenVisible>
-                <div className="who-am-i-container">
-                  <h1 className="who-am-i" id="header-content-line-responsive">
-                    Hello!
-                  </h1>
-                </div>
-              </FadeInWhenVisible>
-
-              <FadeInWhenVisible>
                 <h1>
-                  <div className="home-about-content-line">
-                    <div
-                      id="header-content-line-responsive"
-                      className="home-about-content-line-inner"
-                    >
-                      <span className="what-am-i">I am Kane Jansen</span>
-                    </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    <span className="hello">My goal is bla bla bla bla</span>
                   </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    to bla bla bla people bla
+                  </div>
+                </div>
+                <div className="home-about-content-line">
+                  <div
+                    id="header-content-line"
+                    className="home-about-content-line-inner"
+                  >
+                    <span className="hello">and create bla bla bla bla</span>
+                  </div>
+                </div>
                 </h1>
               </FadeInWhenVisible>
 
               <FadeInWhenVisible>
-                <p className="hero-content-paragraph" id="paragraph-responsive">
-                  I am a photographer and videographer. Sed ut perspiciatis unde
-                  omnis iste natus error sit voluptatem accusantium doloremque
-                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                  inventore veritatis et quasi architecto beatae vitae dicta
-                  sunt explicabo. Sed ut perspiciatis unde omnis iste natus
-                  error sit voluptatem accusantium doloremque laudantium, totam
-                  rem aperiam.
+              <p className="hero-content-paragraph" id="paragraph-responsive">
+                  Welcome to my website. Sed ut perspiciatis unde omnis iste
+                  natus error sit voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                  et quasi.
+                </p>
+                <p className="hero-content-paragraph" id="paragraph">
+                  Welcome to my website. Sed ut perspiciatis unde omnis iste
+                  natus error sit voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                  et quasi.
                 </p>
               </FadeInWhenVisible>
 
               <FadeInWhenVisible>
-                <div className="home-about-buttons">
-                  <div
-                    className="read-about-button"
-                    id="read-about-button-responsive"
-                  >
-                    <Link to="/about">
-                      <button className="read-about-link">Read About me</button>
-                    </Link>
-                  </div>
-                  <div className="read-about-button">
-                    <Link to="/portfolio">
-                      <button className="read-about-link">
-                        View Portfolio
-                      </button>
-                    </Link>
-                  </div>
+              <div className="home-about-buttons">
+                <div className="home-about-button" id="button">
+                  <Link to="/about" className="page-link">
+                    <div className="read-about-link">Read About me</div>
+                  </Link>
                 </div>
+                <em className="home-about-divider">or</em>
+                <div className="home-about-button" id="button">
+                  <Link to="/portfolio" className="page-link">
+                    <div className="read-about-link">View Portfolio</div>
+                  </Link>
+                </div>
+              </div>
               </FadeInWhenVisible>
             </div>
           </div>

@@ -155,6 +155,12 @@ const About = () => {
                     from working with startups, agencies and international
                     clients from concept to final deliverables.
                   </p>
+                  <p className="about-paragraph" id="about-paragraph">
+                    My expertise is art direction, animation and anything
+                    interactive. I’ve had over 7 years of industry experience,
+                    from working with startups, agencies and international
+                    clients from concept to final deliverables.
+                  </p>
                   <div className="about-socials">
                     <ul className="about-socials-list">
                       <li className="about-social">

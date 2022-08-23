@@ -4,7 +4,7 @@
     height: 100vh;
     .banner-container {
         width: 100%;
-        height: 90%;
+        height: 100%;
 
         .banner-grid {
             width: 100%;
@@ -47,20 +47,22 @@
                     }
 
                     .scrolldown-line {
+                        padding-top: 5vh;
                         overflow: hidden;
                         line-height: 1.4;
                         display: flex;
 
                         .scrolldown-text {
-                            font-weight: 500;
+                            font-weight: 700;
                             letter-spacing: 1px;
                             font-size: 1.5rem;
                             padding-right: 10px;
                         }
 
                         .arrow-down-icon {
+                            font-weight: bold;
                             margin-block: auto;
-                            font-size: 1.1rem;                           
+                            font-size: 1.4rem;                           
                         }
                     }
                 }
@@ -71,7 +73,7 @@
                 top: 5%;
                 z-index: 1;
                 width: 100%;
-                height: 100%;
+                height: 90%;
                 overflow: hidden;
 
                 .banner-reveal {
@@ -85,12 +87,10 @@
                 img {
                     height: auto; /* Make sure images are scaled correctly. */
                     width: 100%; /* Adhere to container width. */
-                    display: block;
                     flex-shrink: 0;
                     min-width: 100%;
                     min-height: 100%;
                     object-fit: cover;
-                    display: inline-block;
                 }
             }
         }

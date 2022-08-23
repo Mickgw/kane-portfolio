@@ -99,36 +99,30 @@ $layout-breakpoint-home-about: 1150px;
                     }
 
                     .home-about-buttons {
+                        padding-top: 2em;
                         display: flex;
 
-                        .read-about-button {
-                            &:last-child {
-                                padding-left: 1vw;
+                        .home-about-divider {
+                            margin-block: auto;
+                            font-size: 1.4rem;
+                            padding-inline: 2rem;
+                        }
 
-                                @media (max-width: $layout-breakpoint-xsmall) {
-                                    padding-left: 3vw;
-                                }
-                            }
+                        .home-about-button {
+                            .page-link {
+                                text-decoration: none;
+                                .read-about-link {
+                                    position: relative;
+                                    background-color: transparent;
+                                    transition: 0.5s ease-in-out;
+                                    cursor: pointer !important;
+                                    border: none;
 
-                            .read-about-link {
-                                border-radius: 5rem;
-                                padding-block: .6rem;
-                                padding-inline: 2.1rem;
-                                position: relative;
-                                background-color: transparent;
-                                border: 1px solid rgb(196, 196, 196);
-                                transition: 0.5s ease-in-out;
-                                cursor: pointer !important;
-
-                                color: #323232;
-                                font-weight: 600;
-                                font-size: 1.25rem;
-                                font-family: inherit;
-
-                                &:hover {
-                                    background-color: $black;
-                                    border: 1px solid $black;
-                                    color: $white;
+                                    color: $black;
+                                    font-weight: 600;
+                                    font-size: 1.7rem;
+                                    font-family: inherit;
+                                    text-decoration: none;
                                 }
                             }
                         }

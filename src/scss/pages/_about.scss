@@ -58,7 +58,7 @@
                         .about-socials-list {
                             .about-social {
                                 padding: 1rem;
-                                border-bottom: 1px solid $black;
+                                box-shadow: inset 0 -1px 0 rgb(0, 0, 0);
                                 .about-social-link {
                                     display: flex;
                                     align-items: center;
