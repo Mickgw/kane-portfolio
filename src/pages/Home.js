@@ -3,14 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageLoader from "../components/loader/PageLoader";
 
 //Components
-// import OldBanner from "../components/OldBanner";
-// import HomeAbout from "../components/about/HomeAbout";
+import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 import Banner from "../components/Banner";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 1400;
+  const timer_duration = 0;
 
   //Set loading to false after time
   useEffect(() => {
@@ -53,7 +52,7 @@ const Home = () => {
       ) : (
         <div id="main-container">
           <Banner />
-          {/* <HomeAbout /> */}
+          <HomeAbout />
           <PhotoAlbums />
         </div>
       )}

@@ -27,7 +27,7 @@ function App() {
             innerSize={null} //Disabled the the main dot
             innerScale={null} //Disabled the dot that's following the cursor
             outerSize={15}
-            outerScale={5}
+            outerScale={6}
             clickables={[
               "a",
               "button",

@@ -5,12 +5,12 @@ $card-spacing: 3vw;
     margin-block: 30vh;
     .photo-albums-header {
         letter-spacing: -1px;
-        font-size: 3rem;
+        font-size: 3.5rem;
         font-weight: 600;
+        padding-bottom: 4vh;
     }
 
     .photo-albums {
-        padding-block: 5vh;
         .container {
             .album-card-grid {
                 display: grid;
