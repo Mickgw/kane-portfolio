@@ -84,24 +84,6 @@
           "paragraph": "Dit is een test g "
         }
       ]
-    },
-    {
-      "id": "5cGCjkO4R",
-      "title": "Test V2",
-      "year": 2019,
-      "camera": "unknown",
-      "camera_lens": "unknown",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/acoustic_oov1u7.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655320833/WhatsApp_Image_2022-05-31_at_1.28.41_PM_3_jivbpl.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-3-banner_qsepek.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_4_dncwga.jpg"
-      ],
-      "album_description_paragraphs": [
-        {
-          "paragraph": "nothing"
-        }
-      ]
     }
   ]
 }
