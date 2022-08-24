@@ -4,7 +4,7 @@ import PageLoader from "../components/loader/PageLoader";
 
 //Components
 // import OldBanner from "../components/OldBanner";
-import HomeAbout from "../components/about/HomeAbout";
+// import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 import Banner from "../components/Banner";
 
