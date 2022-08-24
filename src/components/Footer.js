@@ -1,7 +1,7 @@
 import { TbArrowUpRight } from "react-icons/tb";
 import { ImArrowRight2 } from "react-icons/im";
 
-const Footer = () => {  
+const Footer = () => {
   return (
     <div id="footer" className="footer">
       <div className="container">
@@ -29,6 +29,7 @@ const Footer = () => {
           </div>
           <div className="footer-email">
             <div className="email-header">
+              <div className="footer-email-header">Contact</div>
               <div className="interested-question">
                 Interested in what I can do for you?
               </div>

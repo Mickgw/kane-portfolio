@@ -35,13 +35,6 @@
                     display: table-cell;
                     vertical-align: middle;
 
-                    .footer-socials-header {
-                        color: $text-color;
-                        font-size: 1.3rem;
-                        font-weight: 600;
-                        padding-bottom: 2rem;
-                    }
-
                     .footer-social-link {
                         display: flex;
                         align-items: center;
@@ -73,6 +66,7 @@
             .footer-email {
                 width: 100%;
                 display: table;
+
                 .email-header {
                     display: table-cell;
                     vertical-align: middle;
@@ -91,7 +85,7 @@
                         //Changes font size and padding bottom
                         @media (max-width: $layout-breakpoint-xsmall) {
                             font-size: 1.5rem;
-                            padding-bottom: .2rem;
+                            padding-bottom: 0.2rem;
                         }
                     }
 
@@ -99,7 +93,7 @@
                         padding-block: 1rem;
 
                         @media (max-width: $layout-breakpoint-xsmall) {
-                            padding-block: .2rem;
+                            padding-block: 0.2rem;
                         }
 
                         a {
@@ -176,4 +170,13 @@
             }
         }
     }
+}
+
+.footer-socials-header, .footer-email-header {
+    color: $text-color;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
