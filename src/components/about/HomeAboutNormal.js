@@ -15,8 +15,6 @@ const HomeAboutNormal = () => {
   const smallDeviceActive = window.matchMedia("(max-width: 1440px)");
   const delayChildrenDuration = .1;
 
-  console.log(smallDeviceActive.matches)
-
   useEffect(() => {
     if (smallDeviceActive.matches) {
       //===============================================Smaller device timeline

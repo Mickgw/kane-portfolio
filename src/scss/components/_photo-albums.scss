@@ -45,6 +45,7 @@ $card-spacing: 3vw;
 
                             .album-cover {
                                 transform: scale(1.025);
+                                filter: brightness(.5);
                             }
                         }
 

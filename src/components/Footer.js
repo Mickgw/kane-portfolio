@@ -1,13 +1,14 @@
 import { TbArrowUpRight } from "react-icons/tb";
 import { ImArrowRight2 } from "react-icons/im";
 
-const Footer = () => {
+const Footer = () => {  
   return (
     <div id="footer" className="footer">
       <div className="container">
         <div className="top-footer-row">
           <div className="footer-socials">
             <ul className="footer-socials-list">
+              <div className="footer-socials-header">Socials</div>
               <li className="footer-social-link">
                 <a href="/">Instagram</a>
                 <TbArrowUpRight className="footer-social-link-arrow" />
@@ -17,11 +18,11 @@ const Footer = () => {
                 <TbArrowUpRight className="footer-social-link-arrow" />
               </li>
               <li className="footer-social-link">
-                <a href="/">Unsplash</a>
+                <a href="/">LinkedIn</a>
                 <TbArrowUpRight className="footer-social-link-arrow" />
               </li>
               <li className="footer-social-link">
-                <a href="/">Instagram</a>
+                <a href="/">Unsplash</a>
                 <TbArrowUpRight className="footer-social-link-arrow" />
               </li>
             </ul>
@@ -29,7 +30,7 @@ const Footer = () => {
           <div className="footer-email">
             <div className="email-header">
               <div className="interested-question">
-                Interested what I can do for you?
+                Interested in what I can do for you?
               </div>
               <h2 className="email-header-link email">
                 <a href="mailto:kanejansen@hotmail.nl">
@@ -39,7 +40,7 @@ const Footer = () => {
               </h2>
               <h2 className="email-header-link insta">
                 <a href="https://www.instagram.com/kj.026/">
-                  Direct message me 
+                  Direct message me
                 </a>
               </h2>
             </div>
@@ -48,16 +49,21 @@ const Footer = () => {
 
         <div className="bottom-footer-row">
           <div className="footer-bottom-container">
-            <div className="footer-copyright">© Kane Jansen</div>
-            <div className="made-by">
-              made by{" "}
-              <a
-                href="https://www.mickwaanders.dev"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                Mick Waanders
-              </a>
+            <div className="footer-bottom-left">*LOGO*</div>
+            <div className="footer-bottom-right">
+              <div className="footer-copyright">
+                © {new Date().getFullYear()}
+              </div>
+              <div className="made-by">
+                Created by{" "}
+                <a
+                  href="https://www.mickwaanders.dev"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  © Mick Waanders
+                </a>
+              </div>
             </div>
           </div>
         </div>
