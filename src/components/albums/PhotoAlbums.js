@@ -53,7 +53,6 @@ const PhotoAlbums = () => {
                           </span>
                         </div>
                       </div>
-                      <hr className="divider" />
                     </FadeInWhenVisible>
                   </Link>
                 </div>

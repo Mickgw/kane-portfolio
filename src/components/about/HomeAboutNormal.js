@@ -13,42 +13,46 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutNormal = () => {
   const smallDeviceActive = window.matchMedia("(max-width: 1440px)");
-  const delayChildrenDuration = 0.2;
+  const delayChildrenDuration = .1;
+
+  console.log(smallDeviceActive.matches)
 
   useEffect(() => {
     if (smallDeviceActive.matches) {
       //===============================================Smaller device timeline
       gsap
         .timeline({
-          trigger: "#home-about",
-          start: "top +=1000px",
-          once: true,
+          scrollTrigger: {
+            trigger: "#home-about",
+            start: "top +=1000px",
+            once: true,
+          },
         })
         .to("#home-about", { autoAlpha: 1, duration: 0 })
-        // .fromTo(
-        //   "#image-container-left",
-        //   { y: 100, opacity: 0 },
-        //   {
-        //     opacity: 1,
-        //     y: 0,
-        //     duration: 1.5,
-        //   }
-        // )
-        // .fromTo(
-        //   "#image-container-right",
-        //   { y: 150, x: 100 },
-        //   {
-        //     y: 0,
-        //     x: 0,
-        //     duration: 1.5,
-        //     delay: -1.5,
-        //   }
-        // )
-        // .fromTo(
-        //   "#image",
-        //   { scale: 1.6, skewY: 20 },
-        //   { scale: 1, skewY: 0, duration: 2, delay: -2 }
-        // )
+        .fromTo(
+          "#image-container-left",
+          { y: 100, opacity: 0 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+          }
+        )
+        .fromTo(
+          "#image-container-right",
+          { y: 150, x: 100 },
+          {
+            y: 0,
+            x: 0,
+            duration: 1.5,
+            delay: -1.5,
+          }
+        )
+        .fromTo(
+          "#image",
+          { scale: 1.6, skewY: 20 },
+          { scale: 1, skewY: 0, duration: 2, delay: -2 }
+        )
         .fromTo(
           "#header-content-line",
           { y: 100 },
@@ -66,8 +70,9 @@ const HomeAboutNormal = () => {
             y: 0,
             opacity: 1,
             duration: 1,
+            stagger: delayChildrenDuration,
           },
-          "-=.2" //Add a delay because other way didnt work
+          "-=1.2" //Add a delay because other way didnt work
         )
         .fromTo(
           "#button",
@@ -77,7 +82,7 @@ const HomeAboutNormal = () => {
             opacity: 1,
             duration: 1,
           },
-          "-=.8" //Add a delay because other way didnt work
+          "-=1" //Add a delay because other way didnt work
         );
     } else {
       //===============================================Desktop timeline
@@ -101,38 +106,39 @@ const HomeAboutNormal = () => {
         )
         .fromTo(
           "#image",
-          { scale: 1.8},
-          { scale: 1, duration: 2, delay: -2 }
+          { scale: 1.8, skewY: 20},
+          { scale: 1, skewY: 0, duration: 2, delay: -2 }
         )
         .fromTo(
           "#header-content-line",
           { y: 100 },
           {
             y: 0,
-            duration: 1,
+            duration: .5,
             stagger: delayChildrenDuration,
             delay: -1.2,
           }
         )
         .fromTo(
           "#paragraph",
-          { opacity: 0, y: 65 },
+          { opacity: 0, y: 30 },
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: .5,
+            stagger: delayChildrenDuration,
           },
-          "-=.8"
+          "-=.5"
         )
         .fromTo(
           "#button",
-          { opacity: 0, y: 65 },
+          { opacity: 0, y: 30 },
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: .5,
           },
-          "-=.8" //Add a delay because other way didnt work
+          "-=.5" //Add a delay because other way didnt work
         );
     }
   });
@@ -149,7 +155,7 @@ const HomeAboutNormal = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    <span className="hello">My goal is bla bla bla bla</span>
+                    My goal is bla bla bla bla
                   </div>
                 </div>
                 <div className="home-about-content-line">
@@ -165,7 +171,7 @@ const HomeAboutNormal = () => {
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    <span className="hello">and create bla bla bla bla</span>
+                    and create bla bla bla bla
                   </div>
                 </div>
               </h1>
@@ -190,7 +196,7 @@ const HomeAboutNormal = () => {
                     <div className="read-about-link">Read About me</div>
                   </Link>
                 </div>
-                <em className="home-about-divider">or</em>
+                <em className="home-about-divider" id="button">or</em>
                 <div className="home-about-button" id="button">
                   <Link to="/portfolio" className="page-link">
                     <div className="read-about-link">View Portfolio</div>

@@ -6,7 +6,7 @@ $card-spacing: 3vw;
     .photo-albums-header {
         letter-spacing: -1px;
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .photo-albums {
@@ -141,7 +141,7 @@ $card-spacing: 3vw;
 
                     .album-card-cover-content {
                         position: relative;
-                        margin-block: 3vh;
+                        margin-block: 2vh;
                         width: 100%;
                         display: flex;
                         align-items: center;
@@ -154,12 +154,20 @@ $card-spacing: 3vw;
                             font-weight: 500;
                             font-size: 2rem;
                             text-decoration: none;
+
+                            @media (max-width: $layout-breakpoint-xsmall) {
+                                font-size: 1.8rem;
+                            }
                         }
 
                         .content-year-date {
-                            color: $black;
+                            color: $text-color;
                             font-size: 1.5rem;
                             font-weight: 500;
+
+                            @media (max-width: $layout-breakpoint-xsmall) {
+                                font-size: 1.3rem;
+                            }
                         }
                     }
                 }

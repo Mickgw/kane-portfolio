@@ -53,7 +53,7 @@ const Home = () => {
       ) : (
         <div id="main-container">
           <Banner />
-          <HomeAbout />
+          {/* <HomeAbout /> */}
           <PhotoAlbums />
         </div>
       )}

@@ -52,11 +52,10 @@ const BannerV2 = () => {
 
   useEffect(() => {
     gsap
-    .timeline({ repeat: -1, repeatDelay: 2.5 })
-    .to("#scrolldown-container", { y: -5 })
-    .to("#scrolldown-container", { y: 0 })
-    
-  })
+      .timeline({ repeat: -1, repeatDelay: 2.5 })
+      .to("#scrolldown-container", { y: -5 })
+      .to("#scrolldown-container", { y: 0 });
+  });
 
   return (
     <div className="re-designed-banner" id="banner">
@@ -83,7 +82,10 @@ const BannerV2 = () => {
                   className="arrow-down-icon"
                   id="scrolldown"
                 /> */}
-                <IoIosArrowDropdownCircle className="arrow-down-icon" id="scrolldown"/>
+                <IoIosArrowDropdownCircle
+                  className="arrow-down-icon"
+                  id="scrolldown"
+                />
               </div>
             </div>
           </div>
@@ -93,6 +95,7 @@ const BannerV2 = () => {
               src={banner_image}
               alt="big-banner-car"
               id="banner-image"
+              className="test"
             />
           </div>
         </div>

@@ -44,57 +44,36 @@ $layout-breakpoint-home-about: 1150px;
                     display: table-cell;
                     vertical-align: middle;
 
-                    .who-am-i {
-                        font-size: 5.5rem;
-                        color: $black;
-                        font-weight: 700;
-                        padding-bottom: 2rem;
-                        letter-spacing: 2px;
-
-                        @media (max-width: $layout-breakpoint-xsmall) {
-                            font-size: 5rem;
-                        }
-                    }
-                    
-                    .title-divider {
-                        font-weight: 500;
-                    }
-
                     h1 {
                         position: relative;
                         font-weight: 500;
                         margin-bottom: 24px;
 
                         .home-about-content-line {
-                            font-size: 2.4rem;
+                            font-size: 2.5rem;
                             margin: 0;
                             line-height: 1.4;
                             overflow: hidden;
+                            color: $black;
 
                             .home-about-content-line-inner {
-                                .what-am-i {
-                                    letter-spacing: 1px;
-                                    font-size: 2.5rem;
-                                    color: $black;
-                                    font-weight: 700;
-
-                                    @media (max-width: $layout-breakpoint-xsmall) {
-                                        font-size: 2.3rem;
-                                    }
-                                }
+          
                             }
                         }
                     }
 
-                    p {
-                        margin-block: 3em;
-                        font-size: 1.43rem;
-                        line-height: 30px;
-                        font-weight: 300;
-                        padding-right: 48px;
+                    .paragraphs-responsive {
+                        margin-block: 1.5rem;
+                        .hero-content-paragraph-responsive {
+                            max-width: 50ch;
+                            font-size: 1.43rem;
+                            line-height: 30px;
+                            font-weight: 300;
+                            padding-block: 1rem;
 
-                        @media (max-width: $layout-breakpoint-xsmall) {
-                            padding-right: 0px;
+                            @media (max-width: $layout-breakpoint-xsmall) {
+                                padding-right: 0px;
+                            }
                         }
                     }
 
@@ -120,7 +99,7 @@ $layout-breakpoint-home-about: 1150px;
 
                                     color: $black;
                                     font-weight: 600;
-                                    font-size: 1.7rem;
+                                    font-size: 1.5rem;
                                     font-family: inherit;
                                     text-decoration: none;
                                 }

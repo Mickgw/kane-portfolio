@@ -52,7 +52,7 @@ const About = () => {
       .to("#about-page", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#about-header-text",
-        { y: 250, skewY: 5 },
+        { y: 300, skewY: 15 },
         {
           skewY: 0,
           y: 0,

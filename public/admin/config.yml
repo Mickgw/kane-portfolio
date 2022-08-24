@@ -44,7 +44,7 @@ collections:
               - {label: "Year", name: "year", widget: number}
               - {label: "Camera", name: "camera", widget: "string"}
               - {label: "Camera lens", name: "camera_lens", widget: "string"}
-              - {label: "Album cover image", name: "cover_image", widget: "image", hint: "The album cover is used on the home page, displayed beneath the short introduction"}
+              - {label: "Album cover image", name: "cover_image", widget: "image", hint: "*Make sure the cover image has the aspect ratio of an portrait. Only this way it can be displayed properly on the site*", hint: "The album cover is used on the home page, displayed beneath the short introduction"}
               - {label: "Albums images", name: "images", widget: "image", hint: "These images will be displayed on the page of the album it self, you can select multiple (obviously)", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
               - label: "Album description paragraph"
                 name: "album_description_paragraphs"

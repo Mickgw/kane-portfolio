@@ -1,93 +1,53 @@
 .footer {
     width: 100%;
-    height: 100%;
+    height: 90vh;
 
     .container {
-        background-color: $black;
+        background-color: $background;
         height: auto;
-        padding-inline: $wrapper-value;
+        padding-inline: $wrapper-value-navbar;
         position: relative;
         z-index: 2;
         align-items: flex-end;
         .top-footer-row {
-            padding-block: 20em;
+            height: 100%;
             width: 100%;
             display: flex;
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 2rem;
 
-            .email-header {
+            .footer-socials {
                 width: 100%;
-                text-align: center;
 
-                .text-above-link {
-                    font-size: 1.3rem;
-                }
-                .email-header-link {
-                    a {
-                        font-size: calc(clamp(3rem, 7vw, 8rem) * 0.875);
-                        color: $white;
-                    }
-
-                    .email-link-icon {
-                        font-size: 8rem;
-                    }
-                }
-            }
-
-            .section-email-socials {
-                width: 100%;
-                grid-template-rows: repeat(2, 1fr);
-                display: flex;
-
-                .email {
-                    flex: 50%;
-                    .email-header-one {
-                        padding-top: 1em;
-                        font-size: 3rem;
-                        font-weight: 700;
-                    }
-
-                    .contact-paragraph {
-                        line-height: 1.7;
-                        color: $text-color;
-                        padding-block: 2em;
-                        font-size: 1.4rem;
-                    }
-                    .email-link {
-                    }
-                }
-            }
-
-            .section-navigation {
-                width: 100%;
-                .footer-nav {
-                    .footer-nav-link {
-                        padding-block: 5px;
-
+                .footer-socials-list {
+                    .footer-social-link {
+                        padding-block: 1rem;
                         a {
-                            letter-spacing: -1px;
+                            font-size: 1.8rem;
                             text-decoration: none;
-                            font-size: 3rem;
-                            color: $black;
-                            transition: 0.5s ease-in-out;
+                            color: $black
+                        }
+                    }
+                }
+            }
 
-                            &:hover {
-                                color: rgb(110, 110, 110);
-                            }
+            .footer-email {
+                .email-header {
+                    width: 100%;
+                    text-align: center;
+
+                    .text-above-link {
+                        font-size: 1.3rem;
+                    }
+                    .email-header-link {
+                        a {
+                            font-weight: 700;
+                            font-size: calc(clamp(3rem, 7vw, 8rem) * 0.875);
+                            color: $black;
                         }
 
-                        .active {
-                            transition: 0.5s ease-in-out;
-                            pointer-events: none;
-
-                            &:before {
-                                color: $black;
-                                opacity: 1;
-                                float: left;
-                                margin-left: -0.7em;
-                                content: "\2022";
-                            }
+                        .email-link-icon {
+                            font-size: 8rem;
                         }
                     }
                 }
@@ -95,11 +55,10 @@
         }
 
         .bottom-footer-row {
-            padding-block: 3em;
-            font-size: 1.1em;
-            font-weight: 500;
-            color: grey;
-            text-transform: uppercase;
+            padding-block: 4rem;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: $black;
 
             .footer-bottom-container {
                 width: 100%;
@@ -107,23 +66,27 @@
                 align-items: center;
                 justify-content: space-between;
 
-                .local-time {
+                .footer-copyright {
+                }
+
+                .footer-socials {
+                    display: flex;
+
+                    .footer-social-link {
+                        color: $black;
+                        padding-inline: 2rem;
+                        text-decoration: none;
+                    }
                 }
 
                 .made-by {
                     a {
                         text-decoration: none;
-                        color: grey;
-                        transition: 0.3s ease-in-out;
-
-                        &:hover {
-                            color: black;
-                        }
+                        color: $black;
                     }
                 }
             }
         }
-        // }
     }
 }
 
