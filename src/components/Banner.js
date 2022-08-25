@@ -1,18 +1,19 @@
-import bigBannerImage1 from "../assets/images/banner_V2_image1.jpg";
-import bigBannerImage2 from "../assets/images/banner_V2_image2.jpg";
-import bigBannerImage3 from "../assets/images/banner_V2_image3.jpg";
+
+//Banner images
+import banner_image_1 from "../assets/images/images-for-banner/website_banner_1.jpg";
+import banner_image_2 from "../assets/images/images-for-banner/website_banner_2.jpg";
+import banner_image_3 from "../assets/images/images-for-banner/website_banner_3.jpg";
+import banner_image_4 from "../assets/images/images-for-banner/website_banner_4.jpg";
+import banner_image_5 from "../assets/images/images-for-banner/website_banner_5.jpg";
+import banner_image_6 from "../assets/images/images-for-banner/website_banner_6.jpg";
 
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
-
-import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 const BannerV2 = () => {
-  var images = [bigBannerImage1, bigBannerImage2, bigBannerImage3];
+  var images = [banner_image_1, banner_image_2, banner_image_3, banner_image_4, banner_image_5, banner_image_6];
   const banner_image = images[Math.floor(Math.random() * images.length)];
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const BannerV2 = () => {
                   className="arrow-down-icon"
                   id="scrolldown"
                 /> */}
-                <IoIosArrowDropdownCircle
+                <IoIosArrowDown
                   className="arrow-down-icon"
                   id="scrolldown"
                 />

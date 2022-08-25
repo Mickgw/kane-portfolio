@@ -4,9 +4,9 @@ import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
 
 //Menu images on navlink hover
-import homeImage from "../assets/images/image-1-banner.jpeg";
-import portfolioImage from "../assets/images/image-3-banner.jpeg";
-import aboutImage from "../assets/images/image_3_menu.jpeg";
+import homeImage from "../assets/images/images-for-banner/website_banner_1.jpg";
+import portfolioImage from "../assets/images/navmenu_portfolio.jpg";
+import aboutImage from "../assets/images/images-for-about/portrait_1.jpg";
 import motionImage from "../assets/images/image_4_menu.jpeg";
 import otherPage from "../assets/images/other-page-image.jpeg";
 

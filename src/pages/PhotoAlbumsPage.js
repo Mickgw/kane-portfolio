@@ -119,7 +119,6 @@ const PhotoAlbumsPage = () => {
                                   src={album_image}
                                   alt="images photos"
                                 />
-                                <div className="image-index">0{index + 1}</div>
                               </div>
                             </FadeInWhenVisible>
                           </div>

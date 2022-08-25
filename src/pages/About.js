@@ -6,7 +6,7 @@ import gsap from "gsap";
 import PageLoader from "../components/loader/PageLoader";
 
 //Images
-import bigPortrait from "../assets/images/image-1-banner.jpeg";
+import bigPortrait from "../assets/images/images-for-about/portrait_1.jpg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);

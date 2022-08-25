@@ -63,27 +63,7 @@
             .album-images {
                 width: 100%;
                 margin-block: 15vh;
-                .image-index {
-                    top: 2.5vh;
-                    left: -35px;
-                    position: absolute;
 
-                    font-size: 2rem;
-                    color: $black;
-                    font-weight: 700;
-
-                    @media (max-width: $layout-breakpoint-small) {
-                        left: -30px;
-                        font-size: 1.5rem;
-                        color: $text-color;
-                        font-weight: 500;
-                    }
-
-                    @media (max-width: $layout-breakpoint-xsmall) {
-                        left: -20px;
-                        font-size: 1.2rem;
-                    }
-                }
                 .album-image {
                     padding-block: 2em;
                     display: block;
