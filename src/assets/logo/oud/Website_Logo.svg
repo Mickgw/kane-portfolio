@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="90" viewBox="0 0 120 90">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 50px;
+      }
+
+      .cls-2 {
+        font-family: "Allison Script";
+      }
+
+      .cls-3 {
+        font-family: "Three Signature";
+      }
+    </style>
+  </defs>
+  <path id="Lijn_1_kopiëren_4" data-name="Lijn 1 kopiëren 4" class="cls-1" d="M36.307,35.257V35.1h9.887v0.16H36.307ZM36.477,44.4H36.307V35.1h0.171v9.3Zm35.339-9.3h0.17v9.3h-0.17V35.1Zm-9.716.16V35.1h9.887v0.16H62.1Zm9.919,29.2v0.16H62.132v-0.16h9.887Zm-0.171-9.142h0.171v9.3H71.848v-9.3Zm-35.339,9.3h-0.17v-9.3h0.17v9.3Zm9.716-.16v0.16H36.339v-0.16h9.887Z"/>
+  <text id="Kane" class="cls-2" transform="translate(16.047 52.057) scale(0.939 0.85)">Kane</text>
+  <text id="_7iii" data-name="7iii" class="cls-3" transform="translate(56.417 49.895) scale(0.422 0.345)">7iii</text>
+</svg>

@@ -1,70 +1,41 @@
+$footer-bottom-text-color: rgb(255, 255, 255);
+
 .footer {
     width: 100%;
     height: 100vh;
 
+    @media (max-width: $layout-breakpoint-small) {
+        height: 100%;
+    }
+
     .container {
-        background-color: $background;
+        background-color: $black;
         height: auto;
-        padding-inline: $wrapper-value-navbar;
-        padding-block: 3vh;
+        padding-inline: $wrapper-value;
         position: relative;
         z-index: 2;
         align-items: flex-end;
 
         @media (max-width: $layout-breakpoint-small) {
-            padding-inline: $wrapper-value;
+            padding-inline: $wrapper-value-breakpoint-small;
         }
 
         .top-footer-row {
             width: 100%;
             height: 90vh;
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 100%;
+            grid-row-gap: 10vh;
 
             @media (max-width: $layout-breakpoint-small) {
-                grid-template-columns: 100%;
-                grid-row-gap: 6vh;
-                height: 65vh;
+                height: 50vh;
             }
 
-            .footer-socials {
-                display: table;
-                width: 100%;
-
-                .footer-socials-list {
-                    display: table-cell;
-                    vertical-align: middle;
-
-                    .footer-social-link {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 50%;
-                        font-size: 1.8rem;
-                        padding-block: 1.4rem;
-                        box-shadow: inset 0 -1px 0 rgb(0, 0, 0);
-                        cursor: pointer !important;
-
-                        @media (max-width: $layout-breakpoint-xsmall) {
-                            width: 100%;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: $black;
-                            font-weight: 600;
-                            cursor: pointer !important;
-                        }
-
-                        .footer-social-link-arrow {
-                            font-size: 1.9rem;
-                        }
-                    }
-                }
-            }
+            
 
             .footer-email {
                 width: 100%;
+                height: 100%;
                 display: table;
 
                 .email-header {
@@ -77,29 +48,29 @@
                     }
 
                     .interested-question {
-                        font-weight: 600;
-                        font-size: 1.8rem;
-                        padding-bottom: 2rem;
+                        font-weight: 100;
+                        font-size: 3rem;
+                        padding-bottom: 5rem;
                         color: $text-color;
 
                         //Changes font size and padding bottom
                         @media (max-width: $layout-breakpoint-xsmall) {
                             font-size: 1.5rem;
-                            padding-bottom: 0.2rem;
+                            padding-bottom: 1rem;
                         }
                     }
 
                     .email-header-link {
-                        padding-block: 1rem;
+                        padding-block: 2rem;
 
                         @media (max-width: $layout-breakpoint-xsmall) {
                             padding-block: 0.2rem;
                         }
 
                         a {
-                            font-weight: 700;
-                            font-size: calc(clamp(2rem, 5vw, 8rem) * 0.875);
-                            color: $black;
+                            font-weight: 600;
+                            font-size: calc(clamp(3rem, 7vw, 10rem) * 0.875);
+                            color: $white;
                             cursor: pointer !important;
                         }
 
@@ -109,7 +80,7 @@
 
                         .email-link-icon {
                             padding-left: 10px;
-                            font-size: 5rem;
+                            font-size: calc(clamp(3rem, 7vw, 8rem) * 0.875);
 
                             @media (max-width: $layout-breakpoint-xsmall) {
                                 font-size: 1.8rem;
@@ -118,13 +89,33 @@
                     }
                 }
             }
+
+            .footer-socials-responsive {
+                width: 100%;
+                height: 100%;
+                display: none;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    display: block;
+                }
+                .footer-socials-responsive-list {
+                    .footer-socials-responsive-container {
+                        .footer-socials-responsive-link {
+                            color: $white;
+                            text-decoration: none;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
         }
 
         .bottom-footer-row {
             width: 100%;
-            font-size: 1.4rem;
+            height: 10vh;
+            font-size: 1.6rem;
             font-weight: 600;
-            color: $text-color;
+            color: $footer-bottom-text-color;
 
             .footer-bottom-container {
                 width: 100%;
@@ -136,34 +127,51 @@
                 }
 
                 .footer-bottom-left {
-                    @media (max-width: $layout-breakpoint-xsmall) {
-                        padding-bottom: 10vh;
+                    display: flex;
+
+                    .footer-copyright {
+                        margin-right: 3vw;
+                    }
+
+                    .made-by {
+                        a {
+                            color: $footer-bottom-text-color;
+                            text-decoration: none;
+                            cursor: pointer !important;
+                            transition: 0.3s ease-in-out;
+
+                            &:hover {
+                                color: $white;
+                            }
+                        }
                     }
                 }
 
                 .footer-bottom-right {
+                    height: 100%;
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
+                    align-items: right;
+                    justify-content: right;
 
-                .footer-copyright {
-                    font-size: 1.4rem;
-
-                    @media (max-width: $layout-breakpoint-xsmall) {
+                    @media (max-width: $layout-breakpoint-small) {
                         display: none;
                     }
-                }
 
-                .made-by {
-                    a {
-                        color: $text-color;
+                    .footer-bottom-socials-links {
+                        color: $footer-bottom-text-color;
                         text-decoration: none;
-                        cursor: pointer !important;
+                        padding-right: 0.5vw;
                         transition: 0.3s ease-in-out;
+                        cursor: pointer !important;
 
-                        &:hover {
-                            color: $black;
+                        @media (max-width: $layout-breakpoint-xsmall) {
+                            padding-right: 0px;
+                            padding-block: 0.8rem;
+                            display: block;
+
+                            .comma {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -172,7 +180,8 @@
     }
 }
 
-.footer-socials-header, .footer-email-header {
+.footer-socials-header,
+.footer-email-header {
     color: $text-color;
     font-size: 1.2rem;
     font-weight: 100;

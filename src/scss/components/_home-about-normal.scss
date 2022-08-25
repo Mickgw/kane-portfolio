@@ -15,7 +15,7 @@ $layout-breakpoint-home-about: 1150px;
 
         .home-about-inner {
             display: grid;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 60% 50%;
             grid-column-gap: 2vw;
             width: 100%;
 
@@ -41,11 +41,12 @@ $layout-breakpoint-home-about: 1150px;
 
                         .home-about-content-line {
                             color: $black;
-                            font-weight: 600;
-                            font-size: 3.5em;
+                            font-weight: 700;
+                            font-size: 5em;
                             margin: 0;
                             line-height: 1.5;
                             overflow: hidden;
+                            letter-spacing: 1px;
 
                             @media (max-width: $layout-breakpoint-medium) {
                                 font-size: 2.8rem;

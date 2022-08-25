@@ -149,37 +149,15 @@ const HomeAboutNormal = () => {
             <div className="home-about-content-inner">
               <h1>
                 <div className="home-about-content-line">
-                  <div
+                <div
                     id="header-content-line"
                     className="home-about-content-line-inner"
                   >
-                    My goal is bla bla bla bla
-                  </div>
-                </div>
-                <div className="home-about-content-line">
-                  <div
-                    id="header-content-line"
-                    className="home-about-content-line-inner"
-                  >
-                    to bla bla bla people bla
-                  </div>
-                </div>
-                <div className="home-about-content-line">
-                  <div
-                    id="header-content-line"
-                    className="home-about-content-line-inner"
-                  >
-                    and create bla bla bla bla
+                    Fitness, music and travel
                   </div>
                 </div>
               </h1>
               <div className="paragraphs">
-                <p className="hero-content-paragraph" id="paragraph">
-                  Welcome to my website. Sed ut perspiciatis unde omnis iste
-                  natus error sit voluptatem accusantium doloremque laudantium,
-                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-                  et quasi.
-                </p>
                 <p className="hero-content-paragraph" id="paragraph">
                   Welcome to my website. Sed ut perspiciatis unde omnis iste
                   natus error sit voluptatem accusantium doloremque laudantium,
@@ -191,7 +169,7 @@ const HomeAboutNormal = () => {
               <div className="home-about-buttons">
                 <div className="home-about-button" id="button">
                   <Link to="/about" className="page-link">
-                    <div className="read-about-link">Read About me</div>
+                    <div className="read-about-link">More About me</div>
                   </Link>
                 </div>
                 <em className="home-about-divider" id="button">or</em>

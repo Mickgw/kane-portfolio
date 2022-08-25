@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="810 390 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 8.551px;
+        font-family: "Allison Script";
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="890" y="491" width="128" height="107" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="6" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.828"/>
+      <feFlood result="flood" flood-opacity="0.48"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feGaussianBlur result="blur-2" stdDeviation="2.333" in="SourceAlpha"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feComposite result="composite-4"/>
+      <feFlood result="flood-2" flood-color="#fff"/>
+      <feComposite result="composite-5" operator="in" in2="composite-4"/>
+      <feBlend result="blend" mode="screen" in2="composite"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="KaneJansen" class="cls-1" transform="translate(855.132 544.25) scale(5.852 5.847)">KaneJansen</text>
+  <g style="fill: ; filter: url(#filter)">
+    <path id="Lijn_1_kopiëren_3" data-name="Lijn 1 kopiëren 3" class="cls-2" d="M898,498.457V498h30.732v0.462H898Zm0.53,26.325H898V498h0.53v26.787ZM1008.37,498h0.53v26.787h-0.53V498Zm-30.2.462V498H1008.9v0.462H978.171ZM1009,582.543v0.462H978.27v-0.462H1009Zm-0.53-26.324H1009v26.786h-0.53V556.219ZM898.626,583H898.1V556.214h0.53V583Zm30.2-.462V583H898.1v-0.462h30.732Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Lijn_1_kopiëren_3" style="stroke: #000; filter: none; fill: none"/>
+</svg>

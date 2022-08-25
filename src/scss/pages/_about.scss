@@ -8,12 +8,12 @@
             margin-bottom: 24px;
 
             .about-header-line {
-                word-spacing: 10px;
-                font-size: 5.5rem;
+                word-spacing: 1rem;
+                font-size: calc(clamp(3rem, 7vw, 7rem) * 0.875);
                 margin: 0;
                 line-height: 1.5;
                 overflow: hidden;
-                font-weight: 600;
+                font-weight: 700;
 
                 .header-text {
                     .outlined {
@@ -24,126 +24,36 @@
             }
         }
 
-        .about-details {
-            .about-details-grid {
-                display: grid;
-                grid-template-columns: 70% 30%;
+        .big-portrait {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
 
-                .big-portrait {
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                    .about-image {
-                        width: 100%;
-                        object-fit: cover;
-                    }
+            &:hover {
+                .about-banner {
+                    transform: scale(1.2);
                 }
+            }
 
-                .about-details-data {
-                    width: 100%;
-                    position: relative;
-                    margin-inline: 2rem;
-                    .about-paragraph {
-                        padding-bottom: 2em;
-                        color: $text-color;
-                        font-size: 1.5rem;
-                        word-spacing: 7px;
-                    }
-
-                    .about-socials {
-                        width:inherit;
-                        position: absolute;
-                        bottom: 0;
-
-                        .about-socials-list {
-                            .about-social {
-                                padding: 1rem;
-                                box-shadow: inset 0 -1px 0 rgb(0, 0, 0);
-                                .about-social-link {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    text-decoration: none;
-                                    cursor: pointer !important;
-
-                                    .social-link-text {
-                                        color: $black;
-                                        font-size: 1.4rem;
-                                        font-weight: 600;
-                                    }
-
-                                    .about-social-link-arrow {
-                                        color: $black;
-                                        font-size: 1.8rem;
-                                    }
-                                }
-
-
-                            }
-                        }
-
-                    }
-
-                    
-                }
+            .about-banner {
+                width: 100%; 
+                height: 100%;
+                object-fit: cover;
             }
         }
 
-
-        // .about-text {
-        //     .about-header {
-        //         padding-bottom: 2em;
-        //         .about-header-title {
-        //             font-weight: 700;
-        //         }
-        //     }
-
-        //     .about-paragraph {
-        //         padding-block: 3em;
-        //         p {
-        //             color: $text-color;
-        //             font-size: 1.4em;
-        //             line-height: 1.7;
-        //             padding-bottom: 1.5em;
-        //         }
-        //     }
-
-        //     .services-and-tools {
-        //         padding-block: 2em;
-        //         .tools,
-        //         .services {
-        //             padding-block: 1em;
-
-        //             font-size: 2em;
-        //             font-weight: 700;
-
-        //             em {
-        //                 color: $text-color;
-        //                 font-weight: 300;
-        //             }
-        //         }
-        //     }
-        // }
-
-        // .about-images {
-        //     height: 100%;
-        //     display: flex;
-        //     justify-content: space-between;
-
-        //     .image {
-        //         position: relative;
-        //         height: 400px;
-        //         width: 270px;
-
-        //         &.one {
-        //             top: 0;
-        //             left: 0;
-        //         }
-
-        //         &.two {
-        //             top: 100px;
-        //         }
-        //     }
-        // }
+        .about-details-data {
+            width: 100%;
+            position: relative;
+            margin-inline: 2rem;
+            .about-paragraph {
+                padding-bottom: 2em;
+                color: $text-color;
+                font-size: 1.5rem;
+                word-spacing: 7px;
+            }
+        }
     }
 }

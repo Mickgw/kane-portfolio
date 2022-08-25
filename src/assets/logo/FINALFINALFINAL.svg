@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="90" viewBox="0 0 180 90">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 50px;
+      }
+
+      .cls-1 {
+        fill: #fff;
+        font-family: "Allison Script";
+      }
+
+      .cls-2 {
+        fill: #fffefe;
+        font-family: "Three Signature";
+      }
+    </style>
+  </defs>
+  <text id="ane" class="cls-1" transform="matrix(1.861, -0.063, 0.071, 1.688, 49.751, 63.285)">ane</text>
+  <text id="_7iii" data-name="7iii" class="cls-2" transform="translate(67.317 58.492) scale(1.276 0.924)">7iii</text>
+  <text id="K" class="cls-1" transform="translate(2.069 64.962) scale(1.403 1.55)">K</text>
+</svg>

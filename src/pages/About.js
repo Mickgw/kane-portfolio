@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { TbArrowUpRight } from "react-icons/tb";
 import gsap from "gsap";
 
 //Components
@@ -11,7 +10,7 @@ import bigPortrait from "../assets/images/image-1-banner.jpeg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 1400;
+  const timer_duration = 0;
   const delayChildrenDuration = 0.1;
 
   //Set loading to false after time
@@ -132,59 +131,34 @@ const About = () => {
               </div>
             </h1>
 
-            <div className="about-details">
-              <div className="about-details-grid">
-                <div className="big-portrait" id="big-portrait">
-                  <img
-                    className="about-image"
-                    src={bigPortrait}
-                    alt="big portrait"
-                    id="about-image"
-                  />
-                </div>
-                <div className="about-details-data">
-                  <p className="about-paragraph" id="about-paragraph">
-                    My expertise is art direction, animation and anything
-                    interactive. I’ve had over 7 years of industry experience,
-                    from working with startups, agencies and international
-                    clients from concept to final deliverables.
-                  </p>
-                  <p className="about-paragraph" id="about-paragraph">
-                    My expertise is art direction, animation and anything
-                    interactive. I’ve had over 7 years of industry experience,
-                    from working with startups, agencies and international
-                    clients from concept to final deliverables.
-                  </p>
-                  <p className="about-paragraph" id="about-paragraph">
-                    My expertise is art direction, animation and anything
-                    interactive. I’ve had over 7 years of industry experience,
-                    from working with startups, agencies and international
-                    clients from concept to final deliverables.
-                  </p>
-                  <div className="about-socials">
-                    <ul className="about-socials-list">
-                      <li className="about-social">
-                        <a className="about-social-link" href="https://www.instagram.com/kj.026/" target="_blank" rel="noopener noreferrer">
-                          <span className="social-link-text">Instagram</span>
-                          <TbArrowUpRight className="about-social-link-arrow" />
-                        </a>
-                      </li>
-                      <li className="about-social">
-                        <a className="about-social-link" href="/" target="_blank" rel="noopener noreferrer">
-                          <span className="social-link-text">Youtube</span>
-                          <TbArrowUpRight className="about-social-link-arrow" />
-                        </a>
-                      </li>
-                      <li className="about-social">
-                        <a className="about-social-link" href="/" target="_blank" rel="noopener noreferrer">
-                          <span className="social-link-text">Unsplash</span>
-                          <TbArrowUpRight className="about-social-link-arrow" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div className="big-portrait" id="big-portrait">
+              <img
+                className="about-banner"
+                src={bigPortrait}
+                alt="big portrait"
+                id="about-image"
+              />
+            </div>
+
+            <div className="about-details-data">
+              <p className="about-paragraph" id="about-paragraph">
+                My expertise is art direction, animation and anything
+                interactive. I’ve had over 7 years of industry experience, from
+                working with startups, agencies and international clients from
+                concept to final deliverables.
+              </p>
+              <p className="about-paragraph" id="about-paragraph">
+                My expertise is art direction, animation and anything
+                interactive. I’ve had over 7 years of industry experience, from
+                working with startups, agencies and international clients from
+                concept to final deliverables.
+              </p>
+              <p className="about-paragraph" id="about-paragraph">
+                My expertise is art direction, animation and anything
+                interactive. I’ve had over 7 years of industry experience, from
+                working with startups, agencies and international clients from
+                concept to final deliverables.
+              </p>
             </div>
           </div>
         </div>

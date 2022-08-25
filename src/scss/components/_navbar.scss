@@ -1,6 +1,16 @@
 $menu-button-bar-height: 1px;
 $desktop-menu-button-bar-height: 2px;
 
+@font-face {
+  font-family: "Allison Script";
+  src: local("Allison Script"), url("../../fonts/AllisonScript/Allison_Script.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Three Signature";
+  src: local("Three Signature"), url("../../fonts/ThreeSignature/Three\ Signature.otf") format("truetype");
+}
+
 .navbar {
   pointer-events: none;
   position: fixed;
@@ -59,6 +69,10 @@ $desktop-menu-button-bar-height: 2px;
         a:link,
         a:active {
           text-decoration: none;
+        }
+
+        .svg-logo {
+          transform: scale(0.2);
         }
       }
       @media (max-width: $layout-breakpoint-small) {

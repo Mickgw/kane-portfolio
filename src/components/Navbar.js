@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
+//Logo imports
+import { ReactComponent as Logo } from "../assets/logo/FINALFINALFINAL.svg";
+import "../fonts/AllisonScript/Allison_Script.otf";
+import "../fonts/ThreeSignature/Three Signature.otf";
+
 import NavbarMenu from "./NavbarMenu";
 
 const Navbar = () => {
@@ -10,7 +15,7 @@ const Navbar = () => {
   const [disabled, setDisabled] = useState(false);
   const [state, setState] = useState({
     initial: false,
-    clicked: null
+    clicked: null,
   });
 
   //Listening for page changes.
@@ -26,19 +31,19 @@ const Navbar = () => {
       console.log(1);
       setState({
         initial: null,
-        clicked: true
+        clicked: true,
       });
     } else if (state.clicked === true) {
       console.log(2);
       body.classList.remove("disable-scroll");
       setState({
-        clicked: !state.clicked
+        clicked: !state.clicked,
       });
     } else if (state.clicked === false) {
       console.log(3);
       body.classList.add("disable-scroll");
       setState({
-        clicked: !state.clicked
+        clicked: !state.clicked,
       });
     }
   };
@@ -77,15 +82,7 @@ const Navbar = () => {
         <div className="navbar-inner">
           <div className="logo">
             <Link to="/">
-              <h1
-                className={
-                  state.clicked
-                    ? "placeholder-logo menu-open"
-                    : "placeholder-logo"
-                }
-              >
-                kane
-              </h1>
+              <Logo className="svg-logo" />
             </Link>
           </div>
           <div className="menu">

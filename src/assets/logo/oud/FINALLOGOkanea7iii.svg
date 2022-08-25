@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 50px;
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-family: "Allison Script";
+      }
+
+      .cls-2 {
+        font-family: "Three Signature";
+      }
+    </style>
+  </defs>
+  <text id="Kane" class="cls-1" transform="translate(2.49 71.403) scale(2.262 2.066)">Kane</text>
+  <text id="_7iii" data-name="7iii" class="cls-2" transform="translate(96.934 64.292) scale(1.137 0.744)">7iii</text>
+</svg>

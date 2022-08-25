@@ -1,4 +1,3 @@
-import { TbArrowUpRight } from "react-icons/tb";
 import { ImArrowRight2 } from "react-icons/im";
 
 const Footer = () => {
@@ -6,30 +5,8 @@ const Footer = () => {
     <div id="footer" className="footer">
       <div className="container">
         <div className="top-footer-row">
-          <div className="footer-socials">
-            <ul className="footer-socials-list">
-              <div className="footer-socials-header">Socials</div>
-              <li className="footer-social-link">
-                <a href="/">Instagram</a>
-                <TbArrowUpRight className="footer-social-link-arrow" />
-              </li>
-              <li className="footer-social-link">
-                <a href="/">Youtube</a>
-                <TbArrowUpRight className="footer-social-link-arrow" />
-              </li>
-              <li className="footer-social-link">
-                <a href="/">LinkedIn</a>
-                <TbArrowUpRight className="footer-social-link-arrow" />
-              </li>
-              <li className="footer-social-link">
-                <a href="/">Unsplash</a>
-                <TbArrowUpRight className="footer-social-link-arrow" />
-              </li>
-            </ul>
-          </div>
           <div className="footer-email">
             <div className="email-header">
-              <div className="footer-email-header">Contact</div>
               <div className="interested-question">
                 Interested in what I can do for you?
               </div>
@@ -40,31 +17,64 @@ const Footer = () => {
                 </a>
               </h2>
               <h2 className="email-header-link insta">
-                <a href="https://www.instagram.com/kj.026/">
+                <a
+                  href="https://www.instagram.com/kj.026/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Direct message me
                 </a>
               </h2>
             </div>
           </div>
+          <div className="footer-socials-responsive">
+            <ul className="footer-socials-responsive-list">
+              <li className="footer-socials-responsive-container">
+                <a href="/" className="footer-socials-responsive-link">
+                  Instagram
+                </a>
+              </li>
+              <li className="footer-socials-responsive-container">
+                <a href="/" className="footer-socials-responsive-link">
+                  Youtube
+                </a>
+              </li>
+              <li className="footer-socials-responsive-container">
+                <a href="/" className="footer-socials-responsive-link">
+                  Unsplash
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="bottom-footer-row">
           <div className="footer-bottom-container">
-            <div className="footer-bottom-left">*LOGO*</div>
-            <div className="footer-bottom-right">
+            <div className="footer-bottom-left">
               <div className="footer-copyright">
-                © {new Date().getFullYear()}
+                © {new Date().getFullYear()} Kane Jansen
               </div>
               <div className="made-by">
-                Created by{" "}
+                Site by{" "}
                 <a
                   href="https://www.mickwaanders.dev"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  © Mick Waanders
+                  Mick Waanders
                 </a>
               </div>
+            </div>
+            <div className="footer-bottom-right">
+              <a href="/" className="footer-bottom-socials-links">
+                Instagram<em className="comma">,</em>
+              </a>
+              <a href="/" className="footer-bottom-socials-links">
+                Youtube<em className="comma">,</em>
+              </a>
+              <a href="/" className="footer-bottom-socials-links">
+                Unsplash
+              </a>
             </div>
           </div>
         </div>
