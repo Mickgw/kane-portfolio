@@ -30,17 +30,32 @@ const Footer = () => {
           <div className="footer-socials-responsive">
             <ul className="footer-socials-responsive-list">
               <li className="footer-socials-responsive-container">
-                <a href="/" className="footer-socials-responsive-link">
+                <a
+                  href="https://www.instagram.com/kj.026/"
+                  className="footer-socials-responsive-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
                 </a>
               </li>
               <li className="footer-socials-responsive-container">
-                <a href="/" className="footer-socials-responsive-link">
+                <a
+                  href="https://www.youtube.com/channel/UCS1PHPWlS-4NteB-9XNebWQ/featured"
+                  className="footer-socials-responsive-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Youtube
                 </a>
               </li>
               <li className="footer-socials-responsive-container">
-                <a href="/" className="footer-socials-responsive-link">
+                <a
+                  href="/"
+                  className="footer-socials-responsive-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Unsplash
                 </a>
               </li>
