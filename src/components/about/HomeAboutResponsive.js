@@ -4,7 +4,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 // Images
 import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
-import { Fade } from "react-scroll-motion";
+
 
 const HomeAboutResponsive = () => {
   return (

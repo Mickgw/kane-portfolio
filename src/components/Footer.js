@@ -1,4 +1,5 @@
 import { ImArrowRight2 } from "react-icons/im";
+import { ReactComponent as Logo } from "../assets/logo/FINALFINALFINAL.svg";
 
 const Footer = () => {
   return (
@@ -68,6 +69,9 @@ const Footer = () => {
             <div className="footer-bottom-left">
               <div className="footer-copyright">
                 © {new Date().getFullYear()} Kane Jansen
+              </div>
+              <div className="footer-copyright-version-two">
+                © {new Date().getFullYear()}
               </div>
               <div className="made-by">
                 Site by{" "}

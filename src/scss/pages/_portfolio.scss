@@ -14,9 +14,10 @@
                 background: transparent;
                 cursor: pointer !important;
                 font-weight: 500;
-                color: $black;
+                color: $text-color;
                 font-family: inherit;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+                transition: .3s ease-in-out;
 
                 &::first-letter {
                     text-transform: uppercase;
@@ -27,14 +28,13 @@
                 }
 
                 &.active {
-                    font-weight: 700;
+                    color: $black;
                 }
             }
 
             .tag-divider {
                 color: $black;
                 font-size: 1.5rem;
-
             }
         }
         .gallery {
