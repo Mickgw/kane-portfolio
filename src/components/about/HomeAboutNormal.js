@@ -11,7 +11,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutNormal = () => {
-  const delayChildrenDuration = 0.1;
+  const delayChildrenDuration = .1;
 
   useEffect(() => {
     gsap
@@ -113,8 +113,8 @@ const HomeAboutNormal = () => {
                   My hobbies take up quite a bit of free time.
                 </p>
                 <p className="hero-content-paragraph" id="paragraph">
-                  Besides my hobbies, I also try to expand my portfolio.
-                  Every opportunity I get I will try to make the most awesome photo's I can
+                  Besides my hobbies, I am also busy with expanding my portfolio.
+                  Every opportunity I get I will try to make the most awesome photo's I can.
                 </p>
               </div>
 

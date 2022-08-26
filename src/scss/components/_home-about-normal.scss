@@ -56,7 +56,7 @@ $layout-breakpoint-home-about: 1150px;
                             margin: 0;
                             line-height: 1.4;
                             overflow: hidden;
-                            letter-spacing: 3px;
+                            letter-spacing: 0px;
 
                             @media (max-width: $layout-breakpoint-medium) {
                                 font-size: 2.8rem;
@@ -72,9 +72,9 @@ $layout-breakpoint-home-about: 1150px;
                     }
 
                     .paragraphs {
-                        padding-block: 2.5em;
+                        padding-block: 7em;
                         .hero-content-paragraph {
-                            max-width: 35ch;
+                            max-width: 50ch;
                             padding-block: 0.6em;
                             font-size: 2rem;
                             line-height: 30px;
@@ -117,6 +117,9 @@ $layout-breakpoint-home-about: 1150px;
                                     font-size: 1.7rem;
                                     font-family: inherit;
                                     text-decoration: none;
+
+                                    padding-bottom: 10px;
+                                    border-bottom: 1px solid $black;
                                 }
                             }
                         }

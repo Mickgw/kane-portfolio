@@ -25,7 +25,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image"}
-              - {label: "Image category", name: "tag", widget: "select", options: ["car", "nature", "architecture", "people"], hint: "Choose in what category your chosen image needs to be"}
+              - {label: "Image category", name: "tag", widget: "select", options: ["cars", "nature", "architecture", "people"], hint: "Choose in what category your chosen image needs to be"}
 
   # Photo albums
   - label: "Photo album"

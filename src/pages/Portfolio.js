@@ -77,8 +77,8 @@ const Portfolio = () => {
               />
               <em className="tag-divider">,</em>
               <TagButton
-                name="car"
-                tagActive={tag === "car" ? true : false}
+                name="cars"
+                tagActive={tag === "cars" ? true : false}
                 handleSetTag={setTag}
               />
               <em className="tag-divider">,</em>
