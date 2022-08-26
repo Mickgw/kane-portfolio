@@ -75,21 +75,25 @@ const Portfolio = () => {
                 tagActive={tag === "all" ? true : false}
                 handleSetTag={setTag}
               />
+              <em className="tag-divider">,</em>
               <TagButton
                 name="car"
                 tagActive={tag === "car" ? true : false}
                 handleSetTag={setTag}
               />
+              <em className="tag-divider">,</em>
               <TagButton
                 name="nature"
                 tagActive={tag === "nature" ? true : false}
                 handleSetTag={setTag}
               />
+              <em className="tag-divider">,</em>
               <TagButton
                 name="architecture"
                 tagActive={tag === "architecture" ? true : false}
                 handleSetTag={setTag}
               />
+              <em className="tag-divider">,</em>
               <TagButton
                 name="people"
                 tagActive={tag === "people" ? true : false}

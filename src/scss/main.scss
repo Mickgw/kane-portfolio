@@ -30,7 +30,7 @@ body {
   background-color: $background;
   min-height: 100% !important;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   cursor: auto !important;

@@ -8,26 +8,33 @@
             justify-content: center;
             padding-block: 4em;
 
+
             .tag-button {
                 border: none;
                 background: transparent;
-                cursor: pointer;
-                letter-spacing: 1.5px;
-                margin-inline: 1.5em;
-                font-size: 1.3rem;
+                cursor: pointer !important;
+                margin-inline: .3rem;
                 font-weight: 500;
-                color: $text-color;
+                color: $black;
                 font-family: inherit;
-                transition: 0.3s ease-in-out;
-                text-transform: uppercase;
+                font-size: 1.5rem;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
 
                 &:hover {
                     color: $black;
                 }
 
                 &.active {
-                    color: $black;
+                    font-weight: 700;
                 }
+            }
+
+            .tag-divider {
+                display: none;
+
             }
         }
         .gallery {
@@ -35,6 +42,14 @@
             columns: 3;
             column-gap: 2rem;
             width: 100%;
+
+            @media (max-width: $layout-breakpoint-small) {
+                columns: 2;
+            }
+
+            @media (max-width: $layout-breakpoint-xsmall) {
+                columns: 1;
+            }
 
             .image {
                 width: 100%;

@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
+//Font for logo
+@font-face {
+  font-family: "Allison Script";
+  src: local("Allison Script"), url("../../fonts/AllisonScript/Allison_Script.otf") format("truetype");
+}
+
+//Font for logo
+@font-face {
+  font-family: "Three Signature";
+  src: local("Three Signature"), url("../../fonts/ThreeSignature/Three\ Signature.otf") format("truetype");
+}
+
 html {
   font-size: 62.5%;
   line-height: 1.25;

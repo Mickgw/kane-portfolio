@@ -1,16 +1,6 @@
 $menu-button-bar-height: 1px;
 $desktop-menu-button-bar-height: 2px;
 
-@font-face {
-  font-family: "Allison Script";
-  src: local("Allison Script"), url("../../fonts/AllisonScript/Allison_Script.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Three Signature";
-  src: local("Three Signature"), url("../../fonts/ThreeSignature/Three\ Signature.otf") format("truetype");
-}
-
 .navbar {
   pointer-events: none;
   position: fixed;
@@ -22,8 +12,8 @@ $desktop-menu-button-bar-height: 2px;
   mix-blend-mode: difference;
 
   //Disables blend mode so menu can get black
-  @media (max-width: $layout-breakpoint-xsmall) {
-    padding-top: $wrapper-value-breakpoint-small;
+  @media (max-width: $layout-breakpoint-small) {
+    padding-top: 3vh;
     height: auto;
   }
 
@@ -46,6 +36,7 @@ $desktop-menu-button-bar-height: 2px;
 
     @media (max-width: $layout-breakpoint-small) {
       margin-inline: $wrapper-value-breakpoint-small;
+      justify-content: right;
     }
 
     @media (max-width: $layout-breakpoint-medium) {
@@ -61,7 +52,7 @@ $desktop-menu-button-bar-height: 2px;
       }
 
       @media (max-width: $layout-breakpoint-small) {
-        visibility: hidden;
+        display: none;
       }
     }
   }

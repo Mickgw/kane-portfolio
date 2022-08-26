@@ -28,19 +28,16 @@ const Navbar = () => {
   const handleMenu = () => {
     disableMenu();
     if (state.initial === false) {
-      console.log(1);
       setState({
         initial: null,
         clicked: true,
       });
     } else if (state.clicked === true) {
-      console.log(2);
       body.classList.remove("disable-scroll");
       setState({
         clicked: !state.clicked,
       });
     } else if (state.clicked === false) {
-      console.log(3);
       body.classList.add("disable-scroll");
       setState({
         clicked: !state.clicked,

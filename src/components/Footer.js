@@ -1,4 +1,5 @@
 import { ImArrowRight2 } from "react-icons/im";
+import { ReactComponent as Logo } from "../assets/logo/FINALFINALFINAL.svg";
 
 const Footer = () => {
   return (
@@ -76,7 +77,7 @@ const Footer = () => {
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  Mick Waanders
+                  © Mick Waanders
                 </a>
               </div>
             </div>
