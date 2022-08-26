@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Parallax } from "react-parallax";
 
 // Images
 import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
@@ -25,14 +26,13 @@ const HomeAboutNormal = () => {
       .to("#home-about", { autoAlpha: 1, duration: 0 })
       .fromTo(
         "#potrait-container",
-        { opacity: 0, y: 100 },
+        { opacity: 0, y: 200 },
         {
           opacity: 1,
           y: 0,
           duration: 1.5,
         }
       )
-      .fromTo("#image", { scale: 1.8 }, { scale: 1, duration: 2, delay: -2 })
       .fromTo(
         "#header-content-line",
         { y: 100 },
@@ -40,8 +40,8 @@ const HomeAboutNormal = () => {
           y: 0,
           duration: 0.5,
           stagger: delayChildrenDuration,
-          delay: 0,
-        }
+        },
+        "-=.5"
       )
       .fromTo(
         "#paragraph",
@@ -72,11 +72,11 @@ const HomeAboutNormal = () => {
         <div className="home-about-inner">
           <div className="home-about-portrait">
             <div className="potrait-container" id="potrait-container">
-              <img
-                id="image"
-                className="home-about-portrait"
-                src={Portrait}
-                alt="portrait2"
+              <Parallax
+                bgImage={Portrait}
+                bgImageAlt="portrait"
+                strength={150}
+                className="parallax-bg"
               />
             </div>
           </div>
@@ -117,7 +117,7 @@ const HomeAboutNormal = () => {
                   portfolio. Every opportunity I get I will try to make the most
                   awesome photo's I can. Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua do eiusmod tempor incididunt. 
+                  dolore magna aliqua do eiusmod tempor incididunt.
                 </p>
               </div>
 

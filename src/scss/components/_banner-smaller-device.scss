@@ -1,0 +1,10 @@
+.banner-smaller-device {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+
+    @media (max-width: $layout-breakpoint-small) {
+        display: block;
+    }
+}
+ 

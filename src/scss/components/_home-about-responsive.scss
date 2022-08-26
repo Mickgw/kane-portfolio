@@ -14,31 +14,42 @@
             grid-template-columns: 100%;
             width: 100%;
 
-            .home-about-responsive-portrait {
-                .header-above-portrait {
-                    h1 {
-                        position: relative;
-                        font-weight: 500;
+            .header-above-portrait {
+                h1 {
+                    position: relative;
+                    font-weight: 500;
 
-                        .home-about-responsive-content-line {
-                            line-height: 1.4;
-                            overflow: hidden;
+                    .home-about-responsive-content-line {
+                        line-height: 1.4;
+                        overflow: hidden;
 
-                            .home-about-responsive-content-line-inner {
-                                color: $black;
-                                font-weight: 700;
-                                font-size: calc(clamp(5.5rem, 8vw, 9rem) * 0.875);
-                            }
+                        .home-about-responsive-content-line-inner {
+                            color: $black;
+                            font-weight: 700;
+                            font-size: calc(clamp(5.5rem, 8vw, 9rem) * 0.875);
                         }
                     }
                 }
+            }
+
+            .home-about-responsive-portrait {
+                width: 100%;
+                height: 100%;
+                margin-block: 2vh;
+
 
                 .responsive-potrait-container {
-                    overflow: hidden;
-                    .home-about-responsive-portrait {
+                    width: 100%;
+                    height: 100%;
+
+                    .parallax-bg {
                         width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                        height: 100vh;
+
+                        @media (max-width: $layout-breakpoint-xsmall) {
+                            height: 500px;
+
+                        }
                     }
                 }
             }
@@ -55,7 +66,6 @@
                     vertical-align: middle;
 
                     .home-about-responsive-paragraphs {
-                        margin-block: 2vh;
                         .home-about-responsive-paragraph {
                             line-height: 1.8;
                             color: $black;
@@ -88,43 +98,6 @@
                             }
                         }
                     }
-
-                    // .home-about-responsive-buttons {
-                    //     padding-top: 2em;
-                    //     display: block;
-
-                    //     .home-about-divider {
-                    //         color: $black;
-                    //         font-size: 1.5rem;
-                    //         padding-inline: 2rem;
-                    //         font-weight: 600;
-                    //     }
-
-                    //     .home-about-responsive-button {
-                    //         .page-link {
-                    //             text-decoration: none;
-                    //             .home-about-responsive-link {
-                    //                 width: 100%;
-                    //                 align-items: center;
-                    //                 justify-content: space-between;
-                    //                 position: relative;
-                    //                 background-color: transparent;
-                    //                 transition: 0.5s ease-in-out;
-                    //                 cursor: pointer !important;
-                    //                 border: none;
-
-                    //                 color: $black;
-                    //                 font-weight: 600;
-                    //                 font-size: 1.7rem;
-                    //                 font-family: inherit;
-                    //                 text-decoration: none;
-
-                    //                 padding-bottom: 10px;
-                    //                 border-bottom: 1px solid $black;
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
             }
         }

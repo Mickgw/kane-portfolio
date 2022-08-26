@@ -6,6 +6,7 @@ import PageLoader from "../components/loader/PageLoader";
 import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
 import Banner from "../components/Banner";
+import BannerSmallerDevice from "../components/BannerSmallerDevice";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ const Home = () => {
       ) : (
         <div id="main-container">
           <Banner />
+          <BannerSmallerDevice />
           <HomeAbout />
           <PhotoAlbums />
         </div>

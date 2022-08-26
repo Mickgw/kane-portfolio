@@ -1,51 +1,51 @@
 import { Link } from "react-router-dom";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 import { VscArrowRight } from "react-icons/vsc";
+import { Parallax } from "react-parallax";
 
 // Images
 import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
-
 
 const HomeAboutResponsive = () => {
   return (
     <div className="home-about-responsive">
       <div className="home-about-responsive-container">
         <div className="home-about-responsive-inner">
+          <div className="header-above-portrait">
+            <h1>
+              <FadeInWhenVisible>
+                <div className="home-about-responsive-content-line">
+                  <div className="home-about-responsive-content-line-inner">
+                    Music
+                  </div>
+                </div>
+              </FadeInWhenVisible>
+
+              <FadeInWhenVisible>
+                <div className="home-about-responsive-content-line">
+                  <div className="home-about-responsive-content-line-inner">
+                    Fitness
+                  </div>
+                </div>
+              </FadeInWhenVisible>
+
+              <FadeInWhenVisible>
+                <div className="home-about-responsive-content-line">
+                  <div className="home-about-responsive-content-line-inner">
+                    Gaming
+                  </div>
+                </div>
+              </FadeInWhenVisible>
+            </h1>
+          </div>
           <div className="home-about-responsive-portrait">
-            <div className="header-above-portrait">
-              <h1>
-                <FadeInWhenVisible>
-                  <div className="home-about-responsive-content-line">
-                    <div className="home-about-responsive-content-line-inner">
-                      Music
-                    </div>
-                  </div>
-                </FadeInWhenVisible>
-
-                <FadeInWhenVisible>
-                  <div className="home-about-responsive-content-line">
-                    <div className="home-about-responsive-content-line-inner">
-                      Fitness
-                    </div>
-                  </div>
-                </FadeInWhenVisible>
-
-                <FadeInWhenVisible>
-                  <div className="home-about-responsive-content-line">
-                    <div className="home-about-responsive-content-line-inner">
-                      Gaming
-                    </div>
-                  </div>
-                </FadeInWhenVisible>
-              </h1>
-            </div>
-
             <FadeInWhenVisible>
               <div className="responsive-potrait-container">
-                <img
-                  className="home-about-responsive-portrait"
-                  src={Portrait}
-                  alt="portrait"
+                <Parallax
+                  bgImage={Portrait}
+                  bgImageAlt="portrait"
+                  strength={150}
+                  className="parallax-bg"
                 />
               </div>
             </FadeInWhenVisible>
