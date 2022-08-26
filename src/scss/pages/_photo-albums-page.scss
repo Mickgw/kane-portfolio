@@ -49,8 +49,9 @@
                     .album-description-paragraph {
                         padding-bottom: 2em;
                         line-height: 1.5;
-                        font-size: 1.7em;
+                        font-size: 1.8em;
                         color: $text-color;
+                        word-spacing: -1px;
 
                         @media (max-width: $layout-breakpoint-small) {
                             padding-top: 4em;
