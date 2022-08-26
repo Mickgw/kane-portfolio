@@ -1,155 +1,112 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
+import { VscArrowRight } from "react-icons/vsc";
 
 // Images
-import Portrait1 from "../../assets/portraits/portrait-2.jpg";
-import Portrait2 from "../../assets/portraits/portrait-1.jpg";
-
-// GSAP
-import { ScrollTrigger } from "gsap/all";
-import { gsap } from "gsap";
-gsap.registerPlugin(ScrollTrigger);
+import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
+import { Fade } from "react-scroll-motion";
 
 const HomeAboutResponsive = () => {
-  const phoneActive = window.matchMedia("(max-width: 480px)");
-
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#home-about-responsive",
-          start: "top +=800px",
-          once: true,
-        },
-      })
-      .to("#home-about-responsive", { autoAlpha: 1, duration: 0 })
-      .fromTo(
-        "#image-container-left-responsive",
-        {
-          x: phoneActive.matches ? -700 : 0,
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 2,
-          delay: -1,
-        }
-      )
-      .fromTo(
-        "#image-container-right-responsive",
-        { x: phoneActive.matches ? 700 : 0, opacity: 0 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 2,
-          delay: -1.5,
-        }
-      )
-      .fromTo(
-        "#home-about-image-responsive",
-        { scale: 1.6, skewY: 20 },
-        { scale: 1, skewY: 0, duration: 2, delay: -2 }
-      );
-  });
-
   return (
-    <div className="home-about-responsive" id="home-about-responsive">
-      <div className="container">
-        <div className="home-about-inner">
-          <div className="home-about-images">
-            <div className="home-about-images-container">
-              <div
-                className="image-container left responsive"
-                id="image-container-left-responsive"
-              >
-                <img
-                  className="image"
-                  id="home-about-image-responsive"
-                  src={Portrait2}
-                  alt="portrait2"
-                />
-              </div>
-              <div
-                className="image-container right responsive"
-                id="image-container-right-responsive"
-              >
-                <img
-                  className="image"
-                  id="home-about-image-responsive"
-                  src={Portrait1}
-                  alt="portrait1"
-                />
-              </div>
+    <div className="home-about-responsive">
+      <div className="home-about-responsive-container">
+        <div className="home-about-responsive-inner">
+          <div className="home-about-responsive-portrait">
+            <div className="header-above-portrait">
+              <h1>
+                <FadeInWhenVisible>
+                  <div className="home-about-responsive-content-line">
+                    <div className="home-about-responsive-content-line-inner">
+                      Music
+                    </div>
+                  </div>
+                </FadeInWhenVisible>
+
+                <FadeInWhenVisible>
+                  <div className="home-about-responsive-content-line">
+                    <div className="home-about-responsive-content-line-inner">
+                      Fitness
+                    </div>
+                  </div>
+                </FadeInWhenVisible>
+
+                <FadeInWhenVisible>
+                  <div className="home-about-responsive-content-line">
+                    <div className="home-about-responsive-content-line-inner">
+                      Gaming
+                    </div>
+                  </div>
+                </FadeInWhenVisible>
+              </h1>
             </div>
-          </div>
-          <div
-            className="home-about-content"
-            id="home-about-content-responsive"
-          >
-            <div className="home-about-content-inner">
-              <FadeInWhenVisible>
-                <h1>
-                  <div className="home-about-content-line">
-                    <div className="home-about-content-line-inner">
-                      My goal is bla bla bla bla
-                    </div>
-                  </div>
-                  <div className="home-about-content-line">
-                    <div className="home-about-content-line-inner">
-                      to bla bla bla people bla
-                    </div>
-                  </div>
-                  <div className="home-about-content-line">
-                    <div className="home-about-content-line-inner">
-                      and create bla bla bla bla
-                    </div>
-                  </div>
-                </h1>
-              </FadeInWhenVisible>
 
-              <div className="paragraphs-responsive">
+            <FadeInWhenVisible>
+              <div className="responsive-potrait-container">
+                <img
+                  className="home-about-responsive-portrait"
+                  src={Portrait}
+                  alt="portrait"
+                />
+              </div>
+            </FadeInWhenVisible>
+          </div>
+          <div className="home-about-responsive-content">
+            <div className="home-about-responsive-content-inner">
+              <div className="home-about-responsive-paragraphs">
                 <FadeInWhenVisible>
-                  <p
-                    className="hero-content-paragraph-responsive"
-                    id="paragraph-responsive"
-                  >
-                    Welcome to my website. Sed ut perspiciatis unde omnis iste
-                    natus error sit voluptatem accusantium doloremque
-                    laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi.
+                  <p className="home-about-responsive-paragraph">
+                    My hobbies take up quite a bit of free time.
                   </p>
                 </FadeInWhenVisible>
 
                 <FadeInWhenVisible>
-                  <p
-                    className="hero-content-paragraph-responsive"
-                    id="paragraph"
-                  >
-                    Welcome to my website. Sed ut perspiciatis unde omnis iste
-                    natus error sit voluptatem accusantium doloremque
-                    laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi.
+                  <p className="home-about-responsive-paragraph">
+                    Besides my hobbies, I am also busy with expanding my
+                    portfolio. Every opportunity I get I will try to make the
+                    most awesome photo's I can. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua do eiusmod
+                    tempor incididunt.
                   </p>
                 </FadeInWhenVisible>
               </div>
 
-              <FadeInWhenVisible>
-                <div className="home-about-buttons">
-                  <div className="home-about-button" id="button">
+              <ul className="button-list">
+                <FadeInWhenVisible>
+                  <li className="page-link-container">
                     <Link to="/about" className="page-link">
-                      <div className="read-about-link">Read About me</div>
+                      <div className="link-text">More About me</div>
+                      <VscArrowRight className="link-icon" />
                     </Link>
-                  </div>
-                  <em className="home-about-divider">or</em>
-                  <div className="home-about-button" id="button">
+                  </li>
+                </FadeInWhenVisible>
+
+                <FadeInWhenVisible>
+                  <li className="page-link-container">
                     <Link to="/portfolio" className="page-link">
-                      <div className="read-about-link">View Portfolio</div>
+                      <div className="link-text">View portfolio</div>
+                      <VscArrowRight className="link-icon" />
                     </Link>
-                  </div>
+                  </li>
+                </FadeInWhenVisible>
+              </ul>
+              {/* <div className="home-about-responsive-buttons">
+                <div className="home-about-responsive-button">
+                  <Link to="/about" className="page-link">
+                    <div className="home-about-responsive-link">
+                      More About me
+                    </div>
+                  </Link>
                 </div>
-              </FadeInWhenVisible>
+                <div className="home-about-responsive-button" id="button">
+                  <Link to="/portfolio" className="page-link">
+                    <div className="home-about-responsive-link">
+                      View Portfolio
+                      <TbArrowUpRight />
+                    </div>
+                  </Link>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -13,7 +13,6 @@
                 border: none;
                 background: transparent;
                 cursor: pointer !important;
-                margin-inline: .3rem;
                 font-weight: 500;
                 color: $black;
                 font-family: inherit;
@@ -33,7 +32,8 @@
             }
 
             .tag-divider {
-                display: none;
+                color: $black;
+                font-size: 1.5rem;
 
             }
         }

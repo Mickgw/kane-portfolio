@@ -1,152 +1,130 @@
-$layout-breakpoint-home-about: 1150px;
-
 .home-about-responsive {
-    visibility: hidden;
-    display: none;
+    display: block;
     width: 100%;
-    margin-block: 30vh;
-
-    @media (max-width: $layout-breakpoint-small) {
-        margin-block: 20vh !important;
-    }
-
-    @media (max-width: $layout-breakpoint-xsmall) {
-        margin-block: 10vh !important;
-    }
+    margin-block: 40vh;
+    display: none;
 
     @media (max-width: $layout-breakpoint-small) {
         display: block;
     }
 
-    .container {
-        margin: 0 auto;
-
-        .home-about-inner {
+    .home-about-responsive-container {
+        .home-about-responsive-inner {
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-row-gap: 16vh;
+            grid-template-columns: 100%;
             width: 100%;
 
-            @media (max-width: $layout-breakpoint-xsmall) {
-                grid-row-gap: 10vh;
+            .home-about-responsive-portrait {
+                .header-above-portrait {
+                    h1 {
+                        position: relative;
+                        font-weight: 500;
+
+                        .home-about-responsive-content-line {
+                            line-height: 1.4;
+                            overflow: hidden;
+
+                            .home-about-responsive-content-line-inner {
+                                color: $black;
+                                font-weight: 700;
+                                font-size: calc(clamp(5.5rem, 8vw, 9rem) * 0.875);
+                            }
+                        }
+                    }
+                }
+
+                .responsive-potrait-container {
+                    overflow: hidden;
+                    .home-about-responsive-portrait {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
 
-            .home-about-content {
-                margin-top: 10vh;
+            .home-about-responsive-content {
                 display: table;
                 width: 100%;
                 position: relative;
-                width: 100%;
 
-                .home-about-content-inner {
+                .home-about-responsive-content-inner {
                     width: 100%;
                     color: #323232;
                     display: table-cell;
                     vertical-align: middle;
 
-                    h1 {
-                        position: relative;
-                        font-weight: 500;
-                        margin-bottom: 24px;
-
-                        .home-about-content-line {
-                            font-size: 2.5rem;
-                            margin: 0;
-                            line-height: 1.4;
-                            overflow: hidden;
+                    .home-about-responsive-paragraphs {
+                        margin-block: 2vh;
+                        .home-about-responsive-paragraph {
+                            line-height: 1.8;
                             color: $black;
-
-                            .home-about-content-line-inner {
-          
-                            }
+                            padding-block: 2rem;
+                            font-size: calc(clamp(1.6rem, 8vw, 2rem) * 0.875);
                         }
                     }
 
-                    .paragraphs-responsive {
-                        margin-block: 1.5rem;
-                        .hero-content-paragraph-responsive {
-                            max-width: 50ch;
-                            font-size: 1.43rem;
-                            line-height: 30px;
-                            font-weight: 300;
-                            padding-block: 1rem;
-
-                            @media (max-width: $layout-breakpoint-xsmall) {
-                                padding-right: 0px;
-                            }
-                        }
-                    }
-
-                    .home-about-buttons {
-                        padding-top: 2em;
-                        display: flex;
-
-                        .home-about-divider {
-                            margin-block: auto;
-                            font-size: 1.4rem;
-                            padding-inline: 2rem;
-                        }
-
-                        .home-about-button {
+                    .button-list {
+                        margin-top: 5vh;
+                        .page-link-container {
+                            margin-block: 2vh;
                             .page-link {
+                                display: flex;
                                 text-decoration: none;
-                                .read-about-link {
-                                    position: relative;
-                                    background-color: transparent;
-                                    transition: 0.5s ease-in-out;
-                                    cursor: pointer !important;
-                                    border: none;
+                                border-bottom: 1px solid $black;
+                                padding-block: 0.8rem;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 1.8rem;
+                                color: $black;
 
-                                    color: $black;
+                                .link-text {
                                     font-weight: 600;
-                                    font-size: 1.5rem;
-                                    font-family: inherit;
-                                    text-decoration: none;
+                                }
+
+                                .link-icon {
+                                    font-size: 2rem;
                                 }
                             }
                         }
                     }
-                }
-            }
-            .home-about-images {
-                .home-about-images-container {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-column-gap: 2vw;
-                    width: 100%;
-                    position: relative;
-                    .image-container {
-                        width: 100%;
-                        height: 100%;
-                        overflow: hidden;
 
-                        &.left {
-                            position: relative;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
+                    // .home-about-responsive-buttons {
+                    //     padding-top: 2em;
+                    //     display: block;
 
-                            @media (max-width: $layout-breakpoint-xsmall) {
-                                width: 110%;
-                            }
-                        }
+                    //     .home-about-divider {
+                    //         color: $black;
+                    //         font-size: 1.5rem;
+                    //         padding-inline: 2rem;
+                    //         font-weight: 600;
+                    //     }
 
-                        &.right {
-                            position: relative;
-                            top: 40%;
-                            right: 0;
-                            width: 100%;
+                    //     .home-about-responsive-button {
+                    //         .page-link {
+                    //             text-decoration: none;
+                    //             .home-about-responsive-link {
+                    //                 width: 100%;
+                    //                 align-items: center;
+                    //                 justify-content: space-between;
+                    //                 position: relative;
+                    //                 background-color: transparent;
+                    //                 transition: 0.5s ease-in-out;
+                    //                 cursor: pointer !important;
+                    //                 border: none;
 
-                            @media (max-width: $layout-breakpoint-xsmall) {
-                                width: 110%;
-                                right: 10%;
-                            }
-                        }
+                    //                 color: $black;
+                    //                 font-weight: 600;
+                    //                 font-size: 1.7rem;
+                    //                 font-family: inherit;
+                    //                 text-decoration: none;
 
-                        .image {
-                            width: 100%;
-                        }
-                    }
+                    //                 padding-bottom: 10px;
+                    //                 border-bottom: 1px solid $black;
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }

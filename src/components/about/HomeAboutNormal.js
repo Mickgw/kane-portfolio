@@ -11,7 +11,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeAboutNormal = () => {
-  const delayChildrenDuration = .1;
+  const delayChildrenDuration = 0.1;
 
   useEffect(() => {
     gsap
@@ -68,7 +68,7 @@ const HomeAboutNormal = () => {
 
   return (
     <div className="home-about-normal" id="home-about">
-      <div className="container">
+      <div className="home-about-normal-container">
         <div className="home-about-inner">
           <div className="home-about-portrait">
             <div className="potrait-container" id="potrait-container">
@@ -113,15 +113,18 @@ const HomeAboutNormal = () => {
                   My hobbies take up quite a bit of free time.
                 </p>
                 <p className="hero-content-paragraph" id="paragraph">
-                  Besides my hobbies, I am also busy with expanding my portfolio.
-                  Every opportunity I get I will try to make the most awesome photo's I can.
+                  Besides my hobbies, I am also busy with expanding my
+                  portfolio. Every opportunity I get I will try to make the most
+                  awesome photo's I can. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua do eiusmod tempor incididunt. 
                 </p>
               </div>
 
               <div className="home-about-buttons">
                 <div className="home-about-button" id="button">
                   <Link to="/about" className="page-link">
-                    <div className="read-about-link">More About me</div>
+                    <div className="home-about-link">More About me</div>
                   </Link>
                 </div>
                 <em className="home-about-divider" id="button">
@@ -129,7 +132,7 @@ const HomeAboutNormal = () => {
                 </em>
                 <div className="home-about-button" id="button">
                   <Link to="/portfolio" className="page-link">
-                    <div className="read-about-link">View Portfolio</div>
+                    <div className="home-about-link">View Portfolio</div>
                   </Link>
                 </div>
               </div>
