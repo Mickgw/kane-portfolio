@@ -84,6 +84,29 @@
           "paragraph": "Dit is een test g "
         }
       ]
+    },
+    {
+      "id": "B1Eaf0NsH",
+      "title": "proper album",
+      "year": 2018,
+      "camera": "Sony A7.3",
+      "camera_lens": "unknown",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546588/website_banner_phone_isyyxh.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546613/website_banner_6_yakpr3.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546611/website_banner_4_xkylyg.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_5_xv92wl.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_3_ayppiu.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg"
+      ],
+      "album_description_paragraphs": [
+        {
+          "paragraph": "I did this shoot at the Nurburgring (Nordschleife). It was a beautiful sunny day and we went to some amazing spots. These photo's are the result of that day. Unfortunately I didnt have the right lens with me"
+        },
+        {
+          "paragraph": "I did this shoot at the Nurburgring (Nordschleife). It was a beautiful sunny day and we went to some amazing spots. These photo's are the result of that day. Unfortunately I didnt have the right lens with me"
+        }
+      ]
     }
   ]
 }
