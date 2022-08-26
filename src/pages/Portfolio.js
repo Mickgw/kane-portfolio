@@ -134,14 +134,25 @@ const Portfolio = () => {
   );
 };
 
+// const TagButton = ({ name, handleSetTag, tagActive }) => {
+//   return (
+//     <button
+//       className={`tag-button ${tagActive ? "active" : null}`}
+//       onClick={() => handleSetTag(name)}
+//     >
+//       {name}
+//     </button>
+//   );
+// };
+
 const TagButton = ({ name, handleSetTag, tagActive }) => {
   return (
-    <button
+    <div
       className={`tag-button ${tagActive ? "active" : null}`}
       onClick={() => handleSetTag(name)}
     >
       {name}
-    </button>
+    </div>
   );
 };
 

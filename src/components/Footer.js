@@ -1,5 +1,4 @@
 import { ImArrowRight2 } from "react-icons/im";
-import { ReactComponent as Logo } from "../assets/logo/FINALFINALFINAL.svg";
 
 const Footer = () => {
   return (

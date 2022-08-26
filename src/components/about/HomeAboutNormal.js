@@ -19,7 +19,7 @@ const HomeAboutNormal = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#home-about",
-          start: "top +=1200px",
+          start: "top +=900px",
           once: true,
         },
       })

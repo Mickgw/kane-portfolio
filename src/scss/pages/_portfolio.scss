@@ -1,38 +1,65 @@
 .image-gallery {
-    padding-top: $padding-top-global;
+    padding-top: 20vh;
     .container {
+        .portfolio-header {
+            font-weight: 700;
+            font-size: calc(clamp(3rem, 7vw, 5rem) * 0.875);
+        }
+
         .image-category-tags {
             display: flex;
             text-align: left;
             place-items: left;
             justify-content: left;
-            padding-block: 4em;
-
+            margin-top: 7em;
+            margin-bottom: 3em;
 
             .tag-button {
-                border: none;
-                background: transparent;
+                position: relative;
                 cursor: pointer !important;
-                font-weight: 500;
                 color: $black;
                 font-family: inherit;
                 font-size: 1.8rem;
-                transition: .3s ease-in-out;
+                transition: 0.3s ease-in-out;
+                margin-inline: 1.3rem;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 4px;
+                    background-color: $black;
+                    bottom: -7px;
+                    left: 0;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                }
 
                 &:first-child {
-                    padding-left: 0 !important;
+                    margin-left: 0 !important;
                 }
 
                 &::first-letter {
                     text-transform: uppercase;
                 }
 
-                &:hover {
-                    font-weight: 600;
-                }
-
                 &.active {
-                    font-weight: 600;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        border-radius: 4px;
+                        background-color: $black;
+                        bottom: -7px;
+                        left: 0;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -63,4 +90,3 @@
         }
     }
 }
-

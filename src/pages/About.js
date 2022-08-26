@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Parallax } from "react-parallax";
 import gsap from "gsap";
 
 //Components
