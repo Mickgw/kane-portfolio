@@ -12,16 +12,17 @@
             place-items: left;
             justify-content: left;
             margin-top: 7em;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+            cursor: pointer !important;
 
             .tag-button {
                 position: relative;
-                cursor: pointer !important;
                 color: $black;
                 font-family: inherit;
                 font-size: 1.8rem;
                 transition: 0.3s ease-in-out;
                 margin-inline: 1.3rem;
+                text-transform: capitalize;
 
                 &::before {
                     content: "";
@@ -42,10 +43,6 @@
 
                 &:first-child {
                     margin-left: 0 !important;
-                }
-
-                &::first-letter {
-                    text-transform: uppercase;
                 }
 
                 &.active {

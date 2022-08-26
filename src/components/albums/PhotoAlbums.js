@@ -2,6 +2,8 @@ import photoAlbums from "../../content/photo-albums.json";
 import { Link } from "react-router-dom";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 
+import { TbArrowUpRight } from "react-icons/tb";
+
 const PhotoAlbums = () => {
   return (
     <div className="photo-album-section" data-scroll-section>
@@ -33,8 +35,9 @@ const PhotoAlbums = () => {
                             </svg>
 
                             <div className="album-cover-dot-text-container">
-                              <span className="album-cover-dot-text">view</span>
-                              <span className="album-cover-dot-text-responsive">&#8599;</span>
+                              {/* <span className="album-cover-dot-text">view</span> */}
+                              <TbArrowUpRight className="album-cover-dot-text" />
+                              {/* <span className="album-cover-dot-text-responsive">&#8599;</span> */}
                             </div>
                           </div>
                           <div className="image-container">

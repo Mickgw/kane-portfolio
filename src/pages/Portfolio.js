@@ -147,12 +147,12 @@ const Portfolio = () => {
 
 const TagButton = ({ name, handleSetTag, tagActive }) => {
   return (
-    <div
+    <span
       className={`tag-button ${tagActive ? "active" : null}`}
       onClick={() => handleSetTag(name)}
     >
       {name}
-    </div>
+    </span>
   );
 };
 

@@ -35,7 +35,7 @@ function App() {
               ".desktop-menu-button",
               ".gallery-image",
               ".read-about-link",
-              ".tag-button"
+              ".image-category-tags"
             ]}
           />
         </div>
