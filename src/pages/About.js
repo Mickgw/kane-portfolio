@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Parallax } from "react-parallax";
 import gsap from "gsap";
 
 //Components
@@ -62,7 +63,7 @@ const About = () => {
       )
       .fromTo(
         "#big-portrait",
-        { opacity: 0, y: 100 },
+        { opacity: 0, y: 200 },
         {
           opacity: 1,
           y: 0,
@@ -132,6 +133,12 @@ const About = () => {
             </h1>
 
             <div className="big-portrait" id="big-portrait">
+              {/* <Parallax
+                bgImage={bigPortrait}
+                bgImageAlt="portrait"
+                strength={200}
+                className="parallax-bg"
+              /> */}
               <img
                 className="about-banner"
                 src={bigPortrait}

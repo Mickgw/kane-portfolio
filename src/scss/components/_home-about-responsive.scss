@@ -82,11 +82,12 @@
                                 display: flex;
                                 text-decoration: none;
                                 border-bottom: 1px solid $black;
-                                padding-block: 0.8rem;
+                                padding-block: 1.4rem;
                                 justify-content: space-between;
                                 align-items: center;
                                 font-size: 1.8rem;
                                 color: $black;
+                                cursor: pointer !important;
 
                                 .link-text {
                                     font-weight: 600;

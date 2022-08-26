@@ -69,31 +69,28 @@ const Portfolio = () => {
       ) : (
         <div className="image-gallery" id="test">
           <div className="container">
+            <div className="portfolio-header">Selected photo's</div>
             <div className="image-category-tags">
               <TagButton
                 name="all"
                 tagActive={tag === "all" ? true : false}
                 handleSetTag={setTag}
               />
-              <em className="tag-divider">,</em>
               <TagButton
                 name="cars"
                 tagActive={tag === "cars" ? true : false}
                 handleSetTag={setTag}
               />
-              <em className="tag-divider">,</em>
               <TagButton
                 name="nature"
                 tagActive={tag === "nature" ? true : false}
                 handleSetTag={setTag}
               />
-              <em className="tag-divider">,</em>
               <TagButton
                 name="architecture"
                 tagActive={tag === "architecture" ? true : false}
                 handleSetTag={setTag}
               />
-              <em className="tag-divider">,</em>
               <TagButton
                 name="people"
                 tagActive={tag === "people" ? true : false}

@@ -3,9 +3,9 @@
     .container {
         .image-category-tags {
             display: flex;
-            text-align: center;
-            place-items: center;
-            justify-content: center;
+            text-align: left;
+            place-items: left;
+            justify-content: left;
             padding-block: 4em;
 
 
@@ -14,31 +14,30 @@
                 background: transparent;
                 cursor: pointer !important;
                 font-weight: 500;
-                color: $text-color;
+                color: $black;
                 font-family: inherit;
                 font-size: 1.8rem;
                 transition: .3s ease-in-out;
+
+                &:first-child {
+                    padding-left: 0 !important;
+                }
 
                 &::first-letter {
                     text-transform: uppercase;
                 }
 
                 &:hover {
-                    color: $black;
+                    font-weight: 600;
                 }
 
                 &.active {
-                    color: $black;
+                    font-weight: 600;
                 }
-            }
-
-            .tag-divider {
-                color: $black;
-                font-size: 1.5rem;
             }
         }
         .gallery {
-            padding-block: 10vh;
+            padding-bottom: 10vh;
             columns: 3;
             column-gap: 2rem;
             width: 100%;

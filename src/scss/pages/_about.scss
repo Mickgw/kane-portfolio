@@ -31,17 +31,24 @@
             align-items: center;
             overflow: hidden;
 
-            &:hover {
-                .about-banner {
-                    transform: scale(1.2);
-                }
-            }
-
             .about-banner {
-                width: 100%; 
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
+
+            // .parallax-bg {
+            //     width: 100%;
+            //     height: 800px;
+
+            //     .react-parallax-bgimage {
+            //         color: red;
+            //     }
+
+            //     @media (max-width: $layout-breakpoint-small) {
+            //         height: 500px;
+            //     }
+            // }
         }
 
         .about-details-data {
