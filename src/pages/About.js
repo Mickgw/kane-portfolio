@@ -4,13 +4,15 @@ import gsap from "gsap";
 
 //Components
 import PageLoader from "../components/loader/PageLoader";
+import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
+// import { Parallax } from "react-parallax";
 
 //Images
 import bigPortrait from "../assets/images/images-for-about/portrait_1.jpg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 1400;
+  const timer_duration = 0;
   const delayChildrenDuration = 0.1;
 
   //Set loading to false after time
@@ -109,10 +111,26 @@ const About = () => {
             <h1>
               <div className="about-header-line">
                 <div className="header-text" id="about-header-text">
-                  Kane Jansen.
+                  Upcoming
                 </div>
               </div>
               <div className="about-header-line">
+                <div className="header-text" id="about-header-text">
+                  Photographer
+                </div>
+              </div>
+              <div className="about-header-line">
+                <div className="header-text" id="about-header-text">
+                  Cinematographer
+                </div>
+              </div>
+              <div className="about-header-line">
+                <div className="header-text" id="about-header-text">
+                  Based in Arnhem, The Netherlands
+                </div>
+              </div>
+
+              {/* <div className="about-header-line">
                 <div className="header-text" id="about-header-text">
                   I am currently a <span className="outlined">student</span>
                 </div>
@@ -128,7 +146,7 @@ const About = () => {
                   studying{" "}
                   <span className="outlined">Audio Visual Specialist</span>
                 </div>
-              </div>
+              </div> */}
             </h1>
 
             <div className="big-portrait" id="big-portrait">
@@ -147,24 +165,65 @@ const About = () => {
             </div>
 
             <div className="about-details-data">
-              <p className="about-paragraph" id="about-paragraph">
-                My expertise is art direction, animation and anything
-                interactive. I’ve had over 7 years of industry experience, from
-                working with startups, agencies and international clients from
-                concept to final deliverables.
-              </p>
-              <p className="about-paragraph" id="about-paragraph">
-                My expertise is art direction, animation and anything
-                interactive. I’ve had over 7 years of industry experience, from
-                working with startups, agencies and international clients from
-                concept to final deliverables.
-              </p>
-              <p className="about-paragraph" id="about-paragraph">
-                My expertise is art direction, animation and anything
-                interactive. I’ve had over 7 years of industry experience, from
-                working with startups, agencies and international clients from
-                concept to final deliverables.
-              </p>
+              <div className="about-details-data-grid">
+                <FadeInWhenVisible>
+                  <div className="header-container">About me</div>
+                </FadeInWhenVisible>
+
+                <div className="paragraphs-container">
+                  <FadeInWhenVisible>
+                    <p className="about-details-paragraphs">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </FadeInWhenVisible>
+
+                  <FadeInWhenVisible>
+                    <p className="about-details-paragraphs">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </FadeInWhenVisible>
+                </div>
+              </div>
+
+              <div className="services-section">
+                <div className="services-section-grid">
+                  <div className="header-container">My services</div>
+                  <div className="services-and-tools-grid">
+                    <div className="services-container">
+                      <ul className="services-list">
+                        <li className="services-column-header">Services</li>
+                        <li className="services-column-item">Photography</li>
+                        <li className="services-column-item">Cinematography</li>
+                        <li className="services-column-item">Photoshop</li>
+                        <li className="services-column-item">Video Editing</li>
+                        <li className="services-column-item">Sound design</li>
+                      </ul>
+                    </div>
+                    <div className="tools-container">
+                      <ul className="tools-list">
+                        <li className="tools-column-header">Tools</li>
+                        <li className="tools-column-item">Photography</li>
+                        <li className="tools-column-item">Cinematography</li>
+                        <li className="tools-column-item">Photoshop</li>
+                        <li className="tools-column-item">Video Editing</li>
+                        <li className="tools-column-item">Sound design</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

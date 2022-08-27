@@ -10,12 +10,14 @@ const Footer = () => {
               <div className="interested-question">
                 Interested in what I can do for you?
               </div>
+
               <h2 className="email-header-link email">
                 <a href="mailto:kanejansen@hotmail.nl">
                   Send me an email
                   <ImArrowRight2 className="email-link-icon" />
                 </a>
               </h2>
+
               <h2 className="email-header-link insta">
                 <a
                   href="https://www.instagram.com/kj.026/"
@@ -39,6 +41,7 @@ const Footer = () => {
                   Instagram
                 </a>
               </li>
+
               <li className="footer-socials-responsive-container">
                 <a
                   href="https://www.youtube.com/channel/UCS1PHPWlS-4NteB-9XNebWQ/featured"
@@ -49,6 +52,7 @@ const Footer = () => {
                   Youtube
                 </a>
               </li>
+
               <li className="footer-socials-responsive-container">
                 <a
                   href="/"

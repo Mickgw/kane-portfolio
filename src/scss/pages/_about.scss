@@ -9,9 +9,9 @@
 
             .about-header-line {
                 word-spacing: 1rem;
-                font-size: calc(clamp(3rem, 7vw, 7rem) * 0.875);
+                font-size: calc(clamp(3rem, 4vw, 8rem) * 0.875);
                 margin: 0;
-                line-height: 1.5;
+                line-height: 1.3;
                 overflow: hidden;
                 font-weight: 700;
 
@@ -52,15 +52,69 @@
         }
 
         .about-details-data {
-            width: 100%;
-            position: relative;
-            margin-inline: 2rem;
-            .about-paragraph {
-                padding-bottom: 2em;
-                color: $text-color;
-                font-size: 1.5rem;
-                word-spacing: 7px;
+            margin-block: 10vh;
+            .about-details-data-grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 40% 60%;
+
+                .paragraphs-container {
+                    .about-details-paragraphs {
+                        color: $text-color;
+                        line-height: 2;
+                        font-size: calc(clamp(1.6rem, 4vw, 2.1rem) * 0.875);
+
+                        margin-block: 2rem;
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .services-section {
+                margin-block: 40vh;
+
+                .services-section-grid {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+
+                    .services-and-tools-grid {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-column-gap: 3vw;
+
+                        .tools-container,
+                        .services-container {
+                            .tools-list,
+                            .services-list {
+                                .tools-column-header, .services-column-header {
+                                    border-bottom: 1px solid $divider-color;
+                                    color: $text-color;
+                                    font-weight: 700;
+                                    padding-block: 1rem;
+                                    font-size: calc(clamp(1.6rem, 7vw, 3.5rem) * 0.875);
+                                }
+
+                                .tools-column-item,
+                                .services-column-item {
+                                    color: $black;
+                                    padding-block: 1rem;
+                                    border-bottom: 1px solid $divider-color;
+                                    font-size: calc(clamp(1.6rem, 7vw, 2.2rem) * 0.875);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+.header-container {
+    font-size: calc(clamp(1.5rem, 7vw, 2.3rem) * 0.875);
+    font-weight: 600;
 }
