@@ -5,6 +5,7 @@ import gsap from "gsap";
 //Components
 import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
+import Accordion from "../components/Accordion";
 // import { Parallax } from "react-parallax";
 
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -19,7 +20,7 @@ const About = () => {
   const delayChildrenDuration = 0.1;
 
   //Show more button
-  const [showMore, setShowMore] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   // const [showMoreStatus, setShowMoreStatus] = useState("close");
 
   //Set loading to false after time
@@ -100,8 +101,6 @@ const About = () => {
         "-=1"
       );
   });
-
-  console.log(showMore);
 
   return (
     <AnimatePresence>
@@ -210,7 +209,24 @@ const About = () => {
                 <div className="services-section-grid">
                   <div className="header-container">My services</div>
                   <div className="services-container">
-                    <ul className="services-list">
+                    <Accordion title="Why is the sky blue?">
+                      Sunlight reaches Earth's atmosphere and is scattered in
+                      all directions by all the gases and particles in the air.
+                      Blue light is scattered more than the other colors because
+                      it travels as shorter, smaller waves. This is why we see a
+                      blue sky most of the time.
+                    </Accordion>
+                    <Accordion title="What's It Like Inside Jupiter?">
+                      It's really hot inside Jupiter! No one knows exactly how
+                      hot, but scientists think it could be about 43,000°F
+                      (24,000°C) near Jupiter's center, or core.
+                    </Accordion>
+                    <Accordion title="What Is a Black Hole?">
+                      A black hole is an area of such immense gravity that
+                      nothing -- not even light -- can escape from it.
+                    </Accordion>
+
+                    {/* <ul className="services-list">
                       <li className="services-column">
                         <div
                           className="accordion-header"
@@ -285,7 +301,7 @@ const About = () => {
                           </div>
                         </div>
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
                 </div>
               </div>
