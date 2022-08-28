@@ -95,8 +95,8 @@
                                     justify-content: space-between;
 
                                     .accordion-title {
-                                        font-weight: 700;
-                                        font-size: calc(clamp(1.6rem, 4vw, 2.5rem) * 0.875);
+                                        font-weight: 500;
+                                        font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
                                     }
 
                                     .accordion-button {
@@ -107,13 +107,13 @@
                                 }
 
                                 .accordion-item {
-                                    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+                                    transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
                                     height: 160px;
                                     max-height: 9999px;
 
                                     &.collapsed {
                                         max-height: 0;
-                                        transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+                                        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
                                     }
 
                                     .accordion-content {            
