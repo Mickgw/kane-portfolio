@@ -85,23 +85,38 @@
                         .services-list {
                             border-top: 1px solid $black;
                             .services-column {
+                                background-color: $white;
                                 padding-block: 2rem;
                                 border-bottom: 1px solid $black;
 
                                 .accordion-header {
-                                    width: 100%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
+                                    height: 50px;
 
-                                    .accordion-title {
-                                        font-weight: 500;
-                                        font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
-                                    }
 
-                                    .accordion-button {
-                                        .showmore-icon {
-                                            font-size: calc(clamp(1.6rem, 4vw, 3.5rem) * 0.875);
+                                    .accordion-header-grid {
+                                        width: 100%;
+                                        display: grid;
+                                        grid-template-columns: 20% 80%;
+
+                                        .service-index {
+                                            font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
+                                        }
+
+                                        .service-title-container {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            .accordion-title {
+                                                font-weight: 500;
+                                                font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
+                                            }
+
+                                            .accordion-button {
+                                                .showmore-icon {
+                                                    font-size: calc(clamp(1.6rem, 4vw, 3.5rem) * 0.875);
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -116,7 +131,7 @@
                                         transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
                                     }
 
-                                    .accordion-content {            
+                                    .accordion-content {
                                         .servivce-description {
                                             padding-top: 55px;
                                             font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);

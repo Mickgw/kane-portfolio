@@ -218,12 +218,60 @@ const About = () => {
                             setShowMore(!showMore);
                           }}
                         >
-                          <div className="accordion-title">Photography</div>
-                          <div className="accordion-button">
-                            <BsArrowRight className="showmore-icon" />
+                          <div className="accordion-header-grid">
+                            <div className="service-index">01</div>
+                            <div className="service-title-container">
+                              <div className="accordion-title">Photography</div>
+                              <div className="accordion-button">
+                                <BsArrowRight className="showmore-icon" />
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className={showMore ? "accordion-item collapsed" : "accordion-item"}>
+                        <div
+                          className={
+                            showMore
+                              ? "accordion-item collapsed"
+                              : "accordion-item"
+                          }
+                        >
+                          <div className="accordion-content">
+                            <p className="servivce-description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="services-column">
+                        <div
+                          className="accordion-header"
+                          onClick={() => {
+                            setShowMore(!showMore);
+                          }}
+                        >
+                          <div className="accordion-header-grid">
+                            <div className="service-index">01</div>
+                            <div className="service-title-container">
+                              <div className="accordion-title">Photography</div>
+                              <div className="accordion-button">
+                                <BsArrowRight className="showmore-icon" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className={
+                            showMore
+                              ? "accordion-item collapsed"
+                              : "accordion-item"
+                          }
+                        >
                           <div className="accordion-content">
                             <p className="servivce-description">
                               Lorem ipsum dolor sit amet, consectetur adipiscing
