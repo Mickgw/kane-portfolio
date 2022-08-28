@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 
@@ -7,6 +7,9 @@ import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 // import { Parallax } from "react-parallax";
 
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { BsArrowRight } from "react-icons/bs";
+
 //Images
 import bigPortrait from "../assets/images/images-for-about/portrait_1.jpg";
 
@@ -14,6 +17,10 @@ const About = () => {
   const [loading, setLoading] = useState(true);
   const timer_duration = 0;
   const delayChildrenDuration = 0.1;
+
+  //Show more button
+  const [showMore, setShowMore] = useState(false);
+  // const [showMoreStatus, setShowMoreStatus] = useState("close");
 
   //Set loading to false after time
   useEffect(() => {
@@ -93,6 +100,8 @@ const About = () => {
         "-=1"
       );
   });
+
+  console.log(showMore);
 
   return (
     <AnimatePresence>
@@ -200,27 +209,35 @@ const About = () => {
               <div className="services-section">
                 <div className="services-section-grid">
                   <div className="header-container">My services</div>
-                  <div className="services-and-tools-grid">
-                    <div className="services-container">
-                      <ul className="services-list">
-                        <li className="services-column-header">Services</li>
-                        <li className="services-column-item">Photography</li>
-                        <li className="services-column-item">Cinematography</li>
-                        <li className="services-column-item">Photoshop</li>
-                        <li className="services-column-item">Video Editing</li>
-                        <li className="services-column-item">Sound design</li>
-                      </ul>
-                    </div>
-                    <div className="tools-container">
-                      <ul className="tools-list">
-                        <li className="tools-column-header">Tools</li>
-                        <li className="tools-column-item">Photography</li>
-                        <li className="tools-column-item">Cinematography</li>
-                        <li className="tools-column-item">Photoshop</li>
-                        <li className="tools-column-item">Video Editing</li>
-                        <li className="tools-column-item">Sound design</li>
-                      </ul>
-                    </div>
+                  <div className="services-container">
+                    <ul className="services-list">
+                      <li className="services-column">
+                        <div
+                          className="accordion-header"
+                          onClick={() => {
+                            setShowMore(!showMore);
+                          }}
+                        >
+                          <div className="accordion-title">Photography</div>
+                          <div className="accordion-button">
+                            <BsArrowRight className="showmore-icon" />
+                          </div>
+                        </div>
+                        <div className={showMore ? "accordion-item collapsed" : "accordion-item"}>
+                          <div className="accordion-content">
+                            <p className="servivce-description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut
+                              aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse
+                              cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

@@ -39,10 +39,6 @@ $desktop-menu-button-bar-height: 2px;
       justify-content: right;
     }
 
-    @media (max-width: $layout-breakpoint-medium) {
-      margin-inline: $wrapper-value-navbar-breakpoint-medium;
-    }
-
     .logo {
       pointer-events: all;
       cursor: pointer !important;

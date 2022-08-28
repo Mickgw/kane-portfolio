@@ -33,7 +33,7 @@
 
             .about-banner {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
                 object-fit: cover;
             }
 
@@ -52,11 +52,11 @@
         }
 
         .about-details-data {
-            margin-block: 10vh;
+            padding-block: 20vh;
             .about-details-data-grid {
                 width: 100%;
                 display: grid;
-                grid-template-columns: 40% 60%;
+                grid-template-columns: 30% 70%;
 
                 .paragraphs-container {
                     .about-details-paragraphs {
@@ -78,32 +78,50 @@
                 .services-section-grid {
                     width: 100%;
                     display: grid;
-                    grid-template-columns: 40% 60%;
+                    grid-template-columns: 30% 70%;
 
-                    .services-and-tools-grid {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        grid-column-gap: 3vw;
+                    .services-container {
+                        overflow: hidden;
+                        .services-list {
+                            border-top: 1px solid $black;
+                            .services-column {
+                                padding-block: 2rem;
+                                border-bottom: 1px solid $black;
 
-                        .tools-container,
-                        .services-container {
-                            .tools-list,
-                            .services-list {
-                                .tools-column-header, .services-column-header {
-                                    border-bottom: 1px solid $divider-color;
-                                    color: $text-color;
-                                    font-weight: 700;
-                                    padding-block: 1rem;
-                                    font-size: calc(clamp(1.6rem, 7vw, 3.5rem) * 0.875);
+                                .accordion-header {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    .accordion-title {
+                                        font-weight: 700;
+                                        font-size: calc(clamp(1.6rem, 4vw, 2.5rem) * 0.875);
+                                    }
+
+                                    .accordion-button {
+                                        .showmore-icon {
+                                            font-size: calc(clamp(1.6rem, 4vw, 3.5rem) * 0.875);
+                                        }
+                                    }
                                 }
 
-                                .tools-column-item,
-                                .services-column-item {
-                                    color: $black;
-                                    padding-block: 1rem;
-                                    border-bottom: 1px solid $divider-color;
-                                    font-size: calc(clamp(1.6rem, 7vw, 2.2rem) * 0.875);
+                                .accordion-item {
+                                    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+                                    height: 160px;
+                                    max-height: 9999px;
+
+                                    &.collapsed {
+                                        max-height: 0;
+                                        transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+                                    }
+
+                                    .accordion-content {            
+                                        .servivce-description {
+                                            padding-top: 55px;
+                                            font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);
+                                        }
+                                    }
                                 }
                             }
                         }
