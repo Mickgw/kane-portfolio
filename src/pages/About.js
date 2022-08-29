@@ -148,7 +148,10 @@ const About = () => {
             <div className="about-details-data">
               <div className="about-details-data-grid">
                 <FadeInWhenVisible>
-                  <div className="section-header about-text">About me</div>
+                  <div className="title-container">
+                    <div className="section-header-about">About me</div>
+                    <div className="idk-yet">Scroll down</div>
+                  </div>
                 </FadeInWhenVisible>
 
                 <div className="paragraphs-container">
@@ -208,9 +211,10 @@ const About = () => {
                   <div className="services-section-grid">
                     <div className="services-container">
                       <Accordion index="01" title="Photography">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        The goal is to capture a clients story with the best
+                        possible photos. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                       </Accordion>
 
                       <Accordion index="02" title="Videography">

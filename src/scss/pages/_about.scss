@@ -7,11 +7,6 @@
         font-size: 4rem;
         padding-bottom: 2em;
 
-        &.about-text {
-            font-weight: 600;
-            font-size: 2rem;
-        }
-
         @media (max-width: $layout-breakpoint-small) {
             font-size: 2.5rem;
         }
@@ -77,6 +72,29 @@
                     grid-template-columns: 100%;
                 }
 
+                .title-container {
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+
+
+
+                    .section-header-about {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .idk-yet {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+
                 .paragraphs-container {
                     .about-details-paragraphs {
                         color: $text-color;
@@ -87,6 +105,10 @@
 
                         &:first-child {
                             margin-top: 0;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
                         }
                     }
                 }
@@ -116,15 +138,15 @@
                     width: 100%;
 
                     .services-container {
-                        border-top: 1px solid $divider-color;
+                        border-top: 1px solid $black;
                         .accordian {
                             width: 100%;
-                            border-bottom: 1px solid $divider-color;
+                            border-bottom: 1px solid $black;
                             .accordion-header {
                                 display: grid;
                                 grid-template-columns: 20% 80%;
                                 cursor: pointer !important;
-                                padding-block: 4rem;
+                                padding-block: 3.5rem;
 
                                 @media (max-width: $layout-breakpoint-small) {
                                     grid-template-columns: 100%;
@@ -134,8 +156,8 @@
                                 .accordion-index {
                                     color: $black;
                                     margin-block: auto;
-                                    font-weight: 700;
-                                    font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);
+                                    font-weight: 600;
+                                    font-size: calc(clamp(1.6rem, 4vw, 2.2rem) * 0.875);
 
                                     @media (max-width: $layout-breakpoint-small) {
                                         display: none;
@@ -150,7 +172,7 @@
 
                                     .accordion-title {
                                         transition: 0.4s ease-in-out;
-                                        font-weight: 100;
+                                        font-weight: 500;
                                         font-size: calc(clamp(1.8rem, 4vw, 2.5rem) * 0.875);
 
                                         @media (max-width: $layout-breakpoint-small) {
@@ -163,14 +185,13 @@
                                             position: absolute;
                                             left: 18%;
                                             opacity: 0;
-
-                                            @media (max-width: $layout-breakpoint-small) {
-                                                left: -3%;
-                                            }
                                         }
 
                                         &.open::before {
-                                            opacity: 1;
+                                            @media (max-width: $layout-breakpoint-small) {
+                                                opacity: 1;
+                                                left: -3%;
+                                            }
                                         }
                                     }
 
@@ -200,13 +221,13 @@
                                 }
 
                                 .accordion-content {
-                                    padding-top: 4em;
+                                    padding-top: 3em;
                                     width: 100%;
 
-                                    color: $black;
+                                    color: $text-color;
                                     max-width: 50ch;
                                     line-height: 1.8;
-                                    font-size: calc(clamp(1.4rem, 4vw, 1.8rem) * 0.875);
+                                    font-size: calc(clamp(1.4rem, 4vw, 2.5rem) * 0.875);
 
                                     @media (max-width: $layout-breakpoint-xsmall) {
                                         width: 90%;

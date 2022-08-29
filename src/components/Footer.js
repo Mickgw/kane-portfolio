@@ -77,7 +77,7 @@ const Footer = () => {
                 © {new Date().getFullYear()}
               </div>
               <div className="made-by">
-                Site by{" "}
+                Made by{" "}
                 <a
                   href="https://www.mickwaanders.dev"
                   rel="noreferrer noopener"
