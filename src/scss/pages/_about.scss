@@ -78,8 +78,6 @@
                     align-items: center;
                     justify-content: space-between;
 
-
-
                     .section-header-about {
                         font-size: 2rem;
                         font-weight: 600;
@@ -101,15 +99,7 @@
                         line-height: 2;
                         font-size: calc(clamp(1.9rem, 4vw, 2.1rem) * 0.875);
 
-                        margin-block: 2rem;
-
-                        &:first-child {
-                            margin-top: 0;
-                        }
-
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        padding-block: 1rem;
                     }
                 }
             }
