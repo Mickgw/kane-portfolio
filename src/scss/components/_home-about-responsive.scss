@@ -67,8 +67,8 @@
 
                     .home-about-responsive-paragraphs {
                         .home-about-responsive-paragraph {
-                            line-height: 1.8;
-                            color: $black;
+                            line-height: 2;
+                            color: $text-color;
                             padding-block: 2rem;
                             font-size: calc(clamp(1.6rem, 8vw, 2rem) * 0.875);
                         }

@@ -1,6 +1,22 @@
 .about {
     visibility: hidden;
     padding-block: $padding-top-global + 15;
+
+    .section-header {
+        font-weight: 700;
+        font-size: 4rem;
+        padding-bottom: 2em;
+
+        &.about-text {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        @media (max-width: $layout-breakpoint-small) {
+            font-size: 2.5rem;
+        }
+    }
+
     .container {
         h1 {
             position: relative;
@@ -9,7 +25,7 @@
 
             .about-header-line {
                 word-spacing: 1rem;
-                font-size: calc(clamp(3rem, 4vw, 8rem) * 0.875);
+                font-size: calc(clamp(4rem, 5vw, 8rem) * 0.875);
                 margin: 0;
                 line-height: 1.3;
                 overflow: hidden;
@@ -35,34 +51,37 @@
                 width: 100%;
                 height: 100vh;
                 object-fit: cover;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    height: 600px;
+                }
+
+                @media (max-width: $layout-breakpoint-xsmall) {
+                    height: 400px;
+                }
             }
-
-            // .parallax-bg {
-            //     width: 100%;
-            //     height: 800px;
-
-            //     .react-parallax-bgimage {
-            //         color: red;
-            //     }
-
-            //     @media (max-width: $layout-breakpoint-small) {
-            //         height: 500px;
-            //     }
-            // }
         }
 
         .about-details-data {
-            padding-block: 20vh;
+            padding-top: 20vh;
+
+            @media (max-width: $layout-breakpoint-small) {
+                padding-top: 10vh;
+            }
             .about-details-data-grid {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 30% 70%;
 
+                @media (max-width: $layout-breakpoint-small) {
+                    grid-template-columns: 100%;
+                }
+
                 .paragraphs-container {
                     .about-details-paragraphs {
                         color: $text-color;
                         line-height: 2;
-                        font-size: calc(clamp(1.6rem, 4vw, 2.1rem) * 0.875);
+                        font-size: calc(clamp(1.9rem, 4vw, 2.1rem) * 0.875);
 
                         margin-block: 2rem;
 
@@ -72,138 +91,132 @@
                     }
                 }
             }
-            .services-section {
-                margin-block: 40vh;
 
+            .big-portrait-two {
+                margin-block: 20vh;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    margin-block: 10vh;
+                }
+
+                .portrait-two {
+                    width: 100%;
+                    height: 80vh;
+                    object-fit: cover;
+                }
+            }
+
+            .services-section {
                 .services-section-grid {
                     width: 100%;
-                    display: grid;
-                    grid-template-columns: 30% 70%;
 
                     .services-container {
-                        border-top: 1px solid $black;
-                        overflow: hidden;
+                        border-top: 1px solid $divider-color;
+                        .accordian {
+                            width: 100%;
+                            border-bottom: 1px solid $divider-color;
+                            .accordion-header {
+                                display: grid;
+                                grid-template-columns: 20% 80%;
+                                cursor: pointer !important;
+                                padding-block: 4rem;
 
-                        .accordion-wrapper {
-                            & + * {
-                                margin-top: 0.5em;
-                            }
-                        }
+                                @media (max-width: $layout-breakpoint-small) {
+                                    grid-template-columns: 100%;
+                                    padding-block: 2.5rem;
+                                }
 
-                        .accordion-item {
-                            overflow: hidden;
-                            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
-                            height: auto;
-                            max-height: 9999px;
-                        }
+                                .accordion-index {
+                                    color: $black;
+                                    margin-block: auto;
+                                    font-weight: 700;
+                                    font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);
 
-                        .accordion-item.collapsed {
-                            max-height: 0;
-                            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
-                        }
+                                    @media (max-width: $layout-breakpoint-small) {
+                                        display: none;
+                                    }
+                                }
 
-                        .accordion-title {
-                            cursor: pointer !important;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            background-color: $white;
-                            padding-block: 2rem;
-                            border-bottom: 1px solid $black;
-                            font-weight: 500;
-                            font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
+                                .accordion-title-container {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
 
-                            &::after {
-                                content: "";
-                                width: 0;
-                                height: 0;
-                                border-left: 5px solid transparent;
-                                border-right: 5px solid transparent;
-                                border-top: 5px solid currentColor;
-                            }
+                                    .accordion-title {
+                                        transition: 0.4s ease-in-out;
+                                        font-weight: 100;
+                                        font-size: calc(clamp(1.8rem, 4vw, 2.5rem) * 0.875);
 
-                            &:hover,
-                            &.open {
-                                color: black;
-                            }
+                                        @media (max-width: $layout-breakpoint-small) {
+                                            font-weight: 500;
+                                        }
 
-                            &.open {
-                                &::after {
-                                    content: "";
-                                    border-top: 0;
-                                    border-bottom: 5px solid;
+                                        &::before {
+                                            transition: 0.4s ease-in-out;
+                                            content: "\2022";
+                                            position: absolute;
+                                            left: 18%;
+                                            opacity: 0;
+
+                                            @media (max-width: $layout-breakpoint-small) {
+                                                left: -3%;
+                                            }
+                                        }
+
+                                        &.open::before {
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    .accordion-button {
+                                        .showmore-icon {
+                                            transition: 0.4s ease-in-out;
+                                            font-size: calc(clamp(2rem, 4vw, 3rem) * 0.875);
+
+                                            &.open {
+                                                transform: rotate(90deg);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .accordion-item {
+                                    will-change: max-height;
+                                    overflow: hidden;
+                                    transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+                                    height: auto;
+                                    max-height: 9999px;
+                                }
+
+                                .accordion-item.collapsed {
+                                    max-height: 0;
+                                    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+                                }
+
+                                .accordion-content {
+                                    padding-top: 4em;
+                                    width: 100%;
+
+                                    color: $black;
+                                    max-width: 50ch;
+                                    line-height: 1.8;
+                                    font-size: calc(clamp(1.4rem, 4vw, 1.8rem) * 0.875);
+
+                                    @media (max-width: $layout-breakpoint-xsmall) {
+                                        width: 90%;
+                                    }
                                 }
                             }
                         }
-
-                        .accordion-content {
-                            padding: 1em 1.5em;
-                        }
-                        // .services-list {
-                        //     border-top: 1px solid $black;
-                        //     .services-column {
-                        //         background-color: $white;
-                        //         padding-block: 2rem;
-                        //         border-bottom: 1px solid $black;
-
-                        //         .accordion-header {
-                        //             height: 50px;
-
-                        //             .accordion-header-grid {
-                        //                 width: 100%;
-                        //                 display: grid;
-                        //                 grid-template-columns: 20% 80%;
-
-                        //                 .service-index {
-                        //                     font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
-                        //                 }
-
-                        //                 .service-title-container {
-                        //                     width: 100%;
-                        //                     display: flex;
-                        //                     align-items: center;
-                        //                     justify-content: space-between;
-                        //                     .accordion-title {
-                        //                         font-weight: 500;
-                        //                         font-size: calc(clamp(1.6rem, 4vw, 3rem) * 0.875);
-                        //                     }
-
-                        //                     .accordion-button {
-                        //                         .showmore-icon {
-                        //                             font-size: calc(clamp(1.6rem, 4vw, 3.5rem) * 0.875);
-                        //                         }
-                        //                     }
-                        //                 }
-                        //             }
-                        //         }
-
-                        //         .accordion-item {
-                        //             transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
-                        //             height: 160px;
-                        //             max-height: 9999px;
-
-                        //             &.collapsed {
-                        //                 max-height: 0;
-                        //                 transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-                        //             }
-
-                        //             .accordion-content {
-                        //                 .servivce-description {
-                        //                     padding-top: 55px;
-                        //                     font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);
-                        //                 }
-                        //             }
-                        //         }
-                        //     }
-                        // }
                     }
                 }
             }
         }
     }
-}
-
-.header-container {
-    font-size: calc(clamp(1.5rem, 7vw, 2.3rem) * 0.875);
-    font-weight: 600;
 }

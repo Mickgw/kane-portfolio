@@ -10068,6 +10068,13 @@
   "resolved" "https://registry.npmjs.org/pako/-/pako-2.0.4.tgz"
   "version" "2.0.4"
 
+"parallax-controller@^1.5.0":
+  "integrity" "sha512-X7FKD0bH27hJHdknH/UNEznmw6xjcWz/QA4M6RLlE/gUXfbePKhk+ld/20e58aAfjMqj+Q7RURryISFcDIVmtA=="
+  "resolved" "https://registry.npmjs.org/parallax-controller/-/parallax-controller-1.5.0.tgz"
+  "version" "1.5.0"
+  dependencies:
+    "bezier-easing" "^2.1.0"
+
 "param-case@^3.0.4":
   "integrity" "sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A=="
   "resolved" "https://registry.npmjs.org/param-case/-/param-case-3.0.4.tgz"
@@ -11158,7 +11165,7 @@
     "fast-deep-equal" "^3.1.3"
     "hoist-non-react-statics" "^3.3.2"
 
-"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react-dom@^15.0 || ^16.0 || ^17.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x", "react-dom@^16 || ^17 || ^18", "react-dom@^16.2.0", "react-dom@^16.8.0  || >=17.0.0 || >=18.0.0", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@^18.0.0", "react-dom@^18.1.0", "react-dom@>= 16.3", "react-dom@>= 16.8.0 || 18.0.0", "react-dom@>=15.0.0", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.8 || ^17.0.0 || ^18.0.0", "react-dom@16.x.x || 17.x.x || 18.x.x":
+"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react-dom@^15.0 || ^16.0 || ^17.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x", "react-dom@^16 || ^17 || ^18", "react-dom@^16.2.0", "react-dom@^16.8.0  || >=17.0.0 || >=18.0.0", "react-dom@^16.8.0-0 || >=17.0.1 || ^18.0.0", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@^18.0.0", "react-dom@^18.1.0", "react-dom@>= 16.3", "react-dom@>= 16.8.0 || 18.0.0", "react-dom@>=15.0.0", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@>=16.8 || ^17.0.0 || ^18.0.0", "react-dom@16.x.x || 17.x.x || 18.x.x":
   "integrity" "sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.1.0.tgz"
   "version" "18.1.0"
@@ -11592,6 +11599,13 @@
   "resolved" "https://registry.npmjs.org/react-scroll-motion/-/react-scroll-motion-0.2.6.tgz"
   "version" "0.2.6"
 
+"react-scroll-parallax@^3.3.1":
+  "integrity" "sha512-yduD41rowkw6tRDXEshWK2pV8MKUoc8Err2kRXe2lJEryJ5gFXqBNbuSJfaSZAWqnrkHM/ClKyaQ9AL1fHP5ow=="
+  "resolved" "https://registry.npmjs.org/react-scroll-parallax/-/react-scroll-parallax-3.3.1.tgz"
+  "version" "3.3.1"
+  dependencies:
+    "parallax-controller" "^1.5.0"
+
 "react-scroll-sync@^0.9.0":
   "integrity" "sha512-IaMUSTbarj9mhjVtBl9I45Er8gQqV8rdb9A0eK77JJ8MvnLcFIlnoiXVx1NS9ACy9QELq7xCTxdIVEdhDV9R0Q=="
   "resolved" "https://registry.npmjs.org/react-scroll-sync/-/react-scroll-sync-0.9.0.tgz"
@@ -11768,7 +11782,7 @@
     "resize-observer-polyfill" "^1.5.1"
     "scheduler" "0.13.3"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^15.0 || ^16.0 || ^17.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x", "react@^16 || ^17 || ^18", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0", "react@^16.2.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^17.0.1", "react@^17.0.2", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.14", "react@>= 16.3", "react@>= 16.8.0 || 18.0.0", "react@>=15", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0", "react@>=16.x", "react@16.x", "react@16.x.x || 17.x.x || 18.x.x":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18", "react@^15.0 || ^16.0 || ^17.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x", "react@^16 || ^17 || ^18", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0", "react@^16.2.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0-0 || >=17.0.1 || ^18.0.0", "react@^16.8.3 || ^17 || ^18", "react@^17.0.1", "react@^17.0.2", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.14", "react@>= 16.3", "react@>= 16.8.0 || 18.0.0", "react@>=15", "react@>=15.0.0", "react@>=16.0.0", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0", "react@>=16.x", "react@16.x", "react@16.x.x || 17.x.x || 18.x.x":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"

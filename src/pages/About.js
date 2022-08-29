@@ -6,22 +6,20 @@ import gsap from "gsap";
 import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 import Accordion from "../components/Accordion";
-// import { Parallax } from "react-parallax";
-
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { BsArrowRight } from "react-icons/bs";
+import {
+  ParallaxBanner,
+  ParallaxBannerLayer,
+  ParallaxProvider,
+} from "react-scroll-parallax";
 
 //Images
 import bigPortrait from "../assets/images/images-for-about/portrait_1.jpg";
+import bigPortraitTwo from "../assets/images/images-for-about/portrait_3.1.JPEG";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 0;
+  const timer_duration = 1400;
   const delayChildrenDuration = 0.1;
-
-  //Show more button
-  const [isOpen, setOpen] = useState(false);
-  // const [showMoreStatus, setShowMoreStatus] = useState("close");
 
   //Set loading to false after time
   useEffect(() => {
@@ -134,48 +132,23 @@ const About = () => {
               </div>
               <div className="about-header-line">
                 <div className="header-text" id="about-header-text">
-                  Based in Arnhem, The Netherlands
+                  Based in Arnhem.
                 </div>
               </div>
-
-              {/* <div className="about-header-line">
-                <div className="header-text" id="about-header-text">
-                  I am currently a <span className="outlined">student</span>
-                </div>
-              </div>
-              <div className="about-header-line">
-                <div className="header-text" id="about-header-text">
-                  at{" "}
-                  <span className="outlined">Rijn IJssel College Arnhem</span>
-                </div>
-              </div>
-              <div className="about-header-line">
-                <div className="header-text" id="about-header-text">
-                  studying{" "}
-                  <span className="outlined">Audio Visual Specialist</span>
-                </div>
-              </div> */}
             </h1>
 
-            <div className="big-portrait" id="big-portrait">
-              {/* <Parallax
-                bgImage={bigPortrait}
-                bgImageAlt="portrait"
-                strength={200}
-                className="parallax-bg"
-              /> */}
-              <img
-                className="about-banner"
-                src={bigPortrait}
-                alt="big portrait"
-                id="about-image"
-              />
-            </div>
+            <ParallaxProvider>
+              <div className="big-portrait" id="big-portrait">
+                <ParallaxBanner className="about-banner" id="about-image">
+                  <ParallaxBannerLayer image={bigPortrait} speed={15} />
+                </ParallaxBanner>
+              </div>
+            </ParallaxProvider>
 
             <div className="about-details-data">
               <div className="about-details-data-grid">
                 <FadeInWhenVisible>
-                  <div className="header-container">About me</div>
+                  <div className="section-header about-text">About me</div>
                 </FadeInWhenVisible>
 
                 <div className="paragraphs-container">
@@ -202,108 +175,64 @@ const About = () => {
                       esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                   </FadeInWhenVisible>
+
+                  <FadeInWhenVisible>
+                    <p className="about-details-paragraphs">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </FadeInWhenVisible>
                 </div>
               </div>
 
-              <div className="services-section">
-                <div className="services-section-grid">
-                  <div className="header-container">My services</div>
-                  <div className="services-container">
-                    <Accordion title="Why is the sky blue?">
-                      Sunlight reaches Earth's atmosphere and is scattered in
-                      all directions by all the gases and particles in the air.
-                      Blue light is scattered more than the other colors because
-                      it travels as shorter, smaller waves. This is why we see a
-                      blue sky most of the time.
-                    </Accordion>
-                    <Accordion title="What's It Like Inside Jupiter?">
-                      It's really hot inside Jupiter! No one knows exactly how
-                      hot, but scientists think it could be about 43,000°F
-                      (24,000°C) near Jupiter's center, or core.
-                    </Accordion>
-                    <Accordion title="What Is a Black Hole?">
-                      A black hole is an area of such immense gravity that
-                      nothing -- not even light -- can escape from it.
-                    </Accordion>
-
-                    {/* <ul className="services-list">
-                      <li className="services-column">
-                        <div
-                          className="accordion-header"
-                          onClick={() => {
-                            setShowMore(!showMore);
-                          }}
-                        >
-                          <div className="accordion-header-grid">
-                            <div className="service-index">01</div>
-                            <div className="service-title-container">
-                              <div className="accordion-title">Photography</div>
-                              <div className="accordion-button">
-                                <BsArrowRight className="showmore-icon" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={
-                            showMore
-                              ? "accordion-item collapsed"
-                              : "accordion-item"
-                          }
-                        >
-                          <div className="accordion-content">
-                            <p className="servivce-description">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut
-                              aliquip ex ea commodo consequat. Duis aute irure
-                              dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="services-column">
-                        <div
-                          className="accordion-header"
-                          onClick={() => {
-                            setShowMore(!showMore);
-                          }}
-                        >
-                          <div className="accordion-header-grid">
-                            <div className="service-index">01</div>
-                            <div className="service-title-container">
-                              <div className="accordion-title">Photography</div>
-                              <div className="accordion-button">
-                                <BsArrowRight className="showmore-icon" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={
-                            showMore
-                              ? "accordion-item collapsed"
-                              : "accordion-item"
-                          }
-                        >
-                          <div className="accordion-content">
-                            <p className="servivce-description">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut
-                              aliquip ex ea commodo consequat. Duis aute irure
-                              dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul> */}
+              <FadeInWhenVisible>
+                <ParallaxProvider>
+                  <div className="big-portrait-two">
+                    <ParallaxBanner className="portrait-two">
+                      <ParallaxBannerLayer image={bigPortraitTwo} speed={8} />
+                    </ParallaxBanner>
                   </div>
-                </div>
+                </ParallaxProvider>
+              </FadeInWhenVisible>
+
+              <div className="services-section">
+                <FadeInWhenVisible>
+                  <div className="section-header">My services</div>
+                </FadeInWhenVisible>
+
+                <FadeInWhenVisible>
+                  <div className="services-section-grid">
+                    <div className="services-container">
+                      <Accordion index="01" title="Photography">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </Accordion>
+
+                      <Accordion index="02" title="Videography">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </Accordion>
+
+                      <Accordion index="03" title="Video editing">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </Accordion>
+
+                      <Accordion index="04" title="Photoshop">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                      </Accordion>
+                    </div>
+                  </div>
+                </FadeInWhenVisible>
               </div>
             </div>
           </div>
