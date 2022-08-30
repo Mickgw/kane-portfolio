@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md"
 
 const Accordion = ({ index, title, children }) => {
