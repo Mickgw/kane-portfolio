@@ -14,7 +14,7 @@ $footer-menu-font-size: 1.6rem;
     height: 100%;
     position: fixed;
     background-color: $navbar-menu;
-    z-index: 99;
+    z-index: $z-index-navmenu;
 
     .container {
         padding-inline: $wrapper-value;

@@ -27,10 +27,6 @@
                 font-weight: 700;
 
                 .header-text {
-                    .outlined {
-                        color: $white;
-                        -webkit-text-stroke: 1px black;
-                    }
                 }
             }
         }
@@ -52,7 +48,7 @@
                 }
 
                 @media (max-width: $layout-breakpoint-xsmall) {
-                    height: 400px;
+                    height: 300px;
                 }
             }
         }
@@ -168,21 +164,6 @@
                                         @media (max-width: $layout-breakpoint-small) {
                                             font-weight: 500;
                                         }
-
-                                        &::before {
-                                            transition: 0.4s ease-in-out;
-                                            content: "\2022";
-                                            position: absolute;
-                                            left: 18%;
-                                            opacity: 0;
-                                        }
-
-                                        &.open::before {
-                                            @media (max-width: $layout-breakpoint-small) {
-                                                opacity: 1;
-                                                left: -3%;
-                                            }
-                                        }
                                     }
 
                                     .accordion-button {
@@ -221,6 +202,7 @@
 
                                     @media (max-width: $layout-breakpoint-xsmall) {
                                         width: 90%;
+                                        padding-top: 2em;
                                     }
                                 }
                             }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import  { VscClose } from "react-icons/vsc"
 
 const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
   const modalRef = useRef();
@@ -77,7 +78,7 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
           body.classList.remove("disable-scroll");
         }}
       >
-        close
+        <VscClose />
       </button>
 
       <motion.img

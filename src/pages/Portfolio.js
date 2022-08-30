@@ -70,12 +70,22 @@ const Portfolio = () => {
         <div className="image-gallery" id="test">
           <div className="container">
             <FadeInWhenVisible>
-              <div className="portfolio-header">Selected photo's</div>
+              {/* <div className="portfolio-header">Selected photo's</div> */}
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
+
+              {/* https://codepen.io/hectorguo/pen/BoZEyW */}
+
               <div className="image-category-tags">
-                <TagButton
+                <ul>
+                  <li>test</li>
+                  <li>test</li>
+                  <li>test</li>
+                  <li>test</li>
+                  <li>test</li>
+                </ul>
+                {/* <TagButton
                   name="all"
                   tagActive={tag === "all" ? true : false}
                   handleSetTag={setTag}
@@ -99,7 +109,7 @@ const Portfolio = () => {
                   name="people"
                   tagActive={tag === "people" ? true : false}
                   handleSetTag={setTag}
-                />
+                /> */}
               </div>
             </FadeInWhenVisible>
             <div className="gallery">

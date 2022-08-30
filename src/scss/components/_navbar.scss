@@ -8,7 +8,7 @@ $desktop-menu-button-bar-height: 2px;
   font-size: 1.8rem;
   height: 150px;
   display: flex;
-  z-index: 100;
+  z-index: $z-index-navbar;
   mix-blend-mode: difference;
 
   //Disables blend mode so menu can get black
