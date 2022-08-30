@@ -81,14 +81,16 @@
                 columns: 1;
             }
 
-            .image {
-                width: 100%;
-                margin-bottom: 2em;
-                transition: 0.5s ease-in-out;
+            .gallery-image {
+                .image {
+                    width: 100%;
+                    margin-bottom: 2em;
+                    transition: 0.5s cubic-bezier(0.25, 0.11, 0.34, 1);
 
-                &:hover {
-                    filter: brightness(0.7);
-                    cursor: pointer;
+                    &:hover {
+                        filter: brightness(0.6);
+                        cursor: pointer;
+                    }
                 }
             }
         }
