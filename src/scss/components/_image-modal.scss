@@ -16,6 +16,12 @@
     .modal-image {
         height: 90%;
         object-fit: contain;
+
+        @media (max-width: $layout-breakpoint-medium) {
+            max-width: 85%;
+        }
+
+        
     }
 }
 
@@ -25,8 +31,12 @@
     cursor: pointer;
     position: absolute;
     top: 4vh;
-    right: 5vw;
+    right: 3vw;
     color: $black;
     font-size: 4rem;
     cursor: pointer !important;
+
+    @media (max-width: $layout-breakpoint-small) {
+        right: $wrapper-value-breakpoint-small;
+    }
 }

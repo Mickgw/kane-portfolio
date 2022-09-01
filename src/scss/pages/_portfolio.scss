@@ -1,68 +1,64 @@
 .image-gallery {
     padding-top: 25vh;
+
+    @media (max-width: $layout-breakpoint-xsmall) {
+        padding-top: 15vh;
+    }
+
     .container {
         .image-category-tags {
+            width: 100%;
             display: flex;
             text-align: left;
             place-items: left;
             justify-content: left;
-            margin-bottom: 7em;
+            margin-bottom: 3em;
             cursor: pointer !important;
 
-            &:hover {
-                color: $text-color;
+            @media (max-width: $layout-breakpoint-xsmall) {
+                display: block;
             }
 
-            ul {
-                display: flex;
-                li {
-                    display: inline-block;
-                    margin-inline: 2em;
-                    font-size: 2rem;
-                }
-            }
-
-            .tag-button {
-                position: relative;
-                font-family: inherit;
-                font-size: 1.8rem;
-                transition: 0.3s ease-in-out;
-                margin-inline: 2.5rem;
-                text-transform: capitalize;
-                transition: 0.3s ease-in-out;
-
-                @media (max-width: $layout-breakpoint-small) {
-                    margin-inline: 1.5rem;
-                }
-
-                &::before {
-                    content: "\2022";
-                    position: absolute;
-                    top: -5px;
-                    margin-left: -20px;
-                    font-size: calc(clamp(2rem, 7vw, 3rem) * 0.875);
-                    opacity: 0;
-                    transition: 0.3s ease-in-out;
-                }
-
+            .button-list {
                 &:hover {
-                    color: black;
-                    font-weight: 600;
-
-                    &::before {
-                        opacity: 1;
+                    .tag-button {
+                        color: $text-color;
                     }
                 }
 
-                &:first-child {
-                    margin-left: 0 !important;
-                }
+                .tag-button {
+                    text-transform: capitalize;
+                    color: $black;
+                    display: inline-block;
+                    line-height: 1.5;
+                    font-size: 1.8em;
+                    padding-right: 1.5em;
+                    transition: 0.3s ease-in-out;
 
-                &.active {
-                    font-weight: 600;
+                    @media (max-width: $layout-breakpoint-xsmall) {
+                        display: block;
+                    }
 
-                    &::before {
-                        opacity: 1;
+                    @media (max-width: $layout-breakpoint-small) {
+                        padding-bottom: 1em;
+                    }
+                    
+
+                    &:hover {
+                        color: black;
+                        font-weight: 600;
+                    }
+
+                    &:first-child {
+                        margin-left: 0 !important;
+                    }
+
+                    &.active {
+                        font-weight: 700;
+
+                        &::before {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -75,10 +71,7 @@
 
             @media (max-width: $layout-breakpoint-small) {
                 columns: 2;
-            }
-
-            @media (max-width: $layout-breakpoint-xsmall) {
-                columns: 1;
+                column-gap: 1.5rem;
             }
 
             .gallery-image {
@@ -86,6 +79,10 @@
                     width: 100%;
                     margin-bottom: 2em;
                     transition: 0.5s cubic-bezier(0.25, 0.11, 0.34, 1);
+
+                    @media (max-width: $layout-breakpoint-xsmall) {
+                        margin-bottom: 1.5em;
+                    }
 
                     &:hover {
                         filter: brightness(0.6);
@@ -95,4 +92,24 @@
             }
         }
     }
+}
+
+.item {
+    display: inline-block;
+    background: tomato;
+    padding: 5px;
+
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+/*inline-block*/
+.inline-b {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.inline-b-item {
+    display: inline-block;
 }

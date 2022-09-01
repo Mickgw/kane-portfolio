@@ -6,8 +6,7 @@ import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 
 //Files
-import videoProjects from "../assets/videos/motion-videos.json";
-
+import videoProjects from "../content/photo-albums.json";
 
 const Motion = () => {
   const [loading, setLoading] = useState(true);
@@ -27,7 +26,7 @@ const Motion = () => {
 
     loading
       ? navbar_inner.classList.add("loading")
-      : setTimeout(() => navbar_inner.classList.remove("loading"), 600)
+      : setTimeout(() => navbar_inner.classList.remove("loading"), 600);
   }, [loading]);
 
   const loader_animation = {
@@ -49,28 +48,32 @@ const Motion = () => {
           variants={loader_animation}
           exit="exit"
         >
-          <PageLoader loaderText="Motion"/>
+          <PageLoader loaderText="Motion" />
         </motion.div>
       ) : (
         <div className="motion">
           <div className="container">
-            <div className="video-grid">
-              {videoProjects.video_projects_list.map((video, index) => {
-                return (
-                  <FadeInWhenVisible>
-                    <div className="video-container" key={index}>
-                      <div className="video-title">{video.title}</div>
-                      <p className="video-description">{video.description}</p>
-
-                      {/* <ReactPlayer url={video.video_url} controls={true} width="100%" height="100%"/> */}
-                      <video controls>
-                        <source src={video.video_url} type="video/mp4" />
-                      </video>
+            {videoProjects.video_projects_list.map((video, index) => {
+              return (
+                <FadeInWhenVisible>
+                  <div className="video-container" key={index}>
+                    <div className="video-info">
+                      <div className="video-title-column">
+                        <div className="video-info-category">Name</div>
+                        <div className="video-title">{video.title}</div>
+                      </div>
+                      <div className="video-description-column">
+                        <div className="video-info-category">Description</div>
+                        <p className="video-description">{video.description}</p>
+                      </div>
                     </div>
-                  </FadeInWhenVisible>
-                );
-              })}
-            </div>
+                    <video controls>
+                      <source src={video.video_url} type="video/mp4" />
+                    </video>
+                  </div>
+                </FadeInWhenVisible>
+              );
+            })}
           </div>
         </div>
       )}

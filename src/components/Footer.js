@@ -71,7 +71,7 @@ const Footer = () => {
           <div className="footer-bottom-container">
             <div className="footer-bottom-left">
               <div className="footer-copyright">
-              © Kane Jansen {new Date().getFullYear()} 
+              © Kane Jansen - {new Date().getFullYear()} 
               </div>
               <div className="footer-copyright-version-two">
                 © {new Date().getFullYear()}
@@ -83,7 +83,7 @@ const Footer = () => {
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  © Mick Waanders
+                  Mick Waanders
                 </a>
               </div>
             </div>

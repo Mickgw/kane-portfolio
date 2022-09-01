@@ -1,30 +1,45 @@
 .motion {
-    padding-inline: 5vw;
     padding-top: $padding-top-global;
     .container {
+        width: 100%;
         height: 100%;
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-row-gap: 10vh;
-            height: 100%;
-            .video-container {
-                .video-title {
-                    font-size: clamp(2rem, 5vw, 3rem);
-                    font-weight: 500;
-                }
-                .video-description {
-                    padding-block: 3vh;
-                    font-size: clamp(0.8rem, 3vw, 1.5rem);
-                    color: $text-color;
-                    line-height: 1.4;
+
+        .video-container {
+            padding-block: 15vh;
+            .video-info {
+                margin-bottom: 10em;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 40% 60%;
+
+                .video-title-column {
+                    .video-title {
+                        font-size: clamp(2rem, 5vw, 2.8rem);
+                        font-weight: 700;
+                    }
                 }
 
-                video {
-                    width: 100%;
-                    height: 100%;
+                .video-description-column {
+                    .video-description {
+                        line-height: 1.8;
+                        font-size: clamp(1.3rem, 5vw, 1.8rem);
+                        color: $text-color;
+                    }
                 }
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
             }
         }
     }
+}
+
+.video-info-category {
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
+    color: rgb(190, 190, 190);
+    padding-bottom: 1.3em;
+
 }

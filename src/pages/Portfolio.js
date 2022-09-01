@@ -74,43 +74,48 @@ const Portfolio = () => {
             </FadeInWhenVisible>
 
             <FadeInWhenVisible>
-
               {/* https://codepen.io/hectorguo/pen/BoZEyW */}
 
               <div className="image-category-tags">
-                <ul>
-                  <li>test</li>
-                  <li>test</li>
-                  <li>test</li>
-                  <li>test</li>
-                  <li>test</li>
+                <ul className="button-list">
+                  <TagButton
+                    name="all"
+                    tagActive={tag === "all" ? true : false}
+                    handleSetTag={setTag}
+                  />
+                  <TagButton
+                    name="cars"
+                    tagActive={tag === "cars" ? true : false}
+                    handleSetTag={setTag}
+                  />
+                  <TagButton
+                    name="nature"
+                    tagActive={tag === "nature" ? true : false}
+                    handleSetTag={setTag}
+                  />
+                  <TagButton
+                    name="people"
+                    tagActive={tag === "people" ? true : false}
+                    handleSetTag={setTag}
+                  />
+                  <TagButton
+                    name="architecture"
+                    tagActive={tag === "architecture" ? true : false}
+                    handleSetTag={setTag}
+                  />
                 </ul>
-                {/* <TagButton
-                  name="all"
-                  tagActive={tag === "all" ? true : false}
-                  handleSetTag={setTag}
-                />
-                <TagButton
-                  name="cars"
-                  tagActive={tag === "cars" ? true : false}
-                  handleSetTag={setTag}
-                />
-                <TagButton
-                  name="nature"
-                  tagActive={tag === "nature" ? true : false}
-                  handleSetTag={setTag}
-                />
-                <TagButton
-                  name="architecture"
-                  tagActive={tag === "architecture" ? true : false}
-                  handleSetTag={setTag}
-                />
-                <TagButton
-                  name="people"
-                  tagActive={tag === "people" ? true : false}
-                  handleSetTag={setTag}
-                /> */}
               </div>
+
+              {/* <ul className="image-category-tags">
+              </ul>
+
+              <ul class="container inline-b">
+                <li class="item inline-b-item">testweefwefwefe</li>
+                <li class="item inline-b-item">teswefwefewft</li>
+                <li class="item inline-b-item">teswefweft</li>
+                <li class="item inline-b-item">teswefwefwt</li>
+                <li class="item inline-b-item">test</li>
+              </ul> */}
             </FadeInWhenVisible>
             <div className="gallery">
               {filteredImages.map((image_data, index) => (
@@ -162,12 +167,12 @@ const Portfolio = () => {
 
 const TagButton = ({ name, handleSetTag, tagActive }) => {
   return (
-    <span
+    <li
       className={`tag-button ${tagActive ? "active" : null}`}
       onClick={() => handleSetTag(name)}
     >
       {name}
-    </span>
+    </li>
   );
 };
 

@@ -148,10 +148,8 @@ const About = () => {
             <div className="about-details-data">
               <div className="about-details-data-grid">
                 <FadeInWhenVisible>
-                  <div className="title-container">
                     <div className="section-header-about">About me</div>
-                    <div className="idk-yet">Scroll down</div>
-                  </div>
+
                 </FadeInWhenVisible>
 
                 <div className="paragraphs-container">
@@ -210,26 +208,26 @@ const About = () => {
                 <FadeInWhenVisible>
                   <div className="services-section-grid">
                     <div className="services-container">
-                      <Accordion index="01" title="Photography">
+                      <Accordion index="&#8226;" title="Photography">
                         The goal is to capture a clients story with the best
                         possible photos. Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
                       </Accordion>
 
-                      <Accordion index="02" title="Videography">
+                      <Accordion index="&#8226;" title="Videography">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="03" title="Video editing">
+                      <Accordion index="&#8226;" title="Video editing">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="04" title="Photoshop">
+                      <Accordion index="&#8226;" title="Photoshop">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.

@@ -10,7 +10,7 @@ import BannerSmallerDevice from "../components/BannerSmallerDevice";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const timer_duration = 0;
+  const timer_duration = 1400;
 
   //Set loading to false after time
   useEffect(() => {
