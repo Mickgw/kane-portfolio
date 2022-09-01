@@ -57,9 +57,9 @@ collections:
     files: 
       - label: "Video for Motion page"
         name: "Video"
-        file: "src/content/motion-videos.json"
+        file: "src/content/motion-items.json"
         fields:
-          - label: "Video Project"
+          - label: "Item"
             name: "video_projects_list"
             widget: "list"
             fields:
