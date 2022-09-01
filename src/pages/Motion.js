@@ -6,7 +6,7 @@ import PageLoader from "../components/loader/PageLoader";
 import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 
 //Files
-import videoProjects from "../content/photo-albums.json";
+import videoProjects from "../content/motion-items.json";
 
 const Motion = () => {
   const [loading, setLoading] = useState(true);
