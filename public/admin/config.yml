@@ -59,7 +59,7 @@ collections:
         name: "Video"
         file: "src/content/motion-videos.json"
         fields:
-          - label: "Image"
+          - label: "Video Project"
             name: "video_projects_list"
             widget: "list"
             fields:
