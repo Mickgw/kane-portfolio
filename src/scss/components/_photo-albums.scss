@@ -6,9 +6,9 @@ $card-spacing: 3vw;
     margin-bottom: 15vh;
     .photo-albums-header {
         letter-spacing: -1px;
-        font-size: 3.5rem;
-        font-weight: 600;
-        padding-bottom: 4vh;
+        font-size: calc(clamp(3.5rem, 8vw, 5rem) * 0.875);
+        font-weight: 700;
+        padding-bottom: 10vh;
     }
 
     .photo-albums {

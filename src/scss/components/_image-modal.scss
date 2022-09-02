@@ -1,5 +1,5 @@
 .modal-container {
-    height: 100vh;
+    height: calc(100vh - calc(100vh - 100%));
     overflow-y: hidden !important;
     position: fixed;
     top: 0;
@@ -7,21 +7,24 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: $white;
+    background-color: rgba(255, 255, 255, 0.61);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: $z-index-image-modal;
+    backdrop-filter: blur(25px);
 
     .modal-image {
-        height: 90%;
+        height: 85%;
         object-fit: contain;
 
         @media (max-width: $layout-breakpoint-medium) {
-            max-width: 85%;
+            max-width: 100%;
         }
 
-        
+        @media (max-width: $layout-breakpoint-xsmall) {
+            height: auto;
+        }
     }
 }
 

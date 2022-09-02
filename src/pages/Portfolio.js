@@ -70,12 +70,6 @@ const Portfolio = () => {
         <div className="image-gallery" id="test">
           <div className="container">
             <FadeInWhenVisible>
-              {/* <div className="portfolio-header">Selected photo's</div> */}
-            </FadeInWhenVisible>
-
-            <FadeInWhenVisible>
-              {/* https://codepen.io/hectorguo/pen/BoZEyW */}
-
               <div className="image-category-tags">
                 <ul className="button-list">
                   <TagButton
@@ -105,18 +99,9 @@ const Portfolio = () => {
                   />
                 </ul>
               </div>
-
-              {/* <ul className="image-category-tags">
-              </ul>
-
-              <ul class="container inline-b">
-                <li class="item inline-b-item">testweefwefwefe</li>
-                <li class="item inline-b-item">teswefwefewft</li>
-                <li class="item inline-b-item">teswefweft</li>
-                <li class="item inline-b-item">teswefwefwt</li>
-                <li class="item inline-b-item">test</li>
-              </ul> */}
             </FadeInWhenVisible>
+
+            
             <div className="gallery">
               {filteredImages.map((image_data, index) => (
                 <div key={index} className="gallery-image">
@@ -135,6 +120,7 @@ const Portfolio = () => {
                 </div>
               ))}
             </div>
+
             <div className="image-modal">
               <AnimatePresence exitBeforeEnter>
                 {isModal && (
@@ -153,17 +139,6 @@ const Portfolio = () => {
     </AnimatePresence>
   );
 };
-
-// const TagButton = ({ name, handleSetTag, tagActive }) => {
-//   return (
-//     <button
-//       className={`tag-button ${tagActive ? "active" : null}`}
-//       onClick={() => handleSetTag(name)}
-//     >
-//       {name}
-//     </button>
-//   );
-// };
 
 const TagButton = ({ name, handleSetTag, tagActive }) => {
   return (

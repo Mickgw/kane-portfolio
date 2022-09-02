@@ -132,7 +132,7 @@ const HomeAboutNormal = () => {
                 </em>
                 <div className="home-about-button" id="button">
                   <Link to="/portfolio" className="page-link">
-                    <div className="home-about-link">View Portfolio</div>
+                    <div className="home-about-link">View Portfolio &#x279C;</div>
                   </Link>
                 </div>
               </div>

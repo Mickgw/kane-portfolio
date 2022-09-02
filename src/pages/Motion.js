@@ -68,7 +68,7 @@ const Motion = () => {
                       </div>
                     </div>
                     <video controls>
-                      <source src={video.video_url} type="video/mp4" />
+                      <source src={video.video_url + "#t=0.001"} type="video/mp4" />
                     </video>
                   </div>
                 </FadeInWhenVisible>

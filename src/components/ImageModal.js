@@ -82,7 +82,6 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
       </button>
 
       <motion.img
-        onClick={console.log("Image clicked!")}
         className="modal-image"
         src={modalImage}
         alt="modal image"

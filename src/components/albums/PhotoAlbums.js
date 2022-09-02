@@ -35,9 +35,7 @@ const PhotoAlbums = () => {
                             </svg>
 
                             <div className="album-cover-dot-text-container">
-                              {/* <span className="album-cover-dot-text">view</span> */}
                               <TbArrowUpRight className="album-cover-dot-text" />
-                              {/* <span className="album-cover-dot-text-responsive">&#8599;</span> */}
                             </div>
                           </div>
                           <div className="image-container">

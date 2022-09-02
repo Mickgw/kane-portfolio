@@ -61,21 +61,13 @@ $layout-breakpoint-home-about: 1150px;
                             overflow: hidden;
                             letter-spacing: 0px;
 
-                            // @media (max-width: $layout-breakpoint-medium) {
-                            //     font-size: 2.8rem;
-                            // }
-
-                            // @media (max-width: $layout-breakpoint-home-about) {
-                            //     font-size: 2.5rem;
-                            // }
-
                             .home-about-content-line-inner {
                             }
                         }
                     }
 
                     .paragraphs {
-                        padding-block: 5em;
+                        padding-block: 10em;
 
                         @media (max-width: $layout-breakpoint-medium) {
                             padding-block: 2em;
@@ -122,13 +114,13 @@ $layout-breakpoint-home-about: 1150px;
                                     border: none;
 
                                     color: $black;
-                                    font-weight: 600;
+                                    font-weight: 700;
                                     font-size: 1.7rem;
                                     font-family: inherit;
                                     text-decoration: none;
 
-                                    padding-bottom: 10px;
-                                    border-bottom: 1px solid $black;
+                                    // padding-bottom: 7px;
+                                    // border-bottom: 1px solid $black;
 
                                     @media (max-width: $layout-breakpoint-medium) {
                                         font-size: 1.4rem;
