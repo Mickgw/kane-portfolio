@@ -77,7 +77,7 @@ const PhotoAlbumsPage = () => {
         </motion.div>
       ) : (
         <motion.div className="album-page" variants={infoGridAnimation} initial="hidden" animate="visible">
-          <div className="divider-text category">Album</div>
+          <div className="divider-text category">name</div>
           <div className="container">
             {photoAlbums.album_list.map((album, index) => {
               if (title === album.title.replace(" ", "-").toLocaleLowerCase()) {

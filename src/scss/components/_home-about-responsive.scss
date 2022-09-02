@@ -6,6 +6,11 @@
 
     @media (max-width: $layout-breakpoint-small) {
         display: block;
+        margin-top: $hero-section-height + 20vh;
+    }
+
+    @media (max-width: $layout-breakpoint-xsmall) {
+        margin-top: $hero-section-height-xsmall + 40vh;
     }
 
     .home-about-responsive-container {

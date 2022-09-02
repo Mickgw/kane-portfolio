@@ -10,6 +10,7 @@ $desktop-menu-button-bar-height: 2px;
   display: flex;
   z-index: $z-index-navbar;
   mix-blend-mode: difference;
+  top: 0%;
 
   //Disables blend mode so menu can get black
   @media (max-width: $layout-breakpoint-small) {

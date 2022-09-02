@@ -46,10 +46,10 @@ body {
 }
 
 main {
-  margin-inline: $wrapper-value; //wrapper
+  padding-inline: $wrapper-value; 
 
   @media (max-width: $layout-breakpoint-small) {
-    margin-inline: $wrapper-value-breakpoint-small;
+    padding-inline: $wrapper-value-breakpoint-small;
   }
 }
 

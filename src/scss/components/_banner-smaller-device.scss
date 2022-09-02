@@ -1,10 +1,27 @@
-.banner-smaller-device {
-    width: 100vw;
-    height: 100vh;
+
+.hero-responsive {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: none;
 
     @media (max-width: $layout-breakpoint-small) {
         display: block;
     }
+
+    .banner-smaller-device {
+        height: 125vh;
+        width: 100vw;
+
+        @media (max-width: $layout-breakpoint-small) {
+            height: 150vh;
+        }
+    }
+
+    h1 {
+        color: $white;
+        font-size: 5rem;
+        font-weight: 700;
+    }
 }
- 

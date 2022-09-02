@@ -55,8 +55,8 @@ const Motion = () => {
           <div className="container">
             {videoProjects.video_projects_list.map((video, index) => {
               return (
-                <FadeInWhenVisible>
-                  <div className="video-container" key={index}>
+                <FadeInWhenVisible key={index}>
+                  <div className="video-container" >
                     <div className="video-info">
                       <div className="video-title-column">
                         <div className="video-info-category">Name</div>

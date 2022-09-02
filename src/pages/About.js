@@ -148,8 +148,7 @@ const About = () => {
             <div className="about-details-data">
               <div className="about-details-data-grid">
                 <FadeInWhenVisible>
-                    <div className="section-header-about">About me</div>
-
+                  <div className="section-header-about">About me</div>
                 </FadeInWhenVisible>
 
                 <div className="paragraphs-container">
@@ -235,6 +234,25 @@ const About = () => {
                     </div>
                   </div>
                 </FadeInWhenVisible>
+
+                <div className="tools">
+                  <FadeInWhenVisible>
+                    <div className="section-header">Tools I use</div>
+                  </FadeInWhenVisible>
+
+                  <FadeInWhenVisible>
+                    <h2 className="tools-paragraph">
+                      I use a couple of tools for my work. I use After Effects
+                      for... Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua. Ut enim ad minim veniam, quis nostrud
+                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in
+                      voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.
+                    </h2>
+                  </FadeInWhenVisible>
+                </div>
               </div>
             </div>
           </div>
