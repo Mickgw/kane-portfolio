@@ -16,7 +16,6 @@
 @import "components/header";
 @import "components/main-loader";
 @import "components/page-loader";
-@import "components/old-banner";
 @import "components/photo-albums";
 @import "components/footer";
 @import "components/image-modal";
@@ -24,8 +23,8 @@
 @import "components/cursor";
 @import "components/home-about-responsive";
 @import "components/home-about-normal";
-@import "components/banner";
-@import "components/banner-smaller-device";
+@import "components/hero";
+@import "components/hero-responsive";
 
 body {
   background-color: $background;

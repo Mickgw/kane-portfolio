@@ -5,8 +5,8 @@ import PageLoader from "../components/loader/PageLoader";
 //Components
 import HomeAbout from "../components/about/HomeAbout";
 import PhotoAlbums from "../components/albums/PhotoAlbums";
-import Banner from "../components/Banner";
-import BannerSmallerDevice from "../components/BannerSmallerDevice";
+import Hero from "../components/Hero";
+import HeroResponsive from "../components/HeroResponsive";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -52,8 +52,8 @@ const Home = () => {
         </motion.div>
       ) : (
         <div id="main-container">
-          <Banner />
-          <BannerSmallerDevice />
+          <Hero />
+          <HeroResponsive />
           <HomeAbout />
           <PhotoAlbums />
         </div>

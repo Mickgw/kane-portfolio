@@ -12,21 +12,21 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
-const BannerV2 = () => {
+const Hero = () => {
   var images = [banner_image_1, banner_image_2, banner_image_3, banner_image_4, banner_image_5, banner_image_6];
   const banner_image = images[Math.floor(Math.random() * images.length)];
 
   useEffect(() => {
     gsap
       .timeline()
-      .to("#banner", { autoAlpha: 1, duration: 0 })
+      .to("#hero", { autoAlpha: 1, duration: 0 })
       .fromTo(
-        "#banner-reveal",
+        "#hero-image-reveal",
         { height: "100%" },
         { height: "0%", duration: 1.5, delay: 0.4, ease: Power3.easeOut }
       )
       .fromTo(
-        "#banner-image",
+        "#hero-image",
         { scale: 1.3 },
         { scale: 1, duration: 1.5 },
         "-=1.5"
@@ -59,9 +59,9 @@ const BannerV2 = () => {
   });
 
   return (
-    <div className="re-designed-banner" id="banner">
-      <div className="banner-container">
-        <div className="banner-grid">
+    <div className="hero" id="hero">
+      <div className="hero-container">
+        <div className="hero-grid">
           <div className="hero-text">
             <div className="hero-text-inner">
               <div className="my-name-line">
@@ -78,11 +78,6 @@ const BannerV2 = () => {
                 <span className="scrolldown-text" id="scrolldown">
                   scroll down{" "}
                 </span>
-                {/* <FontAwesomeIcon
-                  icon={faArrowDownLong}
-                  className="arrow-down-icon"
-                  id="scrolldown"
-                /> */}
                 <IoIosArrowDown
                   className="arrow-down-icon"
                   id="scrolldown"
@@ -90,13 +85,12 @@ const BannerV2 = () => {
               </div>
             </div>
           </div>
-          <div className="big-banner-image" id="banner-image-container">
-            <div className="banner-reveal" id="banner-reveal" />
+          <div className="hero-image" id="hero-image-container">
+            <div className="hero-image-reveal" id="hero-image-reveal" />
             <motion.img
               src={banner_image}
-              alt="big-banner-car"
-              id="banner-image"
-              className="test"
+              alt="hero-car"
+              id="hero-image"
             />
           </div>
         </div>
@@ -105,4 +99,4 @@ const BannerV2 = () => {
   );
 };
 
-export default BannerV2;
+export default Hero;

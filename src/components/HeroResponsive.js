@@ -1,7 +1,7 @@
 import { Parallax } from "react-parallax";
 import Banner from "../assets/images/images-for-banner/website_banner_phone.jpg";
 
-const BannerSmallerDevice = () => {
+const HeroResponsive = () => {
   return (
     <div className="hero-responsive">
       <Parallax
@@ -19,4 +19,4 @@ const BannerSmallerDevice = () => {
   );
 };
 
-export default BannerSmallerDevice;
+export default HeroResponsive;

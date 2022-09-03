@@ -22,8 +22,8 @@
             max-width: 100%;
         }
 
-        @media (max-width: $layout-breakpoint-xsmall) {
-            height: auto;
+        @media (max-width: $layout-breakpoint-medium) {
+            height: 75%;
         }
     }
 }
