@@ -1,27 +1,58 @@
-
 .hero-responsive {
+    overflow: hidden;
     z-index: 2;
     position: absolute;
     left: 0;
     top: 0;
     display: none;
+    width: 100%;
 
     @media (max-width: $layout-breakpoint-small) {
         display: block;
     }
 
-    .banner-smaller-device {
-        height: 125vh;
-        width: 100vw;
+    .hero-container {
+        height: 100vh;
+        width: 100%;
+        padding-inline: $wrapper-value-breakpoint-small;
+        padding-top: 25vh;
+        background-color: transparent;
+        backdrop-filter: invert(10%) brightness(90%);
 
-        @media (max-width: $layout-breakpoint-small) {
-            height: 150vh;
+        .hero-title {
+            font-weight: 600;
+            font-size: 7rem;
+            color: $white;
+
+            @media (max-width: $layout-breakpoint-xsmall) {
+                font-size: 5rem;
+            }
         }
-    }
 
-    h1 {
-        color: $white;
-        font-size: 5rem;
-        font-weight: 700;
+        .professions {
+            padding-top: 10em;
+
+            .profession-text {
+                display: block;
+                font-weight: 600;
+                font-size: 3.5rem;
+                color: $white;
+                letter-spacing: 1px;
+
+                padding-bottom: .8em;
+
+                @media (max-width: $layout-breakpoint-xsmall) {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .scroll-down {
+            padding-top: 7em;
+            .scroll-down-text {
+                font-size: 1.6rem;
+                color: $white;
+            }
+        }
     }
 }

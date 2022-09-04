@@ -207,26 +207,26 @@ const About = () => {
                 <FadeInWhenVisible>
                   <div className="services-section-grid">
                     <div className="services-container">
-                      <Accordion index="&#8226;" title="Photography">
+                      <Accordion index="01" title="Photography">
                         The goal is to capture a clients story with the best
                         possible photos. Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
                       </Accordion>
 
-                      <Accordion index="&#8226;" title="Videography">
+                      <Accordion index="02" title="Videography">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="&#8226;" title="Video editing">
+                      <Accordion index="03" title="Video editing">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="&#8226;" title="Photoshop">
+                      <Accordion index="04" title="Photoshop">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
@@ -242,12 +242,13 @@ const About = () => {
 
                   <FadeInWhenVisible>
                     <h2 className="tools-paragraph">
-                      I use a couple of tools for my work. I use After Effects
+                      I use a couple of tools for my work. I use
+                      <b className="tool"> After Effects </b>
                       for... Lorem ipsum dolor sit amet, consectetur adipiscing
                       elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua. Ut enim ad minim veniam, quis nostrud
+                      magna aliqua. Ut enim <b className="tool"> Photoshop </b>ad minim veniam, quis nostrud
                       exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in
+                      consequat. Duis aute irure <b className="tool"> Illustrator </b>dolor in reprehenderit in
                       voluptate velit esse cillum dolore eu fugiat nulla
                       pariatur.
                     </h2>
