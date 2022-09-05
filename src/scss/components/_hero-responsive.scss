@@ -17,7 +17,7 @@
         padding-inline: $wrapper-value-breakpoint-small;
         padding-top: 25vh;
         background-color: transparent;
-        backdrop-filter: invert(10%) brightness(90%);
+        // backdrop-filter: invert(10%) brightness(90%);
 
         .hero-title {
             font-weight: 600;
@@ -48,10 +48,18 @@
         }
 
         .scroll-down {
+            display: flex;
             padding-top: 7em;
             .scroll-down-text {
+                font-weight: 600;
                 font-size: 1.6rem;
                 color: $white;
+                padding-right: .3em;
+            }
+
+            .arrow-down-icon {
+                color: $white;
+                font-size: 1.8rem;
             }
         }
     }

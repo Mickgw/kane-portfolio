@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md"
 
-const Accordion = ({ index, title, children }) => {
+const Accordion = ({ title, children }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -10,7 +10,6 @@ const Accordion = ({ index, title, children }) => {
         className="accordion-header"
         onClick={() => setOpen(!isOpen)}
       >
-        <div className="accordion-index">{index}</div>
         <div className="accordion-title-container">
           <div className={`accordion-title ${isOpen ? "open" : ""}`}>{title}</div>
           <div className="accordion-button">

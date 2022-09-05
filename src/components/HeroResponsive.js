@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import Banner from "../assets/images/images-for-banner/website_banner_phone.jpg";
+import Banner from "../assets/images/images-for-banner/website_banner_phone_V2.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 
 const HeroResponsive = () => {
@@ -19,10 +19,8 @@ const HeroResponsive = () => {
             <span className="profession-text">Cinematographer</span>
           </div>
           <div className="scroll-down">
-            <span className="scroll-down-text">
-              scroll down{" "}
-              <IoIosArrowDown className="arrow-down-icon"  />
-            </span>
+            <div className="scroll-down-text">scroll down</div>
+            <IoIosArrowDown className="arrow-down-icon" />
           </div>
         </div>
       </Parallax>

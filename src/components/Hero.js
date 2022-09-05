@@ -3,9 +3,8 @@
 import banner_image_1 from "../assets/images/images-for-banner/website_banner_1.jpg";
 import banner_image_2 from "../assets/images/images-for-banner/website_banner_2.jpg";
 import banner_image_3 from "../assets/images/images-for-banner/website_banner_3.jpg";
-import banner_image_4 from "../assets/images/images-for-banner/website_banner_4.jpg";
-import banner_image_5 from "../assets/images/images-for-banner/website_banner_5.jpg";
-import banner_image_6 from "../assets/images/images-for-banner/website_banner_6.jpg";
+import banner_image_4 from "../assets/images/images-for-banner/website_banner_5.jpg";
+import banner_image_5 from "../assets/images/images-for-banner/website_banner_6.jpg";
 
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
@@ -13,7 +12,7 @@ import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Hero = () => {
-  var images = [banner_image_1, banner_image_2, banner_image_3, banner_image_4, banner_image_5, banner_image_6];
+  var images = [banner_image_1, banner_image_2, banner_image_3, banner_image_4, banner_image_5];
   const banner_image = images[Math.floor(Math.random() * images.length)];
 
   useEffect(() => {

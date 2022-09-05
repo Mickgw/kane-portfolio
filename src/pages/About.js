@@ -207,26 +207,26 @@ const About = () => {
                 <FadeInWhenVisible>
                   <div className="services-section-grid">
                     <div className="services-container">
-                      <Accordion index="01" title="Photography">
+                      <Accordion title="Photography">
                         The goal is to capture a clients story with the best
                         possible photos. Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.
                       </Accordion>
 
-                      <Accordion index="02" title="Videography">
+                      <Accordion title="Videography">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="03" title="Video editing">
+                      <Accordion title="Video editing">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                       </Accordion>
 
-                      <Accordion index="04" title="Photoshop">
+                      <Accordion title="Photoshop">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
@@ -234,26 +234,6 @@ const About = () => {
                     </div>
                   </div>
                 </FadeInWhenVisible>
-
-                <div className="tools">
-                  <FadeInWhenVisible>
-                    <div className="section-header">Tools I use</div>
-                  </FadeInWhenVisible>
-
-                  <FadeInWhenVisible>
-                    <h2 className="tools-paragraph">
-                      I use a couple of tools for my work. I use
-                      <b className="tool"> After Effects </b>
-                      for... Lorem ipsum dolor sit amet, consectetur adipiscing
-                      elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua. Ut enim <b className="tool"> Photoshop </b>ad minim veniam, quis nostrud
-                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure <b className="tool"> Illustrator </b>dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla
-                      pariatur.
-                    </h2>
-                  </FadeInWhenVisible>
-                </div>
               </div>
             </div>
           </div>

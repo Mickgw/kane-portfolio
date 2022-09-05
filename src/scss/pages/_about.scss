@@ -110,32 +110,20 @@
             .services-section {
                 .services-section-grid {
                     width: 100%;
-
                     .services-container {
                         border-top: 1px solid $divider-color;
                         .accordian {
                             width: 100%;
                             border-bottom: 1px solid $divider-color;
                             .accordion-header {
-                                display: grid;
-                                grid-template-columns: 20% 80%;
+                                padding-inline: 3em;
                                 cursor: pointer !important;
                                 padding-block: 3.5rem;
 
                                 @media (max-width: $layout-breakpoint-small) {
                                     grid-template-columns: 100%;
                                     padding-block: 2.5rem;
-                                }
-
-                                .accordion-index {
-                                    color: $black;
-                                    margin-block: auto;
-                                    font-weight: 500;
-                                    font-size: calc(clamp(1.6rem, 4vw, 2.5rem) * 0.875);
-
-                                    @media (max-width: $layout-breakpoint-small) {
-                                        display: none;
-                                    }
+                                    padding-inline: 0px;
                                 }
 
                                 .accordion-title-container {
@@ -147,7 +135,7 @@
                                     .accordion-title {
                                         transition: 0.4s ease-in-out;
                                         font-weight: 500;
-                                        font-size: calc(clamp(1.8rem, 4vw, 2.5rem) * 0.875);
+                                        font-size: calc(clamp(1.8rem, 2vw, 2.5rem) * 0.875);
 
                                         @media (max-width: $layout-breakpoint-small) {
                                             font-weight: 500;
@@ -184,7 +172,7 @@
                                     width: 100%;
 
                                     color: $text-color;
-                                    max-width: 50ch;
+                                    max-width: 90ch;
                                     line-height: 1.8;
                                     font-size: calc(clamp(1.4rem, 4vw, 2rem) * 0.875);
 
