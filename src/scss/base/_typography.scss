@@ -4,12 +4,14 @@
 @font-face {
   font-family: "Allison Script";
   src: local("Allison Script"), url("../../fonts/AllisonScript/Allison_Script.otf") format("truetype");
+  font-display: swap;
 }
 
 //Font for logo
 @font-face {
   font-family: "Three Signature";
   src: local("Three Signature"), url("../../fonts/ThreeSignature/Three\ Signature.otf") format("truetype");
+  font-display: swap;
 }
 
 html {
