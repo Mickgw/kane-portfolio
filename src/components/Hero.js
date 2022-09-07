@@ -1,10 +1,11 @@
 
 //Banner images
-import banner_image_1 from "../assets/images/images-for-banner/website_banner_1.jpg";
-import banner_image_2 from "../assets/images/images-for-banner/website_banner_2.jpg";
-import banner_image_3 from "../assets/images/images-for-banner/website_banner_3.jpg";
-import banner_image_4 from "../assets/images/images-for-banner/website_banner_5.jpg";
-import banner_image_5 from "../assets/images/images-for-banner/website_banner_6.jpg";
+
+// import banner_image_1 from "../assets/images/images-for-banner/website_banner_1-1.webp"; image still too big
+import banner_image_2 from "../assets/images/images-for-banner/website_banner_2.webp";
+import banner_image_3 from "../assets/images/images-for-banner/website_banner_3.webp";
+import banner_image_4 from "../assets/images/images-for-banner/website_banner_5.webp";
+import banner_image_5 from "../assets/images/images-for-banner/website_banner_6.webp";
 
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
