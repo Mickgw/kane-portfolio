@@ -79,7 +79,7 @@ collections:
           - {label: "Email URL", name: "email_url", widget: string}
           - {label: "Instagram URL titel", name: "insta_url_title", widget: string}
           - {label: "Intagram URL", name: "insta_url", widget: string}
-          - label: "Social link"
+          - label: "Social media"
             name: "social_links"
             widget: "list"
             fields:
