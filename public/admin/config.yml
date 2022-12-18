@@ -70,24 +70,27 @@ collections:
   - label: "Footer"
     name: "footer"
     files:
-      - label: "Footer fields"
-        name: "footer_fields"
+      - label: "Footer section"
+        name: "footer_section"
         file: "src/content/footer.json"
-        fields: 
-          - {label: "Header titel", name: "header_title", widget: string, required: false}
-          - {label: "Email URL titel", name: "email_url_title", widget: string}
-          - {label: "Email URL", name: "email_url", widget: string}
-          - {label: "Instagram URL titel", name: "insta_url_title", widget: string}
-          - {label: "Intagram URL", name: "insta_url", widget: string}
-          - label: "Social media"
-            name: "social_links"
-            widget: "list"
-            fields:
-              - {label: "Titel", name: "title", widget: "text"}
-              - {label: "URL", name: "url", widget: "text"}
-          - {label: "Copyright", name: "copyright", widget: string}
-          - {label: "Made by", name: "made_by", widget: string, required: false}
-          - {label: "Made by (URL)", name: "made_by_url", widget: string, required: false}
+        fields:
+          - label: "Footer fields"
+            name: "footer_fields"
+            fields: 
+              - {label: "Header titel", name: "header_title", widget: string, required: false}
+              - {label: "Email URL titel", name: "email_url_title", widget: string}
+              - {label: "Email URL", name: "email_url", widget: string}
+              - {label: "Instagram URL titel", name: "insta_url_title", widget: string}
+              - {label: "Intagram URL", name: "insta_url", widget: string}
+              - label: "Social media"
+                name: "social_links"
+                widget: "list"
+                fields:
+                  - {label: "Titel", name: "title", widget: "text"}
+                  - {label: "URL", name: "url", widget: "text"}
+              - {label: "Copyright", name: "copyright", widget: string}
+              - {label: "Made by", name: "made_by", widget: string, required: false}
+              - {label: "Made by (URL)", name: "made_by_url", widget: string, required: false}
 
  
     
