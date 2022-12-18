@@ -107,6 +107,21 @@
           "paragraph": "I did this shoot at the Nurburgring (Nordschleife). It was a beautiful sunny day and we went to some amazing spots. These photo's are the result of that day. Unfortunately I didnt have the right lens with me"
         }
       ]
+    },
+    {
+      "id": "jKbMg4Bfe",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661451177/website_banner_3_th1mrc.jpg",
+      "images": [
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546588/website_banner_phone_isyyxh.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_3_ayppiu.jpg"
+      ],
+      "album_description_paragraphs": [
+        {
+          "paragraph": "Dit is de beschrijving"
+        }
+      ],
+      "title": "Dit is de album titel"
     }
   ]
 }
