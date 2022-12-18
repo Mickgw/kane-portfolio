@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import FooterNormal from "./components/FooterNormal";
 import FooterResponsive from "./components/FooterResponsive";
 import ScrollToTop from "./components/hooks/ScrollToTop";
-import AnimatedCursor from "react-animated-cursor";
+// import AnimatedCursor from "react-animated-cursor";
 
 // Pages
 import Home from "./pages/Home";

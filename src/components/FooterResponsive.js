@@ -1,4 +1,4 @@
-import { ImArrowRight2 } from "react-icons/im";
+// import { ImArrowRight2 } from "react-icons/im";
 
 const FooterResponsive = () => {
     return (
