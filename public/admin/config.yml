@@ -41,9 +41,9 @@ collections:
             fields:
               - {label: "ID", name: "id", widget: "ncw-id", hint: "The album ID is auto-generated, pureley for back-end purposes"}
               - {label: "Album title", name: "title", widget: "string"}
-              - {label: "Year", name: "year", widget: number}
-              - {label: "Camera", name: "camera", widget: "string"}
-              - {label: "Camera lens", name: "camera_lens", widget: "string"}
+              - {label: "Year", name: "year", widget: number, required: false}
+              - {label: "Camera", name: "camera", widget: "string", required: false}
+              - {label: "Camera lens", name: "camera_lens", widget: "string", required: false}
               - {label: "Album cover image", name: "cover_image", widget: "image", hint: "*Make sure the cover image has the aspect ratio of an portrait. Only this way it can be displayed properly on the site*"}
               - {label: "Albums images", name: "images", widget: "image", hint: "These images will be displayed on the page of the album it self, you can select multiple (obviously)", media_library: { name: cloudinary, output_filename_only: true, config: { multiple: true } }}
               - label: "Album description paragraph"
@@ -64,7 +64,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Video title", name: "title", widget: "string"}
-              - {label: "Video description", name: "description", widget: "string"}
+              - {label: "Video description", name: "description", widget: "string", required: false}
               - {label: "Video file", name: "video_url", widget: "file"}
 
  

@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Hero = () => {
-  var images = [banner_image_2, banner_image_3, banner_image_4, banner_image_5];
+  var images = [ banner_image_2, banner_image_3, banner_image_4, banner_image_5];
   const banner_image = images[Math.floor(Math.random() * images.length)];
 
   useEffect(() => {

@@ -15,8 +15,6 @@ const PhotoAlbumsPage = () => {
   const timer_duration = 1400;
   const location = useLocation();
 
-  console.log(location.pathname);
-
   //Set loading to false after time
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -76,7 +74,12 @@ const PhotoAlbumsPage = () => {
           />
         </motion.div>
       ) : (
-        <motion.div className="album-page" variants={infoGridAnimation} initial="hidden" animate="visible">
+        <motion.div
+          className="album-page"
+          variants={infoGridAnimation}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="divider-text category">name</div>
           <div className="container">
             {photoAlbums.album_list.map((album, index) => {
@@ -85,7 +88,10 @@ const PhotoAlbumsPage = () => {
                   <div className="album-data" key={index}>
                     <motion.div className="album-info-grid">
                       <div className="album-facts">
-                        <h1 className="album-title">{album.title}</h1>
+                        {album?.title && (
+                          <h1 className="album-title">{album.title}</h1>
+                        )}
+
                         <div className="divider-text category">year</div>
                         <h4 className="album-year">{album.year}</h4>
                         <div className="divider-text category">camera</div>
