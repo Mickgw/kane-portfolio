@@ -5,7 +5,8 @@ import { AnimatePresence } from "framer-motion";
 
 // Components
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import FooterNormal from "./components/FooterNormal";
+import FooterResponsive from "./components/FooterResponsive";
 import ScrollToTop from "./components/hooks/ScrollToTop";
 import AnimatedCursor from "react-animated-cursor";
 
@@ -23,7 +24,7 @@ function App() {
       <div className="App">
         <ScrollToTop />
         <div className="cursor__dot">
-          <AnimatedCursor
+          {/* <AnimatedCursor
             innerSize={null} //Disabled the the main dot
             innerScale={null} //Disabled the dot that's following the cursor
             outerSize={15}
@@ -38,7 +39,7 @@ function App() {
               ".image-category-tags",
               ".services-container"
             ]}
-          />
+          /> */}
         </div>
 
         <header>
@@ -57,7 +58,8 @@ function App() {
         </main>
 
         <footer>
-          <Footer />
+          <FooterNormal />
+          <FooterResponsive />
         </footer>
       </div>
     </AnimatePresence>

@@ -15,7 +15,7 @@
 @import "components/navbar";
 @import "components/page-loader";
 @import "components/photo-albums";
-@import "components/footer";
+@import "components/footer-normal";
 @import "components/image-modal";
 @import "components/navbar-menu";
 @import "components/cursor";
@@ -23,6 +23,7 @@
 @import "components/home-about-normal";
 @import "components/hero";
 @import "components/hero-responsive";
+@import "components/footer-responsive";
 
 body {
   background-color: $background;

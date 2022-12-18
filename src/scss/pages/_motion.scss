@@ -31,7 +31,7 @@
                 .video-description-column {
                     .video-description {
                         line-height: 1.8;
-                        font-size: clamp(1.5rem, 3vw, 1.8rem);
+                        font-size: clamp(1.5rem, 3vw, 1.7rem);
                         color: $text-color;
 
                         @media (max-width: $layout-breakpoint-small) {

@@ -13,6 +13,10 @@
         margin-top: $hero-section-height-xsmall + 10vh;
     }
 
+    .hero-image {
+        filter: blur(4px);
+    }
+
     .home-about-responsive-container {
         .home-about-responsive-inner {
             display: grid;

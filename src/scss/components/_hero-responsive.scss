@@ -17,7 +17,7 @@
         padding-inline: $wrapper-value-breakpoint-small;
         padding-top: 25vh;
         background-color: transparent;
-        // backdrop-filter: invert(10%) brightness(90%);
+        backdrop-filter: blur(3px);
 
         .hero-title {
             font-weight: 600;

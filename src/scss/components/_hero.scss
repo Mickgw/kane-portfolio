@@ -17,6 +17,7 @@
             height: 100%;
             display: grid;
             grid-template-columns: 40% 60%;
+            column-gap: 3rem;
 
             .hero-text {
                 display: table;

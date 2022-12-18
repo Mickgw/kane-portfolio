@@ -88,31 +88,47 @@ const PhotoAlbumsPage = () => {
                   <div className="album-data" key={index}>
                     <motion.div className="album-info-grid">
                       <div className="album-facts">
-                        {album?.title && (
-                          <h1 className="album-title">{album.title}</h1>
+                        <h1 className="album-title">{album.title}</h1>
+
+                        {album.year && (
+                          <div id="album-year">
+                            <div className="divider-text category">year</div>
+                            <h4 className="album-year">{album.year}</h4>
+                          </div>
                         )}
 
-                        <div className="divider-text category">year</div>
-                        <h4 className="album-year">{album.year}</h4>
-                        <div className="divider-text category">camera</div>
-                        <h4 className="camera-name">{album.camera}</h4>
-                        <div className="divider-text category">camera lens</div>
-                        <h4 className="camera-name">{album.camera_lens}</h4>
-                      </div>
+                        {album.camera && (
+                          <div id="album-camera">
+                            <div className="divider-text category">camera</div>
+                            <h4 className="camera-name">{album.camera}</h4>
+                          </div>
+                        )}
 
-                      <div className="album-description">
-                        {album.album_description_paragraphs.map(
-                          (album_paragraph, index) => {
-                            return (
-                              <div key={index}>
-                                <p className="album-description-paragraph">
-                                  {album_paragraph.paragraph}
-                                </p>
-                              </div>
-                            );
-                          }
+                        {album.camera_lens && (
+                          <div id="album-camera-lens">
+                            <div className="divider-text category">
+                              camera lens
+                            </div>
+                            <h4 className="camera-name">{album.camera_lens}</h4>
+                          </div>
                         )}
                       </div>
+
+                      {album.album_description_paragraphs && (
+                        <div className="album-description">
+                          {album.album_description_paragraphs.map(
+                            (album_paragraph, index) => {
+                              return (
+                                <div key={index}>
+                                  <p className="album-description-paragraph">
+                                    {album_paragraph.paragraph}
+                                  </p>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      )}
                     </motion.div>
                     <div className="album-images">
                       {album.images.map((album_image, index) => {

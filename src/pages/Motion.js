@@ -56,19 +56,26 @@ const Motion = () => {
             {videoProjects.video_projects_list.map((video, index) => {
               return (
                 <FadeInWhenVisible key={index}>
-                  <div className="video-container" >
+                  <div className="video-container">
                     <div className="video-info">
                       <div className="video-title-column">
                         <div className="video-info-category">Name</div>
                         <div className="video-title">{video.title}</div>
                       </div>
-                      <div className="video-description-column">
-                        <div className="video-info-category">Description</div>
-                        <p className="video-description">{video.description}</p>
-                      </div>
+                      {video.description && (
+                        <div className="video-description-column">
+                          <div className="video-info-category">Description</div>
+                          <p className="video-description">
+                            {video.description}
+                          </p>
+                        </div>
+                      )}
                     </div>
                     <video controls>
-                      <source src={video.video_url + "#t=0.001"} type="video/mp4" />
+                      <source
+                        src={video.video_url + "#t=0.001"}
+                        type="video/mp4"
+                      />
                     </video>
                   </div>
                 </FadeInWhenVisible>

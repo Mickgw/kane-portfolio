@@ -11,6 +11,8 @@ const HeroResponsive = () => {
         strength={200}
         width="100%"
         height="100%"
+        // blur={3}
+        // // style={{ sc }}
       >
         <div className="hero-container">
           <h1 className="hero-title">Kane Jansen</h1>
