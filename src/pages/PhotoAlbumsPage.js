@@ -68,8 +68,8 @@ const PhotoAlbumsPage = () => {
         >
           <PageLoader
             loaderText={location.pathname
-              .replace(/\s/g, "-")
-              .replace(/%20/g, "-")
+              .replaceAll(/\s/g, "-")
+              .replaceAll(/%20/g, "-")
               .substring(1)}
           />
         </motion.div>
@@ -83,7 +83,7 @@ const PhotoAlbumsPage = () => {
           <div className="divider-text category">name</div>
           <div className="container">
             {photoAlbums.album_list.map((album, index) => {
-              if (title === album.title.replace(" ", "-").toLocaleLowerCase()) {
+              if (title === album.title.replaceAll(" ", "-").toLocaleLowerCase()) {
                 return (
                   <div className="album-data" key={index}>
                     <motion.div className="album-info-grid">

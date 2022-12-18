@@ -19,7 +19,7 @@ const PhotoAlbums = () => {
                 <div key={index}>
                   <Link
                     to={`/albums/${album.title
-                      .replace(" ", "-")
+                      .replaceAll(" ", "-")
                       .toLocaleLowerCase()}`}
                   >
                     <FadeInWhenVisible>

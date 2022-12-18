@@ -1,4 +1,5 @@
 import { ImArrowRight2 } from "react-icons/im";
+import FooterFields from "../content/footer.json";
 
 const FooterNormal = () => {
     return (
@@ -8,62 +9,26 @@ const FooterNormal = () => {
                     <div className="footer-email">
                         <div className="email-header">
                             <div className="interested-question">
-                                Interested in what I can do for you?
+                                {FooterFields?.header_title}
                             </div>
 
-                            <h2 className="email-header-link email">
-                                <a href="mailto:kanejansen@hotmail.nl">
-                                    Send me an email
+                            <h2 className="email-header-link">
+                                <a href={FooterFields.email_url}>
+                                    <span>{FooterFields.email_url_title}</span>
                                     <ImArrowRight2 className="email-link-icon" />
                                 </a>
                             </h2>
 
                             <h2 className="email-header-link insta">
                                 <a
-                                    href="https://www.instagram.com/kj.026/"
+                                    href={FooterFields?.insta_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Direct message me
+                                    {FooterFields?.insta_url_title}
                                 </a>
                             </h2>
                         </div>
-                    </div>
-                    <div className="footer-socials-responsive">
-                        <ul className="footer-socials-responsive-list">
-                            <li className="footer-socials-responsive-container">
-                                <a
-                                    href="https://www.instagram.com/kj.026/"
-                                    className="footer-socials-responsive-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Instagram
-                                </a>
-                            </li>
-
-                            <li className="footer-socials-responsive-container">
-                                <a
-                                    href="https://www.youtube.com/channel/UCS1PHPWlS-4NteB-9XNebWQ/featured"
-                                    className="footer-socials-responsive-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Youtube
-                                </a>
-                            </li>
-
-                            <li className="footer-socials-responsive-container">
-                                <a
-                                    href="/"
-                                    className="footer-socials-responsive-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Unsplash
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -71,24 +36,32 @@ const FooterNormal = () => {
                     <div className="footer-bottom-container">
                         <div className="footer-bottom-left">
                             <div className="footer-copyright">
-                                © Kane Jansen
-                            </div>
-                            <div className="footer-copyright-version-two">
-                                © {new Date().getFullYear()}
+                                {FooterFields?.copyright}
                             </div>
                             <div className="made-by">
-                                Made by{" "}
                                 <a
-                                    href="https://www.mickwaanders.dev"
+                                    href={FooterFields?.made_by_url}
                                     rel="noreferrer noopener"
                                     target="_blank"
                                 >
-                                    Mick Waanders
+                                    {FooterFields?.made_by}
                                 </a>
                             </div>
                         </div>
                         <div className="footer-bottom-right">
-                            <a href="/" className="footer-bottom-socials-links">
+                            {FooterFields.social_links.map((link, index) => {
+                                return (
+                                    <a
+                                        className="footer-bottom-socials-links"
+                                        href={link?.url}
+                                    >
+                                        {link?.title}
+                                        <em className="comma">,</em>
+                                    </a>
+                                );
+                            })}
+
+                            {/* <a href="/" className="footer-bottom-socials-links">
                                 Instagram<em className="comma">,</em>
                             </a>
                             <a href="/" className="footer-bottom-socials-links">
@@ -96,7 +69,7 @@ const FooterNormal = () => {
                             </a>
                             <a href="/" className="footer-bottom-socials-links">
                                 Unsplash
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
