@@ -71,7 +71,7 @@ collections:
     name: "footer"
     files:
       - label: "Footer fields"
-        name: "footer"
+        name: "footer_fields"
         file: "src/content/footer.json"
         fields: 
           - {label: "Header titel", name: "header_title", widget: string, required: false}
