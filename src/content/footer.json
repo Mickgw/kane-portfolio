@@ -1,0 +1,24 @@
+{
+  "made_by": "Made by Mick Waanders",
+  "insta_url_title": "Direct message me",
+  "email_url_title": "Send me an email",
+  "header_title": "Dit is de titel",
+  "social_links": [
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/kj.026/"
+    },
+    {
+      "title": "Youtube",
+      "url": "https://www.youtube.com/channel/UCS1PHPWlS-4NteB-9XNebWQ/featured"
+    },
+    {
+      "title": "Unsplash",
+      "url": "/"
+    }
+  ],
+  "copyright": "@ Kane Jansen",
+  "insta_url": "https://www.instagram.com/kj.026/",
+  "email_url": "mailto:kanejansen@hotmail.nl",
+  "made_by_url": "https://www.mickwaanders.dev"
+}
