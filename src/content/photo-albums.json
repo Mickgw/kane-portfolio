@@ -116,11 +116,7 @@
         "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg",
         "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_3_ayppiu.jpg"
       ],
-      "album_description_paragraphs": [
-        {
-          "paragraph": "Dit is de beschrijving"
-        }
-      ],
+      "album_description_paragraphs": [],
       "title": "Dit is de album titel"
     }
   ]
