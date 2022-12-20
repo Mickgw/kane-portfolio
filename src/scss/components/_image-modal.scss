@@ -16,14 +16,12 @@
 
     .modal-image {
         height: 85%;
+        max-width: 85%;
         object-fit: contain;
 
-        @media (max-width: $layout-breakpoint-medium) {
-            max-width: 100%;
-        }
-
-        @media (max-width: $layout-breakpoint-medium) {
+        @media (max-width: $layout-breakpoint-xsmall) {
             height: 75%;
+            max-width: 100%;
         }
     }
 }

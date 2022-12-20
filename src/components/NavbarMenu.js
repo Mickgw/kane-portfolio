@@ -388,6 +388,7 @@ const NavbarMenu = () => {
                       );
               }
             })()}
+            {/* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
             <AnimatePresence>
               {isHoveringHome && (
                 <motion.img

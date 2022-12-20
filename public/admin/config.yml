@@ -36,6 +36,7 @@ collections:
         name: "album"
         file: "src/content/photo-albums.json"
         fields:
+          - {label: "Title above photo albums on home page", name: "title_above_akbums", widget: "text", hint: "This title appears above the photo albums on the home page"}
           - label: "Album"
             name: "album_list"
             widget: "list"
@@ -108,21 +109,21 @@ collections:
             hint: "Every text line will be displayed under each other"
             fields:
               - {label: "Text line", name: "text_line", widget: "text"}
-          - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
-          - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "text"}
-          - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
-          - label: "About paragraph"
-            name: "about_paragraph"
-            widget: "list"
-            fields:
-              - {label: "Paragraph", name: "paragraph", widget: "text"}
-          - {label: "Services title", name: "service_title", widget: string, required: false}
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - {label: "Service name", name: "service_name", widget: "text"}
-              - {label: "Service description", name: "service_description", widget: "text"}
+              - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
+              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "text"}
+              - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
+              - label: "About paragraph"
+                name: "about_paragraph"
+                widget: "list"
+                fields:
+                  - {label: "Paragraph", name: "paragraph", widget: "text"}
+              - {label: "Services title", name: "service_title", widget: string, required: false}
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {label: "Service name", name: "service_name", widget: "text"}
+                  - {label: "Service description", name: "service_description", widget: "text"}
 
   # Images navigation menu
   - label: "Images for Navigation menu"
@@ -139,6 +140,7 @@ collections:
           - {label: "Motion page image", name: "motion_page_image", widget: "image"}
           - {label: "None navigation page image", name: "none_navigation_page_image", widget: "image", hint: "This image will be displayed in the navigation menu when none of the above pages is active. Example could be when you're on the page of an album"}
 
+  # Images for hero
   - label: "Images for hero"
     name: "images_for_hero"
     files: 
@@ -146,6 +148,7 @@ collections:
         name: "hero_images"
         file: "src/assets/images/images-for-hero/hero-images.json"
         fields:
+          - {label: "Hero image for mobile (potrait image advised)", name: "hero_image_mobile", widget: "image"}
           - label: "Hero image"
             name: "hero_images_list"
             widget: "list"
