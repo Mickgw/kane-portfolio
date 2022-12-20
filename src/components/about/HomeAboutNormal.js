@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Parallax } from "react-parallax";
+import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 
 // Images
 import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
@@ -80,11 +81,12 @@ const HomeAboutNormal = () => {
                                 strength={150}
                                 className="parallax-bg"
                             />
-
+                        </div>
+                        <FadeInWhenVisible>
                             <div className="image-info">
                                 2022 - Nürburgring, Germany
                             </div>
-                        </div>
+                        </FadeInWhenVisible>
                     </div>
                     <div className="home-about-content">
                         <div className="home-about-content-inner">

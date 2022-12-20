@@ -36,7 +36,7 @@ collections:
         name: "album"
         file: "src/content/photo-albums.json"
         fields:
-          - {label: "Title above photo albums on home page", name: "title_above_albums", widget: "text", hint: "This title appears above the photo albums on the home page"}
+          - {label: "Title above photo albums on home page", name: "title_above_albums", widget: "string", hint: "This title appears above the photo albums on the home page"}
           - label: "Album"
             name: "album_list"
             widget: "list"
@@ -88,8 +88,8 @@ collections:
             name: "social_links"
             widget: "list"
             fields:
-              - {label: "Titel", name: "title", widget: "text"}
-              - {label: "URL", name: "url", widget: "text"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
           - {label: "Copyright", name: "copyright", widget: string}
           - {label: "Made by", name: "made_by", widget: string, required: false}
           - {label: "Made by (URL)", name: "made_by_url", widget: string, required: false}
@@ -108,9 +108,9 @@ collections:
             widget: "list"
             hint: "Every text line will be displayed under each other"
             fields:
-              - {label: "Text line", name: "text_line", widget: "text"}
+              - {label: "Text line", name: "text_line", widget: "string"}
               - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
-              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "text"}
+              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "string"}
               - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
               - label: "About paragraph"
                 name: "about_paragraph"
@@ -122,7 +122,7 @@ collections:
                 name: "services"
                 widget: "list"
                 fields:
-                  - {label: "Service name", name: "service_name", widget: "text"}
+                  - {label: "Service name", name: "service_name", widget: "string"}
                   - {label: "Service description", name: "service_description", widget: "text"}
 
   # Images navigation menu
@@ -132,7 +132,7 @@ collections:
       - label: "Navigation menu images"
         name: "navigation_menu_images"
         file: "src/assets/images/images-for-navmenu/navigation-menu-images.json"
-        hint: "These images will be displayed according to the active page"
+        hint: "These images will be displayed according to the active page (landscape ratio images advised!)"
         fields:
           - {label: "Home page image", name: "home_page_image", widget: "image"}
           - {label: "Portfolio page image", name: "portfolio_page_image", widget: "image"}
@@ -154,6 +154,26 @@ collections:
             widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image"}
+
+  # Home about content
+  - label: "Home about content"
+    name: "home_about_content"
+    files: 
+      - label: "Content"
+        name: "content"
+        file: "src/content/home-about-page.json"
+        fields:
+          - {label: "Home about image", name: "home_about_image", widget: "image"}
+          - label: "Header title lines"
+            name: "header_title_lines"
+            widget: "list"
+            fields:
+              - {label: "Title line", name: "title_line", widget: "string"}
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            fields:
+              - {label: "Paragraph", name: "paragraph", widget: "text"}             
 
 
 
