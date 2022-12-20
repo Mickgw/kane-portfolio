@@ -2,13 +2,14 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
+import NavigationMenuImages from "../assets/images/images-for-navmenu/navigation-menu-images.json"
 
 //Menu images on navlink hover
-import homeImage from "../assets/images/images-for-navmenu/navmenu_home.jpg";
-import portfolioImage from "../assets/images/images-for-navmenu/navmenu_portfolio.jpg";
-import aboutImage from "../assets/images/images-for-navmenu/navmenu_about.jpg";
-import motionImage from "../assets/images/image_4_menu.jpeg";
-import otherPage from "../assets/images/other-page-image.jpeg";
+// import homeImage from "../assets/images/images-for-navmenu/navmenu_home.jpg";
+// import portfolioImage from "../assets/images/images-for-navmenu/navmenu_portfolio.jpg";
+// import aboutImage from "../assets/images/images-for-navmenu/navmenu_about.jpg";
+// import motionImage from "../assets/images/image_4_menu.jpeg";
+// import otherPage from "../assets/images/other-page-image.jpeg";
 
 const NavbarMenu = () => {
   //assigning location variable
@@ -349,7 +350,7 @@ const NavbarMenu = () => {
                   return (
                     <img
                       className="navigation-image"
-                      src={homeImage}
+                      src={NavigationMenuImages?.home_page_image}
                       alt="home"
                     />
                   );
@@ -357,7 +358,7 @@ const NavbarMenu = () => {
                   return (
                     <img
                       className="navigation-image"
-                      src={portfolioImage}
+                      src={NavigationMenuImages?.portfolio_page_image}
                       alt="portfolio"
                     />
                   );
@@ -365,7 +366,7 @@ const NavbarMenu = () => {
                   return (
                     <img
                       className="navigation-image"
-                      src={aboutImage}
+                      src={NavigationMenuImages?.about_page_image}
                       alt="about"
                     />
                   );
@@ -373,28 +374,25 @@ const NavbarMenu = () => {
                   return (
                     <img
                       className="navigation-image"
-                      src={motionImage}
-                      alt="motion"
-                    />
-                  );
-                case "Albums":
-                  return (
-                    <img
-                      className="navigation-image"
-                      src={otherPage}
+                      src={NavigationMenuImages?.motion_page_image}
                       alt="motion"
                     />
                   );
                 default:
-                  return null;
+                    return (
+                        <img
+                          className="navigation-image"
+                          src={NavigationMenuImages?.none_navigation_page_image}
+                          alt="motion"
+                        />
+                      );
               }
             })()}
-            {/* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
             <AnimatePresence>
               {isHoveringHome && (
                 <motion.img
                   className="navigation-image"
-                  src={homeImage}
+                  src={NavigationMenuImages?.home_page_image}
                   variants={navMenuImageAnimationHover}
                   initial="hidden"
                   animate="visible"
@@ -407,7 +405,7 @@ const NavbarMenu = () => {
               {isHoveringPortfolio && (
                 <motion.img
                   className="navigation-image portfolio"
-                  src={portfolioImage}
+                  src={NavigationMenuImages?.portfolio_page_image}
                   variants={navMenuImageAnimationHover}
                   initial="hidden"
                   animate="visible"
@@ -420,7 +418,7 @@ const NavbarMenu = () => {
               {isHoveringAbout && (
                 <motion.img
                   className="navigation-image"
-                  src={aboutImage}
+                  src={NavigationMenuImages?.about_page_image}
                   variants={navMenuImageAnimationHover}
                   initial="hidden"
                   animate="visible"
@@ -433,7 +431,7 @@ const NavbarMenu = () => {
               {isHoveringMotion && (
                 <motion.img
                   className="navigation-image"
-                  src={motionImage}
+                  src={NavigationMenuImages?.motion_page_image}
                   variants={navMenuImageAnimationHover}
                   initial="hidden"
                   animate="visible"

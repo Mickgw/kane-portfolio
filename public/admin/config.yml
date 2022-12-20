@@ -13,6 +13,7 @@ media_library:
     api_key: 314693828169891
 
 collections:
+  # Images for portfolio
   - label: "Images for portfolio"
     name: "portfolio-images"
     files: 
@@ -52,6 +53,7 @@ collections:
                 fields:
                   - {label: "Paragraph", name: "paragraph", widget: "text"}
 
+  # Videos for motion page
   - label: "Videos for Motion page"
     name: "motion-videos"
     files: 
@@ -67,6 +69,7 @@ collections:
               - {label: "Video description", name: "description", widget: "string", required: false}
               - {label: "Video file", name: "video_url", widget: "file"}
 
+  # Footer
   - label: "Footer"
     name: "footer"
     files:
@@ -90,6 +93,7 @@ collections:
           - {label: "Made by", name: "made_by", widget: string, required: false}
           - {label: "Made by (URL)", name: "made_by_url", widget: string, required: false}
 
+  # About page
   - label: "About page content"
     name: "about_page"
     files:
@@ -120,6 +124,7 @@ collections:
               - {label: "Service name", name: "service_name", widget: "text"}
               - {label: "Service description", name: "service_description", widget: "text"}
 
+  # Images navigation menu
   - label: "Images for Navigation menu"
     name: "images_navigation_menu"
     files: 
@@ -133,7 +138,19 @@ collections:
           - {label: "About page image", name: "about_page_image", widget: "image"}
           - {label: "Motion page image", name: "motion_page_image", widget: "image"}
           - {label: "None navigation page image", name: "none_navigation_page_image", widget: "image", hint: "This image will be displayed in the navigation menu when none of the above pages is active. Example could be when you're on the page of an album"}
-          
+
+  - label: "Images for hero"
+    name: "images_for_hero"
+    files: 
+      - label: "Hero images"
+        name: "hero_images"
+        file: "src/assets/images/images-for-hero/hero-images.json"
+        fields:
+          - label: "Hero image"
+            name: "hero_images_list"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
 
 
 
