@@ -1,0 +1,16 @@
+{
+  "hero_images_list": [
+    {
+      "image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661451177/website_banner_3_th1mrc.jpg"
+    },
+    {
+      "image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg"
+    },
+    {
+      "image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_5_xv92wl.jpg"
+    },
+    {
+      "image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546613/website_banner_6_yakpr3.jpg"
+    }
+  ]
+}
