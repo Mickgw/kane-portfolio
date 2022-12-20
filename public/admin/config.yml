@@ -98,10 +98,11 @@ collections:
         file: "src/content/about-page.json"
         widget: "object"
         fields:
-          - {label: "Line 1", name: "line_1", widget: string, required: false}
-          - {label: "Line 2", name: "line_2", widget: string, required: false}
-          - {label: "Line 3", name: "line_3", widget: string, required: false}
-          - {label: "Line 4", name: "line_4", widget: string, required: false}
+          - label: "Intro text line"
+            name: "intro_text_line"
+            widget: "list"
+            fields:
+              - {label: "Text line", name: "text_line", widget: "text"}
           - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
           - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "text"}
           - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}

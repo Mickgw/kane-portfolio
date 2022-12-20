@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
+import AboutContent from "../content/about-page.json";
 
 //Components
 import PageLoader from "../components/loader/PageLoader";
@@ -12,8 +13,6 @@ import {
     ParallaxProvider,
 } from "react-scroll-parallax";
 
-//Images
-import bigPortrait from "../assets/images/images-for-about/portrait_1.jpg";
 import bigPortraitTwo from "../assets/images/images-for-about/portrait_3.1.JPEG";
 
 const About = () => {
@@ -119,7 +118,7 @@ const About = () => {
                                     className="header-text"
                                     id="about-header-text"
                                 >
-                                    Upcoming
+                                    {AboutContent?.line_1}
                                 </div>
                             </div>
                             <div className="about-header-line">
@@ -127,7 +126,7 @@ const About = () => {
                                     className="header-text"
                                     id="about-header-text"
                                 >
-                                    Photographer
+                                    {AboutContent?.line_2}
                                 </div>
                             </div>
                             <div className="about-header-line">
@@ -135,7 +134,7 @@ const About = () => {
                                     className="header-text"
                                     id="about-header-text"
                                 >
-                                    Cinematographer
+                                    {AboutContent?.line_3}
                                 </div>
                             </div>
                             <div className="about-header-line">
@@ -143,7 +142,7 @@ const About = () => {
                                     className="header-text"
                                     id="about-header-text"
                                 >
-                                    Based in Arnhem.
+                                    {AboutContent?.line_4}
                                 </div>
                             </div>
                         </h1>
@@ -155,14 +154,16 @@ const About = () => {
                                     id="about-image"
                                 >
                                     <ParallaxBannerLayer
-                                        image={bigPortrait}
+                                        image={AboutContent?.image_under_lines}
                                         speed={15}
                                     />
                                 </ParallaxBanner>
                             </div>
                             <FadeInWhenVisible>
                                 <div className="image-info">
-                                    2020 - Arnhem, The Netherlands
+                                    {
+                                        AboutContent?.image_under_lines_description
+                                    }
                                 </div>
                             </FadeInWhenVisible>
                         </ParallaxProvider>
@@ -171,61 +172,27 @@ const About = () => {
                             <div className="about-details-data-grid">
                                 <FadeInWhenVisible>
                                     <div className="section-header-about">
-                                        About me
+                                        {
+                                            AboutContent?.about_paragraph_section_title
+                                        }
                                     </div>
                                 </FadeInWhenVisible>
 
                                 <div className="paragraphs-container">
-                                    <FadeInWhenVisible>
-                                        <p className="about-details-paragraphs">
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore
-                                            et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud
-                                            exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat.
-                                            Duis aute irure dolor in
-                                            reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla
-                                            pariatur. Excepteur sint occaecat
-                                            cupidatat non proident, sunt in
-                                            culpa qui officia deserunt mollit
-                                            anim id est laborum.
-                                        </p>
-                                    </FadeInWhenVisible>
-
-                                    <FadeInWhenVisible>
-                                        <p className="about-details-paragraphs">
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore
-                                            et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud
-                                            exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat.
-                                            Duis aute irure dolor in
-                                            reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla
-                                            pariatur.
-                                        </p>
-                                    </FadeInWhenVisible>
-
-                                    <FadeInWhenVisible>
-                                        <p className="about-details-paragraphs">
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore
-                                            et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud
-                                            exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat.
-                                            Duis aute irure dolor in
-                                            reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla
-                                            pariatur.
-                                        </p>
-                                    </FadeInWhenVisible>
+                                    {AboutContent?.about_paragraph.map(
+                                        (item, index) => {
+                                            return (
+                                                <FadeInWhenVisible>
+                                                    <p
+                                                        key={index}
+                                                        className="about-details-paragraphs"
+                                                    >
+                                                        {item?.paragraph}
+                                                    </p>
+                                                </FadeInWhenVisible>
+                                            );
+                                        }
+                                    )}
                                 </div>
                             </div>
 
@@ -297,36 +264,22 @@ const About = () => {
                                 <FadeInWhenVisible>
                                     <div className="services-section-grid">
                                         <div className="services-container">
-                                            <Accordion title="Photography">
-                                                The goal is to capture a clients
-                                                story with the best possible
-                                                photos. Lorem ipsum dolor sit
-                                                amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore
-                                                magna aliqua.
-                                            </Accordion>
-
-                                            <Accordion title="Videography">
-                                                Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit, sed
-                                                do eiusmod tempor incididunt ut
-                                                labore et dolore magna aliqua.
-                                            </Accordion>
-
-                                            <Accordion title="Video editing">
-                                                Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit, sed
-                                                do eiusmod tempor incididunt ut
-                                                labore et dolore magna aliqua.
-                                            </Accordion>
-
-                                            <Accordion title="Photoshop">
-                                                Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit, sed
-                                                do eiusmod tempor incididunt ut
-                                                labore et dolore magna aliqua.
-                                            </Accordion>
+                                            {AboutContent?.services.map(
+                                                (item, index) => {
+                                                    return (
+                                                        <Accordion
+                                                            key={index}
+                                                            title={
+                                                                item?.service_name
+                                                            }
+                                                        >
+                                                            {
+                                                                item?.service_description
+                                                            }
+                                                        </Accordion>
+                                                    );
+                                                }
+                                            )}
                                         </div>
                                     </div>
                                 </FadeInWhenVisible>
