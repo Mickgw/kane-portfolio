@@ -47,17 +47,12 @@
                 }
 
                 .album-description {
+                    @media (max-width: $layout-breakpoint-small) {
+                        padding-top: 8em;
+                    }
+
                     .album-description-paragraph {
                         padding-bottom: 2em;
-                        line-height: 1.8;
-                        font-size: 1.8em;
-                        color: $text-color;
-                        word-spacing: -1px;
-
-                        @media (max-width: $layout-breakpoint-small) {
-                            padding-top: 4em;
-                            font-size: 1.7em;
-                        }
                     }
                 }
             }

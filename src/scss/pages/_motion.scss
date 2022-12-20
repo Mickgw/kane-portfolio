@@ -30,13 +30,8 @@
 
                 .video-description-column {
                     .video-description {
-                        line-height: 1.8;
-                        font-size: clamp(1.5rem, 3vw, 1.7rem);
                         color: $text-color;
-
-                        @media (max-width: $layout-breakpoint-small) {
-                            color: $black;
-                        }
+                        font-size: calc(clamp(1.7rem, 1.5vw, 1.8rem) * 0.875);
                     }
                 }
             }
@@ -54,4 +49,8 @@
     color: rgb(170, 170, 170);
     padding-bottom: 1.3em;
 
+    @media (max-width: $layout-breakpoint-small) {
+        color: $black;
+        font-weight: 600;
+    }
 }

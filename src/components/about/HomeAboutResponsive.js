@@ -4,9 +4,6 @@ import { VscArrowRight } from "react-icons/vsc";
 import { Parallax } from "react-parallax";
 import HomeAboutContent from "../../content/home-about-page.json";
 
-// Images
-import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
-
 const HomeAboutResponsive = () => {
     return (
         <section className="home-about-responsive">
@@ -56,25 +53,17 @@ const HomeAboutResponsive = () => {
                     <div className="home-about-responsive-content">
                         <div className="home-about-responsive-content-inner">
                             <div className="home-about-responsive-paragraphs">
-                                <FadeInWhenVisible>
-                                    <p className="home-about-responsive-paragraph">
-                                        My hobbies take up quite a bit of free
-                                        time.
-                                    </p>
-                                </FadeInWhenVisible>
-
-                                <FadeInWhenVisible>
-                                    <p className="home-about-responsive-paragraph">
-                                        Besides my hobbies, I am also busy with
-                                        expanding my portfolio. Every
-                                        opportunity I get I will try to make the
-                                        most awesome photo's I can. Lorem ipsum
-                                        dolor sit amet, consectetur adipiscing
-                                        elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua do
-                                        eiusmod tempor incididunt.
-                                    </p>
-                                </FadeInWhenVisible>
+                                {HomeAboutContent?.paragraphs.map(
+                                    (item, index) => {
+                                        return (
+                                            <FadeInWhenVisible key={index}>
+                                                <p className="home-about-responsive-paragraph">
+                                                    {item?.paragraph}
+                                                </p>
+                                            </FadeInWhenVisible>
+                                        );
+                                    }
+                                )}
                             </div>
 
                             <ul className="button-list">

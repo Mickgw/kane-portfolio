@@ -31,3 +31,9 @@ h2 {
 .bolded {
   font-weight: 700;
 }
+
+p {
+    font-size: calc(clamp(1.7rem, 1.5vw, 2rem) * 0.875);
+    line-height: 1.8;
+    color: $text-color;
+}
