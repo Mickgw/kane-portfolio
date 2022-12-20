@@ -98,9 +98,10 @@ collections:
         file: "src/content/about-page.json"
         widget: "object"
         fields:
-          - label: "Intro text line"
+          - label: "Intro text lines"
             name: "intro_text_line"
             widget: "list"
+            hint: "Every text line will be displayed under each other"
             fields:
               - {label: "Text line", name: "text_line", widget: "text"}
           - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}

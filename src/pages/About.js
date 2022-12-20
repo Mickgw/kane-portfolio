@@ -113,7 +113,7 @@ const About = () => {
                 <section className="about" id="about-page">
                     <div className="container">
                         <h1>
-                            <div className="about-header-line">
+                            {/* <div className="about-header-line">
                                 <div
                                     className="header-text"
                                     id="about-header-text"
@@ -144,7 +144,7 @@ const About = () => {
                                 >
                                     {AboutContent?.line_4}
                                 </div>
-                            </div>
+                            </div> */}
                         </h1>
 
                         <ParallaxProvider>
@@ -267,15 +267,8 @@ const About = () => {
                                             {AboutContent?.services.map(
                                                 (item, index) => {
                                                     return (
-                                                        <Accordion
-                                                            key={index}
-                                                            title={
-                                                                item?.service_name
-                                                            }
-                                                        >
-                                                            {
-                                                                item?.service_description
-                                                            }
+                                                        <Accordion key={index} title={item?.service_name}>
+                                                            {item?.service_description}
                                                         </Accordion>
                                                     );
                                                 }

@@ -1,24 +1,6 @@
 {
-  "line_1": "Upcoming",
-  "line_2": "Photographer",
-  "line_3": "Cinematographer",
-  "line_4": "Based in Arnhem.",
   "service_title": "My services",
   "image_under_lines_description": "2020 - Arnhem, The Netherlands",
-  "intro_text_line": [
-    {
-      "text_line": "Upcoming"
-    },
-    {
-      "text_line": "Photographer"
-    },
-    {
-      "text_line": "Cinematographer"
-    },
-    {
-      "text_line": "Based in Arnhem."
-    }
-  ],
   "image_under_lines": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1671563332/navmenu_about_iv7jp3.jpg",
   "about_paragraph_section_title": "About me",
   "about_paragraph": [
