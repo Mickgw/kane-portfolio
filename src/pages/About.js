@@ -113,38 +113,23 @@ const About = () => {
                 <section className="about" id="about-page">
                     <div className="container">
                         <h1>
-                            {/* <div className="about-header-line">
-                                <div
-                                    className="header-text"
-                                    id="about-header-text"
-                                >
-                                    {AboutContent?.line_1}
-                                </div>
-                            </div>
-                            <div className="about-header-line">
-                                <div
-                                    className="header-text"
-                                    id="about-header-text"
-                                >
-                                    {AboutContent?.line_2}
-                                </div>
-                            </div>
-                            <div className="about-header-line">
-                                <div
-                                    className="header-text"
-                                    id="about-header-text"
-                                >
-                                    {AboutContent?.line_3}
-                                </div>
-                            </div>
-                            <div className="about-header-line">
-                                <div
-                                    className="header-text"
-                                    id="about-header-text"
-                                >
-                                    {AboutContent?.line_4}
-                                </div>
-                            </div> */}
+                            {AboutContent?.intro_text_line.map(
+                                (item, index) => {
+                                    return (
+                                        <div
+                                            className="about-header-line"
+                                            key={index}
+                                        >
+                                            <div
+                                                className="header-text"
+                                                id="about-header-text"
+                                            >
+                                                {item?.text_line}
+                                            </div>
+                                        </div>
+                                    );
+                                }
+                            )}
                         </h1>
 
                         <ParallaxProvider>
@@ -182,11 +167,8 @@ const About = () => {
                                     {AboutContent?.about_paragraph.map(
                                         (item, index) => {
                                             return (
-                                                <FadeInWhenVisible>
-                                                    <p
-                                                        key={index}
-                                                        className="about-details-paragraphs"
-                                                    >
+                                                <FadeInWhenVisible key={index}>
+                                                    <p className="about-details-paragraphs">
                                                         {item?.paragraph}
                                                     </p>
                                                 </FadeInWhenVisible>
@@ -267,8 +249,15 @@ const About = () => {
                                             {AboutContent?.services.map(
                                                 (item, index) => {
                                                     return (
-                                                        <Accordion key={index} title={item?.service_name}>
-                                                            {item?.service_description}
+                                                        <Accordion
+                                                            key={index}
+                                                            title={
+                                                                item?.service_name
+                                                            }
+                                                        >
+                                                            {
+                                                                item?.service_description
+                                                            }
                                                         </Accordion>
                                                     );
                                                 }

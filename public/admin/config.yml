@@ -120,6 +120,25 @@ collections:
               - {label: "Service name", name: "service_name", widget: "text"}
               - {label: "Service description", name: "service_description", widget: "text"}
 
+  - label: "Images for Navigation menu"
+    name: "images_navigation_menu"
+    files: 
+      - label: "Navigation menu images"
+        name: "navigation_menu_images"
+        file: "src/assets/images/images-for-navmenu/navigation-menu-images.json"
+        hint: "These images will be displayed according to the active page"
+        fields:
+          - {label: "Home page image", name: "home_page_image", widget: "image"}
+          - {label: "Portfolio page image", name: "portfolio_page_image", widget: "image"}
+          - {label: "About page image", name: "about_page_image", widget: "image"}
+          - {label: "Motion page image", name: "motion_page_image", widget: "image"}
+          - {label: "None navigation page image", name: "none_navigation_page_image", widget: "image", hint: "This image will be displayed in the navigation menu when none of the above pages is active. Example could be when you're on the page of an album"}
+          
+
+
+
+              
+
  
     
 
