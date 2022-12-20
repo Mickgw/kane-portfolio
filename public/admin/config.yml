@@ -110,14 +110,14 @@ collections:
             fields:
               - {label: "Text line", name: "text_line", widget: "string"}
               - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
-              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "string"}
+              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "string", required: false}
               - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
               - label: "About paragraph"
                 name: "about_paragraph"
                 widget: "list"
                 fields:
                   - {label: "Paragraph", name: "paragraph", widget: "text"}
-              - {label: "Services title", name: "service_title", widget: string, required: false}
+              - {label: "Services title", name: "service_title", widget: string, hint: "Title above all services", required: false}
               - label: "Services"
                 name: "services"
                 widget: "list"
@@ -164,14 +164,17 @@ collections:
         file: "src/content/home-about-page.json"
         fields:
           - {label: "Home about image", name: "home_about_image", widget: "image"}
+          - {label: "Home about image description", name: "home_about_image_description", widget: "string", required: false}
           - label: "Header title lines"
             name: "header_title_lines"
             widget: "list"
+            required: false
             fields:
               - {label: "Title line", name: "title_line", widget: "string"}
           - label: "Paragraphs"
             name: "paragraphs"
             widget: "list"
+            required: false
             fields:
               - {label: "Paragraph", name: "paragraph", widget: "text"}             
 

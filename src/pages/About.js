@@ -236,36 +236,38 @@ const About = () => {
                                 </div>
                             </FadeInWhenVisible>
 
-                            <div className="services-section">
-                                <FadeInWhenVisible>
-                                    <div className="section-header">
-                                        My services
-                                    </div>
-                                </FadeInWhenVisible>
-
-                                <FadeInWhenVisible>
-                                    <div className="services-section-grid">
-                                        <div className="services-container">
-                                            {AboutContent?.services.map(
-                                                (item, index) => {
-                                                    return (
-                                                        <Accordion
-                                                            key={index}
-                                                            title={
-                                                                item?.service_name
-                                                            }
-                                                        >
-                                                            {
-                                                                item?.service_description
-                                                            }
-                                                        </Accordion>
-                                                    );
-                                                }
-                                            )}
+                            {AboutContent?.services && (
+                                <div className="services-section">
+                                    <FadeInWhenVisible>
+                                        <div className="section-header">
+                                            {AboutContent?.service_title}
                                         </div>
-                                    </div>
-                                </FadeInWhenVisible>
-                            </div>
+                                    </FadeInWhenVisible>
+
+                                    <FadeInWhenVisible>
+                                        <div className="services-section-grid">
+                                            <div className="services-container">
+                                                {AboutContent?.services.map(
+                                                    (item, index) => {
+                                                        return (
+                                                            <Accordion
+                                                                key={index}
+                                                                title={
+                                                                    item?.service_name
+                                                                }
+                                                            >
+                                                                {
+                                                                    item?.service_description
+                                                                }
+                                                            </Accordion>
+                                                        );
+                                                    }
+                                                )}
+                                            </div>
+                                        </div>
+                                    </FadeInWhenVisible>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </section>
