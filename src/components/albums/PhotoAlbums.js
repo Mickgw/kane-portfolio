@@ -8,7 +8,7 @@ const PhotoAlbums = () => {
     return (
         <section className="photo-album-section">
             <FadeInWhenVisible>
-                <h2 className="photo-albums-header">My Photo Albums</h2>
+                <h2 className="photo-albums-header">{photoAlbums.title_above_akbums}</h2>
             </FadeInWhenVisible>
 
             <div className="photo-albums">

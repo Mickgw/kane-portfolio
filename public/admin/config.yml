@@ -36,7 +36,7 @@ collections:
         name: "album"
         file: "src/content/photo-albums.json"
         fields:
-          - {label: "Title above photo albums on home page", name: "title_above_akbums", widget: "text", hint: "This title appears above the photo albums on the home page"}
+          - {label: "Title above photo albums on home page", name: "title_above_albums", widget: "text", hint: "This title appears above the photo albums on the home page"}
           - label: "Album"
             name: "album_list"
             widget: "list"
