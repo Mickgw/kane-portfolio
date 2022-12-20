@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 import { VscArrowRight } from "react-icons/vsc";
 import { Parallax } from "react-parallax";
+import HomeAboutContent from "../../content/home-about-page.json";
 
 // Images
 import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
@@ -11,44 +12,46 @@ const HomeAboutResponsive = () => {
         <section className="home-about-responsive">
             <div className="home-about-responsive-container">
                 <div className="home-about-responsive-inner">
-                    <div className="header-above-portrait">
-                        <h1>
-                            <FadeInWhenVisible>
-                                <div className="home-about-responsive-content-line">
-                                    <div className="home-about-responsive-content-line-inner">
-                                        Music
-                                    </div>
-                                </div>
-                            </FadeInWhenVisible>
+                    {HomeAboutContent?.header_title_lines && (
+                        <div className="header-above-portrait">
+                            <h1>
+                                {HomeAboutContent?.header_title_lines.map(
+                                    (item, index) => {
+                                        return (
+                                            <FadeInWhenVisible key={index}>
+                                                <div className="home-about-responsive-content-line">
+                                                    <div className="home-about-responsive-content-line-inner">
+                                                        {item?.title_line}
+                                                    </div>
+                                                </div>
+                                            </FadeInWhenVisible>
+                                        );
+                                    }
+                                )}
+                            </h1>
+                        </div>
+                    )}
 
-                            <FadeInWhenVisible>
-                                <div className="home-about-responsive-content-line">
-                                    <div className="home-about-responsive-content-line-inner">
-                                        Fitness
-                                    </div>
-                                </div>
-                            </FadeInWhenVisible>
-
-                            <FadeInWhenVisible>
-                                <div className="home-about-responsive-content-line">
-                                    <div className="home-about-responsive-content-line-inner">
-                                        Gaming
-                                    </div>
-                                </div>
-                            </FadeInWhenVisible>
-                        </h1>
-                    </div>
                     <div className="home-about-responsive-portrait">
                         <FadeInWhenVisible>
                             <div className="responsive-potrait-container">
                                 <Parallax
-                                    bgImage={Portrait}
+                                    bgImage={HomeAboutContent?.home_about_image}
                                     bgImageAlt="portrait"
                                     strength={150}
                                     className="parallax-bg"
                                 />
                             </div>
                         </FadeInWhenVisible>
+                        {HomeAboutContent?.home_about_image_description && (
+                            <FadeInWhenVisible>
+                                <div className="image-info">
+                                    {
+                                        HomeAboutContent?.home_about_image_description
+                                    }
+                                </div>
+                            </FadeInWhenVisible>
+                        )}
                     </div>
                     <div className="home-about-responsive-content">
                         <div className="home-about-responsive-content-inner">

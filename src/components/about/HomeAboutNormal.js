@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Parallax } from "react-parallax";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
-
-// Images
-import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
+import HomeAboutContent from "../../content/home-about-page.json";
 
 // GSAP
 import { ScrollTrigger } from "gsap/all";
@@ -70,71 +68,69 @@ const HomeAboutNormal = () => {
         <section className="home-about-normal" id="home-about">
             <div className="home-about-normal-container">
                 <div className="home-about-inner">
-                    <div className="home-about-portrait">
-                        <div
-                            className="potrait-container"
-                            id="potrait-container"
-                        >
-                            <Parallax
-                                bgImage={Portrait}
-                                bgImageAlt="portrait"
-                                strength={150}
-                                className="parallax-bg"
-                            />
-                        </div>
-                        <FadeInWhenVisible>
-                            <div className="image-info">
-                                2022 - Nürburgring, Germany
+                    {HomeAboutContent?.home_about_image && (
+                        <div className="home-about-portrait">
+                            <div
+                                className="potrait-container"
+                                id="potrait-container"
+                            >
+                                <Parallax
+                                    bgImage={HomeAboutContent?.home_about_image}
+                                    bgImageAlt="portrait"
+                                    strength={150}
+                                    className="parallax-bg"
+                                />
                             </div>
-                        </FadeInWhenVisible>
-                    </div>
+                            {HomeAboutContent?.home_about_image_description && (
+                                <FadeInWhenVisible>
+                                    <div className="image-info">
+                                        {
+                                            HomeAboutContent?.home_about_image_description
+                                        }
+                                    </div>
+                                </FadeInWhenVisible>
+                            )}
+                        </div>
+                    )}
+
                     <div className="home-about-content">
                         <div className="home-about-content-inner">
-                            <h1>
-                                <div className="home-about-content-line">
-                                    <div
-                                        id="header-content-line"
-                                        className="home-about-content-line-inner"
-                                    >
-                                        Music
-                                    </div>
-                                </div>
-                                <div className="home-about-content-line">
-                                    <div
-                                        id="header-content-line"
-                                        className="home-about-content-line-inner"
-                                    >
-                                        Fitness
-                                    </div>
-                                </div>
-                                <div className="home-about-content-line">
-                                    <div
-                                        id="header-content-line"
-                                        className="home-about-content-line-inner"
-                                    >
-                                        Gaming
-                                    </div>
-                                </div>
-                            </h1>
+                            {HomeAboutContent?.header_title_lines && (
+                                <h1>
+                                    {HomeAboutContent?.header_title_lines.map(
+                                        (item, index) => {
+                                            return (
+                                                <div
+                                                    className="home-about-content-line"
+                                                    key={index}
+                                                >
+                                                    <div
+                                                        id="header-content-line"
+                                                        className="home-about-content-line-inner"
+                                                    >
+                                                        {item?.title_line}
+                                                    </div>
+                                                </div>
+                                            );
+                                        }
+                                    )}
+                                </h1>
+                            )}
+
                             <div className="paragraphs">
-                                <p
-                                    className="hero-content-paragraph"
-                                    id="paragraph"
-                                >
-                                    My hobbies take up quite a bit of free time.
-                                </p>
-                                <p
-                                    className="hero-content-paragraph"
-                                    id="paragraph"
-                                >
-                                    Besides my hobbies, I am also busy with
-                                    expanding my portfolio. Every opportunity I
-                                    get I will try to make the most awesome
-                                    photo's I can. Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna
-                                    aliqua do eiusmod tempor incididunt.
-                                </p>
+                                {HomeAboutContent?.paragraphs.map(
+                                    (item, index) => {
+                                        return (
+                                            <p
+                                                key={index}
+                                                className="hero-content-paragraph"
+                                                id="paragraph"
+                                            >
+                                                {item?.paragraph}
+                                            </p>
+                                        );
+                                    }
+                                )}
                             </div>
 
                             <div className="home-about-buttons">
