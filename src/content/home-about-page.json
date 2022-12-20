@@ -1,0 +1,22 @@
+{
+  "header_title_lines": [
+    {
+      "title_line": "Music"
+    },
+    {
+      "title_line": "Fitness"
+    },
+    {
+      "title_line": "Gaming"
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph": "My hobbies take up quite a bit of free time."
+    },
+    {
+      "paragraph": "Besides my hobbies, I am also busy with expanding my portfolio. Every opportunity I get I will try to make the most awesome photo's I can. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua do eiusmod tempor incididunt."
+    }
+  ],
+  "home_about_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1671574236/portrait_2_wbhg03.jpg"
+}
