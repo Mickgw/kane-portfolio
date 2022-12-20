@@ -4,15 +4,13 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const HeroResponsive = () => {
   return (
-    <div className="hero-responsive">
+    <section className="hero-responsive">
       <Parallax
         bgImage={Banner}
         bgImageAlt="hero-image"
         strength={200}
         width="100%"
         height="100%"
-        // blur={3}
-        // // style={{ sc }}
       >
         <div className="hero-container">
           <h1 className="hero-title">Kane Jansen</h1>
@@ -26,7 +24,7 @@ const HeroResponsive = () => {
           </div>
         </div>
       </Parallax>
-    </div>
+    </section>
   );
 };
 

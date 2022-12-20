@@ -68,8 +68,6 @@ $footer-menu-font-size: 1.6rem;
                             cursor: pointer !important;
 
                             &.active::before {
-
-                                padding-top: 10px;
                                 content: "\2022";
                                 position: absolute;
                                 margin-left: -35px;

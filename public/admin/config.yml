@@ -90,6 +90,34 @@ collections:
           - {label: "Made by", name: "made_by", widget: string, required: false}
           - {label: "Made by (URL)", name: "made_by_url", widget: string, required: false}
 
+  - label: "About page content"
+    name: "about_page"
+    files:
+      - label: "About fields"
+        name: "about_fields"
+        file: "src/content/about-page.json"
+        widget: "object"
+        fields:
+          - {label: "Line 1", name: "line_1", widget: string, required: false}
+          - {label: "Line 2", name: "line_2", widget: string, required: false}
+          - {label: "Line 3", name: "line_3", widget: string, required: false}
+          - {label: "Line 4", name: "line_4", widget: string, required: false}
+          - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
+          - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "text"}
+          - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
+          - label: "About paragraph"
+            name: "about_paragraph"
+            widget: "list"
+            fields:
+              - {label: "Paragraph", name: "paragraph", widget: "text"}
+          - {label: "Services title", name: "service_title", widget: string, required: false}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Service name", name: "service_name", widget: "text"}
+              - {label: "Service description", name: "service_description", widget: "text"}
+
  
     
 

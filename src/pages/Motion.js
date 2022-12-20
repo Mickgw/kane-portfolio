@@ -51,7 +51,7 @@ const Motion = () => {
           <PageLoader loaderText="Motion" />
         </motion.div>
       ) : (
-        <div className="motion">
+        <section className="motion">
           <div className="container">
             {videoProjects.video_projects_list.map((video, index) => {
               return (
@@ -82,7 +82,7 @@ const Motion = () => {
               );
             })}
           </div>
-        </div>
+        </section>
       )}
     </AnimatePresence>
   );

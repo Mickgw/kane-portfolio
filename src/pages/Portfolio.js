@@ -67,7 +67,7 @@ const Portfolio = () => {
           <PageLoader loaderText="Portfolio" />
         </motion.div>
       ) : (
-        <div className="image-gallery" id="test">
+        <section className="image-gallery" id="test">
           <div className="container">
             <FadeInWhenVisible>
               <div className="image-category-tags">
@@ -134,7 +134,7 @@ const Portfolio = () => {
               </AnimatePresence>
             </div>
           </div>
-        </div>
+        </section>
       )}
     </AnimatePresence>
   );

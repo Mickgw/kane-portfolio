@@ -1,6 +1,5 @@
 
 //Banner images
-
 // import banner_image_1 from "../assets/images/images-for-banner/website_banner_1-1.webp"; image still too big
 import banner_image_2 from "../assets/images/images-for-banner/website_banner_2.webp";
 import banner_image_3 from "../assets/images/images-for-banner/website_banner_3.webp";
@@ -9,7 +8,6 @@ import banner_image_5 from "../assets/images/images-for-banner/website_banner_6.
 
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Hero = () => {
@@ -59,7 +57,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="hero" id="hero">
+    <section className="hero" id="hero">
       <div className="hero-container">
         <div className="hero-grid">
           <div className="hero-text">
@@ -87,7 +85,7 @@ const Hero = () => {
           </div>
           <div className="hero-image" id="hero-image-container">
             <div className="hero-image-reveal" id="hero-image-reveal" />
-            <motion.img
+            <img
               src={banner_image}
               alt="hero-car"
               id="hero-image"
@@ -95,7 +93,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -74,7 +74,7 @@ const PhotoAlbumsPage = () => {
           />
         </motion.div>
       ) : (
-        <motion.div
+        <motion.section
           className="album-page"
           variants={infoGridAnimation}
           initial="hidden"
@@ -153,7 +153,7 @@ const PhotoAlbumsPage = () => {
               return null;
             })}
           </div>
-        </motion.div>
+        </motion.section>
       )}
     </AnimatePresence>
   );

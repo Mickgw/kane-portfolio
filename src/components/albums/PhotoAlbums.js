@@ -6,7 +6,7 @@ import { TbArrowUpRight } from "react-icons/tb";
 
 const PhotoAlbums = () => {
   return (
-    <div className="photo-album-section" data-scroll-section>
+    <section className="photo-album-section">
       <FadeInWhenVisible>
         <h2 className="photo-albums-header">My Photo Albums</h2>
       </FadeInWhenVisible>
@@ -61,7 +61,7 @@ const PhotoAlbums = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

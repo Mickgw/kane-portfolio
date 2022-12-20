@@ -3,7 +3,7 @@ import FooterFields from "../content/footer.json";
 
 const FooterNormal = () => {
     return (
-        <div id="footer-normal" className="footer-normal">
+        <footer id="footer-normal" className="footer-normal">
             <div className="container">
                 <div className="top-footer-row">
                     <div className="footer-email">
@@ -54,27 +54,18 @@ const FooterNormal = () => {
                                     <a
                                         className="footer-bottom-socials-links"
                                         href={link?.url}
+                                        key={index}
                                     >
                                         {link?.title}
                                         <em className="comma">,</em>
                                     </a>
                                 );
                             })}
-
-                            {/* <a href="/" className="footer-bottom-socials-links">
-                                Instagram<em className="comma">,</em>
-                            </a>
-                            <a href="/" className="footer-bottom-socials-links">
-                                Youtube<em className="comma">,</em>
-                            </a>
-                            <a href="/" className="footer-bottom-socials-links">
-                                Unsplash
-                            </a> */}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

@@ -235,7 +235,7 @@ const NavbarMenu = () => {
   };
 
   return (
-    <motion.div
+    <motion.nav
       className="navbar-menu"
       variants={menuAnimation}
       initial="hidden"
@@ -481,7 +481,7 @@ const NavbarMenu = () => {
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.nav>
   );
 };
 

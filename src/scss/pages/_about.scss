@@ -66,6 +66,7 @@
                 }
 
                 .section-header-about {
+                    line-height: 2;
                     font-size: 2rem;
                     font-weight: 600;
 
@@ -78,29 +79,45 @@
                     .about-details-paragraphs {
                         color: $text-color;
                         line-height: 2;
-                        font-size: calc(clamp(1.9rem, 4vw, 2.1rem) * 0.875);
+                        font-size: calc(clamp(1.6rem, 4vw, 2rem) * 0.875);
 
-                        padding-block: 1rem;
+                        padding-bottom: 2rem;
                     }
                 }
             }
 
-            .big-portrait-two {
+            .my-equipment-grid {
                 margin-block: 20vh;
                 width: 100%;
-                height: 100%;
-                justify-content: center;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                column-gap: 5rem;
                 align-items: center;
-                overflow: hidden;
 
                 @media (max-width: $layout-breakpoint-small) {
-                    margin-block: 10vh;
+                    grid-template-columns: 100%;
                 }
 
-                .portrait-two {
+                .big-portrait-two {
                     width: 100%;
-                    height: 80vh;
-                    object-fit: cover;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    .portrait-two {
+                        width: 100%;
+                        height: 80vh;
+                        object-fit: cover;
+                    }
+                }
+
+                .my-equipment-text {
+                    width: 100%;
+
+                    .my-equipment-header {
+
+                    }
                 }
             }
 

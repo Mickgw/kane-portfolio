@@ -75,7 +75,7 @@ const PageNotFound = () => {
           <PageLoader loaderText="Error"/>
         </motion.div>
       ) : (
-        <div className="page-not-found">
+        <section className="page-not-found">
           <div className="page-not-found-container">
             <h2 className="page-not-found-header">404</h2>
             <h1 className="error-text">
@@ -97,7 +97,7 @@ const PageNotFound = () => {
               </div>
             </h1>
           </div>
-        </div>
+        </section>
       )}
     </AnimatePresence>
   );

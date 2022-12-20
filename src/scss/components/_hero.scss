@@ -18,6 +18,8 @@
             display: grid;
             grid-template-columns: 40% 60%;
             column-gap: 3rem;
+            overflow: hidden;
+            align-items: center;
 
             .hero-text {
                 display: table;
@@ -54,7 +56,6 @@
 
                             @media (max-width: $layout-breakpoint-medium) {
                                 font-size: 1.5rem;
-
                             }
                         }
                     }
@@ -83,11 +84,14 @@
 
             .hero-image {
                 position: relative;
-                top: 5%;
                 z-index: 1;
                 width: 100%;
-                height: 90%;
+                height: 85%;
                 overflow: hidden;
+
+                @media (max-width: $layout-breakpoint-medium) {
+                    height: 60%;
+                }
 
                 .hero-image-reveal {
                     z-index: 2;
@@ -95,16 +99,17 @@
                     width: 100%;
                     height: 100%;
                     background-color: $background;
-
                 }
 
                 img {
                     height: auto; /* Make sure images are scaled correctly. */
-                    width: 110%; /* Adhere to container width. */
+                    width: 100%; /* Adhere to container width. */
                     flex-shrink: 0;
                     min-width: 100%;
                     min-height: 100%;
                     object-fit: cover;
+
+
 
                 }
             }

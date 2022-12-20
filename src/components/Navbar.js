@@ -70,7 +70,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.div
+      <motion.header
         className="navbar"
         variants={navbar_animation}
         initial="hidden"
@@ -82,7 +82,7 @@ const Navbar = () => {
               <Logo className="svg-logo" />
             </Link>
           </div>
-          <div className="menu">
+          <nav className="menu">
             {/*Menu button desktop or medium sized screens*/}
             <div
               className="desktop-menu-button"
@@ -97,7 +97,7 @@ const Navbar = () => {
                     ? "desktop-button-lines desktop-menu-open"
                     : "desktop-button-lines"
                 }
-              ></div>
+              />
             </div>
 
             {/*Menu button small screen sizes*/}
@@ -114,11 +114,11 @@ const Navbar = () => {
                 className={
                   state.clicked ? "button-lines menu-open" : "button-lines"
                 }
-              ></div>
+              />
             </div>
-          </div>
+          </nav>
         </div>
-      </motion.div>
+      </motion.header>
       <AnimatePresence>{state.clicked && <NavbarMenu />}</AnimatePresence>
     </>
   );

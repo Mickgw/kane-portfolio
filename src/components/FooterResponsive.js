@@ -3,7 +3,7 @@ import FooterFields from "../content/footer.json";
 
 const FooterResponsive = () => {
     return (
-        <div id="footer-responsive" className="footer-responsive">
+        <footer id="footer-responsive" className="footer-responsive">
             <div className="footer-container">
                 <div className="interested-section">
                     <div className="interested-question">
@@ -32,7 +32,13 @@ const FooterResponsive = () => {
                         {FooterFields?.social_links.map((link, index) => {
                             return (
                                 <li className="social-link" key={index}>
-                                    <a href={link?.url}>{link?.title}</a>
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={link?.url}
+                                    >
+                                        {link?.title}
+                                    </a>
                                 </li>
                             );
                         })}
@@ -51,7 +57,7 @@ const FooterResponsive = () => {
                     <div className="copyright">{FooterFields?.copyright}</div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

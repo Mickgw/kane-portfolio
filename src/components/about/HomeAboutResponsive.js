@@ -8,7 +8,7 @@ import Portrait from "../../assets/images/images-for-about/portrait_2.jpg";
 
 const HomeAboutResponsive = () => {
   return (
-    <div className="home-about-responsive">
+    <section className="home-about-responsive">
       <div className="home-about-responsive-container">
         <div className="home-about-responsive-inner">
           <div className="header-above-portrait">
@@ -111,7 +111,7 @@ const HomeAboutResponsive = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
