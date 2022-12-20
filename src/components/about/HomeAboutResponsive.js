@@ -103,23 +103,6 @@ const HomeAboutResponsive = () => {
                                     </li>
                                 </FadeInWhenVisible>
                             </ul>
-                            {/* <div className="home-about-responsive-buttons">
-                <div className="home-about-responsive-button">
-                  <Link to="/about" className="page-link">
-                    <div className="home-about-responsive-link">
-                      More About me
-                    </div>
-                  </Link>
-                </div>
-                <div className="home-about-responsive-button" id="button">
-                  <Link to="/portfolio" className="page-link">
-                    <div className="home-about-responsive-link">
-                      View Portfolio
-                      <TbArrowUpRight />
-                    </div>
-                  </Link>
-                </div>
-              </div> */}
                         </div>
                     </div>
                 </div>
