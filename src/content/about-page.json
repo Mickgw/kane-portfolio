@@ -1,7 +1,40 @@
 {
   "service_title": "My services",
+  "equipment": [
+    {
+      "equipment_category": "camera",
+      "equipment_item": "Sony A7.3"
+    },
+    {
+      "equipment_category": "lens",
+      "equipment_item": "een hele mooi lens"
+    },
+    {
+      "equipment_category": "lens",
+      "equipment_item": "nog een lens"
+    },
+    {
+      "equipment_category": "iets anders",
+      "equipment_item": "bedenk maar"
+    }
+  ],
   "image_under_lines_description": "2020 - Arnhem, The Netherlands",
+  "intro_text_line": [
+    {
+      "text_line": "Upcoming"
+    },
+    {
+      "text_line": "Photographer"
+    },
+    {
+      "text_line": "Cinematographer"
+    },
+    {
+      "text_line": "Based in Arnhem."
+    }
+  ],
   "image_under_lines": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1671563332/navmenu_about_iv7jp3.jpg",
+  "my_equipment_title": "My equipment",
   "about_paragraph_section_title": "About me",
   "about_paragraph": [
     {
@@ -27,20 +60,6 @@
     {
       "service_name": "Photoshop",
       "service_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-  ],
-  "intro_text_line": [
-    {
-      "text_line": "Upcoming"
-    },
-    {
-      "text_line": "Photographer"
-    },
-    {
-      "text_line": "Cinematographer"
-    },
-    {
-      "text_line": "Based in Arnhem."
     }
   ]
 }
