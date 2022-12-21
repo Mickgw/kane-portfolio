@@ -1,11 +1,6 @@
 {
   "service_title": "My services",
-  "equipment": [
-    {
-      "equipment_category": "camera",
-      "equipment_item": "Sony kk goeie camera"
-    }
-  ],
+  "equipment": [],
   "image_under_lines_description": "2020 - Arnhem, The Netherlands",
   "intro_text_line": [
     {
