@@ -92,29 +92,54 @@
                 column-gap: 5rem;
                 align-items: center;
 
+                &.no-equipment {
+                    grid-template-columns: 100%;
+                }
+
                 @media (max-width: $layout-breakpoint-small) {
                     grid-template-columns: 100%;
                 }
 
-                .big-portrait-two {
-                    width: 100%;
-                    height: 100%;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-
-                    .portrait-two {
+                .image {
+                    .big-portrait-two {
                         width: 100%;
-                        height: 80vh;
-                        object-fit: cover;
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+
+                        .portrait-two {
+                            width: 100%;
+                            height: 80vh;
+                            object-fit: cover;
+                        }
                     }
                 }
 
-                .my-equipment-text {
-                    width: 100%;
-
+                .my-equipment {
                     .my-equipment-header {
+                        font-weight: 700;
+                        font-size: calc(clamp(3.5rem, 7vw, 4rem) * 0.875);
+                    }
 
+                    .equipment {
+                        .equipment-item {
+                            padding-block: 2.5rem;
+
+                            #equipment-category {
+                                padding-bottom: .1rem;
+                            }
+
+                            .equipment-item-description {
+                                padding-top: 1em;
+                                font-size: 2em;
+                                font-weight: 500;
+
+                                @media (max-width: $layout-breakpoint-small) {
+                                    font-size: 1.9em;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -195,21 +220,6 @@
                                 }
                             }
                         }
-                    }
-                }
-            }
-
-            .tools {
-                padding-top: 20vh;
-                .tools-paragraph {
-                    line-height: 1.8;
-                    font-size: calc(clamp(2.2rem, 2.5vw, 3.1rem) * 0.875);
-                    color: $text-color;
-                    word-spacing: -1px;
-
-                    .tool {
-                        font-weight: 600;
-                        color: $black;
                     }
                 }
             }

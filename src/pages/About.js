@@ -179,8 +179,14 @@ const About = () => {
                             </div>
 
                             <FadeInWhenVisible>
-                                <div className="my-equipment-grid">
-                                    <div className="iamge">
+                                <div
+                                    className={`my-equipment-grid ${
+                                        AboutContent?.equipment.length > 0
+                                            ? ""
+                                            : "no-equipment"
+                                    }`}
+                                >
+                                    <div className="image">
                                         <ParallaxProvider>
                                             <div className="big-portrait-two">
                                                 <ParallaxBanner className="portrait-two">
@@ -197,42 +203,41 @@ const About = () => {
                                             </div>
                                         </FadeInWhenVisible>
                                     </div>
-                                    <div className="my-equipment-text">
-                                        <div className="my-equipment-header">
-                                            <ul>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-                                                <li>wefwef</li>
-
-                                                <li>wefwef</li>
+                                    {AboutContent?.equipment.length === 0 ? null : (
+                                        <div className="my-equipment">
+                                            <div className="section-header">
+                                                {
+                                                    AboutContent?.my_equipment_title
+                                                }
+                                            </div>
+                                            <ul className="equipment">
+                                                {AboutContent?.equipment.map(
+                                                    (item, key) => {
+                                                        return (
+                                                            <li
+                                                                key={key}
+                                                                className="equipment-item"
+                                                            >
+                                                                <div
+                                                                    className="divider-text"
+                                                                    id="equipment-category"
+                                                                >
+                                                                    {
+                                                                        item?.equipment_category
+                                                                    }
+                                                                </div>
+                                                                <div className="equipment-item-description">
+                                                                    {
+                                                                        item?.equipment_item
+                                                                    }
+                                                                </div>
+                                                            </li>
+                                                        );
+                                                    }
+                                                )}
                                             </ul>
                                         </div>
-                                    </div>
+                                    )}
                                 </div>
                             </FadeInWhenVisible>
 
