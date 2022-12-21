@@ -117,6 +117,14 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Paragraph", name: "paragraph", widget: "text"}
+
+              - {label: "My equipment title", name: "my_equipment_title", widget: string, required: false} 
+              - label: "Equipment"
+                name: "equipment"
+                widget: "list"
+                fields:
+                  - {label: "Equipment_category", name: "equipment_category", widget: "string"}
+                  - {label: "Equipment item", name: "equipment_item", widget: "string"}
               - {label: "Services title", name: "service_title", widget: string, hint: "Title above all services", required: false}
               - label: "Services"
                 name: "services"
@@ -140,14 +148,17 @@ collections:
           - {label: "Motion page image", name: "motion_page_image", widget: "image"}
           - {label: "None navigation page image", name: "none_navigation_page_image", widget: "image", hint: "This image will be displayed in the navigation menu when none of the above pages is active. Example could be when you're on the page of an album"}
 
-  # Images for hero
-  - label: "Images for hero"
-    name: "images_for_hero"
+  # Hero content
+  - label: "Hero content"
+    name: "hero_content"
     files: 
-      - label: "Hero images"
-        name: "hero_images"
-        file: "src/assets/images/images-for-hero/hero-images.json"
+      - label: "Cotent"
+        name: "content"
+        file: "src/content/hero.json"
         fields:
+          - {label: "Main title", name: "main_title", widget: "string"}
+          - {label: "Sub title", name: "sub_title", widget: "string"}
+          - {label: "Moving element text", name: "moving_element_text", widget: "string"}
           - {label: "Hero image for mobile (potrait image advised)", name: "hero_image_mobile", widget: "image"}
           - label: "Hero image"
             name: "hero_images_list"
