@@ -152,7 +152,7 @@ collections:
   - label: "Hero content"
     name: "hero_content"
     files: 
-      - label: "Cotent"
+      - label: "Content"
         name: "content"
         file: "src/content/hero.json"
         fields:
