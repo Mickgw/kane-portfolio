@@ -1,6 +1,11 @@
 {
   "service_title": "My services",
-  "equipment": [],
+  "equipment": [
+    {
+      "equipment_category": "wefwefwef",
+      "equipment_item": "wefwefewfwefeef"
+    }
+  ],
   "image_under_lines_description": "2020 - Arnhem, The Netherlands",
   "intro_text_line": [
     {
