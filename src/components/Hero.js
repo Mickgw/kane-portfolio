@@ -1,13 +1,13 @@
-import HeroImages from "../assets/images/images-for-hero/hero-images.json";
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import HeroContent from "../content/hero.json";
 
 const Hero = () => {
     const hero_image =
-        HeroImages.hero_images_list &&
-        HeroImages.hero_images_list[
-            Math.floor(Math.random() * HeroImages.hero_images_list.length)
+        HeroContent.hero_images_list &&
+        HeroContent.hero_images_list[
+            Math.floor(Math.random() * HeroContent.hero_images_list.length)
         ].image;
 
     useEffect(() => {
@@ -63,7 +63,7 @@ const Hero = () => {
                         <div className="hero-text-inner">
                             <div className="my-name-line">
                                 <h1 className="my-name-text" id="my-name">
-                                    Kane Jansen
+                                    {HeroContent?.main_title}
                                 </h1>
                             </div>
                             <div className="profession-line">
@@ -71,7 +71,7 @@ const Hero = () => {
                                     className="profession-text"
                                     id="my-profession"
                                 >
-                                    Photographer and Cinematographer
+                                    {HeroContent?.sub_title}
                                 </h3>
                             </div>
                             <div
@@ -82,7 +82,7 @@ const Hero = () => {
                                     className="scrolldown-text"
                                     id="scrolldown"
                                 >
-                                    scroll down{" "}
+                                    {HeroContent?.moving_element_text}{" "}
                                 </span>
                                 <IoIosArrowDown
                                     className="arrow-down-icon"

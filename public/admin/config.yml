@@ -109,29 +109,31 @@ collections:
             hint: "Every text line will be displayed under each other"
             fields:
               - {label: "Text line", name: "text_line", widget: "string"}
-              - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
-              - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "string", required: false}
-              - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
-              - label: "About paragraph"
-                name: "about_paragraph"
-                widget: "list"
-                fields:
-                  - {label: "Paragraph", name: "paragraph", widget: "text"}
 
-              - {label: "My equipment title", name: "my_equipment_title", widget: string, required: false} 
-              - label: "Equipment"
-                name: "equipment"
-                widget: "list"
-                fields:
-                  - {label: "Equipment_category", name: "equipment_category", widget: "string"}
-                  - {label: "Equipment item", name: "equipment_item", widget: "string"}
-              - {label: "Services title", name: "service_title", widget: string, hint: "Title above all services", required: false}
-              - label: "Services"
-                name: "services"
-                widget: "list"
-                fields:
-                  - {label: "Service name", name: "service_name", widget: "string"}
-                  - {label: "Service description", name: "service_description", widget: "text"}
+          - {label: "Image under intro lines", name: "image_under_lines", widget: "image"}
+          - {label: "Image under intro lines description", name: "image_under_lines_description", widget: "string", required: false}
+          - {label: "About paragraph section title", name: "about_paragraph_section_title", widget: string, required: false}
+          - label: "About paragraph"
+            name: "about_paragraph"
+            widget: "list"
+            fields:
+              - {label: "Paragraph", name: "paragraph", widget: "text"}
+
+          - {label: "My equipment title", name: "my_equipment_title", widget: string, required: false} 
+          - label: "Equipment"
+            name: "equipment"
+            widget: "list"
+            fields:
+              - {label: "Equipment_category", name: "equipment_category", widget: "string"}
+              - {label: "Equipment item", name: "equipment_item", widget: "string"}
+              
+          - {label: "Services title", name: "service_title", widget: string, hint: "Title above all services", required: false}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Service name", name: "service_name", widget: "string"}
+              - {label: "Service description", name: "service_description", widget: "text"}
 
   # Images navigation menu
   - label: "Images for Navigation menu"

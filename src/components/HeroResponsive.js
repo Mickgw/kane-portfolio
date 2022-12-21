@@ -1,12 +1,12 @@
 import { Parallax } from "react-parallax";
-import Banner from "../assets/images/images-for-hero/banner_V2_image2.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import HeroContent from "../content/hero.json";
 
 const HeroResponsive = () => {
     return (
         <section className="hero-responsive">
             <Parallax
-                bgImage={Banner}
+                bgImage={HeroContent?.hero_image_mobile}
                 bgImageAlt="hero-image"
                 strength={200}
                 width="100%"
