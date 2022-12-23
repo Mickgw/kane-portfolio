@@ -4,13 +4,6 @@ import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
 import NavigationMenuImages from "../assets/images/images-for-navmenu/navigation-menu-images.json"
 
-//Menu images on navlink hover
-// import homeImage from "../assets/images/images-for-navmenu/navmenu_home.jpg";
-// import portfolioImage from "../assets/images/images-for-navmenu/navmenu_portfolio.jpg";
-// import aboutImage from "../assets/images/images-for-navmenu/navmenu_about.jpg";
-// import motionImage from "../assets/images/image_4_menu.jpeg";
-// import otherPage from "../assets/images/other-page-image.jpeg";
-
 const NavbarMenu = () => {
   //assigning location variable
   const location = useLocation();
@@ -24,7 +17,7 @@ const NavbarMenu = () => {
   const navlinkDelay = 0.17;
   const navlinkDuration = 1;
 
-  const [isHoveringHome, setisHoveringHome] = useState(false); // const [isHomeLinkActive, setisHomeLinkActive] = useState(false);
+  const [isHoveringHome, setisHoveringHome] = useState(false);
 
   const [isHoveringPortfolio, setisHoveringPortfolio] = useState(false);
   const [isHoveringAbout, setisHoveringAbout] = useState(false);

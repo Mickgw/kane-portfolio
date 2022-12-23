@@ -17,11 +17,19 @@ $footer-menu-font-size: 1.6rem;
     z-index: $z-index-navmenu;
 
     .container {
-        padding-inline: $wrapper-value;
+        position: relative;
+        flex-direction: row;
+        height: 100%;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        margin-inline: $wrapper-value;
 
         //Inherit padding inline from the navbar
         @media (max-width: $layout-breakpoint-small) {
-            padding-inline: $wrapper-value-breakpoint-small;
+            margin-inline: $wrapper-value-breakpoint-small;
+            flex-direction: column;
+            padding-top: 26vh;
         }
 
         .navigation {
@@ -30,11 +38,9 @@ $footer-menu-font-size: 1.6rem;
             grid-column-gap: $card-spacing;
             grid-row-gap: $card-spacing;
             width: 100%;
-            padding-top: 27vh;
 
             @media (max-width: $layout-breakpoint-small) {
                 grid-template-columns: repeat(1, 1fr);
-                padding-top: 22vh;
             }
 
             .nav-links {
@@ -126,10 +132,12 @@ $footer-menu-font-size: 1.6rem;
         }
 
         .menu-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 7rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 20vh;
 
             @media (max-width: $layout-breakpoint-small) {
                 display: none;
