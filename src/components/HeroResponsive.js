@@ -1,14 +1,8 @@
 import { Parallax } from "react-parallax";
-import {
-    ParallaxBanner,
-    ParallaxBannerLayer,
-    ParallaxProvider,
-} from "react-scroll-parallax";
 import { gsap, Power3 } from "gsap";
 import { useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import HeroContent from "../content/hero.json";
-import FadeInWhenVisible from "../components/hooks/FadeInWhenVisible";
 
 const HeroResponsive = () => {
     useEffect(() => {
