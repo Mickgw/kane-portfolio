@@ -113,7 +113,7 @@ const Portfolio = () => {
 
                         <div className="gallery">
                             {filteredImages.map((image_data, index) => (
-                                <div key={index} className="gallery-image">
+                                <div key={index} className="gallery-image" >
                                     <FadeInWhenVisible>
                                         <img
                                             className="image"
