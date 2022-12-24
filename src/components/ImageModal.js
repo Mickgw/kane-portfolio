@@ -24,10 +24,12 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
 
     const image_animation = {
         hidden: {
+            blur: 100,
             opacity: 0,
             y: 100,
         },
         visible: {
+            blur: 0,
             opacity: 1,
             y: 0,
             transition: {
@@ -70,16 +72,17 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
             className="modal-container"
             ref={modalRef}
         >
-            <button
+            <motion.button
                 className="close-btn"
                 onClick={() => {
                     setIsModal(false);
                     setModalImage("");
                     body.classList.remove("disable-scroll");
                 }}
+                whileTap={{ scale: 1.1 }}
             >
-                <VscClose />
-            </button>
+                <VscClose style={{ width: "40px", height: "40px"}}/>
+            </motion.button>
 
             <motion.img
                 className="modal-image"

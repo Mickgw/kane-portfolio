@@ -82,9 +82,9 @@ const Navbar = () => {
                             <Logo className="svg-logo" />
                         </Link>
                     </div>
-                    <nav className="menu">
+                    <motion.nav className="menu"                             whileTap={{ scale: 1.05 }}>
                         {/*Menu button desktop or medium sized screens*/}
-                        <div
+                        <motion.div
                             className="desktop-menu-button"
                             onClick={() => {
                                 handleMenu();
@@ -98,10 +98,10 @@ const Navbar = () => {
                                         : "desktop-button-lines"
                                 }
                             />
-                        </div>
+                        </motion.div>
 
                         {/*Menu button small screen sizes*/}
-                        <div
+                        <motion.div
                             className={
                                 state.clicked
                                     ? "menu-button menu-open"
@@ -119,8 +119,8 @@ const Navbar = () => {
                                         : "button-lines"
                                 }
                             />
-                        </div>
-                    </nav>
+                        </motion.div>
+                    </motion.nav>
                 </div>
             </motion.header>
             <AnimatePresence>{state.clicked && <NavbarMenu />}</AnimatePresence>

@@ -17,11 +17,11 @@ function FadeInWhenVisible({ children }) {
             ref={ref}
             animate={controls}
             initial="hidden"
-            transition={{ duration: 1 }}
+            transition={{ duration: .7 }}
             variants={{
                 hidden: {
                     opacity: 0,
-                    y: "5vh",
+                    y: "2vh",
                     transition: { ease: [0.2, 0.2, -0.05, 0.95] },
                 },
                 visible: { opacity: 1, y: 0 },

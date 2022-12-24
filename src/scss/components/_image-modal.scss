@@ -1,6 +1,6 @@
 .modal-container {
     height: calc(100vh - calc(100vh - 100%));
-    overflow-y: hidden !important;
+    overflow-x: hidden !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,28 +17,32 @@
     .modal-image {
         height: auto;
         max-height: 85%;
-        max-width: 85%;
+        max-width: 80%;
         object-fit: contain;
 
         @media (max-width: $layout-breakpoint-xsmall) {
-            height: 75%;
+            max-height: 70%;
             max-width: 100%;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        // box-shadow: 0 0px 50px -12px rgb(0 0 0 / 0.6);
+        // padding: 1.2rem;
+        border: none;
+        background-color: transparent;
+        color: $black;
+        cursor: pointer !important;
+        border-radius: 9999px;
+
+        @media (max-width: $layout-breakpoint-small) {
+            top: 2.5rem;
+            right: 2.5rem;
         }
     }
 }
 
-.close-btn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    position: absolute;
-    top: 4vh;
-    right: 3vw;
-    color: $black;
-    font-size: 4rem;
-    cursor: pointer !important;
 
-    @media (max-width: $layout-breakpoint-small) {
-        right: $wrapper-value-breakpoint-small;
-    }
-}
