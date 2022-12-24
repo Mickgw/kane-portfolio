@@ -15,6 +15,8 @@
     backdrop-filter: blur(25px);
 
     .modal-image {
+        height: auto;
+        max-height: 85%;
         max-width: 85%;
         object-fit: contain;
 
