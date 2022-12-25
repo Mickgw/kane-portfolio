@@ -81,7 +81,7 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
                 }}
                 whileTap={{ scale: 1.1 }}
             >
-                <VscClose style={{ width: "40px", height: "40px"}}/>
+                <VscClose style={{ width: "35px", height: "35px"}}/>
             </motion.button>
 
             <motion.img

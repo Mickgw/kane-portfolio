@@ -133,7 +133,7 @@ $card-spacing: 3vw;
                             font-size: 0.7rem;
                             color: $black;
                             font-weight: 500;
-                            font-size: calc(clamp(1.9rem, 7vw, 2.3rem) * 0.875);
+                            font-size: calc(clamp(1.9rem, 7vw, 2rem) * 0.875);
                             text-decoration: none;
 
                             @media (max-width: $layout-breakpoint-xsmall) {

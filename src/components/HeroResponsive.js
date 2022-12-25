@@ -6,16 +6,36 @@ import HeroContent from "../content/hero.json";
 
 const HeroResponsive = () => {
     useEffect(() => {
-        gsap.timeline().to("#hero", { autoAlpha: 1, duration: 0 }).fromTo(
-            ".react-parallax-bgimage",
-            { scale: 1.2 },
-            {
-                scale: 1,
-                delay: .1,
-                duration: 1.5,
-                ease: Power3.easeOut,
-            }
-        );
+        gsap.timeline()
+            .to("#hero", { autoAlpha: 1, duration: 0 })
+            .fromTo(
+                ".react-parallax-bgimage",
+                { scale: 1.2 },
+                {
+                    scale: 1,
+                    delay: 0.1,
+                    duration: 1.5,
+                    ease: Power3.easeOut,
+                }
+            )
+            .fromTo(
+                ".hero-title-responsive",
+                { y: 35, opacity: 0, skewY: 2 },
+                { y: 0, opacity: 1, skewY: 0, duration: 1.5, ease: Power3.easeOut},
+                "-=1"
+            )            
+            .fromTo(
+                ".profession-text-responsive",
+                { y: 35, opacity: 0, skewY: 2 },
+                { y: 0, opacity: 1, skewY: 0, duration: 1.5, ease: Power3.easeOut, stagger: 0.1 },
+                "-=1.3"
+            )
+            .fromTo(
+                ".scroll-down-responsive",
+                { y: 35, opacity: 0, skewY: 2 },
+                { y: 0, opacity: 1, skewY: 0, duration: 1.5, ease: Power3.easeOut},
+                "-=1.3"
+            );
     });
 
     return (
@@ -24,71 +44,21 @@ const HeroResponsive = () => {
                 bgImage={HeroContent?.hero_image_mobile}
                 bgImageAlt="hero-image"
                 strength={200}
-                style={{width: "100%", height: "100%"}}
+                blur={3}
+                style={{ width: "100%", height: "100%"}}
             >
-            <div className="hero-container">
-                <h1 className="hero-title">Kane Jansen</h1>
-                <div className="professions">
-                    <span className="profession-text">Photographer</span>
-                    <span className="profession-text">Cinematographer</span>
+                <div className="hero-container">
+                    <h1 className="hero-title-responsive">Kane Jansen</h1>
+                    <div className="professions">
+                        <span className="profession-text-responsive">Photographer</span>
+                        <span className="profession-text-responsive">Cinematographer</span>
+                    </div>
+                    <div className="scroll-down-responsive">
+                        <div className="scroll-down-text">scroll down</div>
+                        <IoIosArrowDown className="arrow-down-icon" />
+                    </div>
                 </div>
-                <div className="scroll-down">
-                    <div className="scroll-down-text">scroll down</div>
-                    <IoIosArrowDown className="arrow-down-icon" />
-                </div>
-            </div>
             </Parallax>
-            {/* <div className="parallax-container">
-                <div className="test">
-                    <Parallax
-                        bgImage={HeroContent?.hero_image_mobile}
-                        bgImageAlt="hero-image"
-                        strength={200}
-                        style={{ height: "inherit", width: "100%" }}
-                    />
-                </div>
-            </div>
-            <div className="hero-content">
-                <h1 className="hero-title">Kane Jansen</h1>
-                <div className="professions">
-                    <span className="profession-text">Photographer</span>
-                    <span className="profession-text">Cinematographer</span>
-                </div>
-                <div className="scroll-down">
-                    <div className="scroll-down-text">scroll down</div>
-                    <IoIosArrowDown className="arrow-down-icon" />
-                </div>
-            </div> */}
-            {/* <ParallaxProvider>
-                <ParallaxBanner style={{ width: "100%", height: "100%" }}>
-                    <ParallaxBannerLayer
-                        image={HeroContent?.hero_image_mobile}
-                        speed={-20}
-                        id="hero-image"
-                    />
-                    <FadeInWhenVisible>
-                        <div className="hero-content" id="#test">
-                            <div className="hero-content-container">
-                                <h1 className="hero-title">Kane Jansen</h1>
-                                <div className="professions">
-                                    <span className="profession-text">
-                                        Photographer
-                                    </span>
-                                    <span className="profession-text">
-                                        Cinematographer
-                                    </span>
-                                </div>
-                                <div className="scroll-down">
-                                    <div className="scroll-down-text">
-                                        scroll down
-                                    </div>
-                                    <IoIosArrowDown className="arrow-down-icon" />
-                                </div>
-                            </div>
-                        </div>
-                    </FadeInWhenVisible>
-                </ParallaxBanner>
-            </ParallaxProvider> */}
         </section>
     );
 };

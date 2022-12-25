@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Parallax } from "react-parallax";
-import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
 import HomeAboutContent from "../../content/home-about-page.json";
 
 // GSAP
@@ -17,7 +16,7 @@ const HomeAboutNormal = () => {
         gsap.timeline({
             scrollTrigger: {
                 trigger: "#home-about",
-                start: "top +=900px",
+                start: "top +=700px",
                 once: true,
             },
         })
@@ -31,6 +30,16 @@ const HomeAboutNormal = () => {
                     duration: 1.5,
                 }
             )
+            .fromTo(
+                "#image-info",
+                { opacity: 0, y: 30 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                },
+                "-=.1" //Add a delay because other way didnt work
+            )  
             .fromTo(
                 "#header-content-line",
                 { y: 100 },
@@ -61,7 +70,7 @@ const HomeAboutNormal = () => {
                     duration: 0.5,
                 },
                 "-=.1" //Add a delay because other way didnt work
-            );
+            )  
     });
 
     return (
@@ -82,13 +91,11 @@ const HomeAboutNormal = () => {
                                 />
                             </div>
                             {HomeAboutContent?.home_about_image_description && (
-                                <FadeInWhenVisible>
-                                    <div className="image-info">
+                                    <div className="image-info" id="image-info">
                                         {
                                             HomeAboutContent?.home_about_image_description
                                         }
                                     </div>
-                                </FadeInWhenVisible>
                             )}
                         </div>
                     )}

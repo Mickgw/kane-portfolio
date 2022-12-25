@@ -6,11 +6,7 @@
 
     @media (max-width: $layout-breakpoint-small) {
         display: block;
-        margin-top: $hero-section-height + 20vh;
-    }
-
-    @media (max-width: $layout-breakpoint-xsmall) {
-        margin-top: $hero-section-height-xsmall + 10vh;
+        margin-top: $hero-section-height;
     }
 
     .hero-image {
@@ -35,7 +31,7 @@
                         .home-about-responsive-content-line-inner {
                             color: $black;
                             font-weight: 700;
-                            font-size: calc(clamp(5.5rem, 8vw, 9rem) * 0.875);
+                            font-size: calc(clamp(4rem, 6vw, 9rem) * 0.875);
                         }
                     }
                 }
@@ -51,15 +47,32 @@
                     width: 100%;
                     height: 100%;
 
-                    .parallax-bg {
+                    .react-parallax.parallax-bg {
                         width: 100%;
-                        height: 100vh;
+                        height: 80vh;
 
-                        @media (max-width: $layout-breakpoint-xsmall) {
-                            height: 500px;
+                        img {
+                            height: auto;
+                            object-fit: cover !important;
 
+                            @media (max-width: $layout-breakpoint-xsmall) {
+                                height: 100% !important;
+                            }
                         }
                     }
+
+                    // .parallax-bg {
+                    //     width: 100%;
+                    //     height: 100vh;
+
+                    //     // @media (max-width: $layout-breakpoint-xsmall) {
+                    //     //     height: 500px;
+
+                    //     // }
+                    //     img {
+                    //         height: 100%;
+                    //     }
+                    // }
                 }
             }
 

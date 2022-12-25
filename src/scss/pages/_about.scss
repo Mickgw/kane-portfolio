@@ -4,12 +4,8 @@
 
     .section-header {
         font-weight: 700;
-        font-size: 4rem;
-        padding-bottom: 2em;
-
-        @media (max-width: $layout-breakpoint-small) {
-            font-size: 2.5rem;
-        }
+        font-size: calc(clamp(3rem, 3vw, 4rem) * 0.875);
+        margin-bottom: 4.5rem;
     }
 
     .container {
@@ -90,6 +86,7 @@
                 display: grid;
                 grid-template-columns: 50% 50%;
                 column-gap: 5rem;
+                row-gap: 10rem;
                 align-items: center;
 
                 &.no-equipment {
@@ -120,23 +117,20 @@
                     .my-equipment-header {
                         font-weight: 700;
                         font-size: calc(clamp(3.5rem, 7vw, 4rem) * 0.875);
+                        margin-bottom: 2.5rem;
                     }
 
                     .equipment {
                         .equipment-item {
-                            padding-block: 2.5rem;
-
-                            #equipment-category {
-                                padding-bottom: .1rem;
-                            }
+                            padding-block: 2rem;
 
                             .equipment-item-description {
                                 padding-top: 1em;
-                                font-size: 2em;
-                                font-weight: 500;
+                                font-size: 1.7em;
+                                font-weight: 600;
 
                                 @media (max-width: $layout-breakpoint-small) {
-                                    font-size: 1.9em;
+                                    font-size: 1.6em;
                                 }
                             }
                         }
