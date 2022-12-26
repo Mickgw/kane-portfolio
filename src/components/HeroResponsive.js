@@ -14,7 +14,7 @@ const HeroResponsive = () => {
                 {
                     scale: 1,
                     delay: 0.1,
-                    duration: 1.5,
+                    duration: 1.8,
                     ease: Power3.easeOut,
                 }
             )
@@ -59,6 +59,9 @@ const HeroResponsive = () => {
                     </div>
                 </div>
             </Parallax>
+            <div className="gradient-overlay-container">
+                    <div className="gradient-overlay" />
+                </div>
         </section>
     );
 };

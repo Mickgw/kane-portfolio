@@ -131,7 +131,7 @@ const PhotoAlbumsPage = () => {
                                                 )}
                                             </div>
 
-                                            {album.album_description_paragraphs && (
+                                            {album.album_description_paragraphs.length > 0 && (
                                                 <div className="album-description">
                                                     {album.album_description_paragraphs.map(
                                                         (

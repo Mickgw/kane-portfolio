@@ -17,7 +17,7 @@ $footer-menu-font-size: 1.6rem;
     z-index: $z-index-navmenu;
  
     @media (min-width: $layout-breakpoint-small) {
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     .container {
@@ -31,6 +31,7 @@ $footer-menu-font-size: 1.6rem;
         //Inherit padding inline from the navbar
         @media (max-width: $layout-breakpoint-small) {
             margin-inline: $wrapper-value-breakpoint-small;
+            margin-top: 5rem;
         }
 
         @media (min-width: $layout-breakpoint-small) {

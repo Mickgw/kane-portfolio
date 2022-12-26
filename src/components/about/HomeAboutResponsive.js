@@ -66,32 +66,37 @@ const HomeAboutResponsive = () => {
                                 )}
                             </div>
 
-                            <ul className="button-list">
-                                <FadeInWhenVisible>
-                                    <li className="page-link-container">
-                                        <Link to="/about" className="page-link">
-                                            <div className="link-text">
-                                                More About me
-                                            </div>
-                                            <VscArrowRight className="link-icon" />
-                                        </Link>
-                                    </li>
-                                </FadeInWhenVisible>
+                            {HomeAboutContent.show_page_links && (
+                                <ul className="button-list">
+                                    <FadeInWhenVisible>
+                                        <li className="page-link-container">
+                                            <Link
+                                                to="/about"n
+                                                className="page-link"
+                                            >
+                                                <div className="link-text">
+                                                    More About me
+                                                </div>
+                                                <VscArrowRight className="link-icon" />
+                                            </Link>
+                                        </li>
+                                    </FadeInWhenVisible>
 
-                                <FadeInWhenVisible>
-                                    <li className="page-link-container">
-                                        <Link
-                                            to="/portfolio"
-                                            className="page-link"
-                                        >
-                                            <div className="link-text">
-                                                View portfolio
-                                            </div>
-                                            <VscArrowRight className="link-icon" />
-                                        </Link>
-                                    </li>
-                                </FadeInWhenVisible>
-                            </ul>
+                                    <FadeInWhenVisible>
+                                        <li className="page-link-container">
+                                            <Link
+                                                to="/portfolio"
+                                                className="page-link"
+                                            >
+                                                <div className="link-text">
+                                                    View portfolio
+                                                </div>
+                                                <VscArrowRight className="link-icon" />
+                                            </Link>
+                                        </li>
+                                    </FadeInWhenVisible>
+                                </ul>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ const HomeAboutNormal = () => {
                     duration: 0.5,
                 },
                 "-=.1" //Add a delay because other way didnt work
-            )  
+            )
             .fromTo(
                 "#header-content-line",
                 { y: 100 },
@@ -70,7 +70,7 @@ const HomeAboutNormal = () => {
                     duration: 0.5,
                 },
                 "-=.1" //Add a delay because other way didnt work
-            )  
+            );
     });
 
     return (
@@ -91,11 +91,11 @@ const HomeAboutNormal = () => {
                                 />
                             </div>
                             {HomeAboutContent?.home_about_image_description && (
-                                    <div className="image-info" id="image-info">
-                                        {
-                                            HomeAboutContent?.home_about_image_description
-                                        }
-                                    </div>
+                                <div className="image-info" id="image-info">
+                                    {
+                                        HomeAboutContent?.home_about_image_description
+                                    }
+                                </div>
                             )}
                         </div>
                     )}
@@ -140,25 +140,39 @@ const HomeAboutNormal = () => {
                                 )}
                             </div>
 
-                            <div className="home-about-buttons">
-                                <div className="home-about-button" id="button">
-                                    <Link to="/about" className="page-link">
-                                        <div className="home-about-link">
-                                            More About me
-                                        </div>
-                                    </Link>
+                            {HomeAboutContent.show_page_links && (
+                                <div className="home-about-buttons">
+                                    <div
+                                        className="home-about-button"
+                                        id="button"
+                                    >
+                                        <Link to="/about" className="page-link">
+                                            <div className="home-about-link">
+                                                More About me
+                                            </div>
+                                        </Link>
+                                    </div>
+                                    <em
+                                        className="home-about-divider"
+                                        id="button"
+                                    >
+                                        or
+                                    </em>
+                                    <div
+                                        className="home-about-button"
+                                        id="button"
+                                    >
+                                        <Link
+                                            to="/portfolio"
+                                            className="page-link"
+                                        >
+                                            <div className="home-about-link">
+                                                View Portfolio &#x279C;
+                                            </div>
+                                        </Link>
+                                    </div>
                                 </div>
-                                <em className="home-about-divider" id="button">
-                                    or
-                                </em>
-                                <div className="home-about-button" id="button">
-                                    <Link to="/portfolio" className="page-link">
-                                        <div className="home-about-link">
-                                            View Portfolio &#x279C;
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </div>
