@@ -241,7 +241,7 @@ const About = () => {
                                 </div>
                             </FadeInWhenVisible>
 
-                            {AboutContent?.services && (
+                            {AboutContent?.services.length > 0 && (
                                 <div className="services-section">
                                     <FadeInWhenVisible>
                                         <div className="section-header">

@@ -65,7 +65,7 @@
             .made-by {
                 margin-bottom: 1.5rem;
                 a {
-                    font-weight: 100;
+                    font-weight: 500;
                     text-decoration: none;
                     color: $text-color;
                     font-size: calc(clamp(1.1rem, 4vw, 1.6rem) * 0.875);
@@ -73,7 +73,7 @@
             }
             .copyright {
                 color: $text-color;
-                font-weight: 100;
+                font-weight: 500;
                 font-size: calc(clamp(1.1rem, 4vw, 1.6rem) * 0.875);
             }
         }

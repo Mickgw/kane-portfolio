@@ -1,6 +1,6 @@
 .about {
     visibility: hidden;
-    padding-block: $padding-top-global + 15;
+    padding-top: $padding-top-global + 10;
 
     .section-header {
         font-weight: 700;
@@ -139,6 +139,7 @@
             }
 
             .services-section {
+                margin-bottom: 15vh;
                 .services-section-grid {
                     width: 100%;
                     .services-container {

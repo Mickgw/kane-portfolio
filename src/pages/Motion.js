@@ -56,10 +56,25 @@ const Motion = () => {
                         {videoProjects.video_projects_list.map(
                             (video, index) => {
                                 return (
-                                    <FadeInWhenVisible key={index}>
-                                        <div className="video-container">
-                                            <div className={`${video?.description ? "video-info" : "video-info no-description"}`}>
-                                                <div className={`${video?.description ? "video-title-column" : "video-title-column no-description"}`}>
+                                    <div
+                                        className="video-container"
+                                        key={index}
+                                    >
+                                        <FadeInWhenVisible>
+                                            <div
+                                                className={`${
+                                                    video?.description
+                                                        ? "video-info"
+                                                        : "video-info no-description"
+                                                }`}
+                                            >
+                                                <div
+                                                    className={`${
+                                                        video?.description
+                                                            ? "video-title-column"
+                                                            : "video-title-column no-description"
+                                                    }`}
+                                                >
                                                     <div className="video-info-category">
                                                         Name
                                                     </div>
@@ -78,6 +93,8 @@ const Motion = () => {
                                                     </div>
                                                 )}
                                             </div>
+                                        </FadeInWhenVisible>
+                                        <FadeInWhenVisible>
                                             <video controls>
                                                 <source
                                                     src={
@@ -87,8 +104,8 @@ const Motion = () => {
                                                     type="video/mp4"
                                                 />
                                             </video>
-                                        </div>
-                                    </FadeInWhenVisible>
+                                        </FadeInWhenVisible>
+                                    </div>
                                 );
                             }
                         )}
