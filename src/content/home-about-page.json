@@ -18,5 +18,5 @@
   "home_about_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1671574236/portrait_2_wbhg03.jpg",
   "home_about_image_description": "2021 - Nijmegen, The Netherlands",
   "show_home_about": true,
-  "show_page_links": false
+  "show_page_links": true
 }
