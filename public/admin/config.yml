@@ -176,7 +176,7 @@ collections:
         name: "content"
         file: "src/content/home-about-page.json"
         fields:
-          - {label: "Show home about section", name: "show_home_about", widget: "boolean", default: true}
+          - {label: "Show home about section", name: "show_home_about", widget: "boolean", default: true, hint: "Option to show the home about section or not"}
           - {label: "Home about image", name: "home_about_image", widget: "image"}
           - {label: "Home about image description", name: "home_about_image_description", widget: "string", required: false}
           - label: "Header title lines"
