@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { VscClose } from "react-icons/vsc";
+import { ANIMATION_DURATION } from "../lib/constants";
 
 const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
     const modalRef = useRef();
-    const animation_duration = 0.7;
     const body = document.querySelector("body");
 
     useEffect(() => {
@@ -33,14 +33,14 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: animation_duration,
+                duration: ANIMATION_DURATION
             },
         },
         exit: {
             y: 100,
             opacity: 0,
             transition: {
-                duration: animation_duration,
+                duration: ANIMATION_DURATION,
             },
         },
     };
@@ -52,13 +52,13 @@ const ImageModal = ({ isModal, setIsModal, modalImage, setModalImage }) => {
         visible: {
             opacity: 1,
             transition: {
-                duration: animation_duration,
+                duration: ANIMATION_DURATION,
             },
         },
         exit: {
             opacity: 0,
             transition: {
-                duration: animation_duration,
+                duration: ANIMATION_DURATION,
             },
         },
     };

@@ -31,7 +31,7 @@ const Hero = () => {
             )
             .fromTo(
                 "#my-name",
-                { y: 100 },
+                { y: 125 },
                 { y: 0, duration: 1, ease: Power3.easeOut },
                 "-=.3"
             )

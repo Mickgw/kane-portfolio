@@ -6,12 +6,22 @@
 
         .video-container {
             padding-block: 15vh;
+
+            @media (max-width: $layout-breakpoint-small) {
+                padding-block: 10vh;
+            }
+
+
             .video-info {
                 margin-bottom: 5em;
                 width: 100%;
                 height: 100%;
                 display: grid;
                 grid-template-columns: 40% 60%;
+
+                &.no-description {
+                    grid-template-columns: 100%;
+                }
 
                 @media (max-width: $layout-breakpoint-small) {
                     grid-template-columns: 100%;
@@ -21,6 +31,10 @@
                     .video-title {
                         font-size: clamp(2.5rem, 5vw, 2.8rem);
                         font-weight: 700;
+                    }
+
+                    &.no-description {
+                        padding-bottom: 0px !important;
                     }
 
                     @media (max-width: $layout-breakpoint-small) {

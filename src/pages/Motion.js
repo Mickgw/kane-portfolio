@@ -58,8 +58,8 @@ const Motion = () => {
                                 return (
                                     <FadeInWhenVisible key={index}>
                                         <div className="video-container">
-                                            <div className="video-info">
-                                                <div className="video-title-column">
+                                            <div className={`${video?.description ? "video-info" : "video-info no-description"}`}>
+                                                <div className={`${video?.description ? "video-title-column" : "video-title-column no-description"}`}>
                                                     <div className="video-info-category">
                                                         Name
                                                     </div>

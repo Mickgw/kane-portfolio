@@ -1,7 +1,6 @@
 .home-about-responsive {
     display: block;
     width: 100%;
-    margin-block: 50vh;
     display: none;
 
     @media (max-width: $layout-breakpoint-small) {
@@ -60,19 +59,6 @@
                             }
                         }
                     }
-
-                    // .parallax-bg {
-                    //     width: 100%;
-                    //     height: 100vh;
-
-                    //     // @media (max-width: $layout-breakpoint-xsmall) {
-                    //     //     height: 500px;
-
-                    //     // }
-                    //     img {
-                    //         height: 100%;
-                    //     }
-                    // }
                 }
             }
 

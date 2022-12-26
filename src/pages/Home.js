@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageLoader from "../components/loader/PageLoader";
+// import HomeAboutContent from "../content/home-about-page.json";
 
 //Components
 import HomeAbout from "../components/about/HomeAbout";

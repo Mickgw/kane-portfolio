@@ -15,8 +15,8 @@ $footer-menu-font-size: 1.6rem;
     position: fixed;
     background-color: $navbar-menu;
     z-index: $z-index-navmenu;
-
-    @media (max-width: $layout-breakpoint-small) {
+ 
+    @media (min-width: $layout-breakpoint-small) {
         overflow-y: scroll;
     }
 
@@ -32,6 +32,11 @@ $footer-menu-font-size: 1.6rem;
         @media (max-width: $layout-breakpoint-small) {
             margin-inline: $wrapper-value-breakpoint-small;
         }
+
+        @media (min-width: $layout-breakpoint-small) {
+            min-height: 700px;
+        }
+
 
         .menu {
             width: 100%;

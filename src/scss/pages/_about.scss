@@ -81,7 +81,7 @@
             }
 
             .my-equipment-grid {
-                margin-block: 20vh;
+                margin-block: 15vh;
                 width: 100%;
                 display: grid;
                 grid-template-columns: 50% 50%;
@@ -175,7 +175,7 @@
 
                                     .accordion-button {
                                         .showmore-icon {
-                                            transition: 0.4s ease-in-out;
+                                            transition: 0.6s ease-in-out;
                                             font-size: calc(clamp(2rem, 4vw, 3rem) * 0.875);
 
                                             &.open {
@@ -188,14 +188,14 @@
                                 .accordion-item {
                                     will-change: max-height;
                                     overflow: hidden;
-                                    transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+                                    transition: max-height 0.6s cubic-bezier(1, 0, 1, 0);
                                     height: auto;
                                     max-height: 9999px;
                                 }
 
                                 .accordion-item.collapsed {
                                     max-height: 0;
-                                    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+                                    transition: max-height 0.6s cubic-bezier(0, 1, 0, 1);
                                 }
 
                                 .accordion-content {

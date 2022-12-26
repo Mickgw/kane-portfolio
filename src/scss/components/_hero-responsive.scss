@@ -16,7 +16,7 @@
         img {
            margin-top: -10px;
            margin-left: -10px;
-           width: 105vw !important;
+           width: 110vw !important;
            object-fit: cover !important;
         }
     }
@@ -34,7 +34,7 @@
             color: $white;
 
             @media (max-width: $layout-breakpoint-xsmall) {
-                font-size: 5rem;
+                font-size: 4.5rem;
             }
         }
 
