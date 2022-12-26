@@ -190,7 +190,8 @@ collections:
             widget: "list"
             required: false
             fields:
-              - {label: "Paragraph", name: "paragraph", widget: "text"}             
+              - {label: "Paragraph", name: "paragraph", widget: "text"}       
+          - {label: "Show page links", name: "show_page_links", widget: "boolean", default: true, hint: "Option to show the page links at bottom of paragraphs"}      
 
 
 
