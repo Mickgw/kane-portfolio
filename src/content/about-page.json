@@ -1,23 +1,6 @@
 {
   "service_title": "My services",
-  "equipment": [
-    {
-      "equipment_category": "camera",
-      "equipment_item": "Sony A7.3"
-    },
-    {
-      "equipment_category": "lens",
-      "equipment_item": "dikke lens"
-    },
-    {
-      "equipment_category": "lens",
-      "equipment_item": "nog een lens"
-    },
-    {
-      "equipment_category": "microphone",
-      "equipment_item": "wwegwgwweg"
-    }
-  ],
+  "equipment": [],
   "image_under_lines_description": "2020 - Arnhem, The Netherlands",
   "intro_text_line": [
     {
