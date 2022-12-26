@@ -15,13 +15,17 @@
         .hero-grid {
             width: 100%;
             height: 100%;
-            display: grid;
-            grid-template-columns: 40% 60%;
-            column-gap: 3rem;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            // display: grid;
+            // grid-template-columns: 40% 60%;
+            // column-gap: 3rem;
             overflow: hidden;
             align-items: center;
 
             .hero-text {
+                width: 40%;
                 display: table;
 
                 .hero-text-inner {
@@ -85,7 +89,7 @@
             .hero-image {
                 position: relative;
                 z-index: 1;
-                width: 100%;
+                width: 60%;
                 height: 85%;
                 overflow: hidden;
 

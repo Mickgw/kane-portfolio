@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageLoader from "../components/loader/PageLoader";
-// import HomeAboutContent from "../content/home-about-page.json";
+import HomeAboutContent from "../content/home-about-page.json";
 
 //Components
 import HomeAbout from "../components/about/HomeAbout";
@@ -55,7 +55,7 @@ const Home = () => {
                 <div id="main-container">
                     <Hero />
                     <HeroResponsive />
-                    <HomeAbout />
+                    {HomeAboutContent.show_home_about && <HomeAbout />}
                     <PhotoAlbums />
                 </div>
             )}

@@ -44,7 +44,7 @@ body {
 }
 
 main {
-  padding-inline: $wrapper-value; 
+  margin-inline: $wrapper-value; 
 
   @media (max-width: $layout-breakpoint-small) {
     padding-inline: $wrapper-value-breakpoint-small;
