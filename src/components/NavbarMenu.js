@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
 import NavigationMenuImages from "../assets/images/images-for-navmenu/navigation-menu-images.json";
-import { ANIMATION_DURATION } from "../lib/constants";
 
 const NavbarMenu = () => {
     //assigning location variable
@@ -215,19 +214,30 @@ const NavbarMenu = () => {
     const navMenuImageAnimationHover = {
         hidden: {
             skewY: -10,
-            x: 800,
+            x: "55vw",
+            y: -25,
+            scale: 1.1,
         },
         visible: {
             scale: 1,
             skewY: 0,
             rotate: 0,
             x: 0,
-            transition: { ease: [0.6, 0.2, 0.25, 1], duration: ANIMATION_DURATION },
+            y: 0,
+            transition: {
+                ease: [0.6, 0.2, 0.25, 1],
+                duration: 1,
+            },
         },
         exit: {
+            scale: .9,
             skewY: 10,
-            x: -800,
-            transition: { ease: [0.6, 0.2, 0.25, 1], duration: ANIMATION_DURATION },
+            y: -25,
+            x: "-55vw",
+            transition: {
+                ease: [0.6, 0.2, 0.25, 1],
+                duration: 1,
+            },
         },
     };
 
@@ -340,128 +350,138 @@ const NavbarMenu = () => {
                             </motion.div>
                         </nav>
 
-                        <motion.div
-                            className="menu-image"
-                            variants={navMenuImageAnimation}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                        >
-                            {(() => {
-                                switch (splitLocation[1]) {
-                                    case "":
-                                        return (
-                                            <img
-                                                className="navigation-image"
-                                                src={
-                                                    NavigationMenuImages?.home_page_image
-                                                }
-                                                alt="home"
-                                            />
-                                        );
-                                    case "portfolio":
-                                        return (
-                                            <img
-                                                className="navigation-image"
-                                                src={
-                                                    NavigationMenuImages?.portfolio_page_image
-                                                }
-                                                alt="portfolio"
-                                            />
-                                        );
-                                    case "about":
-                                        return (
-                                            <img
-                                                className="navigation-image"
-                                                src={
-                                                    NavigationMenuImages?.about_page_image
-                                                }
-                                                alt="about"
-                                            />
-                                        );
-                                    case "motion":
-                                        return (
-                                            <img
-                                                className="navigation-image"
-                                                src={
-                                                    NavigationMenuImages?.motion_page_image
-                                                }
-                                                alt="motion"
-                                            />
-                                        );
-                                    default:
-                                        return (
-                                            <img
-                                                className="navigation-image"
-                                                src={
-                                                    NavigationMenuImages?.none_navigation_page_image
-                                                }
-                                                alt="motion"
-                                            />
-                                        );
-                                }
-                            })()}
-                            {/* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
-                            <AnimatePresence>
-                                {isHoveringHome && (
-                                    <motion.img
-                                        className="navigation-image"
-                                        src={
-                                            NavigationMenuImages?.home_page_image
-                                        }
-                                        variants={navMenuImageAnimationHover}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                    />
-                                )}
-                            </AnimatePresence>
+                        <div className="menu-image-position">
+                            <motion.div
+                                className="menu-image"
+                                variants={navMenuImageAnimation}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                            >
+                                {(() => {
+                                    switch (splitLocation[1]) {
+                                        case "":
+                                            return (
+                                                <img
+                                                    className="navigation-image"
+                                                    src={
+                                                        NavigationMenuImages?.home_page_image
+                                                    }
+                                                    alt="home"
+                                                />
+                                            );
+                                        case "portfolio":
+                                            return (
+                                                <img
+                                                    className="navigation-image"
+                                                    src={
+                                                        NavigationMenuImages?.portfolio_page_image
+                                                    }
+                                                    alt="portfolio"
+                                                />
+                                            );
+                                        case "about":
+                                            return (
+                                                <img
+                                                    className="navigation-image"
+                                                    src={
+                                                        NavigationMenuImages?.about_page_image
+                                                    }
+                                                    alt="about"
+                                                />
+                                            );
+                                        case "motion":
+                                            return (
+                                                <img
+                                                    className="navigation-image"
+                                                    src={
+                                                        NavigationMenuImages?.motion_page_image
+                                                    }
+                                                    alt="motion"
+                                                />
+                                            );
+                                        default:
+                                            return (
+                                                <img
+                                                    className="navigation-image"
+                                                    src={
+                                                        NavigationMenuImages?.none_navigation_page_image
+                                                    }
+                                                    alt="motion"
+                                                />
+                                            );
+                                    }
+                                })()}
+                                {/* https://codesandbox.io/s/framer-motion-start-overlapping-freeze-be4rty?file=/src/LinkWithCallbacksWorkaround.js:0-39 */}
+                                <AnimatePresence>
+                                    {isHoveringHome && (
+                                        <motion.img
+                                            className="navigation-image"
+                                            src={
+                                                NavigationMenuImages?.home_page_image
+                                            }
+                                            variants={
+                                                navMenuImageAnimationHover
+                                            }
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                        />
+                                    )}
+                                </AnimatePresence>
 
-                            <AnimatePresence>
-                                {isHoveringPortfolio && (
-                                    <motion.img
-                                        className="navigation-image portfolio"
-                                        src={
-                                            NavigationMenuImages?.portfolio_page_image
-                                        }
-                                        variants={navMenuImageAnimationHover}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                    />
-                                )}
-                            </AnimatePresence>
+                                <AnimatePresence>
+                                    {isHoveringPortfolio && (
+                                        <motion.img
+                                            className="navigation-image portfolio"
+                                            src={
+                                                NavigationMenuImages?.portfolio_page_image
+                                            }
+                                            variants={
+                                                navMenuImageAnimationHover
+                                            }
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                        />
+                                    )}
+                                </AnimatePresence>
 
-                            <AnimatePresence>
-                                {isHoveringAbout && (
-                                    <motion.img
-                                        className="navigation-image"
-                                        src={
-                                            NavigationMenuImages?.about_page_image
-                                        }
-                                        variants={navMenuImageAnimationHover}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                    />
-                                )}
-                            </AnimatePresence>
+                                <AnimatePresence>
+                                    {isHoveringAbout && (
+                                        <motion.img
+                                            className="navigation-image"
+                                            src={
+                                                NavigationMenuImages?.about_page_image
+                                            }
+                                            variants={
+                                                navMenuImageAnimationHover
+                                            }
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                        />
+                                    )}
+                                </AnimatePresence>
 
-                            <AnimatePresence>
-                                {isHoveringMotion && (
-                                    <motion.img
-                                        className="navigation-image"
-                                        src={
-                                            NavigationMenuImages?.motion_page_image
-                                        }
-                                        variants={navMenuImageAnimationHover}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                    />
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
+                                <AnimatePresence>
+                                    {isHoveringMotion && (
+                                        <motion.img
+                                            className="navigation-image"
+                                            src={
+                                                NavigationMenuImages?.motion_page_image
+                                            }
+                                            variants={
+                                                navMenuImageAnimationHover
+                                            }
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                        />
+                                    )}
+                                </AnimatePresence>
+                            </motion.div>
+                        </div>
                     </div>
 
                     <motion.hr

@@ -26,62 +26,55 @@
 @import "components/footer-responsive";
 
 body {
-  background-color: $background;
-  min-height: 100% !important;
-  height: 100%;
-  overflow-x: hidden !important;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  cursor: auto !important;
+    background-color: $background;
+    min-height: 100% !important;
+    height: 100%;
+    overflow-x: hidden !important;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    cursor: auto !important;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-  &.disable-scroll {
-    overflow-y: hidden;
-  }
+    &.disable-scroll {
+        overflow-y: hidden;
+    }
 }
 
 main {
-  padding-inline: $wrapper-value; 
+    margin-inline: auto;
+    max-width: 1536px;
+    padding-inline: $wrapper-value;
 
-  @media (max-width: $layout-breakpoint-small) {
-    padding-inline: $wrapper-value-breakpoint-small;
-  }
+    @media (max-width: $layout-breakpoint-small) {
+        padding-inline: $wrapper-value-breakpoint-small;
+    }
 }
 
 //Cursor styling
 .cursor__dot div {
-  z-index: 999999 !important;
+    z-index: 999999 !important;
 }
 
 .cursor__dot div:last-child {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .cursor__dot div:first-child {
-  mix-blend-mode: difference;
-  background-color: $white !important;
+    mix-blend-mode: difference;
+    background-color: $white !important;
 }
-
 
 //Selection color styling
 /* Code for Firefox */
-::-moz-selection { 
-  color: $black;
-  background: $white;
+::-moz-selection {
+    color: $black;
+    background: $white;
 }
 
 ::selection {
-  color: $white;
-  background: $black;
+    color: $white;
+    background: $black;
 }
-
-
-
-
-
-
-
-
