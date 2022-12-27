@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Moment from "react-moment";
 import { NavLink, useLocation } from "react-router-dom";
 import NavigationMenuImages from "../assets/images/images-for-navmenu/navigation-menu-images.json";
+import { ANIMATION_DURATION } from "../lib/constants";
 
 const NavbarMenu = () => {
     //assigning location variable
@@ -213,30 +214,26 @@ const NavbarMenu = () => {
 
     const navMenuImageAnimationHover = {
         hidden: {
-            skewY: -10,
-            x: "55vw",
-            y: -25,
             scale: 1.1,
+            skewY: -5,
+            x: "55vw",
         },
         visible: {
             scale: 1,
             skewY: 0,
-            rotate: 0,
             x: 0,
-            y: 0,
             transition: {
                 ease: [0.6, 0.2, 0.25, 1],
-                duration: 1,
+                duration: ANIMATION_DURATION,
             },
         },
         exit: {
-            scale: .9,
-            skewY: 10,
-            y: -25,
+            scale: 1.1,
+            skewY: 5,
             x: "-55vw",
             transition: {
                 ease: [0.6, 0.2, 0.25, 1],
-                duration: 1,
+                duration: ANIMATION_DURATION,
             },
         },
     };
