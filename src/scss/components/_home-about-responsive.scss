@@ -93,7 +93,7 @@
                                 padding-block: 1.4rem;
                                 justify-content: space-between;
                                 align-items: center;
-                                font-size: 1.8rem;
+                                font-size: calc(clamp(1.5rem, 6vw, 1.8rem) * 0.875);
                                 color: $black;
                                 cursor: pointer !important;
 

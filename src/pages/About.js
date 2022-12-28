@@ -13,8 +13,6 @@ import {
     ParallaxProvider,
 } from "react-scroll-parallax";
 
-import bigPortraitTwo from "../assets/images/images-for-about/portrait_3.1.JPEG";
-
 const About = () => {
     const [loading, setLoading] = useState(true);
     const timer_duration = 1400;
@@ -154,29 +152,33 @@ const About = () => {
                         </ParallaxProvider>
 
                         <div className="about-details-data">
-                            <div className="about-details-data-grid">
-                                <FadeInWhenVisible>
-                                    <div className="section-header-about">
-                                        {
-                                            AboutContent?.about_paragraph_section_title
-                                        }
-                                    </div>
-                                </FadeInWhenVisible>
+                            {AboutContent?.about_paragraph.length > 0 && (
+                                <div className="about-details-data-grid">
+                                    <FadeInWhenVisible>
+                                        <div className="section-header-about">
+                                            {
+                                                AboutContent?.about_paragraph_section_title
+                                            }
+                                        </div>
+                                    </FadeInWhenVisible>
 
-                                <div className="paragraphs-container">
-                                    {AboutContent?.about_paragraph.map(
-                                        (item, index) => {
-                                            return (
-                                                <FadeInWhenVisible key={index}>
-                                                    <p className="about-details-paragraphs">
-                                                        {item?.paragraph}
-                                                    </p>
-                                                </FadeInWhenVisible>
-                                            );
-                                        }
-                                    )}
+                                    <div className="paragraphs-container">
+                                        {AboutContent?.about_paragraph.map(
+                                            (item, index) => {
+                                                return (
+                                                    <FadeInWhenVisible
+                                                        key={index}
+                                                    >
+                                                        <p className="about-details-paragraphs">
+                                                            {item?.paragraph}
+                                                        </p>
+                                                    </FadeInWhenVisible>
+                                                );
+                                            }
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
                             <FadeInWhenVisible>
                                 <div
@@ -191,7 +193,7 @@ const About = () => {
                                             <div className="big-portrait-two">
                                                 <ParallaxBanner className="portrait-two">
                                                     <ParallaxBannerLayer
-                                                        image={bigPortraitTwo}
+                                                        image={""}
                                                         speed={8}
                                                     />
                                                 </ParallaxBanner>
@@ -203,7 +205,8 @@ const About = () => {
                                             </div>
                                         </FadeInWhenVisible>
                                     </div>
-                                    {AboutContent?.equipment.length === 0 ? null : (
+                                    {AboutContent?.equipment.length ===
+                                    0 ? null : (
                                         <div className="my-equipment">
                                             <div className="section-header">
                                                 {

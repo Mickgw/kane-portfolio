@@ -75,7 +75,7 @@ const Motion = () => {
                                                             : "video-title-column no-description"
                                                     }`}
                                                 >
-                                                    <div className="video-info-category">
+                                                    <div className="divider-text motion-page">
                                                         Name
                                                     </div>
                                                     <div className="video-title">
@@ -84,7 +84,7 @@ const Motion = () => {
                                                 </div>
                                                 {video.description && (
                                                     <div className="video-description-column">
-                                                        <div className="video-info-category">
+                                                        <div className="divider-text motion-page">
                                                             Description
                                                         </div>
                                                         <p className="video-description">

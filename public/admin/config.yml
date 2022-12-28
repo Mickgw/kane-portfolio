@@ -119,6 +119,7 @@ collections:
             fields:
               - {label: "Paragraph", name: "paragraph", widget: "text"}
 
+          - {label: "Image under paragraphs", name: "image_under_paragraphs", widget: "image"}
           - {label: "My equipment title", name: "my_equipment_title", widget: string, required: false} 
           - label: "Equipment"
             name: "equipment"

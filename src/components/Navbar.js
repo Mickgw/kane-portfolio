@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import NavbarMenu from "./NavbarMenu";
 
 //Logo imports
 import { ReactComponent as Logo } from "../assets/logo/FINALFINALFINAL.svg";
 import "../fonts/AllisonScript/Allison_Script.otf";
 import "../fonts/ThreeSignature/Three Signature.otf";
-
-import NavbarMenu from "./NavbarMenu";
 
 const Navbar = () => {
     const location = useLocation();

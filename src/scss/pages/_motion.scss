@@ -58,13 +58,7 @@
     }
 }
 
-.video-info-category {
-    font-size: clamp(1.4rem, 5vw, 1.6rem);
-    color: rgb(170, 170, 170);
-    padding-bottom: 1.3em;
-
-    @media (max-width: $layout-breakpoint-small) {
-        color: $black;
-        font-weight: 600;
-    }
+.divider-text.motion-page {
+    font-size: clamp(1rem, 3vw, 1.2rem) !important;
+    margin-bottom: 2rem;
 }

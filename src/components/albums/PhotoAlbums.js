@@ -1,7 +1,7 @@
 import photoAlbums from "../../content/photo-albums.json";
 import { Link } from "react-router-dom";
 import FadeInWhenVisible from "../hooks/FadeInWhenVisible";
-
+import { motion } from "framer-motion";
 import { TbArrowUpRight } from "react-icons/tb";
 
 const PhotoAlbums = () => {
@@ -43,7 +43,7 @@ const PhotoAlbums = () => {
                                                             <TbArrowUpRight className="album-cover-dot-text" />
                                                         </div>
                                                     </div>
-                                                    <div className="image-container">
+                                                    <motion.div className="image-container" whileTap={{scale: 1.1 }}>
                                                         <img
                                                             className="album-cover"
                                                             src={
@@ -51,7 +51,7 @@ const PhotoAlbums = () => {
                                                             }
                                                             alt="album cover"
                                                         />
-                                                    </div>
+                                                    </motion.div>
                                                 </div>
                                                 <div className="album-card-cover-content">
                                                     <h2 className="content-header">

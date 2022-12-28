@@ -15,7 +15,7 @@ $footer-menu-font-size: 1.6rem;
     position: fixed;
     background-color: $navbar-menu;
     z-index: $z-index-navmenu;
- 
+
     @media (min-width: $layout-breakpoint-small) {
         overflow-y: auto;
     }
@@ -37,7 +37,6 @@ $footer-menu-font-size: 1.6rem;
 
         @media (min-width: 1536px) {
             margin-inline: auto;
-
         }
 
         @media (min-width: $layout-breakpoint-small) {
@@ -63,11 +62,11 @@ $footer-menu-font-size: 1.6rem;
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
-    
+
                 @media (max-width: $layout-breakpoint-small) {
                     display: none;
                 }
-    
+
                 .navigation-image {
                     position: absolute;
                     height: auto; /* Make sure images are scaled correctly. */
@@ -79,11 +78,7 @@ $footer-menu-font-size: 1.6rem;
                     object-fit: cover;
                 }
             }
-
         }
-
-
-
 
         .menu {
             width: 100%;
@@ -126,16 +121,16 @@ $footer-menu-font-size: 1.6rem;
                                 cursor: pointer !important;
 
                                 &.active::before {
-                                    margin-block: auto;
+                                    transform: translateY(7%);
                                     content: "\2022";
                                     position: absolute;
                                     margin-left: -35px;
-                                    font-size: calc(clamp(3rem, 7vw, 4.5rem) * 0.875);
-
+                                    font-size: calc(clamp(3rem, 4vw, 4.5rem) * 0.875);
+                                    
                                     //Keeps the dot between the wrapper
                                     @media (max-width: $layout-breakpoint-small) {
                                         right: $wrapper-value-breakpoint-small;
-                                        margin-top: 5px;
+                                        margin-top: 7px;
                                     }
                                 }
 
