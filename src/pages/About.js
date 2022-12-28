@@ -181,7 +181,7 @@ const About = () => {
                             )}
 
                             <FadeInWhenVisible>
-                                <div
+                                <section
                                     className={`my-equipment-grid ${
                                         AboutContent?.equipment.length > 0
                                             ? ""
@@ -193,7 +193,7 @@ const About = () => {
                                             <div className="big-portrait-two">
                                                 <ParallaxBanner className="portrait-two">
                                                     <ParallaxBannerLayer
-                                                        image={AboutContent}
+                                                        image={AboutContent.image_under_paragraphs}
                                                         speed={8}
                                                     />
                                                 </ParallaxBanner>
@@ -201,7 +201,7 @@ const About = () => {
                                         </ParallaxProvider>
                                         <FadeInWhenVisible>
                                             <div className="image-info">
-                                                2022 - Nürburgring, Germany
+                                                {AboutContent.image_under_paragraphs_description}
                                             </div>
                                         </FadeInWhenVisible>
                                     </div>
@@ -241,11 +241,11 @@ const About = () => {
                                             </ul>
                                         </div>
                                     )}
-                                </div>
+                                </section>
                             </FadeInWhenVisible>
 
                             {AboutContent?.services.length > 0 && (
-                                <div className="services-section">
+                                <section className="services-section">
                                     <FadeInWhenVisible>
                                         <div className="section-header">
                                             {AboutContent?.service_title}
@@ -274,7 +274,7 @@ const About = () => {
                                             </div>
                                         </div>
                                     </FadeInWhenVisible>
-                                </div>
+                                </section>
                             )}
                         </div>
                     </div>

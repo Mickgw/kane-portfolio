@@ -51,12 +51,12 @@ const Motion = () => {
                     <PageLoader loaderText="Motion" />
                 </motion.div>
             ) : (
-                <section className="motion">
+                <div className="motion">
                     <div className="container">
                         {videoProjects.video_projects_list.map(
                             (video, index) => {
                                 return (
-                                    <div
+                                    <section
                                         className="video-container"
                                         key={index}
                                     >
@@ -105,12 +105,12 @@ const Motion = () => {
                                                 />
                                             </video>
                                         </FadeInWhenVisible>
-                                    </div>
+                                    </section>
                                 );
                             }
                         )}
                     </div>
-                </section>
+                </div>
             )}
         </AnimatePresence>
     );
