@@ -193,7 +193,7 @@ const About = () => {
                                             <div className="big-portrait-two">
                                                 <ParallaxBanner className="portrait-two">
                                                     <ParallaxBannerLayer
-                                                        image={""}
+                                                        image={AboutContent}
                                                         speed={8}
                                                     />
                                                 </ParallaxBanner>
