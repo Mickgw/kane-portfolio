@@ -4,4 +4,4 @@ I really enjoyed this project because Kane gave me total freedom for the whole s
 
 Give it a visit and check out the cool portfolio of Kane :)
 
-Final product: kanejansen.com
+Final product: https://kanejansen.com/
