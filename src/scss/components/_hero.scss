@@ -33,7 +33,7 @@
                         display: flex;
                         line-height: 1.4;
                         overflow: hidden;
-                        margin-bottom: 4vh;
+                        margin-bottom: 8rem;
                         .my-name-text {
                             z-index: 2;
                             font-size: calc(clamp(4.5rem, 4.5vw, 8rem) * 0.875);
@@ -61,7 +61,7 @@
                     }
 
                     .scrolldown-line {
-                        padding-top: 5vh;
+                        padding-top: 10rem;
                         overflow: hidden;
                         line-height: 1.4;
                         display: flex;

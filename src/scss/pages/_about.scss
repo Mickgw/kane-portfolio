@@ -165,6 +165,7 @@
                                     justify-content: space-between;
 
                                     .accordion-title {
+                                        cursor: pointer !important;
                                         transition: 0.4s ease-in-out;
                                         font-weight: 500;
                                         font-size: calc(clamp(1.8rem, 2vw, 2.5rem) * 0.875);
@@ -175,6 +176,7 @@
                                     }
 
                                     .accordion-button {
+                                        cursor: pointer !important;
                                         .showmore-icon {
                                             transition: 0.6s ease-in-out;
                                             font-size: calc(clamp(2rem, 4vw, 3rem) * 0.875);

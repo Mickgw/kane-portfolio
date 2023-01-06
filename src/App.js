@@ -37,7 +37,8 @@ function App() {
               ".gallery-image",
               ".read-about-link",
               ".image-category-tags",
-              ".services-container"
+              ".accordion-title",
+              ".accordion-button"
             ]}
           />
         </div>

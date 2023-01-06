@@ -3,7 +3,7 @@ $layout-breakpoint-home-about: 1150px;
 .home-about-normal {
     display: block;
     width: 100%;
-    margin-block: 40vh;
+    margin-block: $margin-block;
     visibility: hidden;
 
     @media (max-width: $layout-breakpoint-small) {
