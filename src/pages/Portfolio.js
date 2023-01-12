@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { EyeIcon } from "@heroicons/react/24/outline";
 
 //Components
 import ImageModal from "../components/ImageModal";
@@ -113,20 +114,36 @@ const Portfolio = () => {
 
                         <div className="gallery">
                             {filteredImages.map((image_data, index) => (
-                                <div key={index} className="gallery-image" >
+                                <div key={index} className="gallery-image">
                                     <FadeInWhenVisible>
-                                        <img
-                                            className="image"
-                                            src={image_data.image}
-                                            alt=""
-                                            onClick={() => {
-                                                setIsModal(true);
-                                                setModalImage(image_data.image);
-                                                body.classList.add(
-                                                    "disable-scroll"
-                                                );
-                                            }}
-                                        />
+                                        <div className="image-container">
+                                            <img
+                                                className="image"
+                                                src={image_data.image}
+                                                alt="portfolio"
+                                                onClick={() => {
+                                                    setIsModal(true);
+                                                    setModalImage(
+                                                        image_data.image
+                                                    );
+                                                    body.classList.add(
+                                                        "disable-scroll"
+                                                    );
+                                                }}
+                                            />
+                                            <EyeIcon
+                                                className="hover-icon"
+                                                onClick={() => {
+                                                    setIsModal(true);
+                                                    setModalImage(
+                                                        image_data.image
+                                                    );
+                                                    body.classList.add(
+                                                        "disable-scroll"
+                                                    );
+                                                }}
+                                            />
+                                        </div>
                                     </FadeInWhenVisible>
                                 </div>
                             ))}

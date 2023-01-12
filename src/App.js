@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import FooterNormal from "./components/FooterNormal";
 import FooterResponsive from "./components/FooterResponsive";
 import ScrollToTop from "./components/hooks/ScrollToTop";
-import AnimatedCursor from "react-animated-cursor";
+// import AnimatedCursor from "react-animated-cursor";
 
 // Pages
 import Home from "./pages/Home";
@@ -23,7 +23,7 @@ function App() {
     <AnimatePresence>
       <div className="App">
         <ScrollToTop />
-        <div className="cursor__dot">
+        {/* <div className="cursor__dot">
           <AnimatedCursor
             innerSize={null} //Disabled the the main dot
             innerScale={null} //Disabled the dot that's following the cursor
@@ -41,7 +41,7 @@ function App() {
               ".accordion-button"
             ]}
           />
-        </div>
+        </div> */}
 
         <header>
           <Navbar />

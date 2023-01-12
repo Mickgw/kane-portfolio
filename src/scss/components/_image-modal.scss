@@ -1,6 +1,6 @@
 .modal-container {
     height: calc(100vh - calc(100vh - 100%));
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     position: fixed;
     top: 0;
     left: 0;
