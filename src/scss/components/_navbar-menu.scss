@@ -20,28 +20,27 @@ $footer-menu-font-size: 1.6rem;
         overflow-y: auto;
     }
 
-    .container {
-        margin-inline: $wrapper-value;
-        max-width: 1536px;
+    .container {    
         position: relative;
         flex-direction: row;
         height: 100%;
         display: flex;
         align-items: center;
+        max-width: 1536px;
+        
 
         //Inherit padding inline from the navbar
-        @media (max-width: $layout-breakpoint-small) {
-            margin-inline: $wrapper-value-breakpoint-small;
-            margin-top: 5rem;
-        }
-
-        @media (min-width: 1536px) {
-            margin-inline: auto;
+        @media (max-width: 1536px) {
+            margin-inline: $wrapper-value-breakpoint-small !important;
         }
 
         @media (min-width: $layout-breakpoint-small) {
             min-height: 700px;
             margin-inline: $wrapper-value;
+        }
+
+        @media (min-width: 2000px) {
+            margin-inline: auto;
         }
 
         .menu-image-position {
