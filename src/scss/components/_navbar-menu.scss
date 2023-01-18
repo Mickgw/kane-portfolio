@@ -31,7 +31,7 @@ $footer-menu-font-size: 1.6rem;
 
         //Inherit padding inline from the navbar
         @media (max-width: 1536px) {
-            margin-inline: $wrapper-value-breakpoint-small !important;
+            margin-inline: 6vw !important;
         }
 
         @media (min-width: $layout-breakpoint-small) {
@@ -118,13 +118,15 @@ $footer-menu-font-size: 1.6rem;
                                 font-size: calc(clamp(4rem, 3vw, 7rem) * 0.875);
                                 transition: 0.3s ease-in-out;
                                 cursor: pointer !important;
+                                display: flex;
+                                align-items: center;
 
                                 &.active::before {
-                                    transform: translateY(7%);
+                                    transform: translateY(-7%);
                                     content: "\2022";
                                     position: absolute;
                                     margin-left: -35px;
-                                    font-size: calc(clamp(3rem, 4vw, 4.5rem) * 0.875);
+                                    font-size: calc(clamp(3rem, 3vw, 4.5rem) * 0.875);
                                     
                                     //Keeps the dot between the wrapper
                                     @media (max-width: $layout-breakpoint-small) {
