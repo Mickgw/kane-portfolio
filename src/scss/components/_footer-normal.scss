@@ -2,18 +2,32 @@
     width: 100%;
     height: 100vh;
     display: block;
+    background-color: $black;
 
     @media (max-width: $layout-breakpoint-small) {
         display: none;
     }
 
     .container {
-        background-color: $black;
         height: auto;
-        padding-inline: $wrapper-value;
         position: relative;
         z-index: 2;
         align-items: flex-end;
+        max-width: 1536px;
+
+        //Inherit padding inline from the navbar
+        @media (max-width: 1536px) {
+            margin-inline: $wrapper-value !important;
+        }
+
+        @media (min-width: $layout-breakpoint-small) {
+            min-height: 700px;
+            margin-inline: $wrapper-value;
+        }
+
+        @media (min-width: 2000px) {
+            margin-inline: auto;
+        }
 
         .top-footer-row {
             width: 100%;
