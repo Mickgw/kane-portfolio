@@ -8,7 +8,9 @@ const PhotoAlbums = () => {
     return (
         <section className="photo-album-section">
             <FadeInWhenVisible>
-                <h2 className="photo-albums-header">{photoAlbums.title_above_albums}</h2>
+                <h2 className="photo-albums-header">
+                    {photoAlbums.title_above_albums}
+                </h2>
             </FadeInWhenVisible>
 
             <div className="photo-albums">
@@ -43,7 +45,12 @@ const PhotoAlbums = () => {
                                                             <TbArrowUpRight className="album-cover-dot-text" />
                                                         </div>
                                                     </div>
-                                                    <motion.div className="image-container" whileTap={{scale: 1.1 }}>
+                                                    <motion.div
+                                                        className="image-container"
+                                                        whileTap={{
+                                                            scale: 1.025,
+                                                        }}
+                                                    >
                                                         <img
                                                             className="album-cover"
                                                             src={
