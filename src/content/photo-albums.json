@@ -1,123 +1,37 @@
 {
   "album_list": [
     {
-      "camera": "Sony",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655211128/WhatsApp_Image_2022-05-31_at_1.28.40_PM_2_banwjn.jpg",
-      "album_description_paragraphs": [
-        {
-          "paragraph": "Paragraph 1"
-        },
-        {
-          "paragraph": "Paragraph 2"
-        },
-        {
-          "paragraph": "Paragraph 3"
-        }
-      ],
-      "camera_lens": "idk",
-      "title": "Mercedes AMG 2020",
+      "id": "2XAvAgWgA",
+      "title": "Goodwood (Friday)",
+      "year": 2023,
+      "camera": "Sony A6100",
+      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-33-min_agcpqx.jpg",
       "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.40_PM_7_llwcia.jpg"
-      ],
-      "id": "VjXmmmEws",
-      "description": "This is a test\n\n\n\nWhite space\n\n\n\nNew piece of text",
-      "year": 2021
-    },
-    {
-      "id": "OZup2y9Zt",
-      "title": "Suzuki Swift 2011",
-      "year": 2021,
-      "camera": "Sony",
-      "camera_lens": "idk",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_1_tpoj19.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.41_PM_4_dncwga.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-3-banner_qsepek.jpg"
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522931/GoodwoodDAY2-26-min_wygi35.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-34-min_dkea98.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-32-min_n0thvl.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-79-min_vigmcq.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-71-min_lgcqtl.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-75-min_xx43dj.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691522930/GoodwoodDAY2-87-min_rv4gzi.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524538/MickGoodwoodDAY1-28-min_ep5kkm.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524538/MickGoodwoodDAY1-41-min_ivyxlv.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691523291/MickGoodwoodDAY1-31-min_1_x3ezlp.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524538/MickGoodwoodDAY1-42-min_edygpn.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524538/MickGoodwoodDAY1-31-min_hb37fe.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524538/MickGoodwoodDAY1-46-min_ien5lf.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-25-min_eziyth.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-30-min_xhrsce.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-14-min_fjvztl.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-9-min_pwnzkk.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-6-min_a7dba6.jpg",
+        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1691524539/MickGoodwoodDAY1-33-min_agcpqx.jpg"
       ],
       "album_description_paragraphs": [
         {
-          "paragraph": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\""
-        },
-        {
-          "paragraph": "Paragraph 3"
+          "paragraph": "Kane, ik dacht ik plaats alvast een paar kleine picca's"
         }
       ]
-    },
-    {
-      "id": "Io2s6lqka",
-      "title": "Potraits",
-      "year": 2022,
-      "camera": "Sony a7iii",
-      "camera_lens": "Zeiss 24/70 F1.4",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1656272170/AD96740A-C3B4-4128-8C4F-A5A5EBC3021A_llajxy.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1656272171/C929FFBD-DCA2-4BAD-9AEB-B3C68D533626_qoannq.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655320833/WhatsApp_Image_2022-05-31_at_1.28.41_PM_3_jivbpl.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/WhatsApp_Image_2022-05-31_at_1.28.39_PM_1_hyp4nq.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1655208316/image-1-banner_t3eghg.jpg"
-      ],
-      "album_description_paragraphs": [
-        {
-          "paragraph": "Dit is paragraaf 1"
-        },
-        {
-          "paragraph": "Dit is paragraaf 2"
-        }
-      ]
-    },
-    {
-      "id": "ezsllY-HX",
-      "title": "This is a test",
-      "year": 2014,
-      "camera": "unknown",
-      "camera_lens": "unknown",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825458/f9175a16afc06b0c5a25772b0f258f39_fueqg7.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/Frank_Ocean_-_endless_am3jug.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/slowedreverb_zdil7j.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825505/acoustic_oov1u7.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1660825473/night_dstza9.jpg"
-      ],
-      "album_description_paragraphs": [
-        {
-          "paragraph": "Dit is een test g "
-        }
-      ]
-    },
-    {
-      "id": "B1Eaf0NsH",
-      "title": "proper album",
-      "year": 2018,
-      "camera": "Sony A7.3",
-      "camera_lens": "unknown",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546588/website_banner_phone_isyyxh.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546613/website_banner_6_yakpr3.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546611/website_banner_4_xkylyg.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_5_xv92wl.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_3_ayppiu.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg"
-      ],
-      "album_description_paragraphs": [
-        {
-          "paragraph": "I did this shoot at the Nurburgring (Nordschleife). It was a beautiful sunny day and we went to some amazing spots. These photo's are the result of that day. Unfortunately I didnt have the right lens with me"
-        },
-        {
-          "paragraph": "I did this shoot at the Nurburgring (Nordschleife). It was a beautiful sunny day and we went to some amazing spots. These photo's are the result of that day. Unfortunately I didnt have the right lens with me"
-        }
-      ]
-    },
-    {
-      "id": "jKbMg4Bfe",
-      "cover_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661451177/website_banner_3_th1mrc.jpg",
-      "images": [
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546588/website_banner_phone_isyyxh.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_2_suuwlk.jpg",
-        "https://res.cloudinary.com/ddxnrgllz/image/upload/v1661546610/website_banner_3_ayppiu.jpg"
-      ],
-      "album_description_paragraphs": [],
-      "title": "Dit is de album titel"
     }
   ],
   "title_above_albums": "My Photo Albums"
