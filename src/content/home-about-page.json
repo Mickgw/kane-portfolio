@@ -1,8 +1,22 @@
 {
-  "header_title_lines": [],
-  "paragraphs": [],
+  "header_title_lines": [
+    {
+      "title_line": "crypto"
+    },
+    {
+      "title_line": "self development"
+    },
+    {
+      "title_line": "entrepeneur"
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
   "home_about_image": "https://res.cloudinary.com/ddxnrgllz/image/upload/v1671574236/portrait_2_wbhg03.jpg",
-  "home_about_image_description": "",
-  "show_home_about": false,
-  "show_page_links": false
+  "home_about_image_description": "Verweggiestan - 2004",
+  "show_home_about": true,
+  "show_page_links": true
 }
